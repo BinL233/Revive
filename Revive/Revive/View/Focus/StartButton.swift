@@ -16,8 +16,9 @@ struct StartButton: View {
                 .bold()
                 .foregroundStyle(Color.cWhite)
         }
-        .background(Color.cRed)
+        .background(Color.cDarkOrange)
         .clipShape(Circle())
+        .shadow(radius: 6, x: 0, y: 4)
     }
 }
 

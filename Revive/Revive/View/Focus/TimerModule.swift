@@ -11,9 +11,10 @@ struct TimerModule: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Color.cBlue)
+                .fill(Color.cLightYellow)
                 //.frame(width: 300, height: 200)
                 .cornerRadius(50)
+                .shadow(radius: 8, x: 0, y: 8)
             Timer()
         }
     }
