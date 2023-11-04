@@ -11,7 +11,8 @@ import SwiftUI
 struct ReviveApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            LaunchView()
+                .environment(ReviveManager())
         }
     }
 }

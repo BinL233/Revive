@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct TimerModule: View {
+    @State private var timeSelection : Double = 5
+    @Environment(ReviveManager.self) var manager
+    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.cLightYellow)
-                //.frame(width: 300, height: 200)
-                .cornerRadius(50)
-                .shadow(radius: 8, x: 0, y: 8)
-            Timer()
+        VStack {
+            Timer(timeSelection: $timeSelection)
+            Text(manager.timeConvertor(time: Int(timeSelection)))
+                .bold()
+                .italic()
+                .font(.title)
+                .foregroundStyle(Color.cBlackBrown)
         }
     }
 }
 
 #Preview {
     TimerModule()
+        .environment(ReviveManager())
 }

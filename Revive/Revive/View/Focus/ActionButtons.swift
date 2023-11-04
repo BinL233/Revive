@@ -8,42 +8,44 @@
 import SwiftUI
 
 struct ActionButtons: View {
-    @State private var selectedAct = "Hatch"
-//    let action : [String] = ["Hatch", "Train", "Explore"]
+    @Environment(ReviveManager.self) var manager
     
     var body: some View {
         HStack {
-//            Picker("Action", selection: $selectedAct) {
-//                ForEach(action, id: \.self) { act in
-//                    Text("\(act)").tag(act)
-//                        .italic()
-//                        .bold()
-//                }
-//            }
-//            .pickerStyle(.segmented)
+            Button(action: {manager.currAction = .hatching}) {
+                Text("Hatching")
+                    .foregroundStyle(Color.cBlack)
+                    .font(.custom("Georgia-Italic", size: 15))
+            }
+            .padding(15)
+            .background((manager.currAction == .hatching) ? Color.cLightBrown : .clear)
+            .animation(.easeInOut(duration: 0.2), value: manager.currAction)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             
-            Button(action: {}) {
-                Text("Hatch")
+            Button(action: {manager.currAction = .training}) {
+                Text("Training")
                     .foregroundStyle(Color.cBlack)
-                    .font(.custom("Georgia-Italic", size: 18))
+                    .font(.custom("Georgia-Italic", size: 15))
             }
-            .padding()
-            Button(action: {}) {
-                Text("Train")
+            .padding(15)
+            .background((manager.currAction == .training) ? Color.cLightBrown : .clear)
+            .animation(.easeInOut(duration: 0.2), value: manager.currAction)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            
+            Button(action: {manager.currAction = .exploring}) {
+                Text("Exploring")
                     .foregroundStyle(Color.cBlack)
-                    .font(.custom("Georgia-Italic", size: 18))
+                    .font(.custom("Georgia-Italic", size: 15))
             }
-            .padding()
-            Button(action: {}) {
-                Text("Explore")
-                    .foregroundStyle(Color.cBlack)
-                    .font(.custom("Georgia-Italic", size: 18))
-            }
-            .padding()
+            .padding(15)
+            .background((manager.currAction == .exploring) ? Color.cLightBrown : .clear)
+            .animation(.easeInOut(duration: 0.2), value: manager.currAction)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
         }
     }
 }
 
 #Preview {
     ActionButtons()
+        .environment(ReviveManager())
 }
