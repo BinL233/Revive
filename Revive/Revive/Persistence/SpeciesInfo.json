@@ -6,11 +6,9 @@
         "rarity": "SR",
         "hatch_time": 120,
         "evolve_at": 35,
-        "life_span": null,
         "height": {"S": 3, "M": 6, "L": 9, "offset": 1.5},
         "weight": {"S": 150, "M": 200, "L": 250, "offset": 25},
-        "era": "Early Eocene",
-        "speed": null
+        "era": "Early Eocene"
     },
 
     {
@@ -19,10 +17,103 @@
         "stage": 2,
         "rarity": "SR",
         "hatch_time": 120,
-        "life_span": null,
         "height": {"S": 6, "M": 12, "L": 18, "offset": 3},
         "weight": {"S": 300, "M": 400, "L": 500, "offset": 50},
-        "era": "Early Eocene",
-        "speed": null
+        "era": "Early Eocene"
+    },
+
+    {
+        "name": "Sabertooth",
+        "id": 3,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [20, 40],
+        "height": {"S": 1.5, "M": 2.5, "L": 3.5, "offset": 0.25},
+        "weight": {"S": 200, "M": 250, "L": 300, "offset": 25},
+        "era": "Pleistocene Epoch",
+        "speed": [15]
+    },
+
+    {
+        "name": "Sabertooth",
+        "id": 4,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [20, 40],
+        "height": {"S": 3, "M": 5, "L": 7, "offset": 0.5},
+        "weight": {"S": 400, "M": 500, "L": 600, "offset": 50},
+        "era": "Pleistocene Epoch",
+        "speed": [30]
+    },
+
+    {
+        "name": "Mammoth",
+        "id": 5,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [60],
+        "height": {"S": 4.5, "M": 6, "L": 7.5, "offset": 1},
+        "weight": {"S": 5000, "M": 7000, "L": 9000, "offset": 1000},
+        "era": "Ice Age",
+        "speed": [9, 10]
+    },
+
+    {
+        "name": "Mammoth",
+        "id": 6,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [60],
+        "height": {"S": 9, "M": 12, "L": 15, "offset": 2},
+        "weight": {"S": 10000, "M": 14000, "L": 18000, "offset": 2000},
+        "era": "Ice Age",
+        "speed": [18, 20]
+    },
+
+    {
+        "name": "T-Rex",
+        "id": 7,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [28],
+        "height": {"S": 5, "M": 7.5, "L": 10, "offset": 1.5},
+        "weight": {"S": 4000, "M": 7000, "L": 10000, "offset": 1000},
+        "era": "Cretaceous",
+        "speed": [5, 12.5]
+    },
+
+    {
+        "name": "T-Rex",
+        "id": 8,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [28],
+        "height": {"S": 10, "M": 15, "L": 20, "offset": 3},
+        "weight": {"S": 8000, "M": 14000, "L": 20000, "offset": 2000},
+        "era": "Cretaceous",
+        "speed": [10, 25]
+    },
+
+    {
+        "name": "T-Rex",
+        "id": 9,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [10,30],
+        "height": {"S": 2, "M": 4, "L": 6, "offset": 0.5},
+        "weight": {"S": 15, "M": 30, "L": 45, "offset": 5},
+        "era": "15th century",
+        "speed": [10, 25]  
     }
 ]
