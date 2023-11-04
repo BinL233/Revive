@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Walk Whale",
+        "id": 1,
+        "stage": 1,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "evolve_at": 35,
+        "life_span": null,
+        "height": {"S": 3, "M": 6, "L": 9, "offset": 1.5},
+        "weight": {"S": 150, "M": 200, "L": 250, "offset": 25},
+        "era": "Early Eocene",
+        "speed": null
+    },
+
+    {
+        "name": "Walk Whale",
+        "id": 2,
+        "stage": 2,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": null,
+        "height": {"S": 6, "M": 12, "L": 18, "offset": 3},
+        "weight": {"S": 300, "M": 400, "L": 500, "offset": 50},
+        "era": "Early Eocene",
+        "speed": null
+    }
+]
