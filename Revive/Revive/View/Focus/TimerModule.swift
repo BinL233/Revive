@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct TimerModule: View {
-    @State private var timeSelection : Double = 5
     @Environment(ReviveManager.self) var manager
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
+        @Bindable var manager = manager
         VStack {
-            Timer(timeSelection: $timeSelection)
-            Text(manager.timeConvertor(time: Int(timeSelection)))
+            TimerSlider()
+            Text(manager.timeStringGetter())
                 .bold()
                 .italic()
-                .font(.title)
+                .font(.system(size: 35))
                 .foregroundStyle(Color.cBlackBrown)
+                .onReceive(timer, perform: { _ in
+                    if manager.isTimerStart && manager.timeRemaining > 0 {
+                        manager.timeRemaining -= 1
+                    }
+                })
         }
     }
 }

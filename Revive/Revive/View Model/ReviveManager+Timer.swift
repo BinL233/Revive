@@ -8,16 +8,16 @@
 import Foundation
 
 extension ReviveManager {
-    func timeConvertor(time: Int) -> String {
+    func timeStringGetter() -> String {
+        let time = Int(timeRemaining)
         var hour : Int = 0
         var min : Int = 0
-        if time < 60 {
-            min = time
-        } else {
-            hour = time / 60
-            min = time % 60
-        }
+        var sec : Int = 0
         
-        return String(format: "%02d", hour) + ":" + String(format: "%02d", min)
+        hour = time / 3600
+        min = time % 3600 / 60
+        sec = time % 60
+        
+        return String(format: "%02d", hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
     }
 }
