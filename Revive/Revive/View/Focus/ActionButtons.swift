@@ -13,7 +13,11 @@ struct ActionButtons: View {
     var body: some View {
         HStack {
             if ((manager.currAction == .hatching) || !manager.isTimerStart) {
-                Button(action: {withAnimation{manager.currAction = .hatching}}) {
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.1)) {
+                        manager.currAction = .hatching
+                    }
+                }) {
                     Text("Hatching")
                         .foregroundStyle(Color.cBlack)
                         .font(.custom("Georgia-Italic", size: 15))
@@ -25,7 +29,11 @@ struct ActionButtons: View {
             }
             
             if ((manager.currAction == .training) || !manager.isTimerStart) {
-                Button(action: {withAnimation{manager.currAction = .training}}) {
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.1)) {
+                        manager.currAction = .training
+                    }
+                }) {
                     Text("Training")
                         .foregroundStyle(Color.cBlack)
                         .font(.custom("Georgia-Italic", size: 15))
@@ -37,7 +45,11 @@ struct ActionButtons: View {
             }
             
             if ((manager.currAction == .exploring) || !manager.isTimerStart) {
-                Button(action: {withAnimation{manager.currAction = .exploring}}) {
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.1)) {
+                        manager.currAction = .exploring
+                    }
+                }) {
                     Text("Exploring")
                         .foregroundStyle(Color.cBlack)
                         .font(.custom("Georgia-Italic", size: 15))
@@ -49,9 +61,4 @@ struct ActionButtons: View {
             }
         }
     }
-}
-
-#Preview {
-    ActionButtons()
-        .environment(ReviveManager())
 }

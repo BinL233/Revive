@@ -28,6 +28,14 @@ extension ReviveManager {
         }
         
         let randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
-        return speciesList[currRaritySpeciesIDs[randomSpecies] + 1]
+        return speciesList[currRaritySpeciesIDs[randomSpecies] - 1]
+    }
+    
+    func hatchingStartButton() -> Species {
+        return getRandomHatchingSpecies()
+    }
+    
+    func changeToHatchingState2() {
+        currHatchingEgg = currHatchingSpecies?.egg ?? 0
     }
 }

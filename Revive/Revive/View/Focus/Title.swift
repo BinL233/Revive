@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct Title: View {
+    @Environment(ReviveManager.self) var manager
+    
     var body: some View {
+        let testM = LongPressGesture(minimumDuration: 1)
+                .onEnded { value in
+                    manager.activeAlert = .testMode
+                    manager.timeRemaining = 5
+                }
+        
         Text("Focus")
             .font(.custom("Georgia-Italic", size: 40))
             .padding(15)
             .bold()
             .foregroundStyle(Color.cBlack)
+            .gesture(testM)
     }
-}
-
-#Preview {
-    Title()
 }

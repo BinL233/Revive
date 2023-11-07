@@ -23,6 +23,11 @@ struct TimerModule: View {
                 .onReceive(timer, perform: { _ in
                     if manager.isTimerStart && manager.timeRemaining > 0 {
                         manager.timeRemaining -= 1
+                        if Int(manager.timeRemaining) == manager.selectedTime / 2 {
+                            withAnimation{manager.changeToHatchingState2()}
+                        } else if Int(manager.timeRemaining) == manager.selectedTime {
+                            manager.currHatchingState = .state3
+                        }
                     }
                 })
         }

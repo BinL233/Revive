@@ -13,17 +13,7 @@ struct DisplayView: View {
     var body: some View {
         ZStack {
             if manager.currAction == .hatching {
-                VStack {
-                    Spacer()
-                    Ellipse()
-                        .fill(.gray)
-                        .opacity(0.5)
-                        .frame(width: 90, height: 35)
-                        .scaledToFit()
-                }
-                Image(String(manager.currHatchingEgg))
-                    .resizable()
-                    .scaledToFit()
+                HatchingView()
             } else if manager.currAction == .training {
                 
             } else {

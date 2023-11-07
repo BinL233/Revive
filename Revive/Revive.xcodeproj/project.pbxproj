@@ -19,6 +19,9 @@
 		B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD22AF5F29200737872 /* MainTabView.swift */; };
 		B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */; };
 		B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */; };
+		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
+		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
+		B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */; };
 		B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C773FB2ACCE69800387FDC /* ReviveApp.swift */; };
 		B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C773FD2ACCE69800387FDC /* FocusView.swift */; };
 		B3C774002ACCE69A00387FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C773FF2ACCE69A00387FDC /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 		B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Focus.swift"; sourceTree = "<group>"; };
 		B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingMechanics.swift; sourceTree = "<group>"; };
 		B34F1BD82AF6045300737872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
+		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
+		B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrHatchingState.swift; sourceTree = "<group>"; };
 		B3C773F82ACCE69800387FDC /* Revive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C773FB2ACCE69800387FDC /* ReviveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveApp.swift; sourceTree = "<group>"; };
 		B3C773FD2ACCE69800387FDC /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
 				B34F1BCC2AF5DC7300737872 /* CurrAction.swift */,
 				B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */,
+				B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */,
+				B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 			children = (
 				B3C7742A2ACD044F00387FDC /* Focus */,
 				B3C7742F2ACD0BA000387FDC /* Color.swift */,
+				B34F1BD02AF5EFBB00737872 /* DisplayView.swift */,
 				B3C7742B2ACD07B000387FDC /* Background.swift */,
 				B34F1BCE2AF5E40E00737872 /* LaunchView.swift */,
 				B34F1BD22AF5F29200737872 /* MainTabView.swift */,
@@ -221,7 +230,7 @@
 				B3C774312ACD0F6500387FDC /* Title.swift */,
 				B3C774332ACD11CF00387FDC /* ActionButtons.swift */,
 				B3C774352ACD151500387FDC /* StartButton.swift */,
-				B34F1BD02AF5EFBB00737872 /* DisplayView.swift */,
+				B3C738E92AF9E72C006709C9 /* HatchingView.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -361,11 +370,13 @@
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
+				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
 				B3C774322ACD0F6500387FDC /* Title.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
@@ -377,6 +388,7 @@
 				B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
+				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
