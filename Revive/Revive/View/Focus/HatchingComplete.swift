@@ -49,11 +49,13 @@ struct HatchingComplete: View {
                         .scaledToFill()
                 }
                 
-                Button(action: {manager.currHatchingState = .state1}) {
+                Button(action: {
+                    withAnimation{manager.changeToHatchingState1()}
+                }) {
                     Text("Got it")
                         .font(.custom("Georgia-Italic", size: 20))
                         .bold()
-                        .foregroundStyle(Color.cWhite)
+                        .foregroundStyle(.white)
                 }
                 .padding(15)
                 .background(Color.cLightBrown)
@@ -63,6 +65,7 @@ struct HatchingComplete: View {
         }
         .padding(.horizontal, 50)
         .padding(.vertical, 180)
+        .clipShape(RoundedRectangle(cornerRadius: 18))
     }
 }
 

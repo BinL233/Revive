@@ -35,6 +35,14 @@ extension ReviveManager {
         return getRandomHatchingSpecies()
     }
     
+    func changeToHatchingState1() {
+        currHatchingState = .state1
+        isTimerStart.toggle()
+        timeRemaining = 35 * 60
+        currHatchingEgg = 1001
+        activeAlert = .none
+    }
+    
     func changeToHatchingState2() {
         currHatchingEgg = currHatchingSpecies?.egg ?? 0
     }

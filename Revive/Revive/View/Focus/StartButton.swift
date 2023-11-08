@@ -48,10 +48,7 @@ struct StartButton: View {
                     title: Text("Are you sure?"),
                     message: Text("You will fail to hatch this Species."),
                     primaryButton: .destructive(Text("Confirm")) {
-                        withAnimation { manager.isTimerStart.toggle() }
-                        manager.timeRemaining = 35 * 60
-                        withAnimation{manager.currHatchingEgg = 1001}
-                        manager.activeAlert = .none
+                        withAnimation{manager.changeToHatchingState1()}
                     },
                     secondaryButton: .cancel() {
                         manager.activeAlert = .none
