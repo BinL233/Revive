@@ -19,6 +19,7 @@
 		B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD22AF5F29200737872 /* MainTabView.swift */; };
 		B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */; };
 		B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */; };
+		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
 		B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */; };
@@ -69,6 +70,7 @@
 		B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Focus.swift"; sourceTree = "<group>"; };
 		B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingMechanics.swift; sourceTree = "<group>"; };
 		B34F1BD82AF6045300737872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
 		B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrHatchingState.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				B3C774332ACD11CF00387FDC /* ActionButtons.swift */,
 				B3C774352ACD151500387FDC /* StartButton.swift */,
 				B3C738E92AF9E72C006709C9 /* HatchingView.swift */,
+				B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
+				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,

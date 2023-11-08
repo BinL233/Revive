@@ -9,7 +9,7 @@ import Foundation
 
 struct Species : Identifiable, Decodable {
     let name : String
-    var id : Int
+    let id : Int
     let stage : Int
     let rarity : String
     let hatchTime : Int

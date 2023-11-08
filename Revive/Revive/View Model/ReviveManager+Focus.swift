@@ -38,4 +38,8 @@ extension ReviveManager {
     func changeToHatchingState2() {
         currHatchingEgg = currHatchingSpecies?.egg ?? 0
     }
+    
+    func changeToHatchingState3() {
+        currHatchingState = .state3
+    }
 }

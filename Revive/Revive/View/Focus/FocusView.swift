@@ -28,6 +28,11 @@ struct FocusView: View {
                         .padding(.vertical, 50)
                         .padding(.bottom, 80)
                 }
+                
+                if manager.currHatchingState == .state3 {
+                    HatchingComplete()
+                        .transition(.scale)
+                }
             }
         }
     }
