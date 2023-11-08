@@ -26,7 +26,7 @@ struct TimerModule: View {
                         if Int(manager.timeRemaining) == manager.selectedTime / 2 {
                             withAnimation{manager.changeToHatchingState2()}
                         } else if Int(manager.timeRemaining) == 0 {
-                            withAnimation{manager.changeToHatchingState3()}
+                            withAnimation{manager.changeToHatchingState3(manager: manager)}
                         }
                     }
                 })

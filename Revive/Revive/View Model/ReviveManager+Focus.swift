@@ -26,8 +26,15 @@ extension ReviveManager {
                 }
             }
         }
+        // Need to be improved
+        var randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
+        while true {
+            if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].stage == 1 {
+                break
+            }
+            randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
+        }
         
-        let randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
         return speciesList[currRaritySpeciesIDs[randomSpecies] - 1]
     }
     
@@ -47,7 +54,17 @@ extension ReviveManager {
         currHatchingEgg = currHatchingSpecies?.egg ?? 0
     }
     
-    func changeToHatchingState3() {
+    func changeToHatchingState3(manager : ReviveManager) {
         currHatchingState = .state3
+        
+        let maxHeight = currHatchingSpecies?.height.L ?? 0
+        let minHeight = currHatchingSpecies?.height.S ?? 0
+        let maxWeight = currHatchingSpecies?.weight.L ?? 0
+        let minWeight = currHatchingSpecies?.weight.S ?? 0
+        let randomHeight = Double.random(in: minHeight...maxHeight)
+        let randomWeight = Double.random(in: minWeight...maxWeight)
+        
+        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, size: "", height: randomHeight, weight: randomWeight))
+        manager.saveData(customItems: mySpecies)
     }
 }

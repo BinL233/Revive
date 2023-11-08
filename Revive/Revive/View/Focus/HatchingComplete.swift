@@ -12,12 +12,13 @@ struct HatchingComplete: View {
     var body: some View {
         ZStack {
             Color.init(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 18))
             VStack {
                 Text("Hatching Complete!")
                     .font(.custom("Georgia-Italic", size: 20))
                     .bold()
                     .foregroundStyle(Color.cBlack)
-                    .padding()
+                    .padding(5)
                 Text("Species Get")
                     .font(.custom("Georgia-Italic", size: 15))
                     .bold()
@@ -26,19 +27,19 @@ struct HatchingComplete: View {
                     let speciesImage = String(format: "%03d", species.id)
                     if species.rarity == "R" {
                         Text(species.name)
-                            .font(.custom("Georgia-Italic", size: 20))
+                            .font(.custom("Georgia-Italic", size: 22))
                             .padding()
                             .bold()
                             .foregroundStyle(Color.blue)
                     } else if species.rarity == "SR" {
                         Text(species.name)
-                            .font(.custom("Georgia-Italic", size: 20))
+                            .font(.custom("Georgia-Italic", size: 22))
                             .padding()
                             .bold()
                             .foregroundStyle(Color.purple)
                     } else {
                         Text(species.name)
-                            .font(.custom("Georgia-Italic", size: 20))
+                            .font(.custom("Georgia-Italic", size: 22))
                             .padding()
                             .bold()
                             .foregroundStyle(Color.orange)
@@ -58,14 +59,13 @@ struct HatchingComplete: View {
                         .foregroundStyle(.white)
                 }
                 .padding(15)
-                .background(Color.cLightBrown)
+                .background(Color.cDarkOrange)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
             }
             .padding()
         }
         .padding(.horizontal, 50)
         .padding(.vertical, 180)
-        .clipShape(RoundedRectangle(cornerRadius: 18))
     }
 }
 
