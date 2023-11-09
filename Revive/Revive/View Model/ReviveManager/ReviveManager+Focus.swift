@@ -54,7 +54,7 @@ extension ReviveManager {
         currHatchingEgg = currHatchingSpecies?.egg ?? 0
     }
     
-    func changeToHatchingState3(manager : ReviveManager) {
+    func changeToHatchingState3() {
         currHatchingState = .state3
         
         let maxHeight = currHatchingSpecies?.height.L ?? 0
@@ -64,7 +64,7 @@ extension ReviveManager {
         let randomHeight = Double.random(in: minHeight...maxHeight)
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
-        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, size: "", height: randomHeight, weight: randomWeight))
-        manager.saveData(customItems: mySpecies)
+        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight))
+        DataManager.shared.saveData(customItems: mySpecies)
     }
 }

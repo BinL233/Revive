@@ -21,14 +21,12 @@ class ReviveManager {
     var isTimerStart : Bool
     var activeAlert : ActiveAlert?
     var currHatchingState : CurrHatchingState
-
-    let persistentContainer: NSPersistentContainer
     
     init() {
         let localTimeRemaining : TimeInterval = 35 * 60
         
         speciesList = Species.species ?? []
-        mySpecies = []
+        mySpecies = DataManager.shared.loadData()
         currHatchingSpecies = nil
         currAction = .hatching
         currHatchingEgg = 1001
@@ -37,13 +35,6 @@ class ReviveManager {
         isTimerStart = false
         activeAlert = .none
         currHatchingState = .state1
-        
-        persistentContainer = NSPersistentContainer(name: "MySpecies")
-        persistentContainer.loadPersistentStores { (description, error) in
-            if let error = error {
-                fatalError("Core Data store failed to load with error: \(error)")
-            }
-        }
     }
     
     func test() {
