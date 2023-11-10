@@ -19,7 +19,7 @@ struct MainTabView: View {
     var body: some View {
         ZStack {
             TabView (selection: $selectedTab) {
-                Text("Backyard")
+                BackyardView()
                     .tabItem {
                         Image(systemName: "house.and.flag.fill")
                         Text("Backyard")

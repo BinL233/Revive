@@ -12,4 +12,5 @@ struct MySpecies {
     let level : Int
     let height : Double
     let weight : Double
+    let favorite : Bool
 }

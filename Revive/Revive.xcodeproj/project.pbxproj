@@ -22,6 +22,12 @@
 		B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */; };
 		B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
+		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
+		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
+		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
+		B3629B0B2AFDE00000F3D135 /* SpeciesListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */; };
+		B3629B0D2AFDE05800F3D135 /* SpeciesListSingleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */; };
+		B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
@@ -37,7 +43,7 @@
 		B3C7742C2ACD07B000387FDC /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742B2ACD07B000387FDC /* Background.swift */; };
 		B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742D2ACD081800387FDC /* TimerModule.swift */; };
 		B3C774302ACD0BA000387FDC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
-		B3C774322ACD0F6500387FDC /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774312ACD0F6500387FDC /* Title.swift */; };
+		B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774312ACD0F6500387FDC /* FocusTitle.swift */; };
 		B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774332ACD11CF00387FDC /* ActionButtons.swift */; };
 		B3C774362ACD151600387FDC /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774352ACD151500387FDC /* StartButton.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +82,12 @@
 		B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingMechanics.swift; sourceTree = "<group>"; };
 		B34F1BD82AF6045300737872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
+		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
+		B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListView.swift; sourceTree = "<group>"; };
+		B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListRowView.swift; sourceTree = "<group>"; };
+		B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListSingleFrame.swift; sourceTree = "<group>"; };
+		B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListImage.swift; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
@@ -94,7 +106,7 @@
 		B3C7742B2ACD07B000387FDC /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		B3C7742D2ACD081800387FDC /* TimerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModule.swift; sourceTree = "<group>"; };
 		B3C7742F2ACD0BA000387FDC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B3C774312ACD0F6500387FDC /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		B3C774312ACD0F6500387FDC /* FocusTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTitle.swift; sourceTree = "<group>"; };
 		B3C774332ACD11CF00387FDC /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		B3C774352ACD151500387FDC /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +162,45 @@
 				B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B3629B002AFDDD6300F3D135 /* Backyard */ = {
+			isa = PBXGroup;
+			children = (
+				B3629B072AFDDF7700F3D135 /* SpeciesList */,
+				B3629B012AFDDD7A00F3D135 /* BackyardView.swift */,
+				B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */,
+			);
+			path = Backyard;
+			sourceTree = "<group>";
+		};
+		B3629B052AFDDF5500F3D135 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B3C7742D2ACD081800387FDC /* TimerModule.swift */,
+				B3C774282ACD044800387FDC /* TimerSlider.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		B3629B062AFDDF6700F3D135 /* Hatching */ = {
+			isa = PBXGroup;
+			children = (
+				B3C738E92AF9E72C006709C9 /* HatchingView.swift */,
+				B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */,
+			);
+			path = Hatching;
+			sourceTree = "<group>";
+		};
+		B3629B072AFDDF7700F3D135 /* SpeciesList */ = {
+			isa = PBXGroup;
+			children = (
+				B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */,
+				B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */,
+				B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */,
+				B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */,
+			);
+			path = SpeciesList;
 			sourceTree = "<group>";
 		};
 		B3C773EF2ACCE69800387FDC = {
@@ -238,6 +289,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3629B002AFDDD6300F3D135 /* Backyard */,
 				B3C7742A2ACD044F00387FDC /* Focus */,
 				B3C7742F2ACD0BA000387FDC /* Color.swift */,
 				B34F1BD02AF5EFBB00737872 /* DisplayView.swift */,
@@ -251,14 +303,12 @@
 		B3C7742A2ACD044F00387FDC /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B3629B062AFDDF6700F3D135 /* Hatching */,
+				B3629B052AFDDF5500F3D135 /* Timer */,
 				B3C773FD2ACCE69800387FDC /* FocusView.swift */,
-				B3C774282ACD044800387FDC /* TimerSlider.swift */,
-				B3C7742D2ACD081800387FDC /* TimerModule.swift */,
-				B3C774312ACD0F6500387FDC /* Title.swift */,
+				B3C774312ACD0F6500387FDC /* FocusTitle.swift */,
 				B3C774332ACD11CF00387FDC /* ActionButtons.swift */,
 				B3C774352ACD151500387FDC /* StartButton.swift */,
-				B3C738E92AF9E72C006709C9 /* HatchingView.swift */,
-				B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -401,23 +451,29 @@
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
-				B3C774322ACD0F6500387FDC /* Title.swift in Sources */,
+				B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */,
+				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
 				B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */,
+				B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
+				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
+				B3629B0D2AFDE05800F3D135 /* SpeciesListSingleFrame.swift in Sources */,
+				B3629B0B2AFDE00000F3D135 /* SpeciesListRowView.swift in Sources */,
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
+				B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,

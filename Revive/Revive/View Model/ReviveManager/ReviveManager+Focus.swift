@@ -64,7 +64,7 @@ extension ReviveManager {
         let randomHeight = Double.random(in: minHeight...maxHeight)
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
-        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight))
+        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false))
         DataManager.shared.saveData(customItems: mySpecies)
     }
 }

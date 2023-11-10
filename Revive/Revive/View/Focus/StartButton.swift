@@ -26,13 +26,13 @@ struct StartButton: View {
         }) {
             if manager.isTimerStart {
                 Text("Stop")
-                    .font(.custom("Georgia-Italic", size: 20))
+                    .font(.custom("Georgia-Italic", size: 23))
                     .padding(30)
                     .bold()
                     .foregroundStyle(Color.cWhite)
             } else {
                 Text("Start")
-                    .font(.custom("Georgia-Italic", size: 20))
+                    .font(.custom("Georgia-Italic", size: 23))
                     .padding(30)
                     .bold()
                     .foregroundStyle(Color.cWhite)

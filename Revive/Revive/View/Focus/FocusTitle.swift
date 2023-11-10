@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Title: View {
+struct FocusTitle: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {

@@ -30,6 +30,7 @@ class DataManager {
             entity.level = Int16(item.level)
             entity.height = item.height
             entity.weight = item.weight
+            entity.favorite = item.favorite
         }
 
         do {
@@ -45,9 +46,9 @@ class DataManager {
         let fetchRequest = NSFetchRequest<SpeciesEntity>(entityName: "SpeciesEntity")
 
         do {
-            print("Start loading user data...")
+            print("Loading user data...")
             let entities = try context.fetch(fetchRequest)
-            return entities.map { MySpecies(speciesID: Int($0.speciesID), level: Int($0.level), height: $0.height, weight: $0.weight) }
+            return entities.map { MySpecies(speciesID: Int($0.speciesID), level: Int($0.level), height: $0.height, weight: $0.weight, favorite: $0.favorite)}
         } catch {
             print("Failed to fetch custom items: \(error)")
             return []

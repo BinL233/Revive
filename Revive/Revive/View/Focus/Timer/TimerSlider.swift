@@ -18,6 +18,11 @@ struct TimerSlider: View {
                 in: 5*60...180*60,
                 step: 5*60
             )
+            .onChange(of: manager.timeRemaining, { oldValue, newValue in
+                if newValue <= 30*60 {
+                    manager.currAction = .training
+                }
+            })
             .disabled(manager.isTimerStart)
             .accentColor(.cDarkOrange)
         }
