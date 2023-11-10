@@ -13,15 +13,18 @@ struct SpeciesListImage: View {
     
     var body: some View {
         ZStack {
-            SpeciesListSingleFrame(currSpecies: $currSpecies)
-            if let species = manager.currHatchingSpecies {
-                let speciesImage = String(format: "%03d", species.id)
-                Image(speciesImage)
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(radius: 6, x: 0, y: 4)
-                    .padding(40)
-            }
+            Image("frame")
+                .resizable()
+                .scaledToFit()
+            let speciesImage = String(format: "%03d", currSpecies.speciesID)
+            Image(speciesImage)
+                .resizable()
+                .scaledToFit()
+                .padding(8)
+                .shadow(radius: 6, x: 0, y: 4)
+            Image(currSpecies.favorite ? "heart_fill" : "heart")
+                .resizable()
+                .scaledToFit()
         }
     }
 }

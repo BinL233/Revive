@@ -62,6 +62,15 @@ struct StartButton: View {
                         manager.activeAlert = .none
                     }
                 )
+            case .testModeOff:
+                return Alert(
+                    title: Text("TEST MODE DEACTIVATED"),
+                    message: Text("You are now in User Mode."),
+                    dismissButton: .default(Text("OK")) {
+                        manager.activeAlert = .none
+                        manager.timeRemaining = 30*60
+                    }
+                )
             }
         }
     }

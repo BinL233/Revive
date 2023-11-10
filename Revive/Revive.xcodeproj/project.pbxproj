@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
 		B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
 		B31922192AFBED74000446B7 /* MySpeciesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpeciesModel.xcdatamodel; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				B34F1BCC2AF5DC7300737872 /* CurrAction.swift */,
 				B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */,
 				B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */,
+				B317C5822AFE6B150076BE33 /* TestMode.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
+				B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */,
 				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
 				B3629B0D2AFDE05800F3D135 /* SpeciesListSingleFrame.swift in Sources */,
 				B3629B0B2AFDE00000F3D135 /* SpeciesListRowView.swift in Sources */,

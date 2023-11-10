@@ -14,7 +14,7 @@ struct SpeciesListRow: View {
     var body: some View {
         HStack {
             ForEach(currRowSpecies.indices, id: \.self) { i in
-                SpeciesListSingleFrame(currSpecies: $currRowSpecies[i])
+                SpeciesListImage(currSpecies: $currRowSpecies[i])
             }
         }
     }

@@ -13,7 +13,14 @@ struct FocusTitle: View {
     var body: some View {
         let testM = LongPressGesture(minimumDuration: 1)
                 .onEnded { value in
-                    manager.activeAlert = .testMode
+                    if manager.testMode == .off {
+                        manager.testMode = .on
+                        manager.activeAlert = .testMode
+                    } else {
+                        manager.testMode = .off
+                        manager.activeAlert = .testModeOff
+                    }
+                    
                     manager.timeRemaining = 5
                 }
         

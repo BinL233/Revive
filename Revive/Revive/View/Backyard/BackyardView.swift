@@ -24,5 +24,5 @@ struct BackyardView: View {
 
 #Preview {
     BackyardView()
-        .environment(ReviveManager()    )
+        .environment(ReviveManager())
 }
