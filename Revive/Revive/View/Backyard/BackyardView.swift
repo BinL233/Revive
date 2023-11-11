@@ -16,6 +16,10 @@ struct BackyardView: View {
             VStack {
                 BackyardTitle()
                 Spacer()
+                SpeciesPanel()
+                    .padding(.horizontal)
+                    .padding(.top, 20)
+                    .padding(.bottom, 50)
                 SpeciesListView()
             }
         }

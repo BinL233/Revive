@@ -21,18 +21,15 @@ class DataManager {
         }
     }
     
-    func saveData(customItems: [MySpecies]) {
+    func saveData(customItem: MySpecies) {
         let context = persistentContainer.viewContext
-
-        for item in customItems {
-            let entity = NSEntityDescription.insertNewObject(forEntityName: "SpeciesEntity", into: context) as! SpeciesEntity
-            entity.speciesID = Int16(item.speciesID)
-            entity.level = Int16(item.level)
-            entity.height = item.height
-            entity.weight = item.weight
-            entity.favorite = item.favorite
-        }
-
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "SpeciesEntity", into: context) as! SpeciesEntity
+        entity.speciesID = Int16(customItem.speciesID)
+        entity.level = Int16(customItem.level)
+        entity.height = customItem.height
+        entity.weight = customItem.weight
+        entity.favorite = customItem.favorite
+        
         do {
             try context.save()
             print("User data:", context, "saved")
@@ -40,11 +37,11 @@ class DataManager {
             print("Failed to save custom items: \(error)")
         }
     }
-
+    
     func loadData() -> [MySpecies] {
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<SpeciesEntity>(entityName: "SpeciesEntity")
-
+        
         do {
             print("Loading user data...")
             let entities = try context.fetch(fetchRequest)
@@ -52,6 +49,50 @@ class DataManager {
         } catch {
             print("Failed to fetch custom items: \(error)")
             return []
+        }
+    }
+    
+    func updateMySpeciesLevel(for speciesID: Int, with newData: Int, mySpecies: [MySpecies]) {
+        var data = mySpecies
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+            data[index].level = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.level = Int16(newData)
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
+        }
+    }
+    
+    func updateMySpeciesFavorite(for speciesID: Int, with newData: Bool, mySpecies: [MySpecies]) {
+        var data = mySpecies
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+            data[index].favorite = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.favorite = newData
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
         }
     }
 }

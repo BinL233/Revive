@@ -45,7 +45,11 @@ extension ReviveManager {
     func changeToHatchingState1() {
         currHatchingState = .state1
         isTimerStart.toggle()
-        timeRemaining = 35 * 60
+        if testMode == .off {
+            timeRemaining = 35 * 60
+        } else {
+            timeRemaining = 5
+        }
         currHatchingEgg = 1001
         activeAlert = .none
     }
@@ -64,7 +68,8 @@ extension ReviveManager {
         let randomHeight = Double.random(in: minHeight...maxHeight)
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
-        mySpecies.append(MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false))
-        DataManager.shared.saveData(customItems: mySpecies)
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false)
+        mySpecies.append(currS)
+        DataManager.shared.saveData(customItem: currS)
     }
 }

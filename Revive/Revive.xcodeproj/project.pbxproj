@@ -26,8 +26,6 @@
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
 		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
-		B3629B0B2AFDE00000F3D135 /* SpeciesListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */; };
-		B3629B0D2AFDE05800F3D135 /* SpeciesListSingleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */; };
 		B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
@@ -47,6 +45,9 @@
 		B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774312ACD0F6500387FDC /* FocusTitle.swift */; };
 		B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774332ACD11CF00387FDC /* ActionButtons.swift */; };
 		B3C774362ACD151600387FDC /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774352ACD151500387FDC /* StartButton.swift */; };
+		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
+		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
+		B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +88,6 @@
 		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
 		B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListView.swift; sourceTree = "<group>"; };
-		B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListRowView.swift; sourceTree = "<group>"; };
-		B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListSingleFrame.swift; sourceTree = "<group>"; };
 		B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListImage.swift; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
@@ -111,6 +110,9 @@
 		B3C774312ACD0F6500387FDC /* FocusTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTitle.swift; sourceTree = "<group>"; };
 		B3C774332ACD11CF00387FDC /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		B3C774352ACD151500387FDC /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
+		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
+		B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				B34F1BC42AF5CE6700737872 /* ReviveManager.swift */,
 				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
 				B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */,
+				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 		B3629B002AFDDD6300F3D135 /* Backyard */ = {
 			isa = PBXGroup;
 			children = (
+				B3FA42D52AFF1E84009C6C41 /* SpeciesPanel */,
 				B3629B072AFDDF7700F3D135 /* SpeciesList */,
 				B3629B012AFDDD7A00F3D135 /* BackyardView.swift */,
 				B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */,
@@ -198,8 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */,
-				B3629B0A2AFDE00000F3D135 /* SpeciesListRowView.swift */,
-				B3629B0C2AFDE05800F3D135 /* SpeciesListSingleFrame.swift */,
 				B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */,
 			);
 			path = SpeciesList;
@@ -314,6 +316,15 @@
 				B3C774352ACD151500387FDC /* StartButton.swift */,
 			);
 			path = Focus;
+			sourceTree = "<group>";
+		};
+		B3FA42D52AFF1E84009C6C41 /* SpeciesPanel */ = {
+			isa = PBXGroup;
+			children = (
+				B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */,
+				B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */,
+			);
+			path = SpeciesPanel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +468,7 @@
 				B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */,
 				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
+				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
@@ -468,15 +480,15 @@
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
+				B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */,
 				B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */,
 				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
-				B3629B0D2AFDE05800F3D135 /* SpeciesListSingleFrame.swift in Sources */,
-				B3629B0B2AFDE00000F3D135 /* SpeciesListRowView.swift in Sources */,
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
+				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
 				B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,

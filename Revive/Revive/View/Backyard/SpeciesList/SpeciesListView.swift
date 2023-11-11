@@ -9,41 +9,28 @@ import SwiftUI
 
 struct SpeciesListView: View {
     @Environment(ReviveManager.self) var manager
-    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 100))]
+    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 90))]
     
     var body: some View {
         @Bindable var manager = manager
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: adaptiveCloumns, content: {
-//                    ForEach(0..<50) { i in
-//                        Rectangle()
-//                            .frame(width: 90, height: 90)
-//                    }
-                    ForEach(0..<Int(ceil(Double(manager.standardMySpecies.count)/4)), id: \.self) { i in
-                        SpeciesListImage(currSpecies: $manager.standardMySpecies[i])
-                            .padding()
-                    }
-                })
-
-                ForEach(0..<Int(ceil(Double(manager.mySpecies.count)/4)), id: \.self) { i in
-                    let startIndex = i * 4
-                    let endIndex = min(startIndex + 4, manager.mySpecies.count)
-                    
-                    let rowSpeciesBinding = Binding<[MySpecies]>(
-                        get: {
-                            Array(manager.mySpecies[startIndex..<endIndex])
-                        },
-                        set: { newValue in
-                            manager.mySpecies.replaceSubrange(startIndex..<endIndex, with: newValue)
+            if manager.mySpecies.count == 0 {
+                Text("Let's hatch one Species!")
+                    .font(.custom("Georgia-Italic", size: 20))
+                    .padding(15)
+                    .bold()
+                    .foregroundStyle(Color.cBlack)
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                        ForEach(manager.mySpecies.indices, id: \.self) { i in
+                            SpeciesListImage(currSpecies: $manager.mySpecies[i])
                         }
-                    )
-
-                    SpeciesListRow(currRowSpecies: rowSpeciesBinding)
+                    })
                 }
+                .background(Color.cDarkBrown)
             }
         }
-        .background(.white)
     }
 }
 

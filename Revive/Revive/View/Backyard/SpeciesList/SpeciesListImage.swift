@@ -12,19 +12,20 @@ struct SpeciesListImage: View {
     @Binding var currSpecies : MySpecies
     
     var body: some View {
-        ZStack {
-            Image("frame")
-                .resizable()
-                .scaledToFit()
-            let speciesImage = String(format: "%03d", currSpecies.speciesID)
-            Image(speciesImage)
-                .resizable()
-                .scaledToFit()
-                .padding(8)
-                .shadow(radius: 6, x: 0, y: 4)
-            Image(currSpecies.favorite ? "heart_fill" : "heart")
-                .resizable()
-                .scaledToFit()
-        }
+        Button(action: {manager.currPanelSpecies = currSpecies}, label: {
+            ZStack {
+                Image("frame")
+                    .resizable()
+                    .scaledToFit()
+                let speciesImage = String(format: "%03d", currSpecies.speciesID)
+                Image(speciesImage)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+                Image(currSpecies.favorite ? "heart_fill" : "heart")
+                    .resizable()
+                    .scaledToFit()
+            }
+        })
     }
 }

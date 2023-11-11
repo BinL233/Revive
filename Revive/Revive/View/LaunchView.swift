@@ -10,7 +10,6 @@ import SwiftUI
 struct LaunchView: View {
     @State private var isActive = false
     @State private var isVisible = true
-    @Environment(ReviveManager.self) var manager
 
     var body: some View {
         ZStack {

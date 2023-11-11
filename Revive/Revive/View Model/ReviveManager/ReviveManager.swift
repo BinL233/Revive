@@ -23,12 +23,14 @@ class ReviveManager {
     var currHatchingState : CurrHatchingState
     var testMode : TestMode
     var standardMySpecies : [MySpecies]
+    var currPanelSpecies : MySpecies?
     
     init() {
         let localTimeRemaining : TimeInterval = 35 * 60
+        let localMySpecies = DataManager.shared.loadData()
         
         speciesList = Species.species ?? []
-        mySpecies = DataManager.shared.loadData()
+        mySpecies = localMySpecies
         currHatchingSpecies = nil
         currAction = .hatching
         currHatchingEgg = 1001
@@ -38,7 +40,8 @@ class ReviveManager {
         activeAlert = .none
         currHatchingState = .state1
         testMode = .off
-        standardMySpecies = [MySpecies(speciesID: 1, level: 1, height: 2.2, weight: 3.3, favorite: false), MySpecies(speciesID: 3, level: 2, height: 1.1, weight: 4.4, favorite: true)]
+        standardMySpecies = [MySpecies(speciesID: 1, level: 1, height: 2.2, weight: 3.3, favorite: false), MySpecies(speciesID: 3, level: 2, height: 1.1, weight: 4.4, favorite: true), MySpecies(speciesID: 5, level: 1, height: 2.2, weight: 3.3, favorite: false), MySpecies(speciesID: 7, level: 1, height: 2.2, weight: 3.3, favorite: false)]
+        currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
     }
     
     func test() {

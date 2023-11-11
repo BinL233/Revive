@@ -11,18 +11,6 @@ struct ActionButtons: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
-//        VStack {
-//            HStack {
-//                Spacer()
-//                Button {
-//                    <#code#>
-//                } label: {
-//                    Image(systemName: "questionmark.circle")
-//                        .font(.title2)
-//                        .foregroundStyle(Color.cBlack)
-//                }
-//
-//            }
         HStack {
             if ((manager.currAction == .hatching) || !manager.isTimerStart) {
                 Button(action: {
