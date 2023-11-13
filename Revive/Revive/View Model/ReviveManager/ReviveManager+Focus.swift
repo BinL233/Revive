@@ -68,7 +68,12 @@ extension ReviveManager {
         let randomHeight = Double.random(in: minHeight...maxHeight)
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
-        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false)
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateString = formatter.string(from: currentDate)
+        
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
     }

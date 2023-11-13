@@ -11,4 +11,12 @@ extension ReviveManager {
     func getSpecies(mySpecies: MySpecies) -> Species {
         return speciesList[mySpecies.speciesID-1]
     }
+    
+    func SpeciesFavorToggle(id: Int, date: String) {
+        for i in (0..<mySpecies.count) {
+            if mySpecies[i].hatchDate == date && mySpecies[i].speciesID == id {
+                mySpecies[i].favorite.toggle()
+            }
+        }
+    }
 }

@@ -49,6 +49,7 @@ struct SpeciesPanel: View {
                 
                 Button {
                     manager.currPanelSpecies?.favorite.toggle()
+                    manager.SpeciesFavorToggle(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? "")
                     if let currPS = manager.currPanelSpecies {
                         DataManager.shared.updateMySpeciesFavorite(for: currPS.speciesID, with: currPS.favorite, mySpecies: manager.mySpecies)
                     }

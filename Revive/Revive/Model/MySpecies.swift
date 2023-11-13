@@ -13,4 +13,5 @@ struct MySpecies {
     let height : Double
     let weight : Double
     var favorite : Bool
+    let hatchDate : String
 }
