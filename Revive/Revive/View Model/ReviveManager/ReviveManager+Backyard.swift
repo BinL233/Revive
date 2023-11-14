@@ -19,4 +19,13 @@ extension ReviveManager {
             }
         }
     }
+    
+    func getCurrPanelSpeciesTotalExp(id: Int, date: String) -> Int {
+        for i in (0..<mySpecies.count) {
+            if mySpecies[i].hatchDate == date && mySpecies[i].speciesID == id {
+                return 10 * 60 + (mySpecies[i].level-1) * 5 * 60
+            }
+        }
+        return 0
+    }
 }

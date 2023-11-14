@@ -30,6 +30,7 @@ class DataManager {
         entity.weight = customItem.weight
         entity.favorite = customItem.favorite
         entity.hatchDate = customItem.hatchDate
+        entity.currExp = Int32(customItem.currExp)
         
         do {
             try context.save()
@@ -46,7 +47,7 @@ class DataManager {
         do {
             print("Loading user data...")
             let entities = try context.fetch(fetchRequest)
-            return entities.map { MySpecies(speciesID: Int($0.speciesID), level: Int($0.level), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!)}
+            return entities.map { MySpecies(speciesID: Int($0.speciesID), level: Int($0.level), currExp: Int($0.currExp), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!)}
         } catch {
             print("Failed to fetch custom items: \(error)")
             return []

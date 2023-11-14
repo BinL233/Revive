@@ -45,6 +45,7 @@ struct SpeciesPanel: View {
                     }
 
                 }
+                
                 Spacer()
                 
                 Button {
@@ -68,13 +69,22 @@ struct SpeciesPanel: View {
                 }
 
             }
+            HStack {
+                Text("Exp:")
+                    .font(.system(size: 20))
+                    .italic()
+                    .bold()
+                    .foregroundStyle(Color.cBlackBrown)
+                Text(
+                    "\(manager.currPanelSpecies?.currExp ?? 0)/\(manager.getCurrPanelSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))"
+                )
+                .font(.system(size: 18))
+                .italic()
+                .bold()
+                .foregroundStyle(Color.cBlackBrown)
+            }
             SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
         }
         .padding()
     }
-}
-
-#Preview {
-    SpeciesPanel()
-        .environment(ReviveManager())
 }

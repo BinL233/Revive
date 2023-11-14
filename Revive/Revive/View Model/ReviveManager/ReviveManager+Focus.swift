@@ -73,7 +73,7 @@ extension ReviveManager {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateString = formatter.string(from: currentDate)
         
-        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
     }

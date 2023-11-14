@@ -22,8 +22,10 @@ struct FocusView: View {
                     ActionButtons()
                         .padding(.horizontal, 30)
                         .padding(.vertical, 10)
+
                     TimerModule()
                         .padding(.horizontal, 40)
+
                     StartButton()
                         .padding(.vertical, 50)
                         .padding(.bottom, 80)

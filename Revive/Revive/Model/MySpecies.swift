@@ -10,6 +10,7 @@ import Foundation
 struct MySpecies {
     let speciesID : Int
     var level : Int
+    var currExp : Int
     let height : Double
     let weight : Double
     var favorite : Bool

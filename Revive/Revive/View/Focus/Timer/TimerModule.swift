@@ -14,7 +14,12 @@ struct TimerModule: View {
     var body: some View {
         @Bindable var manager = manager
         VStack {
-            TimerSlider()
+            if !manager.isTimerStart {
+                TimerSlider()
+            } else {
+                ProgressBar(percent: CGFloat(manager.timeRemaining / Double(manager.selectedTime)))
+                    .animation(.spring, value: manager.timeRemaining)
+            }
             Text(manager.timeStringGetter())
                 .bold()
                 .italic()
@@ -22,7 +27,7 @@ struct TimerModule: View {
                 .foregroundStyle(Color.cBlackBrown)
                 .onReceive(timer, perform: { _ in
                     if manager.isTimerStart && manager.timeRemaining > 0 {
-                        manager.timeRemaining -= 1
+                        withAnimation{manager.timeRemaining -= 1}
                         if Int(manager.timeRemaining) == manager.selectedTime / 2 {
                             withAnimation{manager.changeToHatchingState2()}
                         } else if Int(manager.timeRemaining) == 0 {
