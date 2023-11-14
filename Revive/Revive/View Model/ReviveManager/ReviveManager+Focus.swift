@@ -76,5 +76,6 @@ extension ReviveManager {
         let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
+        currPanelSpecies = mySpecies[0]
     }
 }

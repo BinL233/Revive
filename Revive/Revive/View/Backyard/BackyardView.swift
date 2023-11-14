@@ -19,7 +19,7 @@ struct BackyardView: View {
                 SpeciesPanel()
                     .padding(.horizontal)
                     .padding(.top, 20)
-                    .padding(.bottom, 50)
+                    .padding(.bottom, 30)
                 SpeciesListView()
             }
         }

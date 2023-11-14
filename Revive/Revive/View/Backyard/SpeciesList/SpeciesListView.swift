@@ -21,20 +21,36 @@ struct SpeciesListView: View {
                     .bold()
                     .foregroundStyle(Color.cBlack)
             } else {
-                ScrollView {
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                        ForEach(manager.mySpecies.indices, id: \.self) { i in
-                            SpeciesListImage(currSpecies: $manager.mySpecies[i])
+                VStack (spacing: 0) {
+                    Picker("SpeciesOrItems", selection: $manager.speciesItemsSelection) {
+                        Text("Species").tag(SpeciesItems.Species)
+                        Text("Items").tag(SpeciesItems.Items)
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(5)
+                    .background(Color.cLightBrown)
+                    
+                    if manager.speciesItemsSelection == .Species {
+                        ScrollView {
+                            LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                                ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                    SpeciesListImage(currSpecies: $manager.mySpecies[i])
+                                }
+                            })
                         }
-                    })
+                        .background(Color.cDarkBrown)
+                    } else {
+                        ScrollView {
+                            LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                                ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                    SpeciesListImage(currSpecies: $manager.mySpecies[i])
+                                }
+                            })
+                        }
+                        .background(Color.cDarkBrown)
+                    }
                 }
-                .background(Color.cDarkBrown)
             }
         }
     }
-}
-
-#Preview {
-    SpeciesListView()
-        .environment(ReviveManager())
 }

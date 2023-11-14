@@ -24,6 +24,7 @@ class ReviveManager {
     var testMode : TestMode
     // var standardMySpecies : [MySpecies]
     var currPanelSpecies : MySpecies?
+    var speciesItemsSelection : SpeciesItems
     
     init() {
         let localTimeRemaining : TimeInterval = 35 * 60
@@ -42,6 +43,7 @@ class ReviveManager {
         testMode = .off
 //        standardMySpecies = [MySpecies(speciesID: 1, level: 1, height: 2.2, weight: 3.3, favorite: false, hatchDate: <#T##String#>), MySpecies(speciesID: 3, level: 2, height: 1.1, weight: 4.4, favorite: true), MySpecies(speciesID: 5, level: 1, height: 2.2, weight: 3.3, favorite: false), MySpecies(speciesID: 7, level: 1, height: 2.2, weight: 3.3, favorite: false)]
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        speciesItemsSelection = .Species
     }
     
     func test() {
