@@ -35,6 +35,7 @@ struct SpeciesExpBar: View {
                 .foregroundStyle(Color.cBlackBrown)
                 .onReceive(timer) { _ in
                     if manager.currTrainingState == .state2 {
+                        manager.isExpGain = false
                         if totalExp > 0 {
                             if manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp == manager.getCurrSpeciesTotalExp(id: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].speciesID, date: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].hatchDate) - 1 {
                                 manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp = 0
@@ -46,6 +47,7 @@ struct SpeciesExpBar: View {
                             }
                         } else {
                             timer.upstream.connect().cancel()
+                            manager.isExpGain = true
                         }
                     }
                  }

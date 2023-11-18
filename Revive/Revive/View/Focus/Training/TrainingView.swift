@@ -20,14 +20,22 @@ struct TrainingView: View {
                 .bold()
                 .foregroundStyle(Color.cBlack)
         } else {
-            ScrollView {
-                LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                    ForEach(manager.mySpecies.indices, id: \.self) { i in
-                        SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
-                    }
-                })
+            if manager.isTimerStart {
+                let speciesImage = String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0)
+                Image(speciesImage)
+                    .resizable()
+                    .scaledToFit()
+                    .padding(15)
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                        ForEach(manager.mySpecies.indices, id: \.self) { i in
+                            SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
+                        }
+                    })
+                }
+                .background(Color.cDarkBrown)
             }
-            .background(Color.cDarkBrown)
         }
     }
 }

@@ -27,6 +27,7 @@ class ReviveManager {
     var currPanelSpecies : MySpecies?
     var speciesItemsSelection : SpeciesItems
     var currTrainingSpecies : MySpecies?
+    var isExpGain : Bool
     
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
@@ -48,5 +49,7 @@ class ReviveManager {
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         speciesItemsSelection = .Species
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        isExpGain = false
+        //userNotificationCenter()
     }
 }

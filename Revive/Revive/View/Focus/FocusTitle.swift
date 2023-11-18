@@ -23,12 +23,22 @@ struct FocusTitle: View {
                     
                     manager.timeRemaining = 5
                 }
-        
-        Text("Focus")
-            .font(.custom("Georgia-Italic", size: 40))
-            .padding(15)
-            .bold()
-            .foregroundStyle(Color.cBlack)
-            .gesture(testM)
+        ZStack {
+            Text("Focus")
+                .font(.custom("Georgia-Italic", size: 40))
+                .padding(15)
+                .bold()
+                .foregroundStyle(Color.cBlack)
+                .gesture(testM)
+            HStack {
+                Spacer()
+                NavigationLink(destination: SettingView()) {
+                    Image(systemName: "gearshape")
+                        .font(.title2)
+                        .foregroundStyle(Color.cBlackBrown)
+                }
+            }
+            .padding(.horizontal, 20)
+        }
     }
 }
