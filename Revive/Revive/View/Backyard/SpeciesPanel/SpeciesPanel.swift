@@ -55,15 +55,9 @@ struct SpeciesPanel: View {
 //                                .bold()
 //                                .italic()
 //                                .foregroundStyle(Color.cBlackBrown)
-                            ZStack {
-                                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: CGFloat(Double(manager.currPanelSpecies?.currExp ?? 0)/Double(manager.getCurrSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))), widthPercent: 0.3)
-                                    Text(
-                                        "\(manager.currPanelSpecies?.currExp ?? 0)/\(manager.getCurrSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))"
-                                    )
-                                    .font(.caption)
-                                    .italic()
-                                    .bold()
-                                    .foregroundStyle(Color.cBlackBrown)
+                        
+                            if let speciesBinding = manager.nonOptionalBinding($manager.currPanelSpecies) {
+                                SpeciesExpBar(currModule: speciesBinding, totalExp: 0)
                             }
                         }
                     }

@@ -13,11 +13,20 @@ struct TimerModule: View {
     
     var body: some View {
         @Bindable var manager = manager
+        var percentBinding: Binding<CGFloat> {
+            Binding<CGFloat>(
+                get: {
+                    CGFloat(manager.timeRemaining / Double(manager.selectedTime))
+                },
+                set: { _ in }
+            )
+        }
+            
         VStack {
             if !manager.isTimerStart {
                 TimerSlider()
             } else {
-                ProgressBar(percent: CGFloat(manager.timeRemaining / Double(manager.selectedTime)))
+                ProgressBar(percent: percentBinding)
                     .animation(.spring, value: manager.timeRemaining)
                     .padding(5)
             }

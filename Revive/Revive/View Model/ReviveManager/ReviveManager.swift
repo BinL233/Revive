@@ -23,7 +23,7 @@ class ReviveManager {
     var currHatchingState : CurrHatchingState
     var currTrainingState : CurrTrainingState
     var testMode : TestMode
-    // var standardMySpecies : [MySpecies]
+    var standardMySpecies : [MySpecies]
     var currPanelSpecies : MySpecies?
     var speciesItemsSelection : SpeciesItems
     var currTrainingSpecies : MySpecies?
@@ -44,13 +44,9 @@ class ReviveManager {
         currHatchingState = .state1
         currTrainingState = .none
         testMode = .off
-//        standardMySpecies = [MySpecies(speciesID: 1, level: 1, height: 2.2, weight: 3.3, favorite: false, hatchDate: <#T##String#>), MySpecies(speciesID: 3, level: 2, height: 1.1, weight: 4.4, favorite: true), MySpecies(speciesID: 5, level: 1, height: 2.2, weight: 3.3, favorite: false), MySpecies(speciesID: 7, level: 1, height: 2.2, weight: 3.3, favorite: false)]
+        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: "")]
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         speciesItemsSelection = .Species
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
-    }
-    
-    func test() {
-        print("test")
     }
 }

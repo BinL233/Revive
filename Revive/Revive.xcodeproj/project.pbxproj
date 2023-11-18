@@ -11,6 +11,8 @@
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
 		B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */; };
 		B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34831992B03C82000545E46 /* SpeciesItems.swift */; };
+		B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D22B0927C200270661 /* ReviveManager+util.swift */; };
+		B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D42B09296400270661 /* SpeciesExpBar.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
 		B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC42AF5CE6700737872 /* ReviveManager.swift */; };
@@ -77,6 +79,8 @@
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
 		B31922192AFBED74000446B7 /* MySpeciesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpeciesModel.xcdatamodel; sourceTree = "<group>"; };
 		B34831992B03C82000545E46 /* SpeciesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesItems.swift; sourceTree = "<group>"; };
+		B349D5D22B0927C200270661 /* ReviveManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+util.swift"; sourceTree = "<group>"; };
+		B349D5D42B09296400270661 /* SpeciesExpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesExpBar.swift; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		B34F1BC42AF5CE6700737872 /* ReviveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveManager.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
 				B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */,
 				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
+				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			children = (
 				B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */,
 				B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */,
+				B349D5D42B09296400270661 /* SpeciesExpBar.swift */,
 			);
 			path = SpeciesPanel;
 			sourceTree = "<group>";
@@ -490,11 +496,13 @@
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
 				B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */,
+				B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */,
 				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,

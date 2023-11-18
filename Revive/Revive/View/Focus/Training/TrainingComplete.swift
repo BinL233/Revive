@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TrainingComplete: View {
     @Environment(ReviveManager.self) var manager
+    
     var body: some View {
+        @Bindable var manager = manager
         ZStack {
             Color.init(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 18))
@@ -35,12 +37,16 @@ struct TrainingComplete: View {
                             .bold()
                             .foregroundStyle(Color.cBlackBrown)
                         
-                        Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")].level)")
-                            .font(.title)
-                            .italic()
-                            .bold()
-                            .foregroundStyle(Color.cBlackBrown)
+                        withAnimation(.bouncy){ Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")].level)")
+                                .font(.title)
+                                .italic()
+                                .bold()
+                                .foregroundStyle(Color.cBlackBrown)
+                        }
                     }
+                    
+                    let intValue = manager.testMode == .on ? Int($manager.selectedTime.wrappedValue) * 100 : Int($manager.selectedTime.wrappedValue)
+                    SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue)
                     
                     Image(speciesImage)
                         .resizable()

@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressBar: View {
     var color1 = Color.cBlackBrown
     var color2 = Color.cDarkOrange
-    var percent : CGFloat = 0.8
+    @Binding var percent : CGFloat
     var widthPercent : CGFloat = 0.8
     var body: some View {
         ZStack(alignment: .leading) {
@@ -26,8 +26,4 @@ struct ProgressBar: View {
                 .foregroundStyle(.clear)
         }
     }
-}
-
-#Preview {
-    ProgressBar()
 }

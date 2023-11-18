@@ -70,7 +70,6 @@ extension ReviveManager {
 
         while totalExp > 0 {
             let levelExp = getCurrSpeciesTotalExp(id: myspecies.speciesID, date: myspecies.hatchDate)
-            print(levelExp, totalExp, currExp)
             if totalExp >= levelExp - currExp {
                 totalExp -= levelExp - currExp
                 currExp = 0
@@ -99,12 +98,13 @@ extension ReviveManager {
     
     func changeToTrainingState2(id: Int, date: String, currExp: Int, levelUpNum: Int) {
         currTrainingState = .state2
-        let idx = getSpeciesIndex(id: id, date: date)
-        mySpecies[idx].currExp = currExp
-        mySpecies[idx].level += levelUpNum
-        currPanelSpecies = mySpecies[0]
-        DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
-        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
+//        let idx = self.getSpeciesIndex(id: id, date: date)
+//        self.mySpecies[idx].currExp = currExp
+//        self.mySpecies[idx].level += levelUpNum
+        self.currPanelSpecies = self.mySpecies[0]
+        // self.currTrainingSpecies = self.mySpecies[0]
+        DataManager.shared.updateMySpeciesLevel(for: id, with: self.currTrainingSpecies!.level + levelUpNum, mySpecies: self.mySpecies)
+        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: self.mySpecies)
     }
     
     // Hatching State Change
