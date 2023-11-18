@@ -50,15 +50,15 @@ struct SpeciesPanel: View {
                     Spacer()
                     HStack {
                         if manager.currPanelSpecies != nil {
-                            Text("Exp:")
-                                .font(.title3)
-                                .bold()
-                                .italic()
-                                .foregroundStyle(Color.cBlackBrown)
+//                            Text("Exp:")
+//                                .font(.title3)
+//                                .bold()
+//                                .italic()
+//                                .foregroundStyle(Color.cBlackBrown)
                             ZStack {
-                                    ProgressBar(color1: .orange, color2: .orange, percent: CGFloat(manager.currPanelSpecies?.currExp ?? 0 / manager.getCurrPanelSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 1, date: manager.currPanelSpecies?.hatchDate ?? "")), widthPercent: 0.3)
+                                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: CGFloat(Double(manager.currPanelSpecies?.currExp ?? 0)/Double(manager.getCurrSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))), widthPercent: 0.3)
                                     Text(
-                                        "\(manager.currPanelSpecies?.currExp ?? 0)/\(manager.getCurrPanelSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))"
+                                        "\(manager.currPanelSpecies?.currExp ?? 0)/\(manager.getCurrSpeciesTotalExp(id: manager.currPanelSpecies?.speciesID ?? 0, date: manager.currPanelSpecies?.hatchDate ?? ""))"
                                     )
                                     .font(.caption)
                                     .italic()

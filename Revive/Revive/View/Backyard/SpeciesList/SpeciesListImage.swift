@@ -10,11 +10,12 @@ import SwiftUI
 struct SpeciesListImage: View {
     @Environment(ReviveManager.self) var manager
     @Binding var currSpecies : MySpecies
+    @Binding var currModule : MySpecies?
     
     var body: some View {
-        Button(action: {manager.currPanelSpecies = currSpecies}, label: {
+        Button(action: {currModule = currSpecies}, label: {
             ZStack {
-                if manager.currPanelSpecies == currSpecies {
+                if currModule == currSpecies {
                     Image("frame_selected")
                         .resizable()
                         .scaledToFit()
@@ -29,7 +30,7 @@ struct SpeciesListImage: View {
                     .resizable()
                     .scaledToFit()
                     .padding(15)
-                if manager.currPanelSpecies == currSpecies {
+                if currModule == currSpecies {
                     Image(currSpecies.favorite ? "heart_fill_selected" : "heart_selected")
                         .resizable()
                         .scaledToFit()

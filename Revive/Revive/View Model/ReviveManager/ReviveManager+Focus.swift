@@ -29,8 +29,10 @@ extension ReviveManager {
         // Need to be improved
         var randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
         while true {
-            if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].stage == 1 {
-                break
+            if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].stage == 1{
+                if testMode == .on || speciesList[currRaritySpeciesIDs[randomSpecies] - 1].hatchTime*60 >= selectedTime {
+                    break
+                }
             }
             randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
         }
@@ -38,13 +40,74 @@ extension ReviveManager {
         return speciesList[currRaritySpeciesIDs[randomSpecies] - 1]
     }
     
+//    private func trainSpecies() {
+//        var species = currTrainingSpecies
+//        
+//    }
+//    
     func hatchingStartButton() -> Species {
         return getRandomHatchingSpecies()
     }
     
-    func trainingStartButton() {
+    func getSpeciesIndex(id: Int, date: String) -> Int {
+        for i in 0..<mySpecies.count {
+            if mySpecies[i].speciesID == id && mySpecies[i].hatchDate == date {
+                return i
+            }
+        }
         
+        return -1
     }
+    
+    func getLevelUpNum(species: MySpecies) -> (Int, Int) {
+        let myspecies = mySpecies[getSpeciesIndex(id: species.speciesID, date: species.hatchDate)]
+        var totalExp = selectedTime
+        if testMode == .on {
+            totalExp = selectedTime * 100
+        }
+        var currExp = myspecies.currExp
+        var num = 0
+
+        while totalExp > 0 {
+            let levelExp = getCurrSpeciesTotalExp(id: myspecies.speciesID, date: myspecies.hatchDate)
+            print(levelExp, totalExp, currExp)
+            if totalExp >= levelExp - currExp {
+                totalExp -= levelExp - currExp
+                currExp = 0
+                num += 1
+            } else {
+                currExp = currExp + totalExp
+                break
+            }
+        }
+        
+        return (num, currExp)
+    }
+    
+    // Training State Change
+    
+    func changeToTrainingState1() {
+        currTrainingState = .state1
+        isTimerStart.toggle()
+        if testMode == .off {
+            timeRemaining = 30 * 60
+        } else {
+            timeRemaining = 5
+        }
+        activeAlert = .none
+    }
+    
+    func changeToTrainingState2(id: Int, date: String, currExp: Int, levelUpNum: Int) {
+        currTrainingState = .state2
+        let idx = getSpeciesIndex(id: id, date: date)
+        mySpecies[idx].currExp = currExp
+        mySpecies[idx].level += levelUpNum
+        currPanelSpecies = mySpecies[0]
+        DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
+    }
+    
+    // Hatching State Change
     
     func changeToHatchingState1() {
         currHatchingState = .state1

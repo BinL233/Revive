@@ -19,6 +19,7 @@ struct TimerModule: View {
             } else {
                 ProgressBar(percent: CGFloat(manager.timeRemaining / Double(manager.selectedTime)))
                     .animation(.spring, value: manager.timeRemaining)
+                    .padding(5)
             }
             Text(manager.timeStringGetter())
                 .bold()
@@ -35,6 +36,11 @@ struct TimerModule: View {
                                 withAnimation{manager.changeToHatchingState2()}
                             } else if Int(manager.timeRemaining) == 0 {
                                 withAnimation{manager.changeToHatchingState3()}
+                            }
+                        } else if manager.currAction == .training {
+                            if Int(manager.timeRemaining) == 0 {
+                                let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!)
+                                withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
                             }
                         }
                     }

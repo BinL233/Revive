@@ -76,6 +76,28 @@ class DataManager {
         }
     }
     
+    func updateMySpeciesCurrExp(for speciesID: Int, with newData: Int, mySpecies: [MySpecies]) {
+        var data = mySpecies
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+            data[index].currExp = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.currExp = Int32(newData)
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
+        }
+    }
+    
     func updateMySpeciesFavorite(for speciesID: Int, with newData: Bool, mySpecies: [MySpecies]) {
         var data = mySpecies
         if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {

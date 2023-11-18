@@ -28,7 +28,7 @@ struct FocusView: View {
 
                     StartButton()
                         .padding(.vertical, 50)
-                        .padding(.bottom, 80)
+                        .padding(.bottom, 50)
                 }
                 
                 // For hatching
@@ -37,6 +37,13 @@ struct FocusView: View {
                         HatchingComplete()
                             .transition(.scale)
                     }
+                } else if manager.currAction == .training {
+                    if manager.currTrainingState == .state2 {
+                        TrainingComplete()
+                            .transition(.scale)
+                    }
+                } else {
+                    
                 }
             }
         }

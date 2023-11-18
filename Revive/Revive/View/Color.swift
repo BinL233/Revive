@@ -16,4 +16,5 @@ extension Color {
     static let cDarkOrange = Color(red: 0.7255, green: 0.5843, blue: 0.4824)
     static let cDarkBrown = Color(red: 0.6627, green: 0.4549, blue: 0.2824)
     static let cBlackBrown = Color(red: 0.3059, green: 0.1961, blue: 0.1137)
+    static let cYellow = Color(red: 0.9020, green: 0.7069, blue: 0.1533)
 }

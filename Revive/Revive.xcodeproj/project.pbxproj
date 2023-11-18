@@ -48,6 +48,8 @@
 		B3C774362ACD151600387FDC /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774352ACD151500387FDC /* StartButton.swift */; };
 		B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */; };
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
+		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
+		B3E1B94C2B085C3700AD7AA7 /* CurrTrainingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
 		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
 		B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */; };
@@ -116,6 +118,8 @@
 		B3C774352ACD151500387FDC /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
+		B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrTrainingState.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
 		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
 		B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelImage.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */,
 				B317C5822AFE6B150076BE33 /* TestMode.swift */,
 				B34831992B03C82000545E46 /* SpeciesItems.swift */,
+				B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */,
+				B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 			files = (
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
+				B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
@@ -497,6 +504,7 @@
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
+				B3E1B94C2B085C3700AD7AA7 /* CurrTrainingState.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */,

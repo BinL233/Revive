@@ -13,20 +13,33 @@ struct StartButton: View {
     var body: some View {
         @Bindable var manager = manager
         
+        var alertMessage : Text {
+            if manager.currAction == .hatching {
+                return Text("You will fail to hatch this Species.")
+            } else if manager.currAction == .training {
+                return Text("You will fail to train this Species.")
+            } else {
+                return Text("You will fail to explore.")
+            }
+        }
+        
         Button(action: {
             if manager.isTimerStart {
                 manager.activeAlert = .stop
             } else {
                 withAnimation{
-                    manager.isTimerStart.toggle()
-                    
                     // For Hatching
                     if manager.currAction == .hatching {
+                        manager.isTimerStart.toggle()
+                        manager.currTrainingState = .none
                         manager.currHatchingSpecies = manager.hatchingStartButton()
                     } else {
                         // For Training
-                        manager.currHatchingState = .none
-                        manager.trainingStartButton()
+                        if manager.currTrainingSpecies != nil {
+                            manager.isTimerStart.toggle()
+                            manager.currHatchingState = .none
+                            manager.currTrainingState = .state1
+                        }
                     }
                     
                 }
@@ -55,16 +68,17 @@ struct StartButton: View {
             case .stop:
                 return Alert(
                     title: Text("Are you sure?"),
-                    message: 
-                        if manager.currAction == .hatching {
-                            Text("You will fail to hatch this Species."),
-                        } else if manager.currAction == .training {
-                            Text("You will fail to train this Species."),
-                        } else {
-                            Text("You will fail to explore."),
-                        }
+                    message: alertMessage,
                     primaryButton: .destructive(Text("Confirm")) {
-                        withAnimation{manager.changeToHatchingState1()}
+                        withAnimation{
+                            if manager.currAction == .hatching {
+                                manager.changeToHatchingState1()
+                            } else if manager.currAction == .training {
+                                manager.changeToTrainingState1()
+                            } else {
+                                
+                            }
+                        }
                     },
                     secondaryButton: .cancel() {
                         manager.activeAlert = .none
