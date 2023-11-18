@@ -31,9 +31,12 @@ struct FocusView: View {
                         .padding(.bottom, 80)
                 }
                 
-                if manager.currHatchingState == .state3 {
-                    HatchingComplete()
-                        .transition(.scale)
+                // For hatching
+                if manager.currAction == .hatching {
+                    if manager.currHatchingState == .state3 {
+                        HatchingComplete()
+                            .transition(.scale)
+                    }
                 }
             }
         }

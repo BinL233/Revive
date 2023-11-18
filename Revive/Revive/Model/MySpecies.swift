@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MySpecies {
+struct MySpecies : Equatable {
     let speciesID : Int
     var level : Int
     var currExp : Int

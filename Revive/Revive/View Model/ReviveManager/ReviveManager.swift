@@ -27,7 +27,7 @@ class ReviveManager {
     var speciesItemsSelection : SpeciesItems
     
     init() {
-        let localTimeRemaining : TimeInterval = 35 * 60
+        let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
         
         speciesList = Species.species ?? []

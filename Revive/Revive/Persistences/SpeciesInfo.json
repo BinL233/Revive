@@ -3,25 +3,27 @@
         "name": "Walk Whale",
         "id": 1,
         "stage": 1,
-        "rarity": "SR",
-        "hatch_time": 120,
+        "rarity": "R",
+        "hatch_time": 30,
         "evolve_at": 35,
         "height": {"S": 0.4, "M": 0.5, "L": 0.6, "offset": 0.05},
         "weight": {"S": 75, "M": 95, "L": 115, "offset": 10},
+        "type": 3,
         "era": "Early Eocene",
-        "egg": 1201
+        "egg": 1103
     },
-
+ 
     {
         "name": "Walk Whale",
         "id": 2,
         "stage": 2,
-        "rarity": "SR",
-        "hatch_time": 120,
+        "rarity": "R",
+        "hatch_time": 30,
         "height": {"S": 0.8, "M": 1, "L": 1.2, "offset": 0.1},
         "weight": {"S": 150, "M": 190, "L": 230, "offset": 20},
+        "type": 3,
         "era": "Early Eocene",
-        "egg": 1201
+        "egg": 1103
     },
 
     {
@@ -34,6 +36,7 @@
         "life_span": [20, 40],
         "height": {"S": 0.5, "M": 0.65, "L": 0.8, "offset": 0.1},
         "weight": {"S": 90, "M": 115, "L": 140, "offset": 12.5},
+        "type": 2,
         "era": "Pleistocene Epoch",
         "egg": 1104
     },
@@ -47,6 +50,7 @@
         "life_span": [20, 40],
         "height": {"S": 1, "M": 1.3, "L": 1.6, "offset": 0.2},
         "weight": {"S": 180, "M": 230, "L": 280, "offset": 25},
+        "type": 2,
         "era": "Pleistocene Epoch",
         "egg": 1104
     },
@@ -61,6 +65,7 @@
         "life_span": [60],
         "height": {"S": 1.5, "M": 2, "L": 2.5, "offset": 0.25},
         "weight": {"S": 3000, "M": 3500, "L": 4000, "offset": 250},
+        "type": 1,
         "era": "Ice Age",
         "egg": 1104
     },
@@ -74,6 +79,7 @@
         "life_span": [60],
         "height": {"S": 3, "M": 4, "L": 5, "offset": 0.5},
         "weight": {"S": 6000, "M": 7000, "L": 8000, "offset": 500},
+        "type": 1,
         "era": "Ice Age",
         "egg": 1104
     },
@@ -88,6 +94,7 @@
         "life_span": [28],
         "height": {"S": 1.5, "M": 2.5, "L": 3.5, "offset": 0.5},
         "weight": {"S": 3000, "M": 3750, "L": 4500, "offset": 250},
+        "type": 2,
         "era": "Cretaceous",
         "egg": 1101
     },
@@ -101,6 +108,7 @@
         "life_span": [28],
         "height": {"S": 3, "M": 5, "L": 7, "offset": 1},
         "weight": {"S": 6000, "M": 7500, "L": 9000, "offset": 500},
+        "type": 2,
         "era": "Cretaceous",
         "egg": 1101
     },
@@ -111,9 +119,11 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [10, 30],
         "height": {"S": 0.4, "M": 0.5, "L": 0.6, "offset": 0.05},
         "weight": {"S": 2, "M": 3, "L": 4, "offset": 0.5},
+        "type": 2,
         "era": "15th century",
         "egg": 1103
     },
@@ -127,6 +137,7 @@
         "life_span": [10, 30],
         "height": {"S": 0.8, "M": 1, "L": 1.2, "offset": 0.1},
         "weight": {"S": 4, "M": 6, "L": 8, "offset": 1},
+        "type": 2,
         "era": "15th century",
         "egg": 1103
     },
@@ -140,7 +151,121 @@
         "life_span": [12],
         "height": {"S": 0.04, "M": 0.05, "L": 0.06, "offset": 0},
         "weight": {"S": 0.02, "M": 0.03, "L": 0.04, "offset": 0},
+        "type": 2,
         "era": "19th century",
         "egg": 1102
+    },
+
+    {
+        "name": "Triceratops",
+        "id": 12,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [80, 90],
+        "height": {"S": 1.25, "M": 1.4, "L":1.55, "offset": 0.05},
+        "weight": {"S": 3000, "M": 4500, "L": 6000, "offset": 750},
+        "type": 1,
+        "era": "Cretaceous",
+        "egg": 1103
+    },
+
+    {
+        "name": "Triceratops",
+        "id": 13,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [80, 90],
+        "height": {"S": 2.5, "M": 2.8, "L": 3.1, "offset": 0.1},
+        "weight": {"S": 6000, "M": 9000, "L": 12000, "offset": 1500},
+        "type": 1,
+        "era": "Cretaceous",
+        "egg": 1103
+    },
+
+    {
+        "name": "Pterosaur",
+        "id": 14,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [25],
+        "height": {"S": 0.4, "M": 0.5, "L": 0.6, "offset": 0},
+        "weight": {"S": 1, "M": 2, "L": 3, "offset": 0},
+        "type": 2,
+        "era": "Mesozoic",
+        "egg": 1102
+    },
+
+    {
+        "name": "Pterosaur",
+        "id": 15,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [25],
+        "height": {"S": 0.8, "M": 1.0, "L": 1.2, "offset": 0},
+        "weight": {"S": 2, "M": 4, "L": 6, "offset": 0},
+        "type": 2,
+        "era": "Mesozoic",
+        "egg": 1102
+    },
+
+    {
+        "name": "Quagga",
+        "id": 16,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [22],
+        "height": {"S": 0.5, "M": 0.6, "L": 0.7, "offset": 0},
+        "weight": {"S": 125, "M": 140, "L": 155, "offset": 0},
+        "type": 1,
+        "era": "19th century",
+        "egg": 1104
+    },
+
+    {
+        "name": "Quagga",
+        "id": 17,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [22],
+        "height": {"S": 1.0, "M": 1.2, "L": 1.4, "offset": 0},
+        "weight": {"S": 250, "M": 280, "L": 310, "offset": 0},
+        "type": 1,
+        "era": "19th century",
+        "egg": 1104
+    },
+
+    {
+        "name": "Stegosaurus",
+        "id": 18,
+        "stage": 1,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": [30, 50],
+        "height": {"S": 1, "M": 2, "L": 3, "offset": 0.2},
+        "weight": {"S": 1500, "M": 2500, "L": 3500, "offset": 250},
+        "type": 1,
+        "era": "Jurassic",
+        "egg": 1201
+    },
+
+    {
+        "name": "Stegosaurus",
+        "id": 19,
+        "stage": 2,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": [30, 50],
+        "height": {"S": 2, "M": 4, "L": 6, "offset": 0.5},
+        "weight": {"S": 3000, "M": 5000, "L": 7000, "offset": 500},
+        "type": 1,
+        "era": "Jurassic",
+        "egg": 1201
     }
 ]

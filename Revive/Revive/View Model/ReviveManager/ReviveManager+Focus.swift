@@ -42,11 +42,15 @@ extension ReviveManager {
         return getRandomHatchingSpecies()
     }
     
+    func trainingStartButton() {
+        
+    }
+    
     func changeToHatchingState1() {
         currHatchingState = .state1
         isTimerStart.toggle()
         if testMode == .off {
-            timeRemaining = 35 * 60
+            timeRemaining = 30 * 60
         } else {
             timeRemaining = 5
         }

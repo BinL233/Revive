@@ -19,7 +19,16 @@ struct StartButton: View {
             } else {
                 withAnimation{
                     manager.isTimerStart.toggle()
-                    manager.currHatchingSpecies = manager.hatchingStartButton()
+                    
+                    // For Hatching
+                    if manager.currAction == .hatching {
+                        manager.currHatchingSpecies = manager.hatchingStartButton()
+                    } else {
+                        // For Training
+                        manager.currHatchingState = .none
+                        manager.trainingStartButton()
+                    }
+                    
                 }
                 manager.selectedTime = Int(manager.timeRemaining)
             }
@@ -46,7 +55,14 @@ struct StartButton: View {
             case .stop:
                 return Alert(
                     title: Text("Are you sure?"),
-                    message: Text("You will fail to hatch this Species."),
+                    message: 
+                        if manager.currAction == .hatching {
+                            Text("You will fail to hatch this Species."),
+                        } else if manager.currAction == .training {
+                            Text("You will fail to train this Species."),
+                        } else {
+                            Text("You will fail to explore."),
+                        }
                     primaryButton: .destructive(Text("Confirm")) {
                         withAnimation{manager.changeToHatchingState1()}
                     },

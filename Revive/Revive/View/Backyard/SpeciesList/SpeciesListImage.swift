@@ -14,17 +14,30 @@ struct SpeciesListImage: View {
     var body: some View {
         Button(action: {manager.currPanelSpecies = currSpecies}, label: {
             ZStack {
-                Image("frame")
-                    .resizable()
-                    .scaledToFit()
+                if manager.currPanelSpecies == currSpecies {
+                    Image("frame_selected")
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    Image("frame")
+                        .resizable()
+                        .scaledToFit()
+                }
+
                 let speciesImage = String(format: "%03d", currSpecies.speciesID)
                 Image(speciesImage)
                     .resizable()
                     .scaledToFit()
-                    .padding(10)
-                Image(currSpecies.favorite ? "heart_fill" : "heart")
-                    .resizable()
-                    .scaledToFit()
+                    .padding(15)
+                if manager.currPanelSpecies == currSpecies {
+                    Image(currSpecies.favorite ? "heart_fill_selected" : "heart_selected")
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    Image(currSpecies.favorite ? "heart_fill" : "heart")
+                        .resizable()
+                        .scaledToFit()
+                }
             }
         })
     }

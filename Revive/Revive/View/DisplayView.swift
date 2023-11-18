@@ -15,7 +15,9 @@ struct DisplayView: View {
             if manager.currAction == .hatching {
                 HatchingView()
             } else if manager.currAction == .training {
-                
+                TrainingView()
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .padding(.horizontal)
             } else {
                 
             }
