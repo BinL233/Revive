@@ -105,6 +105,11 @@ extension ReviveManager {
 //        self.mySpecies[idx].level += levelUpNum
         DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
         DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
+        
+        totalTrainingTime += selectedTime
+        totalTime += selectedTime
+        UserDefaults.standard.set(totalTrainingTime, forKey: "TotalTrainingTime")
+        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
     }
     
     // Hatching State Change
@@ -141,6 +146,23 @@ extension ReviveManager {
         let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
+        
+        totalHatchingTime += selectedTime
+        totalTime += selectedTime
+        numOfSpecies += 1
+        
+        if getSpecies(mySpecies: currS).rarity == "R" {
+            numOfRSpecies += 1
+            UserDefaults.standard.set(numOfRSpecies, forKey: "NumOfRSpecies")
+        } else if getSpecies(mySpecies: currS).rarity == "SR" {
+            numOfSRSpecies += 1
+            UserDefaults.standard.set(numOfSRSpecies, forKey: "NumOfSRSpecies")
+        }
+        
+        UserDefaults.standard.set(totalHatchingTime, forKey: "TotalHatchingTime")
+        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        UserDefaults.standard.set(numOfSpecies, forKey: "NumOfSpecies")
+        
         currPanelSpecies = mySpecies[0]
     }
 }

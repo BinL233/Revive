@@ -44,6 +44,7 @@ struct ReminderSetting: View {
                                             isTimerSelectorShow.toggle()
                                             manager.reminderTime = manager.dateToString(date: selectedTime, format: "HH:mm")
                                             UserDefaults.standard.set(manager.reminderTime, forKey: "ReminderTime")
+                                            manager.addNotification(title: "Revive Reminder", subtitle: "Let's focus right now!", date: selectedTime)
                                         }
                                     }
                                 }

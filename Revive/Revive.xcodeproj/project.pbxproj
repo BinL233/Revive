@@ -18,6 +18,9 @@
 		B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5DD2B09593A00270661 /* FocusSetting.swift */; };
 		B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5DF2B09598C00270661 /* ReminderSetting.swift */; };
 		B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */; };
+		B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E42B09894F00270661 /* AnalysisView.swift */; };
+		B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E62B098B6700270661 /* AnalysisDetails.swift */; };
+		B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E82B0996F500270661 /* AnalysisTitle.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
 		B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC42AF5CE6700737872 /* ReviveManager.swift */; };
@@ -91,6 +94,9 @@
 		B349D5DD2B09593A00270661 /* FocusSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSetting.swift; sourceTree = "<group>"; };
 		B349D5DF2B09598C00270661 /* ReminderSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSetting.swift; sourceTree = "<group>"; };
 		B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Setting.swift"; sourceTree = "<group>"; };
+		B349D5E42B09894F00270661 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		B349D5E62B098B6700270661 /* AnalysisDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDetails.swift; sourceTree = "<group>"; };
+		B349D5E82B0996F500270661 /* AnalysisTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTitle.swift; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		B34F1BC42AF5CE6700737872 /* ReviveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveManager.swift; sourceTree = "<group>"; };
@@ -172,6 +178,16 @@
 				B349D5DF2B09598C00270661 /* ReminderSetting.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		B349D5E32B09892700270661 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				B349D5E62B098B6700270661 /* AnalysisDetails.swift */,
+				B349D5E42B09894F00270661 /* AnalysisView.swift */,
+				B349D5E82B0996F500270661 /* AnalysisTitle.swift */,
+			);
+			path = Analysis;
 			sourceTree = "<group>";
 		};
 		B34F1BB92AF5C27B00737872 /* Persistences */ = {
@@ -333,6 +349,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B349D5E32B09892700270661 /* Analysis */,
 				B349D5D62B09509700270661 /* Setting */,
 				B3629B002AFDDD6300F3D135 /* Backyard */,
 				B3C7742A2ACD044F00387FDC /* Focus */,
@@ -514,6 +531,7 @@
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
 				B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */,
+				B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */,
 				B349D5D82B0950A900270661 /* SettingView.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
@@ -552,8 +570,10 @@
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
 				B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */,
+				B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */,
 				B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */,
 				B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */,
+				B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,

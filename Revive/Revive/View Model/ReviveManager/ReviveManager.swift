@@ -34,6 +34,16 @@ class ReviveManager {
     var reminderOn : Bool
     var reminderTime : String
     
+    var totalTime : Int
+    var totalHatchingTime : Int
+    var totalTrainingTime : Int
+    var totalExploringTime : Int
+    var numOfSpecies : Int
+    var numOfRSpecies : Int
+    var numOfSRSpecies : Int
+    var numOfItems : Int
+    var numOfCoins : Int
+    
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
@@ -59,6 +69,16 @@ class ReviveManager {
         keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")
         reminderOn = UserDefaults.standard.bool(forKey: "isRemindOn")
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
+        
+        totalTime = UserDefaults.standard.integer(forKey: "TotalTime")
+        totalHatchingTime = UserDefaults.standard.integer(forKey: "TotalHatchingTime")
+        totalTrainingTime = UserDefaults.standard.integer(forKey: "TotalTrainingTime")
+        totalExploringTime = UserDefaults.standard.integer(forKey: "TotalExploringTime")
+        numOfSpecies = UserDefaults.standard.integer(forKey: "NumOfSpecies")
+        numOfRSpecies = UserDefaults.standard.integer(forKey: "NumOfRSpecies")
+        numOfSRSpecies = UserDefaults.standard.integer(forKey: "NumOfSRSpecies")
+        numOfItems = UserDefaults.standard.integer(forKey: "NumOfItems")
+        numOfCoins = UserDefaults.standard.integer(forKey: "NumOfCoins")
         
         userNotificationCenter()
     }

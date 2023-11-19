@@ -33,7 +33,7 @@ struct MainTabView: View {
                     }
                     .tag("focus")
                 
-                Text("Analysis")
+                AnalysisView()
                     .tabItem {
                         Image(systemName: "chart.line.uptrend.xyaxis")
                         Text("Analysis")

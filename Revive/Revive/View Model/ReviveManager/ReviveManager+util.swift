@@ -39,4 +39,17 @@ extension ReviveManager {
         return formatter.string(from: date)
         
     }
+    
+    func secTimeToString(time: Int) -> String {
+        let time = time
+        var hour : Int = 0
+        var min : Int = 0
+        var sec : Int = 0
+        
+        hour = time / 3600
+        min = time % 3600 / 60
+        sec = time % 60
+        
+        return String(hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
+    }
 }

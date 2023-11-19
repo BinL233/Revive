@@ -19,15 +19,22 @@ extension ReviveManager {
         }
     }
     
-    func addNotification(title: String, subtitle: String) {
+    func addNotification(title: String, subtitle: String, date: Date) {
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = subtitle
         content.sound = UNNotificationSound.default
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute], from: date)
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
-        UNUserNotificationCenter.current().add(request)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
     }
 }

@@ -13,9 +13,13 @@ struct SettingView: View {
     var body: some View {
         @Bindable var manager = manager
         NavigationStack {
-            Form {
-                FocusSetting()
-                ReminderSetting()
+            ZStack {
+                Background()
+                Form {
+                    FocusSetting()
+                    ReminderSetting()
+                }
+                .scrollContentBackground(.hidden)
             }
         }
     }
