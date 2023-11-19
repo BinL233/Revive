@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct FocusSetting: View {
-    @State var keepDisplay : Bool
+    @Environment(ReviveManager.self) var manager
     
     var body: some View {
+        @Bindable var manager = manager
         Section {
             List {
                 HStack {
                     Text("Keep Screen On")
                     Spacer()
-                    Toggle("", isOn: $keepDisplay)
+                    Toggle("", isOn: $manager.keepDisplay)
                         .labelsHidden()
+                        .onChange(of: manager.keepDisplay) { oldValue, newValue in
+                            UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
+                            manager.setDisplay()
+                        }
                 }
             }
         } header: {

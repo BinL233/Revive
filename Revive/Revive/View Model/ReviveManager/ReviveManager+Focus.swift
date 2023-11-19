@@ -87,6 +87,8 @@ extension ReviveManager {
     
     func changeToTrainingState1() {
         currTrainingState = .state1
+        currPanelSpecies = mySpecies[0]
+        currTrainingSpecies = mySpecies[0]
         isTimerStart.toggle()
         if testMode == .off {
             timeRemaining = 30 * 60
@@ -101,10 +103,8 @@ extension ReviveManager {
 //        let idx = self.getSpeciesIndex(id: id, date: date)
 //        self.mySpecies[idx].currExp = currExp
 //        self.mySpecies[idx].level += levelUpNum
-        self.currPanelSpecies = self.mySpecies[0]
-        // self.currTrainingSpecies = self.mySpecies[0]
-        DataManager.shared.updateMySpeciesLevel(for: id, with: self.currTrainingSpecies!.level + levelUpNum, mySpecies: self.mySpecies)
-        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: self.mySpecies)
+        DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
     }
     
     // Hatching State Change
@@ -136,9 +136,7 @@ extension ReviveManager {
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
         let currentDate = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateString = formatter.string(from: currentDate)
+        let dateString = dateToString(date: currentDate, format: "yyyy-MM-dd HH:mm:ss")
         
         let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
         mySpecies.append(currS)

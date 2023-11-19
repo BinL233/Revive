@@ -17,6 +17,7 @@
 		B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D92B09541900270661 /* ReviveManager+Notification.swift */; };
 		B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5DD2B09593A00270661 /* FocusSetting.swift */; };
 		B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5DF2B09598C00270661 /* ReminderSetting.swift */; };
+		B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
 		B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC42AF5CE6700737872 /* ReviveManager.swift */; };
@@ -89,6 +90,7 @@
 		B349D5D92B09541900270661 /* ReviveManager+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Notification.swift"; sourceTree = "<group>"; };
 		B349D5DD2B09593A00270661 /* FocusSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSetting.swift; sourceTree = "<group>"; };
 		B349D5DF2B09598C00270661 /* ReminderSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSetting.swift; sourceTree = "<group>"; };
+		B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Setting.swift"; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		B34F1BC42AF5CE6700737872 /* ReviveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveManager.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
 				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 				B349D5D92B09541900270661 /* ReviveManager+Notification.swift */,
+				B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,

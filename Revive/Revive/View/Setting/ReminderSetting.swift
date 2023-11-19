@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct ReminderSetting: View {
-    @State var reminderOn : Bool
-    @State var reminderTime : String
+    @Environment(ReviveManager.self) var manager
     @State private var selectedTime = Date()
     @State private var isTimerSelectorShow : Bool = false
     
     var body: some View {
+        @Bindable var manager = manager
         Section {
             List {
                 HStack {
                     Text("Reminder Notification")
                     Spacer()
-                    Toggle("", isOn: $reminderOn)
+                    Toggle("", isOn: $manager.reminderOn)
                         .labelsHidden()
+                        .onChange(of: manager.reminderOn) { oldValue, newValue in
+                            UserDefaults.standard.set(manager.reminderOn, forKey: "isRemindOn")
+                        }
                 }
                 HStack {
                     Text("Reminder")
@@ -28,7 +31,7 @@ struct ReminderSetting: View {
                     Button {
                         isTimerSelectorShow = true
                     } label: {
-                        Text(reminderTime)
+                        Text(manager.reminderTime)
                     }
                     .sheet(isPresented: $isTimerSelectorShow) {
                         NavigationStack {
@@ -39,6 +42,8 @@ struct ReminderSetting: View {
                                     ToolbarItem(placement: .topBarTrailing) {
                                         Button("Confirm") {
                                             isTimerSelectorShow.toggle()
+                                            manager.reminderTime = manager.dateToString(date: selectedTime, format: "HH:mm")
+                                            UserDefaults.standard.set(manager.reminderTime, forKey: "ReminderTime")
                                         }
                                     }
                                 }

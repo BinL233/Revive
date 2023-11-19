@@ -12,7 +12,7 @@ extension ReviveManager {
     func userNotificationCenter() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
-                print("All set!")
+                print("Notification Configured")
             } else if let error = error {
                 print(error.localizedDescription)
             }

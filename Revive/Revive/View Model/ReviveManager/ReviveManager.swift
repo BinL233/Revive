@@ -8,6 +8,7 @@
 import Foundation
 import Observation
 import CoreData
+import SwiftUI
 
 @Observable
 class ReviveManager {
@@ -28,6 +29,10 @@ class ReviveManager {
     var speciesItemsSelection : SpeciesItems
     var currTrainingSpecies : MySpecies?
     var isExpGain : Bool
+    
+    var keepDisplay : Bool
+    var reminderOn : Bool
+    var reminderTime : String
     
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
@@ -50,6 +55,11 @@ class ReviveManager {
         speciesItemsSelection = .Species
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         isExpGain = false
-        //userNotificationCenter()
+        
+        keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")
+        reminderOn = UserDefaults.standard.bool(forKey: "isRemindOn")
+        reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
+        
+        userNotificationCenter()
     }
 }

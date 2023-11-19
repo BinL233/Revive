@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct SettingView: View {
-    @AppStorage("keepDisplay") var keepDisplay : Bool = false
-    @AppStorage("reminderOn") var reminderOn : Bool = false
-    @AppStorage("reminderTime") var reminderTime : String = "Please select a time"
+    @Environment(ReviveManager.self) var manager
     
     var body: some View {
+        @Bindable var manager = manager
         NavigationStack {
             Form {
-                FocusSetting(keepDisplay: keepDisplay)
-                ReminderSetting(reminderOn: reminderOn, reminderTime: reminderTime)
+                FocusSetting()
+                ReminderSetting()
             }
         }
     }
-}
-
-#Preview {
-    SettingView()
 }
