@@ -14,7 +14,7 @@ struct SpeciesExpBar: View {
     let timer = Timer.publish(every: 0.0001, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        
+        var boostExp : Bool = false
         var percentBinding: Binding<CGFloat> {
             Binding<CGFloat>(
                 get: {
@@ -33,17 +33,29 @@ struct SpeciesExpBar: View {
                 .italic()
                 .bold()
                 .foregroundStyle(Color.cBlackBrown)
+                .onAppear {
+                    if totalExp > 2000 {
+                        boostExp = true
+                    }
+                }
                 .onReceive(timer) { _ in
                     if manager.currTrainingState == .state2 {
                         manager.isExpGain = false
                         if totalExp > 0 {
+                            // if currExp == total Exp of this level - 1
                             if manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp == manager.getCurrSpeciesTotalExp(id: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].speciesID, date: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].hatchDate) - 1 {
                                 manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp = 0
                                 totalExp -= 1
                                 manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].level += 1
                             } else {
-                                manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 1
-                                totalExp -= 1
+                                // if currExp < total Exp of this level - 10
+                                if manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp < manager.getCurrSpeciesTotalExp(id: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].speciesID, date: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].hatchDate) - 10 && boostExp {
+                                    manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 9
+                                    totalExp -= 9
+                                } else {
+                                    manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 1
+                                    totalExp -= 1
+                                }
                             }
                         } else {
                             timer.upstream.connect().cancel()

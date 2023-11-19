@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension ReviveManager {
     private func getRandomHatchingSpecies() -> Species {
@@ -30,7 +31,7 @@ extension ReviveManager {
         var randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
         while true {
             if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].stage == 1{
-                if testMode == .on || speciesList[currRaritySpeciesIDs[randomSpecies] - 1].hatchTime*60 >= selectedTime {
+                if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].hatchTime*60 >= selectedTime {
                     break
                 }
             }
@@ -62,9 +63,6 @@ extension ReviveManager {
     func getLevelUpNum(species: MySpecies) -> (Int, Int) {
         let myspecies = mySpecies[getSpeciesIndex(id: species.speciesID, date: species.hatchDate)]
         var totalExp = selectedTime
-        if testMode == .on {
-            totalExp = selectedTime * 100
-        }
         var currExp = myspecies.currExp
         var num = 0
 
@@ -87,14 +85,11 @@ extension ReviveManager {
     
     func changeToTrainingState1() {
         currTrainingState = .state1
+        UIApplication.shared.isIdleTimerDisabled = false
         currPanelSpecies = mySpecies[0]
         currTrainingSpecies = mySpecies[0]
         isTimerStart.toggle()
-        if testMode == .off {
-            timeRemaining = 30 * 60
-        } else {
-            timeRemaining = 5
-        }
+        timeRemaining = 30 * 60
         activeAlert = .none
     }
     
@@ -116,12 +111,9 @@ extension ReviveManager {
     
     func changeToHatchingState1() {
         currHatchingState = .state1
+        UIApplication.shared.isIdleTimerDisabled = false
         isTimerStart.toggle()
-        if testMode == .off {
-            timeRemaining = 30 * 60
-        } else {
-            timeRemaining = 5
-        }
+        timeRemaining = 30 * 60
         currHatchingEgg = 1001
         activeAlert = .none
     }

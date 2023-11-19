@@ -10,13 +10,17 @@ import SwiftUI
 struct LaunchView: View {
     @State private var isActive = false
     @State private var isVisible = true
+    @State private var isTestModeOn : Bool = false
+    @State private var isModeSelected : Bool = false
 
     var body: some View {
         ZStack {
             Background()
             VStack {
-                if isActive {
-                    MainTabView()
+                if isActive && !isModeSelected {
+                    ModeSelectView(isTestModeOn: $isTestModeOn, isModeSelected: $isModeSelected)
+                } else if isActive && isModeSelected {
+                    MainTabView(isTestModeOn: $isTestModeOn)
                 } else {
                     Spacer()
                     Text("Revive")

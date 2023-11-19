@@ -45,7 +45,8 @@ struct TrainingComplete: View {
                         }
                     }
                     
-                    let intValue = manager.testMode == .on ? Int($manager.selectedTime.wrappedValue) * 100 : Int($manager.selectedTime.wrappedValue)
+                    let intValue = Int($manager.selectedTime.wrappedValue)
+                    
                     SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue)
                     
                     Image(speciesImage)

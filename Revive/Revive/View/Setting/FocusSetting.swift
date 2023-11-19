@@ -21,7 +21,6 @@ struct FocusSetting: View {
                         .labelsHidden()
                         .onChange(of: manager.keepDisplay) { oldValue, newValue in
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
-                            manager.setDisplay()
                         }
                 }
             }

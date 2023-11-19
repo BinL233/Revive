@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TimerModule: View {
     @Environment(ReviveManager.self) var manager
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var timer : AnyCancellable?
     
     var body: some View {
         @Bindable var manager = manager
@@ -35,25 +36,36 @@ struct TimerModule: View {
                 .italic()
                 .font(.system(size: 35))
                 .foregroundStyle(Color.cBlackBrown)
-                .onReceive(timer, perform: { _ in
-                    if manager.isTimerStart && manager.timeRemaining > 0 {
-                        manager.timeRemaining -= 1
-                        
-                        // For Hatching
-                        if manager.currAction == .hatching {
-                            if Int(manager.timeRemaining) == manager.selectedTime / 2 {
-                                withAnimation{manager.changeToHatchingState2()}
-                            } else if Int(manager.timeRemaining) == 0 {
-                                withAnimation{manager.changeToHatchingState3()}
-                            }
-                        } else if manager.currAction == .training {
-                            if Int(manager.timeRemaining) == 0 {
-                                let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!)
-                                withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
-                            }
+                .onAppear {
+                    timer?.cancel()
+                    timer = Timer.publish(every: manager.testMode == .on ? 0.001 : 1, on: .main, in: .common)
+                        .autoconnect()
+                        .sink { _ in
+                            timerTick()
                         }
-                    }
-                })
+                }
+        }
+    }
+}
+
+extension TimerModule {
+    func timerTick() {
+        if manager.isTimerStart && manager.timeRemaining > 0 {
+            manager.timeRemaining -= 1
+            
+            // For Hatching
+            if manager.currAction == .hatching {
+                if Int(manager.timeRemaining) == manager.selectedTime / 2 {
+                    withAnimation{manager.changeToHatchingState2()}
+                } else if Int(manager.timeRemaining) == 0 {
+                    withAnimation{manager.changeToHatchingState3()}
+                }
+            } else if manager.currAction == .training {
+                if Int(manager.timeRemaining) == 0 {
+                    let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!)
+                    withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
+                }
+            }
         }
     }
 }

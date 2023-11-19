@@ -10,10 +10,11 @@ import SwiftUI
 struct MainTabView: View {
     @State private var selectedTab = "focus"
     @Environment(ReviveManager.self) var manager
+    @Binding var isTestModeOn : Bool
     
-    init() {
+    init(isTestModeOn: Binding<Bool>) {
+        self._isTestModeOn = isTestModeOn
         UITabBar.appearance().backgroundColor = UIColor.white
-
     }
     
     var body: some View {
@@ -41,11 +42,13 @@ struct MainTabView: View {
                     .tag("analysis")
             }
             .tint(.cBlackBrown)
+            .onAppear {
+                if isTestModeOn {
+                    manager.testMode = .on
+                } else {
+                    manager.testMode = .off
+                }
+            }
         }
     }
-}
-
-#Preview {
-    MainTabView()
-        .environment(ReviveManager())
 }

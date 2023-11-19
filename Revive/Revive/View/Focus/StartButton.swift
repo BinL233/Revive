@@ -28,6 +28,10 @@ struct StartButton: View {
                 manager.activeAlert = .stop
             } else {
                 withAnimation{
+                    if manager.keepDisplay {
+                        UIApplication.shared.isIdleTimerDisabled = true
+                    }
+                    
                     // For Hatching
                     if manager.currAction == .hatching {
                         manager.isTimerStart.toggle()
