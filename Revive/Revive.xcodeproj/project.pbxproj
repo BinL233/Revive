@@ -11,6 +11,13 @@
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
 		B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */; };
 		B319E6802B0A6627000B9FD4 /* ModeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319E67F2B0A6627000B9FD4 /* ModeSelectView.swift */; };
+		B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E8A2B15048700A730D1 /* ExploringView.swift */; };
+		B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E8D2B15052300A730D1 /* AnalysisChart.swift */; };
+		B3234E902B15096E00A730D1 /* AnalysisDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E8F2B15096E00A730D1 /* AnalysisDistribution.swift */; };
+		B3234E942B150A6500A730D1 /* FocusLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E932B150A6500A730D1 /* FocusLog.swift */; };
+		B3234E962B150B5F00A730D1 /* DataManager+FocusLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */; };
+		B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E972B150D4E00A730D1 /* DistributionMode.swift */; };
+		B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */; };
 		B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34831992B03C82000545E46 /* SpeciesItems.swift */; };
 		B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D22B0927C200270661 /* ReviveManager+util.swift */; };
 		B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D42B09296400270661 /* SpeciesExpBar.swift */; };
@@ -88,6 +95,13 @@
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
 		B31922192AFBED74000446B7 /* MySpeciesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpeciesModel.xcdatamodel; sourceTree = "<group>"; };
 		B319E67F2B0A6627000B9FD4 /* ModeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectView.swift; sourceTree = "<group>"; };
+		B3234E8A2B15048700A730D1 /* ExploringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringView.swift; sourceTree = "<group>"; };
+		B3234E8D2B15052300A730D1 /* AnalysisChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisChart.swift; sourceTree = "<group>"; };
+		B3234E8F2B15096E00A730D1 /* AnalysisDistribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDistribution.swift; sourceTree = "<group>"; };
+		B3234E932B150A6500A730D1 /* FocusLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLog.swift; sourceTree = "<group>"; };
+		B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+FocusLog.swift"; sourceTree = "<group>"; };
+		B3234E972B150D4E00A730D1 /* DistributionMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionMode.swift; sourceTree = "<group>"; };
+		B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Dist.swift"; sourceTree = "<group>"; };
 		B34831992B03C82000545E46 /* SpeciesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesItems.swift; sourceTree = "<group>"; };
 		B349D5D22B0927C200270661 /* ReviveManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+util.swift"; sourceTree = "<group>"; };
 		B349D5D42B09296400270661 /* SpeciesExpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesExpBar.swift; sourceTree = "<group>"; };
@@ -181,6 +195,14 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		B3234E892B15047200A730D1 /* Exploring */ = {
+			isa = PBXGroup;
+			children = (
+				B3234E8A2B15048700A730D1 /* ExploringView.swift */,
+			);
+			path = Exploring;
+			sourceTree = "<group>";
+		};
 		B349D5D62B09509700270661 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +219,8 @@
 				B349D5E62B098B6700270661 /* AnalysisDetails.swift */,
 				B349D5E42B09894F00270661 /* AnalysisView.swift */,
 				B349D5E82B0996F500270661 /* AnalysisTitle.swift */,
+				B3234E8D2B15052300A730D1 /* AnalysisChart.swift */,
+				B3234E8F2B15096E00A730D1 /* AnalysisDistribution.swift */,
 			);
 			path = Analysis;
 			sourceTree = "<group>";
@@ -221,6 +245,7 @@
 				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 				B349D5D92B09541900270661 /* ReviveManager+Notification.swift */,
 				B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */,
+				B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -229,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */,
+				B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -337,6 +363,7 @@
 				B34F1BC22AF5C30500737872 /* Species.swift */,
 				B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */,
 				B31922142AFBE175000446B7 /* MySpecies.swift */,
+				B3234E932B150A6500A730D1 /* FocusLog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +380,7 @@
 				B317C5822AFE6B150076BE33 /* TestMode.swift */,
 				B34831992B03C82000545E46 /* SpeciesItems.swift */,
 				B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */,
+				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -377,6 +405,7 @@
 		B3C7742A2ACD044F00387FDC /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B3234E892B15047200A730D1 /* Exploring */,
 				B3E1B9462B082B0700AD7AA7 /* Training */,
 				B3629B062AFDDF6700F3D135 /* Hatching */,
 				B3629B052AFDDF5500F3D135 /* Timer */,
@@ -544,17 +573,21 @@
 				B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */,
 				B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */,
 				B349D5D82B0950A900270661 /* SettingView.swift in Sources */,
+				B3234E942B150A6500A730D1 /* FocusLog.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
 				B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */,
 				B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */,
+				B3234E902B15096E00A730D1 /* AnalysisDistribution.swift in Sources */,
 				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
+				B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
@@ -570,6 +603,7 @@
 				B3E1B94C2B085C3700AD7AA7 /* CurrTrainingState.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
+				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
 				B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */,
 				B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */,
 				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
@@ -584,10 +618,12 @@
 				B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */,
 				B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */,
 				B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */,
+				B3234E962B150B5F00A730D1 /* DataManager+FocusLog.swift in Sources */,
 				B319E6802B0A6627000B9FD4 /* ModeSelectView.swift in Sources */,
 				B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
+				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

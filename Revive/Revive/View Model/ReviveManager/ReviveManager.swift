@@ -44,12 +44,40 @@ class ReviveManager {
     var numOfItems : Int
     var numOfCoins : Int
     
+    var focusLog : [FocusLog]
+    var currFocusLog : [DateComponents: Int]
+    var currDistTimeSpanSelection : CurrDistTimeSpanSelection
+    var currDistActionSelection : CurrDistActionSelection
+    
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
+        let localFocusLog = DataManager.shared.loadLogData()
         
         speciesList = Species.species ?? []
+
         mySpecies = localMySpecies
+        focusLog = localFocusLog
+        
+        currDistTimeSpanSelection = .total
+        currDistActionSelection = .total
+        
+        currFocusLog = {
+            let calendar = Calendar.current
+            let groupedLogs = Dictionary(grouping: localFocusLog.filter { log in
+                guard let weekAgo = calendar.date(byAdding: .day, value: -7, to: Date()) else { return false }
+                return log.date >= weekAgo
+            }) { log in
+                return calendar.dateComponents([.year, .month, .weekOfYear, .day], from: log.date)
+            }
+
+            return groupedLogs.mapValues { logs in
+                logs.reduce(0) { total, log in
+                    total + log.duration
+                }
+            }
+        }()
+        
         currHatchingSpecies = nil
         currAction = .hatching
         currHatchingEgg = 1001
