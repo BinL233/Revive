@@ -45,7 +45,7 @@ class ReviveManager {
     var numOfCoins : Int
     
     var focusLog : [FocusLog]
-    var currFocusLog : [DateComponents: Int]
+    var currFocusLog : [(key: String, value: Int)]
     var currDistTimeSpanSelection : CurrDistTimeSpanSelection
     var currDistActionSelection : CurrDistActionSelection
     
@@ -63,6 +63,14 @@ class ReviveManager {
         currDistActionSelection = .total
         
         currFocusLog = {
+            func dateString(from components: DateComponents, calendar: Calendar) -> String {
+                if let date = calendar.date(from: components) {
+                    return DateFormatter.localizedString(from: date, dateStyle: .medium, timeStyle: .none)
+                } else {
+                    return "Unknown Date"
+                }
+            }
+
             let calendar = Calendar.current
             let groupedLogs = Dictionary(grouping: localFocusLog.filter { log in
                 guard let weekAgo = calendar.date(byAdding: .day, value: -7, to: Date()) else { return false }
@@ -71,11 +79,13 @@ class ReviveManager {
                 return calendar.dateComponents([.year, .month, .weekOfYear, .day], from: log.date)
             }
 
-            return groupedLogs.mapValues { logs in
-                logs.reduce(0) { total, log in
-                    total + log.duration
-                }
+            let durations = groupedLogs.mapValues { logs in
+                logs.reduce(0) { $0 + $1.duration }
             }
+            
+            return durations.map { (key, value) in
+                (key: dateString(from: key, calendar: calendar), value: value)
+            }.sorted { $0.key < $1.key }
         }()
         
         currHatchingSpecies = nil

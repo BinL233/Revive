@@ -11,11 +11,9 @@ import CoreData
 class DataManager {
     static let shared = DataManager()
     let persistentContainer: NSPersistentContainer
-    let persistentLogContainer: NSPersistentContainer
     
     init() {
         persistentContainer = NSPersistentContainer(name: "MySpeciesModel")
-        persistentLogContainer = NSPersistentContainer(name: "FocusLogModel")
         persistentContainer.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("Core Data store failed to load with error: \(error)")

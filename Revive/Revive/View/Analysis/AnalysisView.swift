@@ -13,6 +13,7 @@ struct AnalysisView: View {
             ZStack {
                 Background()
                 VStack {
+                    AnalysisDistribution()
                     AnalysisTitle()
                     Spacer()
                     Form {

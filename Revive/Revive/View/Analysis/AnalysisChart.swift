@@ -13,15 +13,21 @@ struct AnalysisChart: View {
     var body: some View {
         VStack {
             Chart {
+                let currFocusLogs = manager.currFocusLog
                 
-                BarMark(x: .value("234", "23"), y: .value("Minutes", 1))
-                    .foregroundStyle(Color.cDarkBrown)
+                ForEach(manager.currFocusLog.sorted(by: { $0.key < $1.key }), id: \.key) { key, value in
+                    BarMark(x: .value("233", "23"), y: .value("Minutes", value))
+                        .foregroundStyle(Color.cDarkBrown)
+                }
                 
-                RuleMark(y: .value("Average", 1.5))
-                    .foregroundStyle(Color.cBlackBrown)
-                    .annotation(position: .bottom, alignment: .bottomLeading) {
-                        Text("Average 1.5")
-                    }
+                if manager.currFocusLog.count != 0 {
+                    RuleMark(y: .value("Average", manager.calculateAverage()))
+                        .foregroundStyle(.indigo)
+                        .annotation(position: .bottom, alignment: .bottomLeading) {
+                            Text("Average \(manager.calculateAverage())")
+                                .foregroundStyle(.indigo)
+                        }
+                }
             }
             .padding()
         }

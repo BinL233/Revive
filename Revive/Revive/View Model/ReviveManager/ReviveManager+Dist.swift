@@ -8,17 +8,7 @@
 import Foundation
 
 extension ReviveManager {
-    func getStandardDurations(localFocusLog: [FocusLog]) -> [DateComponents: Int] {
-        let calendar = Calendar.current
-        let groupedLogs = Dictionary(grouping: localFocusLog.filter { ($0.date >= calendar.date(byAdding: .day, value: -7, to: Date())!) }) { (log) -> DateComponents in
-            return calendar.dateComponents([.year, .month, .weekOfYear, .day], from: log.date) }
-        
-        return groupedLogs.mapValues { logs in
-            logs.reduce(0) { $0 + $1.duration }
-        }
-    }
-        
-    func groupAndCalculateDurations() -> [DateComponents: Int] {
+    func groupAndCalculateDurations() -> [(key: String, value: Int)] {
         let logs = getLog()
         let calendar = Calendar.current
         
@@ -35,10 +25,12 @@ extension ReviveManager {
                 return calendar.dateComponents([.year], from: log.date)
             }
         }
-        
-        return groupedLogs.mapValues { logs in
+
+        let durations = groupedLogs.mapValues { logs in
             logs.reduce(0) { $0 + $1.duration }
         }
+        
+        return sortedData(data: durations, calendar: calendar)
     }
     
     private func getLog() -> [FocusLog] {
@@ -67,5 +59,28 @@ extension ReviveManager {
         } else {
             return calendar.date(byAdding: .year, value: -100, to: Date())!
         }
+    }
+    
+    private func sortedData(data: [DateComponents: Int], calendar: Calendar) -> [(key: String, value: Int)] {
+        return data.map { (key, value) in
+            (key: dateString(from: key, calendar: calendar), value: value)
+        }.sorted { $0.key < $1.key }
+    }
+
+    private func dateString(from components: DateComponents, calendar: Calendar) -> String {
+        if let date = calendar.date(from: components) {
+            return DateFormatter.localizedString(from: date, dateStyle: .medium, timeStyle: .none)
+        } else {
+            return "Unknown Date"
+        }
+    }
+    
+    func calculateAverage() -> Int {
+        var total = 0
+        for x in currFocusLog {
+            total += x.value
+        }
+        
+        return Int(total/currFocusLog.count)
     }
 }

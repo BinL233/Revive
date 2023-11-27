@@ -28,7 +28,7 @@ struct AnalysisDistribution: View {
                 Text("Total").tag(CurrDistActionSelection.total)
                 Text("Hatching").tag(CurrDistActionSelection.hatching)
                 Text("Training").tag(CurrDistActionSelection.training)
-                Text("Explorinh").tag(CurrDistActionSelection.exploring)
+                Text("Exploring").tag(CurrDistActionSelection.exploring)
             }
             .pickerStyle(.segmented)
             .padding()
@@ -39,9 +39,4 @@ struct AnalysisDistribution: View {
             AnalysisChart()
         }
     }
-}
-
-#Preview {
-    AnalysisDistribution()
-        .environment(ReviveManager())
 }

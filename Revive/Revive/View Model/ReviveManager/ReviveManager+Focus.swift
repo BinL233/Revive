@@ -105,6 +105,11 @@ extension ReviveManager {
         totalTime += selectedTime
         UserDefaults.standard.set(totalTrainingTime, forKey: "TotalTrainingTime")
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        
+        let currentDate = Date()
+        let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "training")
+        focusLog.append(logg)
+        DataManager.shared.saveLogData(customItem: logg)
     }
     
     // Hatching State Change
@@ -139,6 +144,7 @@ extension ReviveManager {
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
         
+        // Save Details
         totalHatchingTime += selectedTime
         totalTime += selectedTime
         numOfSpecies += 1
@@ -154,6 +160,11 @@ extension ReviveManager {
         UserDefaults.standard.set(totalHatchingTime, forKey: "TotalHatchingTime")
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
         UserDefaults.standard.set(numOfSpecies, forKey: "NumOfSpecies")
+        
+        // Save log
+        let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "hatching")
+        focusLog.append(logg)
+        DataManager.shared.saveLogData(customItem: logg)
         
         currPanelSpecies = mySpecies[0]
     }
