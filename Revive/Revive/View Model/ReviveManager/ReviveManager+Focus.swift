@@ -109,6 +109,7 @@ extension ReviveManager {
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "training")
         focusLog.append(logg)
+        currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
     }
     
@@ -164,6 +165,7 @@ extension ReviveManager {
         // Save log
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "hatching")
         focusLog.append(logg)
+        currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
         
         currPanelSpecies = mySpecies[0]

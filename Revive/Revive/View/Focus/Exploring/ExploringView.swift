@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExploringView: View {
+    @Environment(ReviveManager.self) var manager
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,4 +17,5 @@ struct ExploringView: View {
 
 #Preview {
     ExploringView()
+        .environment(ReviveManager())
 }

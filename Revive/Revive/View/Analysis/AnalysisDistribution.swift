@@ -13,7 +13,7 @@ struct AnalysisDistribution: View {
         @Bindable var manager = manager
         VStack {
             Picker("currDistTimeSpan", selection: $manager.currDistTimeSpanSelection) {
-                Text("Week").tag(CurrDistTimeSpanSelection.week)
+                Text("Days").tag(CurrDistTimeSpanSelection.week)
                 Text("Month").tag(CurrDistTimeSpanSelection.month)
                 Text("Year").tag(CurrDistTimeSpanSelection.year)
             }
