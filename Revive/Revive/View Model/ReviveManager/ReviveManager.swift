@@ -59,7 +59,7 @@ class ReviveManager {
         mySpecies = localMySpecies
         focusLog = localFocusLog
         
-        currDistTimeSpanSelection = .total
+        currDistTimeSpanSelection = .week
         currDistActionSelection = .total
         
         currFocusLog = {

@@ -83,4 +83,61 @@ extension ReviveManager {
         
         return Int(total/currFocusLog.count)
     }
+    
+    func getSevenDays() -> [String] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        _ = dateFormatter.string(from: Date())
+        
+        var lastSevenDays: [String] = []
+
+        for day in 0..<7 {
+            if let date = Calendar.current.date(byAdding: .day, value: -day, to: Date()) {
+                let dateString = dateFormatter.string(from: date)
+                lastSevenDays.append(dateString)
+            }
+        }
+        
+        lastSevenDays.reverse()
+        
+        return lastSevenDays
+    }
+    
+    func getSixMonths() -> [String] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        _ = dateFormatter.string(from: Date())
+        
+        var lastTwelveMonths: [String] = []
+
+        for month in 0..<6 {
+            if let date = Calendar.current.date(byAdding: .month, value: -month, to: Date()) {
+                let dateString = dateFormatter.string(from: date)
+                lastTwelveMonths.append(dateString)
+            }
+        }
+        
+        lastTwelveMonths.reverse()
+        
+        return lastTwelveMonths
+    }
+    
+    func getFiveYears() -> [String] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY"
+        _ = dateFormatter.string(from: Date())
+        
+        var lastTenYears: [String] = []
+
+        for year in 0..<5 {
+            if let date = Calendar.current.date(byAdding: .year, value: -year, to: Date()) {
+                let dateString = dateFormatter.string(from: date)
+                lastTenYears.append(dateString)
+            }
+        }
+        
+        lastTenYears.reverse()
+        
+        return lastTenYears
+    }
 }

@@ -13,9 +13,9 @@ struct AnalysisView: View {
             ZStack {
                 Background()
                 VStack {
-                    AnalysisDistribution()
                     AnalysisTitle()
                     Spacer()
+                    AnalysisDistribution()
                     Form {
                         VStack {
                             HStack {
