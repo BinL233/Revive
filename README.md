@@ -69,10 +69,10 @@ The path of life is a circle; the scene's end and beginning are the same. The ex
 | Test | 11/19/2023 | Finished |
 | Design - 20 Items | 12/05/2023 |  |
 | Design - 20 Species | 12/05/2023 |  |
-| Feature Reminder | 12/11/2023 |  |
+| Feature Reminder | 12/11/2023 | Finished |
 | Feature - Focus - Exploring | 12/11/2023 |  |
 | Feature - Backyard - Items | 12/11/2023 |  |
-| Feature - Analysis - Distribution | 12/11/2023 |  |
+| Feature - Analysis - Distribution | 12/11/2023 | Finished |
 | Feature - Cloud Sync | 12/11/2023 |  |
 | Test | 12/11/2023 |  |
 
