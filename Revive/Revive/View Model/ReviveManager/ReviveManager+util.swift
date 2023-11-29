@@ -52,4 +52,15 @@ extension ReviveManager {
         
         return String(hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
     }
+    
+    func secTimeToString2(time: Int) -> String {
+        let time = time
+        var hour : Int = 0
+        var min : Int = 0
+        
+        hour = time / 60
+        min = time % 60
+        
+        return String(hour) + "h " + String(format: "%02d", min) + "m "
+    }
 }

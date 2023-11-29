@@ -8,5 +8,6 @@
 import Foundation
 
 struct HatchingMechanics {
-    var superRare : Double = 0.05
+    var superRare : Double = 0.1
+    var superRareUpRate : Double = 0.34
 }

@@ -11,41 +11,15 @@ import SwiftUI
 extension ReviveManager {
     private func getRandomHatchingSpecies() -> Species {
         let superRarePercent = HatchingMechanics().superRare
-        let r = Int.random(in: 0...100)
-        var currRaritySpeciesIDs : [Int] = []
+        let upRate = HatchingMechanics().superRareUpRate * Double(selectedTime / 60)
+        let rarityToFilter = Int.random(in: 0..<(100-Int(upRate))) < Int(superRarePercent * 100) ? "SR" : "R"
+        let filteredSpeciesIDs = speciesList.filter { $0.stage == 1 && $0.rarity == rarityToFilter && $0.hatchTime*60 <= selectedTime }.map { $0.id }
+        let randomSpecies = Int.random(in: 0..<filteredSpeciesIDs.count)
         
-        if r < Int(superRarePercent * 100) {
-            for species in speciesList {
-                if species.rarity == "SR" {
-                    currRaritySpeciesIDs.append(species.id)
-                }
-            }
-        } else {
-            for species in speciesList {
-                if species.rarity == "R" {
-                    currRaritySpeciesIDs.append(species.id)
-                }
-            }
-        }
-        // Need to be improved
-        var randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
-        while true {
-            if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].stage == 1{
-                if speciesList[currRaritySpeciesIDs[randomSpecies] - 1].hatchTime*60 >= selectedTime {
-                    break
-                }
-            }
-            randomSpecies = Int.random(in: 0..<currRaritySpeciesIDs.count)
-        }
-        
-        return speciesList[currRaritySpeciesIDs[randomSpecies] - 1]
+        return speciesList[filteredSpeciesIDs[randomSpecies] - 1]
     }
     
-//    private func trainSpecies() {
-//        var species = currTrainingSpecies
-//        
-//    }
-//    
+
     func hatchingStartButton() -> Species {
         return getRandomHatchingSpecies()
     }
@@ -79,6 +53,18 @@ extension ReviveManager {
         }
         
         return (num, currExp)
+    }
+    
+    // Exploring State Change
+    
+    func changeToExploringState1() {
+        currExploringState = .state1
+        UIApplication.shared.isIdleTimerDisabled = false
+        currPanelSpecies = mySpecies[0]
+        currExploringSpecies = mySpecies[0]
+        isTimerStart.toggle()
+        timeRemaining = 30 * 60
+        activeAlert = .none
     }
     
     // Training State Change

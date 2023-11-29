@@ -23,11 +23,13 @@ class ReviveManager {
     var activeAlert : ActiveAlert?
     var currHatchingState : CurrHatchingState
     var currTrainingState : CurrTrainingState
+    var currExploringState : CurrExploringState
     var testMode : TestMode
     var standardMySpecies : [MySpecies]
     var currPanelSpecies : MySpecies?
     var speciesItemsSelection : SpeciesItems
     var currTrainingSpecies : MySpecies?
+    var currExploringSpecies : MySpecies?
     var isExpGain : Bool
     
     var keepDisplay : Bool
@@ -95,13 +97,19 @@ class ReviveManager {
         selectedTime = Int(localTimeRemaining)
         isTimerStart = false
         activeAlert = .none
+        
         currHatchingState = .state1
         currTrainingState = .none
+        currExploringState = .none
+        
         testMode = .off
         standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: "")]
+        
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         speciesItemsSelection = .Species
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        currExploringSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        
         isExpGain = false
         
         keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")

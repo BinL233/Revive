@@ -32,22 +32,33 @@ struct StartButton: View {
                         UIApplication.shared.isIdleTimerDisabled = true
                     }
                     
+                    manager.selectedTime = Int(manager.timeRemaining)
+                    
                     // For Hatching
                     if manager.currAction == .hatching {
                         manager.isTimerStart.toggle()
                         manager.currTrainingState = .none
+                        manager.currExploringState = .none
                         manager.currHatchingSpecies = manager.hatchingStartButton()
-                    } else {
+                    } else if manager.currAction == .training {
                         // For Training
                         if manager.currTrainingSpecies != nil {
                             manager.isTimerStart.toggle()
                             manager.currHatchingState = .none
+                            manager.currExploringState = .none
                             manager.currTrainingState = .state1
+                        }
+                    } else {
+                        // For Exploring
+                        if manager.currExploringSpecies != nil {
+                            manager.isTimerStart.toggle()
+                            manager.currHatchingState = .none
+                            manager.currTrainingState = .none
+                            manager.currExploringState = .state1
                         }
                     }
                     
                 }
-                manager.selectedTime = Int(manager.timeRemaining)
             }
         }) {
             if manager.isTimerStart {
@@ -80,7 +91,7 @@ struct StartButton: View {
                             } else if manager.currAction == .training {
                                 manager.changeToTrainingState1()
                             } else {
-                                
+                                manager.changeToExploringState1()
                             }
                         }
                     },

@@ -60,11 +60,16 @@ extension TimerModule {
                 } else if Int(manager.timeRemaining) == 0 {
                     withAnimation{manager.changeToHatchingState3()}
                 }
+            // For Training
             } else if manager.currAction == .training {
                 if Int(manager.timeRemaining) == 0 {
                     let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!)
                     withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
                 }
+            }
+            // For Exploring
+            else {
+                
             }
         }
     }

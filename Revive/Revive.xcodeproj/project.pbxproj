@@ -49,7 +49,7 @@
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
-		B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */; };
+		B3C738EC2AF9E7F2006709C9 /* CurrFocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */; };
 		B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C773FB2ACCE69800387FDC /* ReviveApp.swift */; };
 		B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C773FD2ACCE69800387FDC /* FocusView.swift */; };
 		B3C774002ACCE69A00387FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C773FF2ACCE69A00387FDC /* Assets.xcassets */; };
@@ -67,7 +67,6 @@
 		B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */; };
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
-		B3E1B94C2B085C3700AD7AA7 /* CurrTrainingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
 		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
 		B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */; };
@@ -134,7 +133,7 @@
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
-		B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrHatchingState.swift; sourceTree = "<group>"; };
+		B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrFocusState.swift; sourceTree = "<group>"; };
 		B3C773F82ACCE69800387FDC /* Revive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Revive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C773FB2ACCE69800387FDC /* ReviveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveApp.swift; sourceTree = "<group>"; };
 		B3C773FD2ACCE69800387FDC /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
@@ -155,7 +154,6 @@
 		B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
-		B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrTrainingState.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
 		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
 		B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelImage.swift; sourceTree = "<group>"; };
@@ -376,10 +374,9 @@
 				B34F1BC62AF5CE9700737872 /* Persistences.swift */,
 				B34F1BCC2AF5DC7300737872 /* CurrAction.swift */,
 				B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */,
-				B3C738EB2AF9E7F2006709C9 /* CurrHatchingState.swift */,
+				B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */,
 				B317C5822AFE6B150076BE33 /* TestMode.swift */,
 				B34831992B03C82000545E46 /* SpeciesItems.swift */,
-				B3E1B94B2B085C3700AD7AA7 /* CurrTrainingState.swift */,
 				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
 			);
 			path = "View Model";
@@ -591,7 +588,7 @@
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
-				B3C738EC2AF9E7F2006709C9 /* CurrHatchingState.swift in Sources */,
+				B3C738EC2AF9E7F2006709C9 /* CurrFocusState.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
 				B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */,
@@ -600,7 +597,6 @@
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
-				B3E1B94C2B085C3700AD7AA7 /* CurrTrainingState.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
