@@ -41,11 +41,9 @@ struct SpeciesPanel: View {
                                         if trimmedString.isEmpty {
                                             manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName = manager.getSpecies(mySpecies: manager.currPanelSpecies!).name
                                         } else {
-                                            let newValue = String(trimmedString.prefix(15))
+                                            let newValue = String(trimmedString.prefix(10))
                                             manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName = newValue
                                         }
-                                        
-                                        DataManager.shared.updateMySpeciesNickName(for: manager.currPanelSpecies?.speciesID ?? 0, with: manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName, mySpecies: manager.mySpecies)
                                     })
                                   )
                             .font(.system(size: 25))
@@ -55,6 +53,9 @@ struct SpeciesPanel: View {
                             .focused($isTextFieldFocused)
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 5)
+                            .onSubmit {
+                                DataManager.shared.updateMySpeciesNickName(for: manager.currPanelSpecies?.speciesID ?? 0, with: manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName, mySpecies: manager.mySpecies)
+                            }
                     
                         Button(action: { isTextFieldFocused = true }, label: {
                                 Image(systemName: "square.and.pencil")

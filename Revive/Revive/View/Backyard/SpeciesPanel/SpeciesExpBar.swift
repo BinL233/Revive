@@ -11,10 +11,10 @@ struct SpeciesExpBar: View {
     @Environment(ReviveManager.self) var manager
     @Binding var currModule : MySpecies
     @State var totalExp : Int
-    let timer = Timer.publish(every: 0.0001, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        var boostExp : Bool = false
+        var boostExp : Bool = true
         var percentBinding: Binding<CGFloat> {
             Binding<CGFloat>(
                 get: {
