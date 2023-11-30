@@ -25,6 +25,7 @@ class DataManager {
         let context = persistentContainer.viewContext
         let entity = NSEntityDescription.insertNewObject(forEntityName: "SpeciesEntity", into: context) as! SpeciesEntity
         entity.speciesID = Int16(customItem.speciesID)
+        entity.nickName = customItem.nickName
         entity.level = Int16(customItem.level)
         entity.height = customItem.height
         entity.weight = customItem.weight
@@ -47,10 +48,32 @@ class DataManager {
         do {
             print("Loading user data...")
             let entities = try context.fetch(fetchRequest)
-            return entities.map { MySpecies(speciesID: Int($0.speciesID), level: Int($0.level), currExp: Int($0.currExp), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!)}
+            return entities.map { MySpecies(speciesID: Int($0.speciesID), nickName: $0.nickName ?? "", level: Int($0.level), currExp: Int($0.currExp), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!)}
         } catch {
             print("Failed to fetch custom items: \(error)")
             return []
+        }
+    }
+    
+    func updateMySpeciesNickName(for speciesID: Int, with newData: String, mySpecies: [MySpecies]) {
+        var data = mySpecies
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+            data[index].nickName = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.nickName = newData
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
         }
     }
     

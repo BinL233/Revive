@@ -13,17 +13,17 @@ extension ReviveManager {
         let calendar = Calendar.current
         
         let groupedLogs = Dictionary(grouping: logs) { (log) -> DateComponents in
-            //switch currDistTimeSpanSelection {
-            //case .week:
+            switch currDistTimeSpanSelection {
+            case .week:
                 return calendar.dateComponents([.year, .month, .weekOfYear, .day], from: log.date)
-//            case .year:
-//                let weekOfYear = calendar.component(.weekOfYear, from: log.date)
-//                return DateComponents(year: calendar.component(.year, from: log.date), weekOfYear: weekOfYear)
-//            case .month:
-//                return calendar.dateComponents([.year, .month], from: log.date)
-//            case .total:
-//                return calendar.dateComponents([.year], from: log.date)
-//            }
+            case .year:
+                let weekOfYear = calendar.component(.weekOfYear, from: log.date)
+                return DateComponents(year: calendar.component(.year, from: log.date), weekOfYear: weekOfYear)
+            case .month:
+                return calendar.dateComponents([.year, .month], from: log.date)
+            case .total:
+                return calendar.dateComponents([.year], from: log.date)
+            }
         }
 
         let durations = groupedLogs.mapValues { logs in

@@ -9,6 +9,7 @@ import Foundation
 
 struct MySpecies : Equatable {
     let speciesID : Int
+    var nickName : String = ""
     var level : Int
     var currExp : Int
     let height : Double
