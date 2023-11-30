@@ -19,6 +19,7 @@ struct Species : Identifiable, Decodable {
     let weight : Size
     let era : String
     let egg : Int
+    let intro : String
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -32,6 +33,7 @@ struct Species : Identifiable, Decodable {
         case weight
         case era
         case egg
+        case intro
     }
     
     static var species : [Species]? = {
@@ -53,6 +55,7 @@ extension Species {
         weight = try values.decode(Size.self, forKey: .weight)
         era = try values.decode(String.self, forKey: .era)
         egg = try values.decode(Int.self, forKey: .egg)
+        intro = try values.decode(String.self, forKey: .intro)
     }
 }
 

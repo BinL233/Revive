@@ -12,30 +12,50 @@ import SwiftUI
 
 @Observable
 class ReviveManager {
+    // Total list
     var speciesList : [Species]
+    var mapList : [ExploringMap]
+    var itemList : [Item]
+    
+    // My species
     var mySpecies : [MySpecies]
     var currHatchingSpecies : Species?
-    var currAction : CurrAction
     var currHatchingEgg : Int
-    var timeRemaining : TimeInterval
-    var selectedTime : Int
-    var isTimerStart : Bool
-    var activeAlert : ActiveAlert?
+    var standardMySpecies : [MySpecies]
+    var currPanelSpecies : MySpecies?
+    var currTrainingSpecies : MySpecies?
+    var currExploringSpecies : MySpecies?
+    
+    var speciesItemsSelection : SpeciesItems
+    
+    // Map
+    var currExploringMap : MyMaps?
+    var myMaps : [MyMaps]
+    
+    // Item
+    var myItems : [MyItems]
+    var currPanelItem : MyItems?
+    
+    // State
     var currHatchingState : CurrHatchingState
     var currTrainingState : CurrTrainingState
     var currExploringState : CurrExploringState
+    
+    // Actions
+    var currAction : CurrAction
+    var selectedTime : Int
+    var isTimerStart : Bool
+    var timeRemaining : TimeInterval
+    var activeAlert : ActiveAlert?
     var testMode : TestMode
-    var standardMySpecies : [MySpecies]
-    var currPanelSpecies : MySpecies?
-    var speciesItemsSelection : SpeciesItems
-    var currTrainingSpecies : MySpecies?
-    var currExploringSpecies : MySpecies?
     var isExpGain : Bool
     
+    // Setting
     var keepDisplay : Bool
     var reminderOn : Bool
     var reminderTime : String
     
+    // Analysis Details
     var totalTime : Int
     var totalHatchingTime : Int
     var totalTrainingTime : Int
@@ -55,10 +75,18 @@ class ReviveManager {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
         let localFocusLog = DataManager.shared.loadLogData()
+        let localMyItems = DataManager.shared.loadItemData()
+        let localMyMaps = DataManager.shared.loadMapData()
         
         speciesList = Species.species ?? []
+        mapList = ExploringMap.maps ?? []
+        itemList = Item.items ?? []
 
         mySpecies = localMySpecies
+        myMaps = localMyMaps
+        myItems = localMyItems
+        
+        
         focusLog = localFocusLog
         
         currDistTimeSpanSelection = .week
@@ -106,9 +134,13 @@ class ReviveManager {
         standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: "")]
         
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
+        
         speciesItemsSelection = .Species
+        
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currExploringSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
+        currExploringMap = localMyMaps.count == 0 ? nil : localMyMaps[0]
         
         isExpGain = false
         

@@ -70,6 +70,14 @@
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
 		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
 		B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */; };
+		B3FB81782B192209004CB417 /* ExploringMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81772B192209004CB417 /* ExploringMap.swift */; };
+		B3FB817A2B192232004CB417 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81792B192232004CB417 /* Item.swift */; };
+		B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB817B2B192E4C004CB417 /* MyMaps.swift */; };
+		B3FB817E2B192EDA004CB417 /* MyItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB817D2B192EDA004CB417 /* MyItems.swift */; };
+		B3FB81802B192F94004CB417 /* DataManager+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB817F2B192F94004CB417 /* DataManager+Item.swift */; };
+		B3FB81822B192F9F004CB417 /* DataManager+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81812B192F9F004CB417 /* DataManager+Map.swift */; };
+		B3FB81852B193C1F004CB417 /* ItemListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81842B193C1F004CB417 /* ItemListImage.swift */; };
+		B3FB81872B19421E004CB417 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81862B19421E004CB417 /* MapListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +165,14 @@
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
 		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
 		B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelImage.swift; sourceTree = "<group>"; };
+		B3FB81772B192209004CB417 /* ExploringMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringMap.swift; sourceTree = "<group>"; };
+		B3FB81792B192232004CB417 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B3FB817B2B192E4C004CB417 /* MyMaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMaps.swift; sourceTree = "<group>"; };
+		B3FB817D2B192EDA004CB417 /* MyItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItems.swift; sourceTree = "<group>"; };
+		B3FB817F2B192F94004CB417 /* DataManager+Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Item.swift"; sourceTree = "<group>"; };
+		B3FB81812B192F9F004CB417 /* DataManager+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Map.swift"; sourceTree = "<group>"; };
+		B3FB81842B193C1F004CB417 /* ItemListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListImage.swift; sourceTree = "<group>"; };
+		B3FB81862B19421E004CB417 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B3234E8A2B15048700A730D1 /* ExploringView.swift */,
+				B3FB81862B19421E004CB417 /* MapListView.swift */,
 			);
 			path = Exploring;
 			sourceTree = "<group>";
@@ -253,6 +270,8 @@
 			children = (
 				B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */,
 				B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */,
+				B3FB817F2B192F94004CB417 /* DataManager+Item.swift */,
+				B3FB81812B192F9F004CB417 /* DataManager+Map.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -291,6 +310,7 @@
 			children = (
 				B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */,
 				B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */,
+				B3FB81842B193C1F004CB417 /* ItemListImage.swift */,
 			);
 			path = SpeciesList;
 			sourceTree = "<group>";
@@ -362,6 +382,10 @@
 				B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */,
 				B31922142AFBE175000446B7 /* MySpecies.swift */,
 				B3234E932B150A6500A730D1 /* FocusLog.swift */,
+				B3FB81772B192209004CB417 /* ExploringMap.swift */,
+				B3FB81792B192232004CB417 /* Item.swift */,
+				B3FB817B2B192E4C004CB417 /* MyMaps.swift */,
+				B3FB817D2B192EDA004CB417 /* MyItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -566,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
+				B3FB81872B19421E004CB417 /* MapListView.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
 				B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */,
 				B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */,
@@ -583,6 +608,7 @@
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
+				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
@@ -593,6 +619,7 @@
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
 				B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */,
 				B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */,
+				B3FB817A2B192232004CB417 /* Item.swift in Sources */,
 				B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
@@ -603,13 +630,16 @@
 				B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */,
 				B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */,
 				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
+				B3FB817E2B192EDA004CB417 /* MyItems.swift in Sources */,
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
+				B3FB81852B193C1F004CB417 /* ItemListImage.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
+				B3FB81802B192F94004CB417 /* DataManager+Item.swift in Sources */,
 				B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */,
 				B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */,
 				B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */,
@@ -617,9 +647,11 @@
 				B3234E962B150B5F00A730D1 /* DataManager+FocusLog.swift in Sources */,
 				B319E6802B0A6627000B9FD4 /* ModeSelectView.swift in Sources */,
 				B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */,
+				B3FB81782B192209004CB417 /* ExploringMap.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
+				B3FB81822B192F9F004CB417 /* DataManager+Map.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

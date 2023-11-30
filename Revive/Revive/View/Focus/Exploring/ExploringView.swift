@@ -10,6 +10,7 @@ import SwiftUI
 struct ExploringView: View {
     @Environment(ReviveManager.self) var manager
     private let adaptiveCloumns = [GridItem(.adaptive(minimum: 70))]
+    @State var isMapSelected = false
     
     var body: some View {
         @Bindable var manager = manager
@@ -26,6 +27,14 @@ struct ExploringView: View {
                     .resizable()
                     .scaledToFit()
                     .padding(15)
+            } else if !isMapSelected {
+                ScrollView {
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                        ForEach(manager.mySpecies.indices, id: \.self) { i in
+                            
+                        }
+                    })
+                }
             } else {
                 ScrollView {
                     LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
@@ -38,9 +47,4 @@ struct ExploringView: View {
             }
         }
     }
-}
-
-#Preview {
-    ExploringView()
-        .environment(ReviveManager())
 }

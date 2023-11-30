@@ -10,6 +10,7 @@ import Charts
 
 struct AnalysisChart: View {
     @Environment(ReviveManager.self) var manager
+    @State var IndLogs : [Int] = []
     
     var body: some View {
         VStack {
