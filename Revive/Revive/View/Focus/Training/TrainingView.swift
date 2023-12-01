@@ -38,7 +38,7 @@ struct TrainingView: View {
                     ScrollView {
                         LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
                             ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
+                                SpeciesListImage(mode: "Training", currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
                             }
                         })
                     }

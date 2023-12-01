@@ -143,7 +143,7 @@ class ReviveManager {
         
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currExploringSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
-        currExploringMap = localMyMaps.count == 0 ? nil : localMyMaps[0]
+        currExploringMap = localMyMaps.count == 0 ? MyMaps(id: 5002, isUnlocked: false, currTime: 0) : localMyMaps[0]
         
         isExpGain = false
         

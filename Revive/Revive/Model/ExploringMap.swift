@@ -42,7 +42,7 @@ extension ExploringMap {
 }
 
 enum MapType : String, Decodable {
-    case Plain, Desert, Rainforest, Ocean, Glaicer, River, Beach, Volcano
+    case Plain, Desert, Rainforest, Ocean, Glacier, River, Beach, Volcano, Sky
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

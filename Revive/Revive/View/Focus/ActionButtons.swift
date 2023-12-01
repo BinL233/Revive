@@ -16,6 +16,7 @@ struct ActionButtons: View {
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.1)) {
                         manager.currAction = .hatching
+                        manager.isStartButtonDisabled = false
                     }
                 }) {
                     Text("Hatching")
@@ -33,6 +34,7 @@ struct ActionButtons: View {
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.1)) {
                         manager.currAction = .training
+                        manager.isStartButtonDisabled = false
                     }
                 }) {
                     Text("Training")
@@ -49,6 +51,7 @@ struct ActionButtons: View {
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.1)) {
                         manager.currAction = .exploring
+                        manager.isStartButtonDisabled = true
                     }
                 }) {
                     Text("Exploring")

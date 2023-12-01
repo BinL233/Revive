@@ -61,6 +61,35 @@ extension ReviveManager {
     
     // Exploring State Change
     
+    func getMap(map: MyMaps) -> ExploringMap {
+        return mapList[map.id-5002]
+    }
+    
+    func getNextRewardTimeRemain() -> Int {
+        let currMapTime = currExploringMap?.currTime
+        let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
+        
+        for point in points {
+            guard let pointTime = Int(point.key) else {
+                return 0
+            }
+            
+            if pointTime > currMapTime {
+                
+            }
+        }
+    }
+    
+    func isMapTypeFitsSpecies(species: MySpecies) -> Bool {
+        for x in getMap(map: currExploringMap!).type {
+            if getSpecies(mySpecies: species).area.contains(where: {$0.key == x.rawValue} ) {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
     func changeToExploringState1() {
         currExploringState = .state1
         UIApplication.shared.isIdleTimerDisabled = false
@@ -69,6 +98,10 @@ extension ReviveManager {
         isTimerStart.toggle()
         timeRemaining = 30 * 60
         activeAlert = .none
+    }
+    
+    func changeToExploringState2() {
+        
     }
     
     func initMyMap() {

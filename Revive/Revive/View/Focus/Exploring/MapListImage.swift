@@ -16,22 +16,14 @@ struct MapListImage: View {
         Button(action: {
             currModule = currMap
         }, label: {
-            ZStack {
-//                if currModule == currMap {
-//                    Image("frame_selected")
-//                        .resizable()
-//                        .scaledToFit()
-//                } else {
-//                    Image("frame")
-//                        .resizable()
-//                        .scaledToFit()
-//                }
-
-                let itemImage = String(format: "%03d", currMap.id)
-                Image(itemImage)
+            if currModule == currMap {
+                Image("map_frame_selected_\(currMap.id)")
                     .resizable()
                     .scaledToFit()
-                    .padding(15)
+            } else {
+                Image("map_frame_\(currMap.id)")
+                    .resizable()
+                    .scaledToFit()
             }
         })
     }

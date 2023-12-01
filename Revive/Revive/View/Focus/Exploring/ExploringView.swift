@@ -23,11 +23,7 @@ struct ExploringView: View {
                 .foregroundStyle(Color.cBlack)
         } else {
             if manager.isTimerStart {
-                let speciesImage = String(format: "%03d", manager.currExploringSpecies?.speciesID ?? 0)
-                Image(speciesImage)
-                    .resizable()
-                    .scaledToFit()
-                    .padding(15)
+                ExploringStartView()
             } else if !isMapSelected {
                 VStack {
                     Text("Select Map")
@@ -48,12 +44,16 @@ struct ExploringView: View {
                     .background(Color.cDarkBrown)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     
-                    Button(action: {isMapSelected = true}, label: {
-                        Image(systemName: "checkmark")
-                            .tint(.white)
+                    Button(action: {
+                        withAnimation{isMapSelected = true}
+                    }, label: {
+                        Text("Next")
+                            .font(.custom("Georgia-Italic", size: 18))
+                            .foregroundStyle(.white)
+                            .bold()
+                            .padding()
+                            .padding(.horizontal, 30)
                     })
-                    .padding()
-                    .padding(.horizontal, 20)
                     .background(Color.cDarkOrange)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
@@ -65,11 +65,14 @@ struct ExploringView: View {
                         .padding()
                         .bold()
                         .foregroundStyle(Color.cBlack)
+                        .onAppear {
+                            manager.isStartButtonDisabled = false
+                        }
                     
                     ScrollView {
                         LazyVGrid(columns: adaptiveSpeciesCloumns, spacing: 20, content: {
                             ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
+                                SpeciesListImage(mode: "Exploring", currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
                             }
                         })
                     }
