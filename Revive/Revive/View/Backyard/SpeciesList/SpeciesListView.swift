@@ -14,48 +14,57 @@ struct SpeciesListView: View {
     var body: some View {
         @Bindable var manager = manager
         NavigationStack {
-            VStack (spacing: 0) {
-                Picker("SpeciesOrItems", selection: $manager.speciesItemsSelection) {
-                    Text("Species").tag(SpeciesItems.Species)
-                    Text("Items").tag(SpeciesItems.Items)
-                }
-                .pickerStyle(.segmented)
-                .padding(5)
-                .background(Color.cLightBrown)
+            if manager.speciesItemsSelection == .Species && manager.mySpecies.count == 0 {
+                Text("Let's hatch one Species!")
+                    .font(.custom("Georgia-Italic", size: 20))
+                    .padding(15)
+                    .bold()
+                    .foregroundStyle(Color.cBlack)
+            } else {
                 
-                if manager.speciesItemsSelection == .Species {
-                    if manager.mySpecies.count == 0 {
-                        Text("Let's hatch one Species!")
-                            .font(.custom("Georgia-Italic", size: 20))
-                            .padding(15)
-                            .bold()
-                            .foregroundStyle(Color.cBlack)
-                    } else {
-                        ScrollView {
-                            LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                                ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                    SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currPanelSpecies)
-                                }
-                            })
-                        }
-                        .background(Color.cDarkBrown)
+                VStack (spacing: 0) {
+                    Picker("SpeciesOrItems", selection: $manager.speciesItemsSelection) {
+                        Text("Species").tag(SpeciesItems.Species)
+                        Text("Items").tag(SpeciesItems.Items)
                     }
-                } else {
-                    if manager.mySpecies.count == 0 {
-                        Text("Oops...Nothing in your bag pack yet.")
-                            .font(.custom("Georgia-Italic", size: 20))
-                            .padding(15)
-                            .bold()
-                            .foregroundStyle(Color.cBlack)
+                    .pickerStyle(.segmented)
+                    .padding(5)
+                    .background(Color.cLightBrown)
+                    
+                    if manager.speciesItemsSelection == .Species {
+                            ScrollView {
+                                LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                                    ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                        SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currPanelSpecies)
+                                    }
+                                })
+                            }
+                            .background(Color.cDarkBrown)
                     } else {
-                        ScrollView {
-                            LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                                ForEach(manager.myItems.indices, id: \.self) { i in
-                                    ItemListImage(currItem: $manager.myItems[i], currModule: $manager.currPanelItem)
-                                }
-                            })
+                        if manager.myItems.count == 0 {
+                            VStack {
+                                Spacer()
+                                Text("Oops...")
+                                    .font(.custom("Georgia-Italic", size: 23))
+                                    .bold()
+                                    .foregroundStyle(Color.cBlack)
+                                Text("Nothing in your bag pack yet")
+                                    .font(.custom("Georgia-Italic", size: 20))
+                                    .padding(3)
+                                    .bold()
+                                    .foregroundStyle(Color.cBlack)
+                                Spacer()
+                            }
+                        } else {
+                            ScrollView {
+                                LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                                    ForEach(manager.myItems.indices, id: \.self) { i in
+                                        ItemListImage(currItem: $manager.myItems[i], currModule: $manager.currPanelItem)
+                                    }
+                                })
+                            }
+                            .background(Color.cDarkBrown)
                         }
-                        .background(Color.cDarkBrown)
                     }
                 }
             }

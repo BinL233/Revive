@@ -59,6 +59,7 @@ struct HatchingComplete: View {
                 }
                 
                 Button(action: {
+                    manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToHatchingState1()}
                 }) {
                     Text("Got it")
@@ -77,9 +78,4 @@ struct HatchingComplete: View {
         .padding(.horizontal, 50)
         .padding(.vertical, 180)
     }
-}
-
-#Preview {
-    HatchingComplete()
-        .environment(ReviveManager())
 }

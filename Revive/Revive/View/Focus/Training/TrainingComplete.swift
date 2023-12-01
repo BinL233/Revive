@@ -56,6 +56,7 @@ struct TrainingComplete: View {
                 }
                 
                 Button(action: {
+                    manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToTrainingState1()}
                 }) {
                     Text("Got it")

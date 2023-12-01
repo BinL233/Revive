@@ -41,7 +41,17 @@ extension ExploringMap {
     }
 }
 
-enum MapType : Identifiable, Decodable {
-    var id: Self { self }
+enum MapType : String, Decodable {
     case Plain, Desert, Rainforest, Ocean, Glaicer, River, Beach, Volcano
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let decodedString = try container.decode(String.self)
+
+        guard let value = MapType(rawValue: decodedString) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid function type value")
+        }
+
+        self = value
+    }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ExploringView: View {
     @Environment(ReviveManager.self) var manager
-    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 70))]
+    private let adaptiveMapCloumns = [GridItem(.adaptive(minimum: 150))]
+    private let adaptiveSpeciesCloumns = [GridItem(.adaptive(minimum: 73))]
     @State var isMapSelected = false
     
     var body: some View {
@@ -28,22 +29,54 @@ struct ExploringView: View {
                     .scaledToFit()
                     .padding(15)
             } else if !isMapSelected {
-                ScrollView {
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                        ForEach(manager.mySpecies.indices, id: \.self) { i in
-                            
-                        }
+                VStack {
+                    Text("Select Map")
+                        .font(.custom("Georgia-Italic", size: 15))
+                        .bold()
+                        .foregroundStyle(Color.black)
+                        //.background(Color.cDarkBrown)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    ScrollView {
+                        LazyVGrid(columns: adaptiveMapCloumns, spacing: 20, content: {
+                            ForEach(manager.mapList.indices, id: \.self) { i in
+                                MapListImage(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
+                            }
+                        })
+                    }
+                    .padding()
+                    .background(Color.cDarkBrown)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    
+                    Button(action: {isMapSelected = true}, label: {
+                        Image(systemName: "checkmark")
+                            .tint(.white)
                     })
+                    .padding()
+                    .padding(.horizontal, 20)
+                    .background(Color.cDarkOrange)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
+                
             } else {
-                ScrollView {
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                        ForEach(manager.mySpecies.indices, id: \.self) { i in
-                            SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
-                        }
-                    })
+                VStack {
+                    Text("Select adventure buddy")
+                        .font(.custom("Georgia-Italic", size: 18))
+                        .padding()
+                        .bold()
+                        .foregroundStyle(Color.cBlack)
+                    
+                    ScrollView {
+                        LazyVGrid(columns: adaptiveSpeciesCloumns, spacing: 20, content: {
+                            ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
+                            }
+                        })
+                    }
+                    .padding()
+                    .background(Color.cDarkBrown)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
-                .background(Color.cDarkBrown)
             }
         }
     }

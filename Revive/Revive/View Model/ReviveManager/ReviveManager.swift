@@ -49,6 +49,7 @@ class ReviveManager {
     var activeAlert : ActiveAlert?
     var testMode : TestMode
     var isExpGain : Bool
+    var isStartButtonDisabled : Bool
     
     // Setting
     var keepDisplay : Bool
@@ -83,7 +84,7 @@ class ReviveManager {
         itemList = Item.items ?? []
 
         mySpecies = localMySpecies
-        myMaps = localMyMaps
+        myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5002, isUnlocked: false, currTime: 0)] : localMyMaps
         myItems = localMyItems
         
         
@@ -91,6 +92,8 @@ class ReviveManager {
         
         currDistTimeSpanSelection = .week
         currDistActionSelection = .total
+        
+        isStartButtonDisabled = false
         
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {

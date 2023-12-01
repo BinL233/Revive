@@ -14,13 +14,13 @@ struct DisplayView: View {
         ZStack {
             if manager.currAction == .hatching {
                 HatchingView()
-                    .padding()
+                    .padding(60)
             } else if manager.currAction == .training {
                 TrainingView()
-                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     .padding(.horizontal)
             } else {
-                
+                ExploringView()
+                    .padding(.horizontal)
             }
         }
     }

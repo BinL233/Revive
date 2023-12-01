@@ -18,7 +18,8 @@ struct FocusView: View {
                     FocusTitle()
                     Spacer()
                     DisplayView()
-                        .padding(.vertical, 30)
+                        .padding(.bottom, 30)
+                        .padding(.top, 10)
                     ActionButtons()
                         .padding(.horizontal, 30)
                         .padding(.vertical, 10)
@@ -27,8 +28,8 @@ struct FocusView: View {
                         .padding(.horizontal, 40)
 
                     StartButton()
-                        .padding(.vertical, 50)
-                        .padding(.bottom, 50)
+                        .padding(.vertical, 20)
+                        .padding(.bottom, 30)
                 }
                 
                 // For hatching
@@ -36,11 +37,17 @@ struct FocusView: View {
                     if manager.currHatchingState == .state3 {
                         HatchingComplete()
                             .transition(.scale)
+                            .onAppear {
+                                manager.isStartButtonDisabled = true
+                            }
                     }
                 } else if manager.currAction == .training {
                     if manager.currTrainingState == .state2 {
                         TrainingComplete()
                             .transition(.scale)
+                            .onAppear {
+                                manager.isStartButtonDisabled = true
+                            }
                     }
                 } else {
                     

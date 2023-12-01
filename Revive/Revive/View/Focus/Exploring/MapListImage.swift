@@ -13,17 +13,19 @@ struct MapListImage: View {
     @Binding var currModule : MyMaps?
     
     var body: some View {
-        Button(action: {currModule = currMap}, label: {
+        Button(action: {
+            currModule = currMap
+        }, label: {
             ZStack {
-                if currModule == currMap {
-                    Image("frame_selected")
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    Image("frame")
-                        .resizable()
-                        .scaledToFit()
-                }
+//                if currModule == currMap {
+//                    Image("frame_selected")
+//                        .resizable()
+//                        .scaledToFit()
+//                } else {
+//                    Image("frame")
+//                        .resizable()
+//                        .scaledToFit()
+//                }
 
                 let itemImage = String(format: "%03d", currMap.id)
                 Image(itemImage)

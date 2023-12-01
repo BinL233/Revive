@@ -13,7 +13,11 @@ extension ReviveManager {
         let superRarePercent = HatchingMechanics().superRare
         let upRate = HatchingMechanics().superRareUpRate * Double(selectedTime / 60)
         let rarityToFilter = Int.random(in: 0..<(100-Int(upRate))) < Int(superRarePercent * 100) ? "SR" : "R"
-        let filteredSpeciesIDs = speciesList.filter { $0.stage == 1 && $0.rarity == rarityToFilter && $0.hatchTime*60 <= selectedTime }.map { $0.id }
+        var filteredSpeciesIDs = speciesList.filter { $0.stage == 1 && $0.rarity == rarityToFilter && $0.hatchTime*60 <= selectedTime }.map { $0.id }
+        
+        if filteredSpeciesIDs.isEmpty {
+            filteredSpeciesIDs = speciesList.filter { $0.stage == 1 && $0.rarity == "R" && $0.hatchTime*60 <= selectedTime }.map { $0.id }
+        }
         let randomSpecies = Int.random(in: 0..<filteredSpeciesIDs.count)
         
         return speciesList[filteredSpeciesIDs[randomSpecies] - 1]
@@ -65,6 +69,12 @@ extension ReviveManager {
         isTimerStart.toggle()
         timeRemaining = 30 * 60
         activeAlert = .none
+    }
+    
+    func initMyMap() {
+        if myMaps.isEmpty {
+            myMaps.append(MyMaps(id: 5002, isUnlocked: true, currTime: 0))
+        }
     }
     
     // Training State Change

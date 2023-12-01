@@ -38,12 +38,32 @@ extension Item {
     }
 }
 
-enum FunctionType : Identifiable, Decodable {
-    var id: Self { self }
-    case exp, hatchingTime, trainingTime, exploringTime
+enum FunctionType: String, Decodable {
+    case exp, hatchingTime = "hatching_time", trainingTime = "training_time", exploringTime = "exploring_time"
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let decodedString = try container.decode(String.self)
+
+        guard let value = FunctionType(rawValue: decodedString) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid function type value")
+        }
+
+        self = value
+    }
 }
 
-enum Trait : Identifiable, Decodable {
-    var id: Self { self }
-    case carnivore, herbivore, omnivorou
+enum Trait : String, Decodable {
+    case carnivore, herbivore, omnivorous
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let decodedString = try container.decode(String.self)
+
+        guard let value = Trait(rawValue: decodedString) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid function type value")
+        }
+
+        self = value
+    }
 }

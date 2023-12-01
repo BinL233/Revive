@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrainingView: View {
     @Environment(ReviveManager.self) var manager
-    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 70))]
+    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 73))]
     
     var body: some View {
         @Bindable var manager = manager
@@ -27,14 +27,25 @@ struct TrainingView: View {
                     .scaledToFit()
                     .padding(15)
             } else {
-                ScrollView {
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                        ForEach(manager.mySpecies.indices, id: \.self) { i in
-                            SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
-                        }
-                    })
+                VStack {
+                    Text("Select a Species for training")
+                        .font(.custom("Georgia-Italic", size: 15))
+                        .bold()
+                        .foregroundStyle(Color.black)
+                        //.background(Color.cDarkOrange)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    ScrollView {
+                        LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                            ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                SpeciesListImage(currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
+                            }
+                        })
+                    }
+                    .padding()
+                    .background(Color.cDarkBrown)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
-                .background(Color.cDarkBrown)
             }
         }
     }
