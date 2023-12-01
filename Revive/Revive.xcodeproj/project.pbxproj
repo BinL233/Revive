@@ -76,10 +76,10 @@
 		B3FB81822B192F9F004CB417 /* DataManager+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81812B192F9F004CB417 /* DataManager+Map.swift */; };
 		B3FB81852B193C1F004CB417 /* ItemListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81842B193C1F004CB417 /* ItemListImage.swift */; };
 		B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81862B19421E004CB417 /* MapListImage.swift */; };
-		B3FB818B2B1978EA004CB417 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81882B1978EA004CB417 /* Item.json */; };
-		B3FB818C2B1978EA004CB417 /* SpeciesInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81892B1978EA004CB417 /* SpeciesInfo.json */; };
-		B3FB818D2B1978EA004CB417 /* ExploringMap.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB818A2B1978EA004CB417 /* ExploringMap.json */; };
-		B3FB818F2B198D4A004CB417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB818E2B198D4A004CB417 /* Assets.xcassets */; };
+		B3FB81912B199131004CB417 /* ExploringMap.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81902B199131004CB417 /* ExploringMap.json */; };
+		B3FB81932B199144004CB417 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81922B199144004CB417 /* Item.json */; };
+		B3FB81952B199158004CB417 /* SpeciesInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81942B199158004CB417 /* SpeciesInfo.json */; };
+		B3FB81972B199168004CB417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81962B199168004CB417 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,10 +173,10 @@
 		B3FB81812B192F9F004CB417 /* DataManager+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Map.swift"; sourceTree = "<group>"; };
 		B3FB81842B193C1F004CB417 /* ItemListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListImage.swift; sourceTree = "<group>"; };
 		B3FB81862B19421E004CB417 /* MapListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListImage.swift; sourceTree = "<group>"; };
-		B3FB81882B1978EA004CB417 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Item.json; path = ../../../../../Repos/Revive/Revive/Revive/Persistences/Item.json; sourceTree = "<group>"; };
-		B3FB81892B1978EA004CB417 /* SpeciesInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpeciesInfo.json; path = ../../../../../Repos/Revive/Revive/Revive/Persistences/SpeciesInfo.json; sourceTree = "<group>"; };
-		B3FB818A2B1978EA004CB417 /* ExploringMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ExploringMap.json; path = ../../../../../Repos/Revive/Revive/Revive/Persistences/ExploringMap.json; sourceTree = "<group>"; };
-		B3FB818E2B198D4A004CB417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Repos/Revive/Revive/Revive/Assets.xcassets; sourceTree = "<group>"; };
+		B3FB81902B199131004CB417 /* ExploringMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ExploringMap.json; path = ../../../../Revive2/Revive/Revive/Persistences/ExploringMap.json; sourceTree = "<group>"; };
+		B3FB81922B199144004CB417 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Item.json; path = ../../../../Revive2/Revive/Revive/Persistences/Item.json; sourceTree = "<group>"; };
+		B3FB81942B199158004CB417 /* SpeciesInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SpeciesInfo.json; path = ../../../../Revive2/Revive/Revive/Persistences/SpeciesInfo.json; sourceTree = "<group>"; };
+		B3FB81962B199168004CB417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Revive2/Revive/Revive/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,9 +247,9 @@
 		B34F1BB92AF5C27B00737872 /* Persistences */ = {
 			isa = PBXGroup;
 			children = (
-				B3FB818A2B1978EA004CB417 /* ExploringMap.json */,
-				B3FB81882B1978EA004CB417 /* Item.json */,
-				B3FB81892B1978EA004CB417 /* SpeciesInfo.json */,
+				B3FB81902B199131004CB417 /* ExploringMap.json */,
+				B3FB81922B199144004CB417 /* Item.json */,
+				B3FB81942B199158004CB417 /* SpeciesInfo.json */,
 				B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */,
 				B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */,
 			);
@@ -344,7 +344,7 @@
 		B3C773FA2ACCE69800387FDC /* Revive */ = {
 			isa = PBXGroup;
 			children = (
-				B3FB818E2B198D4A004CB417 /* Assets.xcassets */,
+				B3FB81962B199168004CB417 /* Assets.xcassets */,
 				B34F1BD82AF6045300737872 /* Info.plist */,
 				B34F1BB92AF5C27B00737872 /* Persistences */,
 				B3C774272ACCE6D800387FDC /* View */,
@@ -567,12 +567,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FB81932B199144004CB417 /* Item.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
-				B3FB818D2B1978EA004CB417 /* ExploringMap.json in Resources */,
+				B3FB81912B199131004CB417 /* ExploringMap.json in Resources */,
 				B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */,
-				B3FB818C2B1978EA004CB417 /* SpeciesInfo.json in Resources */,
-				B3FB818F2B198D4A004CB417 /* Assets.xcassets in Resources */,
-				B3FB818B2B1978EA004CB417 /* Item.json in Resources */,
+				B3FB81972B199168004CB417 /* Assets.xcassets in Resources */,
+				B3FB81952B199158004CB417 /* SpeciesInfo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
