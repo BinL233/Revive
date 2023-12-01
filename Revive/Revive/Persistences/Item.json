@@ -1,0 +1,33 @@
+[
+    {
+       "id" : 2001,
+       "name": "Cookie",
+       "trait": ["carnivore", "herbivore", "omnivorous"],
+       "function_type": ["exp"],
+       "amount": [100]
+    },
+
+    {
+        "id" : 2002,
+        "name": "Meat",
+        "trait": ["carnivore", "omnivorous"],
+        "function_type": ["exp"],
+        "amount": [300]
+    },
+
+    {
+        "id" : 2003,
+        "name": "Vegetables",
+        "trait": ["herbivore", "omnivorous"],
+        "function_type": ["exp"],
+        "amount": [300]
+    },
+    
+    {
+        "id" : 2004,
+        "name": "datepalm",
+        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "function_type": ["exp"],
+        "amount": [1000]  
+    }
+]
