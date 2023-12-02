@@ -12,7 +12,7 @@ struct Item : Identifiable, Decodable {
     let name : String
     let trait : [Trait]
     let functionType : [FunctionType]
-    let amount : [Int]
+    let amount : [Double]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -34,12 +34,12 @@ extension Item {
         name = try values.decode(String.self, forKey: .name)
         trait = try values.decode([Trait].self, forKey: .trait)
         functionType = try values.decode([FunctionType].self, forKey: .functionType)
-        amount = try values.decode([Int].self, forKey: .amount)
+        amount = try values.decode([Double].self, forKey: .amount)
     }
 }
 
 enum FunctionType: String, Decodable {
-    case exp, hatchingTime = "hatching_time", trainingTime = "training_time", exploringTime = "exploring_time"
+    case exp, hatchingTime = "hatching_time", trainingTime = "training_time", exploringTime = "exploring_time", rarityUp = "rarity_up"
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

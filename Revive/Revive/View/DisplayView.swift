@@ -14,7 +14,7 @@ struct DisplayView: View {
         ZStack {
             if manager.currAction == .hatching {
                 HatchingView()
-                    .padding(60)
+                    .padding(70)
             } else if manager.currAction == .training {
                 TrainingView()
                     .padding(.horizontal)

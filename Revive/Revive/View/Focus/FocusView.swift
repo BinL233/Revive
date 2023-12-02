@@ -18,7 +18,7 @@ struct FocusView: View {
                     FocusTitle()
                     Spacer()
                     DisplayView()
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 10)
                         .padding(.top, 10)
                     ActionButtons()
                         .padding(.horizontal, 30)
@@ -50,7 +50,13 @@ struct FocusView: View {
                             }
                     }
                 } else {
-                    
+                    if manager.currExploringState == .state2 {
+                        ExploringComplete()
+                            .transition(.scale)
+                            .onAppear {
+                                manager.isStartButtonDisabled = true
+                            }
+                    }
                 }
             }
         }

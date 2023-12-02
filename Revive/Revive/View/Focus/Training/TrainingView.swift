@@ -19,13 +19,24 @@ struct TrainingView: View {
                 .padding(15)
                 .bold()
                 .foregroundStyle(Color.cBlack)
+                .onAppear {
+                    manager.isStartButtonDisabled = true
+                }
         } else {
             if manager.isTimerStart {
                 let speciesImage = String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0)
-                Image(speciesImage)
-                    .resizable()
-                    .scaledToFit()
-                    .padding(15)
+                
+                ZStack {
+                    Image(speciesImage)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(15)
+                    
+                    ForEach(0..<5, id: \.self) { _ in
+                        TrainingAnimation()
+                    }
+                }
+
             } else {
                 VStack {
                     Text("Select a Species for training")

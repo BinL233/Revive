@@ -17,11 +17,11 @@ struct MapListImage: View {
             currModule = currMap
         }, label: {
             if currModule == currMap {
-                Image("map_frame_selected_\(currMap.id)")
+                Image("mapFrameSelected\(currMap.id)")
                     .resizable()
                     .scaledToFit()
             } else {
-                Image("map_frame_\(currMap.id)")
+                Image("mapFrame\(currMap.id)")
                     .resizable()
                     .scaledToFit()
             }

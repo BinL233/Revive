@@ -30,24 +30,32 @@ struct TrainingComplete: View {
                 if let species = manager.currTrainingSpecies {
                     let speciesImage = String(format: "%03d", species.speciesID)
                     
-                    HStack {
+                    Text(manager.currTrainingSpecies?.nickName ?? "???")
+                        .font(.system(size: 25))
+                        .italic()
+                        .bold()
+                        .foregroundStyle(manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
+                        .padding()
+                    
+                    HStack (alignment: .top){
                         Text("Lv")
-                            .font(.title2)
+                            .font(.title3)
                             .italic()
                             .bold()
                             .foregroundStyle(Color.cBlackBrown)
                         
                         withAnimation(.bouncy){ Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")].level)")
-                                .font(.title)
+                                .font(.title2)
                                 .italic()
                                 .bold()
                                 .foregroundStyle(Color.cBlackBrown)
                         }
+                        
+                        let intValue = Int($manager.selectedTime.wrappedValue)
+                        
+                        SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue)
+                            .padding(.leading)
                     }
-                    
-                    let intValue = Int($manager.selectedTime.wrappedValue)
-                    
-                    SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue)
                     
                     Image(speciesImage)
                         .resizable()

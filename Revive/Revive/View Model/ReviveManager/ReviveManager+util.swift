@@ -63,4 +63,12 @@ extension ReviveManager {
         
         return String(hour) + "h " + String(format: "%02d", min) + "m "
     }
+    
+    func randomColor() -> Color {
+        Color(
+            red: Double.random(in: 0.5...0.9),
+            green: Double.random(in: 0.5...0.9),
+            blue: Double.random(in: 0.5...0.9)
+        )
+    }
 }

@@ -38,9 +38,9 @@ extension ReviveManager {
         return -1
     }
     
-    func getLevelUpNum(species: MySpecies) -> (Int, Int) {
+    func getLevelUpNum(species: MySpecies, rate: Double) -> (Int, Int) {
         let myspecies = mySpecies[getSpeciesIndex(id: species.speciesID, date: species.hatchDate)]
-        var totalExp = selectedTime
+        var totalExp = Int(Double(selectedTime) * rate)
         var currExp = myspecies.currExp
         var num = 0
 
@@ -62,22 +62,56 @@ extension ReviveManager {
     // Exploring State Change
     
     func getMap(map: MyMaps) -> ExploringMap {
-        return mapList[map.id-5002]
+        return mapList[map.id-5001]
+    }
+    
+    func getLastNextPoint() -> (Int, Int) {
+        let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
+        let sortedPoints = points.sorted { Int($0.key)! < Int($1.key)! }
+        
+        for i in 0..<sortedPoints.count {
+            guard let pointTime : Int = Int(sortedPoints[i].key) else {
+                return (0, 0)
+            }
+            
+            guard let currMapTime = currExploringMap?.currTime else {
+                return (0, 0)
+            }
+            
+            if pointTime > currMapTime {
+                if i == 0 {
+                    return (0, pointTime)
+                } else {
+                    guard let lastPoint : Int = Int(sortedPoints[i-1].key) else {
+                        return (0, 0)
+                    }
+                    return (lastPoint, pointTime)
+                }
+            }
+        }
+        
+        return (0, 0)
     }
     
     func getNextRewardTimeRemain() -> Int {
-        let currMapTime = currExploringMap?.currTime
         let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
+        let sortedPoints = points.sorted { Int($0.key)! < Int($1.key)! }
         
-        for point in points {
-            guard let pointTime = Int(point.key) else {
+        for point in sortedPoints {
+            guard let pointTime : Int = Int(point.key) else {
+                return 0
+            }
+            
+            guard let currMapTime = currExploringMap?.currTime else {
                 return 0
             }
             
             if pointTime > currMapTime {
-                
+                return pointTime - currMapTime
             }
         }
+        
+        return 0
     }
     
     func isMapTypeFitsSpecies(species: MySpecies) -> Bool {
@@ -100,13 +134,28 @@ extension ReviveManager {
         activeAlert = .none
     }
     
-    func changeToExploringState2() {
+    func changeToExploringState2(id: Int, date: String, currExp: Int, levelUpNum: Int) {
+        currExploringState = .state2
+        
+        DataManager.shared.updateMySpeciesLevel(for: id, with: currExploringSpecies!.level + levelUpNum, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
+        
+        totalExploringTime += selectedTime
+        totalTime += selectedTime
+        UserDefaults.standard.set(totalExploringTime, forKey: "TotalExploringTime")
+        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        
+        let currentDate = Date()
+        let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "exploring")
+        focusLog.append(logg)
+        currFocusLog = groupAndCalculateDurations()
+        DataManager.shared.saveLogData(customItem: logg)
         
     }
     
     func initMyMap() {
         if myMaps.isEmpty {
-            myMaps.append(MyMaps(id: 5002, isUnlocked: true, currTime: 0))
+            myMaps.append(MyMaps(id: 5001, isUnlocked: true, currTime: 0))
         }
     }
     

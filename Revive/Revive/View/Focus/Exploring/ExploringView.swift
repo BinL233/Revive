@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ExploringView: View {
     @Environment(ReviveManager.self) var manager
-    private let adaptiveMapCloumns = [GridItem(.adaptive(minimum: 150))]
     private let adaptiveSpeciesCloumns = [GridItem(.adaptive(minimum: 73))]
     @State var isMapSelected = false
     
@@ -34,11 +33,77 @@ struct ExploringView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     ScrollView {
-                        LazyVGrid(columns: adaptiveMapCloumns, spacing: 20, content: {
+                        VStack {
                             ForEach(manager.mapList.indices, id: \.self) { i in
-                                MapListImage(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
+                                if i < manager.myMaps.count {
+                                    HStack {
+                                        MapListImage(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
+                                        
+                                        VStack {
+                                            Text("Exploring Time:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text(manager.secTimeToString(time: manager.myMaps[i].currTime))
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                            
+                                            Spacer()
+                                            
+                                            Text("Next Treasure:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text("\(manager.secTimeToString(time: manager.getNextRewardTimeRemain()))")
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                        }
+                                        .padding()
+                                        .padding(.top)
+                                    }
+                                } else {
+                                    HStack {
+                                        Image("mapFrame\(manager.mapList[i].id)")
+                                            .resizable()
+                                            .scaledToFit()
+                                        
+                                        VStack {
+                                            Text("Exploring Time:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text("???")
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                            
+                                            Spacer()
+                                            
+                                            Text("Next Treasure:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text("???")
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                        }
+                                        .padding()
+                                        .padding(.top)
+                                    }
+                                }
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(height: 2)
+                                    .tint(Color.cBlackBrown)
+                                    .opacity(0.3)
                             }
-                        })
+                        }
                     }
                     .padding()
                     .background(Color.cDarkBrown)

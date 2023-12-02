@@ -64,6 +64,9 @@
 		B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774332ACD11CF00387FDC /* ActionButtons.swift */; };
 		B3C774362ACD151600387FDC /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774352ACD151500387FDC /* StartButton.swift */; };
 		B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */; };
+		B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */; };
+		B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */; };
+		B3D5529A2B1AD52E0046F4FF /* TreasureProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */; };
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
@@ -162,6 +165,9 @@
 		B3C774332ACD11CF00387FDC /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		B3C774352ACD151500387FDC /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringComplete.swift; sourceTree = "<group>"; };
+		B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAnimation.swift; sourceTree = "<group>"; };
+		B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureProgressBar.swift; sourceTree = "<group>"; };
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
@@ -221,6 +227,8 @@
 				B3234E8A2B15048700A730D1 /* ExploringView.swift */,
 				B3FB81862B19421E004CB417 /* MapListImage.swift */,
 				B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */,
+				B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */,
+				B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */,
 			);
 			path = Exploring;
 			sourceTree = "<group>";
@@ -452,6 +460,7 @@
 			children = (
 				B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */,
 				B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */,
+				B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */,
 			);
 			path = Training;
 			sourceTree = "<group>";
@@ -600,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */,
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
@@ -663,6 +673,8 @@
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
+				B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */,
+				B3D5529A2B1AD52E0046F4FF /* TreasureProgressBar.swift in Sources */,
 				B3FB81822B192F9F004CB417 /* DataManager+Map.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,
 			);

@@ -58,9 +58,9 @@ struct SpeciesExpBar: View {
                                 }
                             }
                         } else {
-                            timer.upstream.connect().cancel()
-                            manager.isExpGain = true
-                        }
+                                timer.upstream.connect().cancel()
+                                manager.isExpGain = true
+                            }
                     }
                  }
         }
