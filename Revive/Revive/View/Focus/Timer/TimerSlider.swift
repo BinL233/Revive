@@ -19,7 +19,9 @@ struct TimerSlider: View {
                 step: 5*60
             )
             .onChange(of: manager.timeRemaining, { oldValue, newValue in
-                if newValue < 30*60 && !manager.isTimerStart {
+                if manager.currAction == .hatching && newValue < 30*60 && !manager.isTimerStart {
+                    manager.currAction = .training
+                } else if manager.currAction == .exploring && newValue < 10*60 && !manager.isTimerStart {
                     manager.currAction = .training
                 }
             })

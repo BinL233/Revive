@@ -18,7 +18,7 @@
     {
         "id" : 2003,
         "name": "Ball",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": [],
         "amount": []
     },
@@ -26,7 +26,7 @@
     {
         "id" : 2004,
         "name": "Incubator",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["hatching_time"],
         "amount": [0.90]
     },
@@ -34,7 +34,7 @@
     {
         "id" : 2005,
         "name": "Dumbbell",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["training_time"],
         "amount": [0.90]
     },
@@ -42,7 +42,7 @@
     {
         "id" : 2006,
         "name": "Pocketwatch",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exploring_time"],
         "amount": [0.90]
     },
@@ -50,7 +50,7 @@
     {
         "id" : 2007,
         "name": "Compass",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["rarity_up"],
         "amount": [0.30]
     },
@@ -58,7 +58,7 @@
     {
        "id" : 2008,
        "name": "Cookie",
-       "trait": ["carnivore", "herbivore", "omnivorous"],
+       "trait": ["carnivore", "herbivore", "omnivore"],
        "function_type": ["exp"],
        "amount": [100]
     },
@@ -66,7 +66,7 @@
     {
         "id" : 2009,
         "name": "Meat",
-        "trait": ["carnivore", "omnivorous"],
+        "trait": ["carnivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [300]
     },
@@ -74,7 +74,7 @@
     {
         "id" : 2010,
         "name": "Vegetables",
-        "trait": ["herbivore", "omnivorous"],
+        "trait": ["herbivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [300]
     },
@@ -82,7 +82,7 @@
     {
         "id" : 2011,
         "name": "datepalm",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [1000]  
     },
@@ -90,7 +90,7 @@
     {
         "id" : 2012,
         "name": "Berrybush",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [1000]  
     },
@@ -98,7 +98,7 @@
     {
         "id" : 2013,
         "name": "Firn",
-        "trait": ["carnivore", "herbivore", "omnivorous"],
+        "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [1000]  
     }

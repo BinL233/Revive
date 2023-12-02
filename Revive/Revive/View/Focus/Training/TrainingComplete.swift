@@ -37,25 +37,24 @@ struct TrainingComplete: View {
                         .foregroundStyle(manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
                         .padding()
                     
-                    HStack (alignment: .top){
+                    HStack {
                         Text("Lv")
-                            .font(.title3)
+                            .font(.title2)
                             .italic()
                             .bold()
                             .foregroundStyle(Color.cBlackBrown)
                         
                         withAnimation(.bouncy){ Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")].level)")
-                                .font(.title2)
+                                .font(.title)
                                 .italic()
                                 .bold()
                                 .foregroundStyle(Color.cBlackBrown)
                         }
-                        
-                        let intValue = Int($manager.selectedTime.wrappedValue)
-                        
-                        SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue)
-                            .padding(.leading)
                     }
+                        
+                    let intValue = Int($manager.selectedTime.wrappedValue)
+                    
+                    SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue, widthPercent: 0.7)
                     
                     Image(speciesImage)
                         .resizable()

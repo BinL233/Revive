@@ -35,6 +35,7 @@ class ReviveManager {
     // Item
     var myItems : [MyItems]
     var currPanelItem : MyItems?
+    var currExploringItems : [Int:Int]
     
     // State
     var currHatchingState : CurrHatchingState
@@ -121,6 +122,7 @@ class ReviveManager {
             }.sorted { $0.key < $1.key }
         }()
         
+        currExploringItems = [:]
         currHatchingSpecies = nil
         currAction = .hatching
         currHatchingEgg = 1001

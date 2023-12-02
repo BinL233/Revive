@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploringComplete: View {
     @Environment(ReviveManager.self) var manager
+    private let adaptiveCloumns = [GridItem(.adaptive(minimum: 70))]
     
     var body: some View {
         @Bindable var manager = manager
@@ -27,13 +28,59 @@ struct ExploringComplete: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(radius: 0.7, x: 0, y: 2)
                 
-                VStack {
-                    Image("mapFrame\(manager.currExploringMap?.id ?? 5001)")
+//                Image("mapFrame\(manager.currExploringMap?.id ?? 5001)")
+//                    .resizable()
+//                    .scaledToFit()
+                
+                HStack {
+                    Image("2001")
                         .resizable()
                         .scaledToFit()
                     
-                    
+                    VStack {
+                        Text("Next Treasure")
+                            .font(.custom("Georgia-Italic", size: 12))
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+//                        Text("\(manager.secTimeToString(time: manager.getNextRewardTimeRemain()))")
+//                            .font(.custom("Georgia-Italic", size: 12))
+//                            .bold()
+//                            .foregroundStyle(Color.cBlack)
+                        
+                        TreasureProgressBar(widthPercent: 0.5)
+                    }
+                    .padding(.vertical)
                 }
+                .padding(.vertical)
+                
+                VStack {
+                    Text("Rewards")
+                        .font(.custom("Georgia-Italic", size: 16))
+                        .bold()
+                        .foregroundStyle(Color.cBlackBrown)
+                        .shadow(radius: 0.7, x: 0, y: 2)
+                        .padding(13)
+                        .background(Color.cLightYellow)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(radius: 0.7, x: 0, y: 2)
+                    
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
+                        ForEach(Array(manager.getRewards().keys), id: \.self) { key in
+                            ItemsListImage(
+                                isUsedforSelection: false,
+                                currItem: $manager.itemList[key - 2001],
+                                currItemNum: manager.currExploringItems[key]!,
+                                currModule: $manager.currPanelItem
+                            )
+                        }
+                    })
+                }
+                .padding()
+                .background(Color.cDarkOrange)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 2, x: 0, y: 4)
+                .padding(.bottom)
+                    
                 
                 Spacer()
                 

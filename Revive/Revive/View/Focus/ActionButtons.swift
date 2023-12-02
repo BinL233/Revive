@@ -55,13 +55,14 @@ struct ActionButtons: View {
                     }
                 }) {
                     Text("Exploring")
-                        .foregroundStyle(Color.cBlack)
+                        .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 10*60) ? .gray : Color.cBlack})
                         .font(.custom("Georgia-Italic", size: 15))
                 }
                 .padding(15)
                 .background((manager.currAction == .exploring) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
+                .disabled(!manager.isTimerStart && manager.timeRemaining < 10*60)
             }
         }
 //        }

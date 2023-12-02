@@ -71,4 +71,14 @@ extension ReviveManager {
             blue: Double.random(in: 0.5...0.9)
         )
     }
+    
+    func getSpeciesIndex(id: Int, date: String) -> Int {
+        for i in 0..<mySpecies.count {
+            if mySpecies[i].speciesID == id && mySpecies[i].hatchDate == date {
+                return i
+            }
+        }
+        
+        return -1
+    }
 }

@@ -39,7 +39,6 @@
 		B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BCE2AF5E40E00737872 /* LaunchView.swift */; };
 		B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD02AF5EFBB00737872 /* DisplayView.swift */; };
 		B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD22AF5F29200737872 /* MainTabView.swift */; };
-		B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */; };
 		B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
@@ -84,6 +83,11 @@
 		B3FB819C2B19920B004CB417 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81992B19920A004CB417 /* Item.json */; };
 		B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819A2B19920B004CB417 /* SpeciesInfo.json */; };
 		B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
+		B3FF6B9B2B1BB71000327E93 /* SpeciesPanelActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6B9A2B1BB71000327E93 /* SpeciesPanelActionButtons.swift */; };
+		B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6B9C2B1BB74200327E93 /* ReviveManager+Hatching.swift */; };
+		B3FF6BA02B1BB78200327E93 /* ReviveManager+Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6B9F2B1BB78200327E93 /* ReviveManager+Training.swift */; };
+		B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6BA12B1BB7A800327E93 /* ReviveManager+Exploring.swift */; };
+		B3FF6BA42B1BD4E700327E93 /* ItemsListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6BA32B1BD4E700327E93 /* ItemsListImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,7 +140,6 @@
 		B34F1BCE2AF5E40E00737872 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		B34F1BD02AF5EFBB00737872 /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		B34F1BD22AF5F29200737872 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Focus.swift"; sourceTree = "<group>"; };
 		B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingMechanics.swift; sourceTree = "<group>"; };
 		B34F1BD82AF6045300737872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -185,6 +188,11 @@
 		B3FB81992B19920A004CB417 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Item.json; sourceTree = "<group>"; };
 		B3FB819A2B19920B004CB417 /* SpeciesInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesInfo.json; sourceTree = "<group>"; };
 		B3FB819E2B199212004CB417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3FF6B9A2B1BB71000327E93 /* SpeciesPanelActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelActionButtons.swift; sourceTree = "<group>"; };
+		B3FF6B9C2B1BB74200327E93 /* ReviveManager+Hatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Hatching.swift"; sourceTree = "<group>"; };
+		B3FF6B9F2B1BB78200327E93 /* ReviveManager+Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Training.swift"; sourceTree = "<group>"; };
+		B3FF6BA12B1BB7A800327E93 /* ReviveManager+Exploring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Exploring.swift"; sourceTree = "<group>"; };
+		B3FF6BA32B1BD4E700327E93 /* ItemsListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +237,7 @@
 				B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */,
 				B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */,
 				B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */,
+				B3FF6BA32B1BD4E700327E93 /* ItemsListImage.swift */,
 			);
 			path = Exploring;
 			sourceTree = "<group>";
@@ -270,9 +279,9 @@
 		B359FE4A2AFBF9CB00A58A87 /* ReviveManager */ = {
 			isa = PBXGroup;
 			children = (
+				B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */,
 				B34F1BC42AF5CE6700737872 /* ReviveManager.swift */,
 				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
-				B34F1BD42AF5F88600737872 /* ReviveManager+Focus.swift */,
 				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
 				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 				B349D5D92B09541900270661 /* ReviveManager+Notification.swift */,
@@ -471,8 +480,19 @@
 				B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */,
 				B3FA42D62AFF1E99009C6C41 /* SpeciesPanelImage.swift */,
 				B349D5D42B09296400270661 /* SpeciesExpBar.swift */,
+				B3FF6B9A2B1BB71000327E93 /* SpeciesPanelActionButtons.swift */,
 			);
 			path = SpeciesPanel;
+			sourceTree = "<group>";
+		};
+		B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */ = {
+			isa = PBXGroup;
+			children = (
+				B3FF6B9C2B1BB74200327E93 /* ReviveManager+Hatching.swift */,
+				B3FF6B9F2B1BB78200327E93 /* ReviveManager+Training.swift */,
+				B3FF6BA12B1BB7A800327E93 /* ReviveManager+Exploring.swift */,
+			);
+			path = "Revivemanager+Focus";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FF6BA42B1BD4E700327E93 /* ItemsListImage.swift in Sources */,
 				B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */,
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */,
@@ -618,6 +639,7 @@
 				B349D5D82B0950A900270661 /* SettingView.swift in Sources */,
 				B3234E942B150A6500A730D1 /* FocusLog.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
+				B3FF6BA02B1BB78200327E93 /* ReviveManager+Training.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
@@ -643,9 +665,11 @@
 				B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */,
 				B3FB817A2B192232004CB417 /* Item.swift in Sources */,
 				B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */,
+				B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
+				B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
@@ -658,8 +682,8 @@
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B3FB81852B193C1F004CB417 /* ItemListImage.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
-				B34F1BD52AF5F88600737872 /* ReviveManager+Focus.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
+				B3FF6B9B2B1BB71000327E93 /* SpeciesPanelActionButtons.swift in Sources */,
 				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
 				B3FB81802B192F94004CB417 /* DataManager+Item.swift in Sources */,
 				B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */,

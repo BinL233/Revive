@@ -54,7 +54,7 @@ enum FunctionType: String, Decodable {
 }
 
 enum Trait : String, Decodable {
-    case carnivore, herbivore, omnivorous
+    case carnivore, herbivore, omnivore
     
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

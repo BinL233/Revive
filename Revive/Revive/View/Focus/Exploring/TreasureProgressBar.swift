@@ -10,6 +10,7 @@ import SwiftUI
 struct TreasureProgressBar: View {
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     @Environment(ReviveManager.self) var manager
+    var widthPercent : Double
     
     var body: some View {
         @Bindable var manager = manager
@@ -22,6 +23,6 @@ struct TreasureProgressBar: View {
             )
         }
         
-        ProgressBar(percent: percentBinding)
+        ProgressBar(color1: .cDarkOrange, color2: .cDarkOrange, percent: percentBinding, widthPercent: widthPercent, height: 10)
     }
 }

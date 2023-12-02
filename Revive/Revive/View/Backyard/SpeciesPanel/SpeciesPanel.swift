@@ -126,6 +126,12 @@ struct SpeciesPanel: View {
             HStack {
                 SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
             }
+            
+            Spacer()
+            
+            if manager.currPanelSpecies != nil {
+                SpeciesPanelActionButtons()
+            }
         }
     }
 }

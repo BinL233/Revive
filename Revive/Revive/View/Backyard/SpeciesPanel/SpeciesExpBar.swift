@@ -11,6 +11,7 @@ struct SpeciesExpBar: View {
     @Environment(ReviveManager.self) var manager
     @Binding var currModule : MySpecies
     @State var totalExp : Int
+    var widthPercent : Double = 0.3
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -25,7 +26,7 @@ struct SpeciesExpBar: View {
         }
         
         ZStack {
-            ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: percentBinding, widthPercent: 0.3)
+            ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: percentBinding, widthPercent: widthPercent)
                 Text(
                     "\(currModule.currExp)/\(manager.getCurrSpeciesTotalExp(id: currModule.speciesID, date: currModule.hatchDate))"
                 )

@@ -70,7 +70,7 @@ extension TimerModule {
             // For Exploring
             else {
                 if Int(manager.timeRemaining) == 0 {
-                   
+                    withAnimation{manager.changeToExploringState2()}
                 }
             }
         }
