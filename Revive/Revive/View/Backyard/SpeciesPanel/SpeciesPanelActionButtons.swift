@@ -43,7 +43,9 @@ struct SpeciesPanelActionButtons: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .shadow(radius: 0.7, x: 2, y: 3)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    manager.panelInfoAction = .feed
+                }, label: {
                     Text("Feed")
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 15)
@@ -56,7 +58,7 @@ struct SpeciesPanelActionButtons: View {
                 .shadow(radius: 0.7, x: 2, y: 3)
             } else {
                 Button(action: {
-                    manager.panelInfoAction = .feed
+                    
                 }, label: {
                     Text("Use")
                         .font(.custom("Georgia-Italic", size: 15))

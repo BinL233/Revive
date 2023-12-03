@@ -16,10 +16,24 @@ extension ReviveManager {
         return itemList[id - 2001]
     }
     
+    func getMyItemIndex(id: Int) -> Int {
+        for i in 0..<myItems.count {
+            if myItems[i].id == id {
+                return i
+            }
+        }
+        
+        return 0
+    }
+    
     
     func itemBuff() {
-        for function in getItem(id: currPanelItem!.id).functionType {
-            switch function.rawValue {
+        if currPanelItem == nil {
+            return
+        }
+        
+        for i in 0..<getItem(id: currPanelItem!.id).functionType.count {
+            switch getItem(id: currPanelItem!.id).functionType[i].rawValue {
             case "hatching_time":
                 continue
             case "training_time":
@@ -29,15 +43,28 @@ extension ReviveManager {
             case "rarity_up":
                 continue
             case "exp":
-                ItemsAddEXP()
+                ItemsAddEXP(index: i)
+                useItem()
+                
             default:
                 continue
             }
         }
     }
     
-    func ItemsAddEXP() {
-        let (levelUpNum, currExp) = getLevelUpNum(species: currPanelSpecies!, exp: currPanelItem?.amount ?? 0)
+    func useItem() {
+        myItems[getMyItemIndex(id: currPanelItem!.id)].amount -= 1
+        
+        updateItemAmount(id: currPanelItem!.id, newAmount: myItems[getMyItemIndex(id: currPanelItem!.id)].amount)
+        
+        if myItems[getMyItemIndex(id: currPanelItem!.id)].amount == 0 {
+            myItems.remove(at: getMyItemIndex(id: currPanelItem!.id))
+            currPanelItem = nil
+        }
+    }
+    
+    func ItemsAddEXP(index: Int) {
+        let (levelUpNum, currExp) = getLevelUpNum(species: currPanelSpecies!, exp: Int(getItem(id: currPanelItem!.id).amount[index] ))
         
         mySpecies[getSpeciesIndex(id: currPanelSpecies?.speciesID ?? 0, date: currPanelSpecies?.hatchDate ?? Date())].level += levelUpNum
         mySpecies[getSpeciesIndex(id: currPanelSpecies?.speciesID ?? 0, date: currPanelSpecies?.hatchDate ?? Date())].currExp = currExp

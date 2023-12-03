@@ -18,7 +18,7 @@ struct SpeciesAction: View {
             } else if manager.panelInfoAction == .info {
                 SpeciesInfo()
             } else {
-                
+                SpeciesFeed()
             }
         }
 //        .navigationTitle(currAction)
