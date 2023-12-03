@@ -44,7 +44,7 @@ struct TrainingComplete: View {
                             .bold()
                             .foregroundStyle(Color.cBlackBrown)
                         
-                        withAnimation(.bouncy){ Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")].level)")
+                        withAnimation(.bouncy){ Text("\(manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? Date())].level)")
                                 .font(.title)
                                 .italic()
                                 .bold()
@@ -54,7 +54,7 @@ struct TrainingComplete: View {
                         
                     let intValue = Int($manager.selectedTime.wrappedValue)
                     
-                    SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue, widthPercent: 0.7)
+                    SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? Date())], totalExp: intValue, widthPercent: 0.7)
                         .shadow(radius: 1, x: 0.5, y: 0.5)
                     
                     Image(speciesImage)

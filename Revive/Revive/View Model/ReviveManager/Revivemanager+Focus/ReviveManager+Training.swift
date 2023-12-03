@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 extension ReviveManager {
-    func getLevelUpNum(species: MySpecies, rate: Double) -> (Int, Int) {
+    func getLevelUpNum(species: MySpecies, exp: Int) -> (Int, Int) {
         let myspecies = mySpecies[getSpeciesIndex(id: species.speciesID, date: species.hatchDate)]
-        var totalExp = Int(Double(selectedTime) * rate)
+        var totalExp = exp
         var currExp = myspecies.currExp
         var num = 0
 
@@ -39,7 +39,7 @@ extension ReviveManager {
         activeAlert = .none
     }
     
-    func changeToTrainingState2(id: Int, date: String, currExp: Int, levelUpNum: Int) {
+    func changeToTrainingState2(id: Int, date: Date, currExp: Int, levelUpNum: Int) {
         currTrainingState = .state2
 //        let idx = self.getSpeciesIndex(id: id, date: date)
 //        self.mySpecies[idx].currExp = currExp

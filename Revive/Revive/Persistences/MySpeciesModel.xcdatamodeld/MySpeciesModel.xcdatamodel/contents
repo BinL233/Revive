@@ -17,7 +17,7 @@
     <entity name="SpeciesEntity" representedClassName="SpeciesEntity" syncable="YES" codeGenerationType="class">
         <attribute name="currExp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="hatchDate" optional="YES" attributeType="String"/>
+        <attribute name="hatchDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nickName" optional="YES" attributeType="String"/>

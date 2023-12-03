@@ -40,6 +40,9 @@ class ReviveManager {
     var currPanelItem : MyItems?
     var currExploringItems : [Int:Int]
     
+    // Backyard
+    var panelInfoAction : PanelButtonsInfoAction
+    
     // State
     var currHatchingState : CurrHatchingState
     var currTrainingState : CurrTrainingState
@@ -106,6 +109,7 @@ class ReviveManager {
         currDistActionSelection = .total
         
         isTreasureBarCompleted = false
+        panelInfoAction = .none
         
         isStartButtonDisabled = false
         
@@ -149,7 +153,7 @@ class ReviveManager {
         currExploringState = .none
         
         testMode = .off
-        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: "")]
+        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date())]
         
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]

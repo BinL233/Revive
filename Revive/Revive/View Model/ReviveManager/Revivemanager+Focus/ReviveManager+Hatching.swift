@@ -52,9 +52,8 @@ extension ReviveManager {
         let randomWeight = Double.random(in: minWeight...maxWeight)
         
         let currentDate = Date()
-        let dateString = dateToString(date: currentDate, format: "yyyy-MM-dd HH:mm:ss")
         
-        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: dateString)
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date())
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
         

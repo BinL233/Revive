@@ -17,6 +17,7 @@ struct Species : Identifiable, Decodable {
     let lifeSpan : [Int]?
     let height : Size
     let weight : Size
+    let trait : Trait
     let era : String
     let egg : Int
     let flip : Bool
@@ -33,6 +34,7 @@ struct Species : Identifiable, Decodable {
         case lifeSpan = "life_span"
         case height
         case weight
+        case trait
         case era
         case egg
         case flip
@@ -57,6 +59,7 @@ extension Species {
         lifeSpan = try values.decodeIfPresent([Int].self, forKey: .lifeSpan)
         height = try values.decode(Size.self, forKey: .height)
         weight = try values.decode(Size.self, forKey: .weight)
+        trait = try values.decode(Trait.self, forKey: .trait)
         era = try values.decode(String.self, forKey: .era)
         egg = try values.decode(Int.self, forKey: .egg)
         flip = try values.decode(Bool.self, forKey: .flip)

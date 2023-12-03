@@ -13,7 +13,9 @@ struct SpeciesPanelActionButtons: View {
     var body: some View {
         HStack {
             if manager.speciesItemsSelection == .Species {
-                Button(action: {}, label: {
+                Button(action: {
+                    manager.panelInfoAction = .evolve
+                }, label: {
                     Text("Evolve")
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 15)
@@ -27,7 +29,9 @@ struct SpeciesPanelActionButtons: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .shadow(radius: manager.canEvolve() ? 0.7 : 0, x: manager.canEvolve() ? 2 : 0, y: manager.canEvolve() ? 3 : 0)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    manager.panelInfoAction = .info
+                }, label: {
                     Text("Info")
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 15)
@@ -51,7 +55,9 @@ struct SpeciesPanelActionButtons: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .shadow(radius: 0.7, x: 2, y: 3)
             } else {
-                Button(action: {}, label: {
+                Button(action: {
+                    manager.panelInfoAction = .feed
+                }, label: {
                     Text("Use")
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 30)

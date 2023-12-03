@@ -161,10 +161,6 @@ extension ReviveManager {
         DataManager.shared.saveItemData(customItem: MyItems(id: id, amount: amount))
     }
     
-    func updateItemAmount(id: Int, newAmount: Int) {
-        DataManager.shared.updateItemCurrTimeData(for: id, with: newAmount, myItems: myItems)
-    }
-    
     func initMyMap() {
         if myMaps.isEmpty {
             myMaps.append(MyMaps(id: 5001, isUnlocked: true, currTime: 0))

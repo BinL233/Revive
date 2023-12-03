@@ -63,7 +63,7 @@ extension TimerModule {
             // For Training
             } else if manager.currAction == .training {
                 if Int(manager.timeRemaining) == 0 {
-                    let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!, rate: 1)
+                    let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!, exp: manager.selectedTime)
                     withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
                 }
             }

@@ -43,6 +43,11 @@
 		B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD02AF5EFBB00737872 /* DisplayView.swift */; };
 		B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD22AF5F29200737872 /* MainTabView.swift */; };
 		B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */; };
+		B35006C92B1CDE6300F030D6 /* PanelButtonsInfoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */; };
+		B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35006CC2B1CE0F800F030D6 /* SpeciesList.swift */; };
+		B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */; };
+		B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */; };
+		B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
@@ -148,6 +153,11 @@
 		B34F1BD22AF5F29200737872 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B34F1BD62AF5FA6800737872 /* HatchingMechanics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingMechanics.swift; sourceTree = "<group>"; };
 		B34F1BD82AF6045300737872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelButtonsInfoAction.swift; sourceTree = "<group>"; };
+		B35006CC2B1CE0F800F030D6 /* SpeciesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesList.swift; sourceTree = "<group>"; };
+		B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesAction.swift; sourceTree = "<group>"; };
+		B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesInfo.swift; sourceTree = "<group>"; };
+		B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Items.swift"; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
@@ -294,17 +304,42 @@
 			path = Persistences;
 			sourceTree = "<group>";
 		};
+		B35006C72B1CDE3E00F030D6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B34F1BCC2AF5DC7300737872 /* CurrAction.swift */,
+				B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */,
+				B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */,
+				B317C5822AFE6B150076BE33 /* TestMode.swift */,
+				B34831992B03C82000545E46 /* SpeciesItems.swift */,
+				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
+				B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B35304012B1D0D5200F5E2D3 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */,
+				B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
 		B359FE4A2AFBF9CB00A58A87 /* ReviveManager */ = {
 			isa = PBXGroup;
 			children = (
-				B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */,
+				B35006C72B1CDE3E00F030D6 /* Enums */,
 				B34F1BC42AF5CE6700737872 /* ReviveManager.swift */,
-				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
 				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
-				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
+				B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */,
+				B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */,
 				B349D5D92B09541900270661 /* ReviveManager+Notification.swift */,
 				B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */,
-				B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */,
+				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
+				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
+				B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -352,9 +387,11 @@
 		B3629B072AFDDF7700F3D135 /* SpeciesList */ = {
 			isa = PBXGroup;
 			children = (
+				B35304012B1D0D5200F5E2D3 /* Action */,
 				B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */,
 				B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */,
 				B3FB81842B193C1F004CB417 /* ItemBYListImage.swift */,
+				B35006CC2B1CE0F800F030D6 /* SpeciesList.swift */,
 			);
 			path = SpeciesList;
 			sourceTree = "<group>";
@@ -440,12 +477,6 @@
 				B359FE4B2AFBF9DD00A58A87 /* DataManager */,
 				B359FE4A2AFBF9CB00A58A87 /* ReviveManager */,
 				B34F1BC62AF5CE9700737872 /* Persistences.swift */,
-				B34F1BCC2AF5DC7300737872 /* CurrAction.swift */,
-				B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */,
-				B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */,
-				B317C5822AFE6B150076BE33 /* TestMode.swift */,
-				B34831992B03C82000545E46 /* SpeciesItems.swift */,
-				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -659,6 +690,7 @@
 				B3FF6BA02B1BB78200327E93 /* ReviveManager+Training.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
+				B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
 				B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */,
 				B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */,
@@ -666,12 +698,14 @@
 				B32D8EDB2B1C329200FD5235 /* SpeciesPanelName.swift in Sources */,
 				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
+				B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */,
 				B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */,
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
@@ -690,6 +724,7 @@
 				B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
 				B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */,
+				B35006C92B1CDE6300F030D6 /* PanelButtonsInfoAction.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
@@ -701,6 +736,7 @@
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B3FB81852B193C1F004CB417 /* ItemBYListImage.swift in Sources */,
+				B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3FF6B9B2B1BB71000327E93 /* SpeciesPanelActionButtons.swift in Sources */,

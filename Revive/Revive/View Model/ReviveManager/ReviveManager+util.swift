@@ -40,6 +40,13 @@ extension ReviveManager {
         
     }
     
+    func optionDateToString(date: Date?, format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: date ?? Date())
+        
+    }
+    
     func secTimeToString(time: Int) -> String {
         let time = time
         var hour : Int = 0
@@ -72,7 +79,7 @@ extension ReviveManager {
         )
     }
     
-    func getSpeciesIndex(id: Int, date: String) -> Int {
+    func getSpeciesIndex(id: Int, date: Date) -> Int {
         for i in 0..<mySpecies.count {
             if mySpecies[i].speciesID == id && mySpecies[i].hatchDate == date {
                 return i
