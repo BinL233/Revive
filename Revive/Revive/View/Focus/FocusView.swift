@@ -23,13 +23,15 @@ struct FocusView: View {
                     ActionButtons()
                         .padding(.horizontal, 30)
                         .padding(.vertical, 10)
+                    
+                    if !manager.isMapStartSelect {
+                        TimerModule()
+                            .padding(.horizontal, 40)
 
-                    TimerModule()
-                        .padding(.horizontal, 40)
-
-                    StartButton()
-                        .padding(.vertical, 20)
-                        .padding(.bottom, 30)
+                        StartButton()
+                            .padding(.vertical, 20)
+                            .padding(.bottom, 30)
+                    }
                 }
                 
                 // For hatching

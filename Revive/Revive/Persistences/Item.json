@@ -4,7 +4,9 @@
         "name": "Treasure",
         "trait": [],
         "function_type": [],
-        "amount": []
+        "amount": [],
+        "description": "Brave people enjoy the world first.",
+        "function": "Container for Exploration Map prizes."
     },
 
     {
@@ -12,7 +14,9 @@
         "name": "Puzzle",
         "trait": [],
         "function_type": [],
-        "amount": []
+        "amount": [],
+        "description": "Mysterious puzzle with summon power.",
+        "function": "Collect to unlock SSR species!"
     },
 
     {
@@ -20,7 +24,9 @@
         "name": "Ball",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": [],
-        "amount": []
+        "amount": [],
+        "description": "Rolling everyday.",
+        "function": "Increase 100 Affection for any species."
     },
 
     {
@@ -28,7 +34,9 @@
         "name": "Incubator",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["hatching_time"],
-        "amount": [0.90]
+        "amount": [0.90],
+        "description": "Product from a crazy inventor.",
+        "function": "Reduce time in hatching."
     },
 
     {
@@ -36,7 +44,9 @@
         "name": "Dumbbell",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["training_time"],
-        "amount": [0.90]
+        "amount": [0.90],
+        "description": "Cute color, more power.",
+        "function": "Reduce time in training."
     },
 
     {
@@ -44,7 +54,9 @@
         "name": "Pocketwatch",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exploring_time"],
-        "amount": [0.90]
+        "amount": [0.90],
+        "description": "The owner might from last centry.",
+        "function": "Reduce time in exploring."
     },
 
     {
@@ -52,7 +64,9 @@
         "name": "Compass",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["rarity_up"],
-        "amount": [0.30]
+        "amount": [0.30],
+        "description": "Direct to the rarest.",
+        "function": "Increase the probability of hatching rare species."
     },
 
     {
@@ -60,7 +74,9 @@
        "name": "Cookie",
        "trait": ["carnivore", "herbivore", "omnivore"],
        "function_type": ["exp"],
-       "amount": [100]
+       "amount": [100],
+       "description": "Everyone loves cookie!",
+       "function": "100 EXP for any species."
     },
 
     {
@@ -68,7 +84,9 @@
         "name": "Meat",
         "trait": ["carnivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [300]
+        "amount": [300],
+        "description": "Carnivore's favorite.",
+        "function": "200 EXP, carnivore only."
     },
 
     {
@@ -76,7 +94,9 @@
         "name": "Vegetables",
         "trait": ["herbivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [300]
+        "amount": [300],
+        "description": "Herbivore's favorite.",
+        "function": "200 EXP, herbivore only."
     },
     
     {
@@ -84,7 +104,9 @@
         "name": "datepalm",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [1000]  
+        "amount": [1000],
+        "description": "Hide on bush.",
+        "function": "Special reward in Plain area, 1000 EXP."
     },
 
     {
@@ -92,7 +114,9 @@
         "name": "Berrybush",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [1000]  
+        "amount": [1000],
+        "description": "I have more than 1000 relatives on a single bunch.",
+        "function": "Special reward in Desert area, 1000 EXP."
     },
 
     {
@@ -100,6 +124,8 @@
         "name": "Firn",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [1000]  
+        "amount": [1000],
+        "description": "An ice with more density.",
+        "function": "Special reward in Glacier, 1000 EXP."
     }
 ]

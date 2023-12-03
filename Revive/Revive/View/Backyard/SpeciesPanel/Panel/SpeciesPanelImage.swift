@@ -23,6 +23,7 @@ struct SpeciesPanelImage: View {
                 Image(speciesImage)
                     .resizable()
                     .scaledToFit()
+                    .shadow(radius: 6, x: 0, y: 4)
                     .padding(10)
             }
         } else {
@@ -38,6 +39,7 @@ struct SpeciesPanelImage: View {
                         .italic()
                         .bold()
                         .foregroundStyle(Color.cBlackBrown)
+                        .shadow(radius: 6, x: 0, y: 4)
                     
             }
         }

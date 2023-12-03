@@ -13,6 +13,16 @@ extension ReviveManager {
         return mapList[map.id-5001]
     }
     
+    func getMyMapIndex(map: MyMaps) -> Int {
+        for i in 0..<myMaps.count {
+            if myMaps[i].id == map.id {
+                return i
+            }
+        }
+        
+        return 0
+    }
+    
     func getLastNextPoint() -> (Int, Int) {
         let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
         let sortedPoints = points.sorted { Int($0.key)! < Int($1.key)! }
@@ -81,11 +91,23 @@ extension ReviveManager {
             }
         }
         
-        currExploringItems = rewards
-        
-        print(currExploringItems)
-        
         return rewards
+    }
+    
+    func rewardsAddToBag() {
+        for item in currExploringItems {
+            if myItems.contains(where: { $0.id == item.key }) {
+                for i in 0..<myItems.count {
+                    if myItems[i].id == item.key {
+                        myItems[i].amount += item.value
+                        updateItemAmount(id: myItems[i].id, newAmount: myItems[i].amount)
+                    }
+                }
+            } else {
+                myItems.append(MyItems(id: item.key, amount: item.value))
+                saveNewItem(id: item.key, amount: item.value)
+            }
+        }
     }
     
     func isMapTypeFitsSpecies(species: MySpecies) -> Bool {
@@ -116,12 +138,31 @@ extension ReviveManager {
         UserDefaults.standard.set(totalExploringTime, forKey: "TotalExploringTime")
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
         
+        rewardsAddToBag()
+        updateMapCurrTime()
+        
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "exploring")
         focusLog.append(logg)
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
         
+    }
+    
+    func saveNewMap(id : Int) {
+        DataManager.shared.saveMapData(customItem: MyMaps(id: id, isUnlocked: false, currTime: 0))
+    }
+    
+    func updateMapCurrTime() {
+        DataManager.shared.updateMapCurrTimeData(for: currExploringMap?.id ?? 0, with: currExploringMap!.currTime + selectedTime , myMaps: myMaps)
+    }
+    
+    func saveNewItem(id: Int, amount: Int) {
+        DataManager.shared.saveItemData(customItem: MyItems(id: id, amount: amount))
+    }
+    
+    func updateItemAmount(id: Int, newAmount: Int) {
+        DataManager.shared.updateItemCurrTimeData(for: id, with: newAmount, myItems: myItems)
     }
     
     func initMyMap() {

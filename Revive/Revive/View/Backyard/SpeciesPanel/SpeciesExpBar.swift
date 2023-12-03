@@ -27,6 +27,7 @@ struct SpeciesExpBar: View {
         
         ZStack {
             ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: percentBinding, widthPercent: widthPercent)
+            
                 Text(
                     "\(currModule.currExp)/\(manager.getCurrSpeciesTotalExp(id: currModule.speciesID, date: currModule.hatchDate))"
                 )
@@ -51,8 +52,8 @@ struct SpeciesExpBar: View {
                             } else {
                                 // if currExp < total Exp of this level - 10
                                 if manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp < manager.getCurrSpeciesTotalExp(id: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].speciesID, date: manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].hatchDate) - 10 && boostExp {
-                                    manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 9
-                                    totalExp -= 9
+                                    manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 10
+                                    totalExp -= 10
                                 } else {
                                     manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate)].currExp += 1
                                     totalExp -= 1

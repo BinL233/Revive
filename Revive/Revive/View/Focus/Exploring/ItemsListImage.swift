@@ -38,9 +38,10 @@ struct ItemsListImage: View {
                                 .font(.title3)
                                 .bold()
                                 .italic()
-                                .padding(10)
-                                .background(Color.cDarkBrown)
-                                .clipShape(Circle())
+                                .padding(.vertical, 3)
+                                .padding(.horizontal, 8)
+                                .background(Color.cBlackBrown)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
                         }
                         .padding(.horizontal, 4)
                     }
@@ -65,9 +66,10 @@ struct ItemsListImage: View {
                                 .font(.title3)
                                 .bold()
                                 .italic()
-                                .padding(10)
-                                .background(Color.cDarkBrown)
-                                .clipShape(Circle())
+                                .padding(.vertical, 3)
+                                .padding(.horizontal, 8)
+                                .background(Color.cBlackBrown)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
                         }
                         .padding(.horizontal, 4)
                     }

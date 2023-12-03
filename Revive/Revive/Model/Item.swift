@@ -13,6 +13,8 @@ struct Item : Identifiable, Decodable {
     let trait : [Trait]
     let functionType : [FunctionType]
     let amount : [Double]
+    let description : String
+    let function : String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -20,6 +22,8 @@ struct Item : Identifiable, Decodable {
         case trait
         case functionType = "function_type"
         case amount
+        case description
+        case function
     }
     
     static var items : [Item]? = {
@@ -35,6 +39,8 @@ extension Item {
         trait = try values.decode([Trait].self, forKey: .trait)
         functionType = try values.decode([FunctionType].self, forKey: .functionType)
         amount = try values.decode([Double].self, forKey: .amount)
+        description = try values.decode(String.self, forKey: .description)
+        function = try values.decode(String.self, forKey: .function)
     }
 }
 

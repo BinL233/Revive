@@ -14,9 +14,10 @@ struct ActionButtons: View {
         HStack {
             if ((manager.currAction == .hatching) || !manager.isTimerStart) {
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.1)) {
+                    withAnimation(.bouncy(duration: 0.2)) {
                         manager.currAction = .hatching
                         manager.isStartButtonDisabled = false
+                        manager.isMapStartSelect = false
                     }
                 }) {
                     Text("Hatching")
@@ -32,10 +33,11 @@ struct ActionButtons: View {
             
             if ((manager.currAction == .training) || !manager.isTimerStart) {
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.1)) {
+                    withAnimation(.bouncy(duration: 0.1)) {
                         manager.currAction = .training
                         manager.isStartButtonDisabled = false
                     }
+                    withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = false}
                 }) {
                     Text("Training")
                         .foregroundStyle(Color.cBlack)
@@ -49,10 +51,11 @@ struct ActionButtons: View {
             
             if ((manager.currAction == .exploring) || !manager.isTimerStart) {
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.1)) {
+                    withAnimation(.bouncy(duration: 0.2)) {
                         manager.currAction = .exploring
                         manager.isStartButtonDisabled = true
                     }
+                    withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
                 }) {
                     Text("Exploring")
                         .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 10*60) ? .gray : Color.cBlack})

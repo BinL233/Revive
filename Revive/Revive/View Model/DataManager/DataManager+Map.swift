@@ -24,6 +24,28 @@ extension DataManager {
         }
     }
     
+    func updateMapCurrTimeData(for id: Int, with newData: Int, myMaps: [MyMaps]) {
+        var data = myMaps
+        if let index = data.firstIndex(where: { $0.id == id }) {
+            data[index].currTime = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<MapEntity> = MapEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.currTime = Int32(newData)
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
+        }
+    }
+    
     func loadMapData() -> [MyMaps] {
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<MapEntity>(entityName: "MapEntity")

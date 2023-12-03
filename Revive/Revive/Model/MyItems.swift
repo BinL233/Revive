@@ -9,5 +9,5 @@ import Foundation
 
 struct MyItems : Equatable {
     let id : Int
-    let amount : Int
+    var amount : Int
 }

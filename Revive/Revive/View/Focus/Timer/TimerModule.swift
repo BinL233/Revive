@@ -70,6 +70,7 @@ extension TimerModule {
             // For Exploring
             else {
                 if Int(manager.timeRemaining) == 0 {
+                    manager.currExploringItems = manager.getRewards()
                     withAnimation{manager.changeToExploringState2()}
                 }
             }

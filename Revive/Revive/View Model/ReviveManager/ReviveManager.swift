@@ -31,6 +31,9 @@ class ReviveManager {
     // Map
     var currExploringMap : MyMaps?
     var myMaps : [MyMaps]
+    var isTreasureBarCompleted : Bool
+    var selectedTime2 : Int
+    var isMapStartSelect : Bool
     
     // Item
     var myItems : [MyItems]
@@ -83,16 +86,26 @@ class ReviveManager {
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
+        
+        isMapStartSelect = false
 
         mySpecies = localMySpecies
+
         myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isUnlocked: false, currTime: 0)] : localMyMaps
+        if localMyMaps.isEmpty {
+            DataManager.shared.saveMapData(customItem: MyMaps(id: 5001, isUnlocked: false, currTime: 0))
+        }
+        
         myItems = localMyItems
         
         
         focusLog = localFocusLog
+        selectedTime2 = 0
         
         currDistTimeSpanSelection = .week
         currDistActionSelection = .total
+        
+        isTreasureBarCompleted = false
         
         isStartButtonDisabled = false
         

@@ -26,11 +26,10 @@ struct ExploringView: View {
             } else if !isMapSelected {
                 VStack {
                     Text("Select Map")
-                        .font(.custom("Georgia-Italic", size: 15))
+                        .font(.custom("Georgia-Italic", size: 18))
+                        .padding()
                         .bold()
-                        .foregroundStyle(Color.black)
-                        //.background(Color.cDarkBrown)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .foregroundStyle(Color.cBlack)
                     
                     ScrollView {
                         VStack {
@@ -97,6 +96,8 @@ struct ExploringView: View {
                                         .padding()
                                         .padding(.top)
                                     }
+                                    .overlay(Color.black.opacity(0.5))
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
                                 }
                                 RoundedRectangle(cornerRadius: 10)
                                     .frame(height: 2)
@@ -110,17 +111,19 @@ struct ExploringView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     
                     Button(action: {
-                        withAnimation{isMapSelected = true}
+                        withAnimation(.bouncy(duration: 0.3)){isMapSelected = true}
+                        withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = false}
                     }, label: {
                         Text("Next")
                             .font(.custom("Georgia-Italic", size: 18))
                             .foregroundStyle(.white)
                             .bold()
-                            .padding()
-                            .padding(.horizontal, 30)
+                            .padding(10)
+                            .padding(.horizontal, 40)
                     })
                     .background(Color.cDarkOrange)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.top)
                 }
                 
             } else {
@@ -144,6 +147,21 @@ struct ExploringView: View {
                     .padding()
                     .background(Color.cDarkBrown)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                    
+                    Button(action: {
+                        withAnimation(.bouncy(duration: 0.3)){isMapSelected = false}
+                        withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
+                    }, label: {
+                        Text("Back")
+                            .font(.custom("Georgia-Italic", size: 18))
+                            .foregroundStyle(.white)
+                            .bold()
+                            .padding(10)
+                            .padding(.horizontal, 40)
+                    })
+                    .background(Color.cDarkOrange)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .padding(.top)
                 }
             }
         }

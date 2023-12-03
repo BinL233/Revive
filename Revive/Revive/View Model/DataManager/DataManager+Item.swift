@@ -35,5 +35,27 @@ extension DataManager {
             return []
         }
     }
+    
+    func updateItemCurrTimeData(for id: Int, with newData: Int, myItems: [MyItems]) {
+        var data = myItems
+        if let index = data.firstIndex(where: { $0.id == id }) {
+            data[index].amount = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<ItemEntity> = ItemEntity.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.amount = Int32(newData)
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
+        }
+    }
 
 }

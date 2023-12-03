@@ -47,7 +47,9 @@ struct ExploringComplete: View {
 //                            .bold()
 //                            .foregroundStyle(Color.cBlack)
                         
-                        TreasureProgressBar(widthPercent: 0.5)
+                        let intValue = manager.selectedTime
+                        
+                        TreasureProgressBar(widthPercent: 0.5, timeRemain: intValue)
                     }
                     .padding(.vertical)
                 }
@@ -65,7 +67,7 @@ struct ExploringComplete: View {
                         .shadow(radius: 0.7, x: 0, y: 2)
                     
                     LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
-                        ForEach(Array(manager.getRewards().keys), id: \.self) { key in
+                        ForEach(Array(manager.currExploringItems.keys), id: \.self) { key in
                             ItemsListImage(
                                 isUsedforSelection: false,
                                 currItem: $manager.itemList[key - 2001],
@@ -94,10 +96,10 @@ struct ExploringComplete: View {
                         .foregroundStyle(.white)
                 }
                 .padding(15)
-                .background(manager.isExpGain ? Color.cDarkOrange : .gray)
+                .background(manager.isTreasureBarCompleted ? Color.cDarkOrange : .gray)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(radius: 4, x: 0, y: 4)
-                .disabled(!manager.isExpGain)
+                .disabled(!manager.isTreasureBarCompleted)
             }
             .padding(.vertical, 20)
             .padding(.horizontal)

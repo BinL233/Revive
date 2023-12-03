@@ -55,6 +55,7 @@ struct TrainingComplete: View {
                     let intValue = Int($manager.selectedTime.wrappedValue)
                     
                     SpeciesExpBar(currModule: $manager.mySpecies[manager.getSpeciesIndex(id: manager.currTrainingSpecies?.speciesID ?? 0, date: manager.currTrainingSpecies?.hatchDate ?? "")], totalExp: intValue, widthPercent: 0.7)
+                        .shadow(radius: 1, x: 0.5, y: 0.5)
                     
                     Image(speciesImage)
                         .resizable()

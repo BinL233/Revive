@@ -46,4 +46,8 @@ extension ReviveManager {
         
         return myItems[0]
     }
+    
+    func getItem(id: Int) -> Item {
+        return itemList[id - 2001]
+    }
 }
