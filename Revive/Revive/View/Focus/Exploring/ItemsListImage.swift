@@ -18,7 +18,7 @@ struct ItemsListImage: View {
         Button(action: {
             currModule = manager.getMyPanelItem(id: currItem.id)
         }, label: {
-            if currModule?.id == currItem.id {
+            if currModule?.id == currItem.id && isUsedforSelection {
                 ZStack {
                     Image("frame_selected")
                         .resizable()

@@ -94,9 +94,9 @@ class ReviveManager {
 
         mySpecies = localMySpecies
 
-        myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isUnlocked: false, currTime: 0)] : localMyMaps
+        myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0)] : localMyMaps
         if localMyMaps.isEmpty {
-            DataManager.shared.saveMapData(customItem: MyMaps(id: 5001, isUnlocked: false, currTime: 0))
+            DataManager.shared.saveMapData(customItem: MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
         }
         
         myItems = localMyItems
@@ -162,7 +162,7 @@ class ReviveManager {
         
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currExploringSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
-        currExploringMap = localMyMaps.count == 0 ? MyMaps(id: 5001, isUnlocked: false, currTime: 0) : localMyMaps[0]
+        currExploringMap = localMyMaps.count == 0 ? MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0) : localMyMaps[0]
         
         isExpGain = false
         

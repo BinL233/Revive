@@ -12,6 +12,14 @@ extension ReviveManager {
         DataManager.shared.updateItemCurrTimeData(for: id, with: newAmount, myItems: myItems)
     }
     
+    func saveNewItem(id: Int, amount: Int) {
+        DataManager.shared.saveItemData(customItem: MyItems(id: id, amount: amount))
+    }
+    
+    func deleteItem(id: Int) {
+        DataManager.shared.deleteItemData(for: id)
+    }
+    
     func getItem(id: Int) -> Item {
         return itemList[id - 2001]
     }
@@ -54,12 +62,19 @@ extension ReviveManager {
     
     func useItem() {
         myItems[getMyItemIndex(id: currPanelItem!.id)].amount -= 1
+        currPanelItem = myItems[getMyItemIndex(id: currPanelItem!.id)]
         
         updateItemAmount(id: currPanelItem!.id, newAmount: myItems[getMyItemIndex(id: currPanelItem!.id)].amount)
         
         if myItems[getMyItemIndex(id: currPanelItem!.id)].amount == 0 {
+            deleteItem(id: currPanelItem!.id)
             myItems.remove(at: getMyItemIndex(id: currPanelItem!.id))
-            currPanelItem = nil
+            if myItems.count == 0 {
+                currPanelItem = nil
+            } else {
+                currPanelItem = myItems[0]
+            }
+
         }
     }
     

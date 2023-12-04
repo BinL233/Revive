@@ -57,5 +57,22 @@ extension DataManager {
             }
         }
     }
+    
+    func deleteItemData(for id: Int) {
+        let context = persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<ItemEntity> = ItemEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let entityToDelete = results.first {
+                context.delete(entityToDelete)
+                try context.save()
+                print("Deleted item with id \(id)")
+            }
+        } catch {
+            print("Delete failed: \(error)")
+        }
+    }
 
 }

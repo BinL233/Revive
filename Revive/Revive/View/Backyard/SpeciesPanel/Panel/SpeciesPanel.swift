@@ -15,43 +15,63 @@ struct SpeciesPanel: View {
         @Bindable var manager = manager
         VStack {
             VStack {
-                if manager.currPanelSpecies == nil {
-                    Text("???")
-                        .font(.system(size: 25))
-                        .italic()
-                        .bold()
-                        .foregroundStyle(Color.cBlack)
-                        .padding(.bottom, 5)
-                        .shadow(radius: 0.7, x: 2, y: 3)
-                } else {
-                    if manager.speciesItemsSelection == .Species {
+                if manager.speciesItemsSelection == .Species {
+                    if manager.currPanelSpecies == nil {
+                        Text("???")
+                            .font(.system(size: 25))
+                            .italic()
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+                            .padding(.bottom, 5)
+                            .shadow(radius: 0.7, x: 2, y: 3)
+                    } else {
                         SpeciesPanelName()
+                    }
+                        
+                } else {
+                    if manager.currPanelItem == nil {
+                        HStack {
+                            Spacer()
+                            
+                            Text("???")
+                                .font(.system(size: 25))
+                                .italic()
+                                .bold()
+                                .foregroundStyle(Color.cBlack)
+                                .padding(.bottom, 5)
+                                .shadow(radius: 0.7, x: 2, y: 3)
+                            
+                            Spacer()
+                        }
+
                     } else {
                         ItemPanelName()
                     }
                 }
                 
                 if manager.speciesItemsSelection == .Items {
-                    HStack {
-                        Spacer()
-                        Text(manager.getItem(id: manager.currPanelItem!.id).description)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .font(.caption)
-                            .italic()
-                            .foregroundStyle(Color.cBlack)
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Spacer()
-                        Text(manager.getItem(id: manager.currPanelItem!.id).function)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(nil)
-                            .font(.caption)
-                            .bold()
-                            .foregroundStyle(Color.cBlue)
-                        Spacer()
+                    if !manager.myItems.isEmpty && manager.currPanelItem != nil {
+                        HStack {
+                            Spacer()
+                            Text(manager.getItem(id: manager.currPanelItem!.id).description)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(nil)
+                                .font(.caption)
+                                .italic()
+                                .foregroundStyle(Color.cBlack)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Spacer()
+                            Text(manager.getItem(id: manager.currPanelItem!.id).function)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(nil)
+                                .font(.caption)
+                                .bold()
+                                .foregroundStyle(Color.cBlue)
+                            Spacer()
+                        }
                     }
                 } else {
                     HStack {

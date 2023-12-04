@@ -37,6 +37,7 @@ struct SpeciesFeed: View {
             })
             .background(Color.cDarkOrange)
             .clipShape(RoundedRectangle(cornerRadius: 15))
+            .shadow(radius: 0.7, x: 2, y: 3)
             .padding(.top)
         }
     }

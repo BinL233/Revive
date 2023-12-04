@@ -48,7 +48,19 @@ extension ReviveManager {
             }
         }
         
-        return (0, 0)
+        mapFinished()
+        
+        return (-1, -1)
+    }
+    
+    func mapFinished() {
+        var map = myMaps[getMyMapIndex(map: currExploringMap!)]
+        
+        map.isFinished = true
+        map.finishedTimes += 1
+        map.currTime = 0
+        
+        updateMapData()
     }
     
     func getNextRewardTimeRemain() -> Int {
@@ -139,7 +151,7 @@ extension ReviveManager {
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
         
         rewardsAddToBag()
-        updateMapCurrTime()
+        updateMapData()
         
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "exploring")
@@ -147,23 +159,23 @@ extension ReviveManager {
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
         
+        if !myItems.isEmpty {
+            currPanelItem = myItems[0]
+        }
+        
     }
     
     func saveNewMap(id : Int) {
-        DataManager.shared.saveMapData(customItem: MyMaps(id: id, isUnlocked: false, currTime: 0))
+        DataManager.shared.saveMapData(customItem: MyMaps(id: id, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
     }
     
-    func updateMapCurrTime() {
-        DataManager.shared.updateMapCurrTimeData(for: currExploringMap?.id ?? 0, with: currExploringMap!.currTime + selectedTime , myMaps: myMaps)
-    }
-    
-    func saveNewItem(id: Int, amount: Int) {
-        DataManager.shared.saveItemData(customItem: MyItems(id: id, amount: amount))
+    func updateMapData() {
+        DataManager.shared.updateMapData(for: currExploringMap?.id ?? 0, with: currExploringMap!.currTime + selectedTime, newTotalTime: currExploringMap!.totalTime + selectedTime, newFinishedTimes: currExploringMap!.finishedTimes , myMaps: myMaps)
     }
     
     func initMyMap() {
         if myMaps.isEmpty {
-            myMaps.append(MyMaps(id: 5001, isUnlocked: true, currTime: 0))
+            myMaps.append(MyMaps(id: 5001, isFinished: true, finishedTimes: 0, currTime: 0, totalTime: 0))
         }
     }
 }

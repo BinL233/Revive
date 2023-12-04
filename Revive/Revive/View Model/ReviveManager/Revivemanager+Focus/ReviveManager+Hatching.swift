@@ -81,6 +81,9 @@ extension ReviveManager {
         DataManager.shared.saveLogData(customItem: logg)
         
         currPanelSpecies = mySpecies[0]
+        if !myItems.isEmpty {
+            currPanelItem = myItems[0]
+        }
     }
 
 }

@@ -9,6 +9,8 @@ import Foundation
 
 struct MyMaps : Equatable {
     let id : Int
-    let isUnlocked : Bool
+    var isFinished : Bool
+    var finishedTimes : Int
     var currTime : Int
+    var totalTime : Int
 }
