@@ -18,7 +18,10 @@ struct TreasureProgressBar: View {
         var percentBinding: Binding<CGFloat> {
             Binding<CGFloat>(
                 get: {
-                    CGFloat(Double(manager.currExploringMap!.currTime - manager.getLastNextPoint().0) / Double(manager.getLastNextPoint().1 - manager.getLastNextPoint().0))
+                    if manager.getLastNextPoint() == (-1, -1) {
+                        return CGFloat(1)
+                    }
+                     return CGFloat(Double(manager.currExploringMap!.currTime - manager.getLastNextPoint().0) / Double(manager.getLastNextPoint().1 - manager.getLastNextPoint().0))
                 },
                 set: { _ in }
             )
@@ -27,6 +30,7 @@ struct TreasureProgressBar: View {
         ProgressBar(color1: .cDarkOrange, color2: .cDarkOrange, percent: percentBinding, widthPercent: widthPercent, height: 10)
             .onReceive(timer, perform: { _ in
                 manager.isTreasureBarCompleted = false
+                
                 if timeRemain > 0 {
                     manager.currExploringMap!.currTime += 10
                     manager.myMaps[manager.getMyMapIndex(map: manager.currExploringMap!)].currTime += 10

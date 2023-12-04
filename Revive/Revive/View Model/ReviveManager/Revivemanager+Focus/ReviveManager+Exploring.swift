@@ -48,17 +48,18 @@ extension ReviveManager {
             }
         }
         
-        mapFinished()
-        
         return (-1, -1)
     }
     
     func mapFinished() {
-        var map = myMaps[getMyMapIndex(map: currExploringMap!)]
+        myMaps.append(MyMaps(id: myMaps.count + 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
         
-        map.isFinished = true
-        map.finishedTimes += 1
-        map.currTime = 0
+        print("finished")
+        
+        myMaps[getMyMapIndex(map: currExploringMap!)].isFinished = true
+        myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes += 1
+        myMaps[getMyMapIndex(map: currExploringMap!)].currTime = 0
+        selectedTime = 0
         
         updateMapData()
     }
@@ -152,6 +153,10 @@ extension ReviveManager {
         
         rewardsAddToBag()
         updateMapData()
+        
+        if currExploringMap!.currTime + selectedTime >= getMap(map: currExploringMap!).totalTime {
+            mapFinished()
+        }
         
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "exploring")
