@@ -39,6 +39,7 @@ class ReviveManager {
     var myItems : [MyItems]
     var currPanelItem : MyItems?
     var currExploringItems : [Int:Int]
+    var currExploringFixedRewards : [Int:Int]
     
     // Backyard
     var panelInfoAction : PanelButtonsInfoAction
@@ -140,6 +141,7 @@ class ReviveManager {
         }()
         
         currExploringItems = [:]
+        currExploringFixedRewards = [:]
         currHatchingSpecies = nil
         currAction = .hatching
         currHatchingEgg = 1001

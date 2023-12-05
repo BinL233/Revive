@@ -105,12 +105,41 @@ extension ReviveManager {
         return rewards
     }
     
-//    func getTreasureReward() -> [Int:Int] {
-//        
-//    }
+    func getTreasureRewards() -> [Int:Int] {
+        let treasureRewards : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
+        var rewards : [Int:Int] = [:]
+        
+        for point in treasureRewards.keys {
+            if Int(point)! > currExploringMap!.currTime - selectedTime && Int(point)! <= currExploringMap!.currTime {
+                for item in treasureRewards[point]!.keys {
+                    if rewards.keys.contains(Int(item)!) {
+                        rewards[Int(item)!]! += 1
+                    } else {
+                        rewards[Int(item)!] = 1
+                    }
+                }
+            }
+        }
+        
+        return rewards
+    }
     
     func rewardsAddToBag() {
         for item in currExploringItems {
+            if myItems.contains(where: { $0.id == item.key }) {
+                for i in 0..<myItems.count {
+                    if myItems[i].id == item.key {
+                        myItems[i].amount += item.value
+                        updateItemAmount(id: myItems[i].id, newAmount: myItems[i].amount)
+                    }
+                }
+            } else {
+                myItems.append(MyItems(id: item.key, amount: item.value))
+                saveNewItem(id: item.key, amount: item.value)
+            }
+        }
+        
+        for item in currExploringFixedRewards {
             if myItems.contains(where: { $0.id == item.key }) {
                 for i in 0..<myItems.count {
                     if myItems[i].id == item.key {
@@ -147,6 +176,8 @@ extension ReviveManager {
     
     func changeToExploringState2() {
         currExploringState = .state2
+        
+        currExploringFixedRewards = getTreasureRewards()
         
         totalExploringTime += selectedTime
         totalTime += selectedTime
