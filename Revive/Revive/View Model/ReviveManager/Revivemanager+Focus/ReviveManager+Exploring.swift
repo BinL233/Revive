@@ -53,14 +53,12 @@ extension ReviveManager {
     
     func mapFinished() {
         myMaps.append(MyMaps(id: myMaps.count + 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
-        
-        print("finished")
-        
         myMaps[getMyMapIndex(map: currExploringMap!)].isFinished = true
         myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes += 1
         myMaps[getMyMapIndex(map: currExploringMap!)].currTime = 0
         selectedTime = 0
         
+        saveNewMap(id: myMaps.count + 5001)
         updateMapData()
     }
     
@@ -107,6 +105,10 @@ extension ReviveManager {
         return rewards
     }
     
+//    func getTreasureReward() -> [Int:Int] {
+//        
+//    }
+    
     func rewardsAddToBag() {
         for item in currExploringItems {
             if myItems.contains(where: { $0.id == item.key }) {
@@ -150,6 +152,10 @@ extension ReviveManager {
         totalTime += selectedTime
         UserDefaults.standard.set(totalExploringTime, forKey: "TotalExploringTime")
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        
+        myMaps[getMyMapIndex(map: currExploringMap!)].currTime += selectedTime
+        myMaps[getMyMapIndex(map: currExploringMap!)].totalTime += selectedTime
+        
         
         rewardsAddToBag()
         updateMapData()

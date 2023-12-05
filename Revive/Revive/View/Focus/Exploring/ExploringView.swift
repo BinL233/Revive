@@ -39,7 +39,19 @@ struct ExploringView: View {
                                         MapListImage(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
                                         
                                         VStack {
-                                            Text("Exploring Time:")
+                                            Text("Total Time:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text(manager.secTimeToString(time: manager.myMaps[i].totalTime))
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                            
+                                            Spacer()
+                                            
+                                            Text("Current Time:")
                                                 .font(.custom("Georgia-Italic", size: 13))
                                                 .bold()
                                                 .foregroundStyle(.white)
@@ -71,7 +83,19 @@ struct ExploringView: View {
                                             .scaledToFit()
                                         
                                         VStack {
-                                            Text("Exploring Time:")
+                                            Text("Total Time:")
+                                                .font(.custom("Georgia-Italic", size: 13))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                            Text("???")
+                                                .font(.custom("Georgia-Italic", size: 15))
+                                                .bold()
+                                                .foregroundStyle(.white)
+                                                .shadow(radius: 3, x: 0, y: 4)
+                                            
+                                            Spacer()
+                                            
+                                            Text("Current Time:")
                                                 .font(.custom("Georgia-Italic", size: 13))
                                                 .bold()
                                                 .foregroundStyle(.white)

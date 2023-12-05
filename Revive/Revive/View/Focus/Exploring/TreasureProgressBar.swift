@@ -33,7 +33,6 @@ struct TreasureProgressBar: View {
                 
                 if timeRemain > 0 {
                     manager.currExploringMap!.currTime += 10
-                    manager.myMaps[manager.getMyMapIndex(map: manager.currExploringMap!)].currTime += 10
                     timeRemain -= 10
                 } else {
                     timer.upstream.connect().cancel()

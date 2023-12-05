@@ -13,18 +13,42 @@ struct MapListImage: View {
     @Binding var currModule : MyMaps?
     
     var body: some View {
-        Button(action: {
-            currModule = currMap
-        }, label: {
-            if currModule == currMap {
-                Image("mapFrameSelected\(currMap.id)")
-                    .resizable()
-                    .scaledToFit()
-            } else {
-                Image("mapFrame\(currMap.id)")
-                    .resizable()
-                    .scaledToFit()
+        ZStack {
+            Button(action: {
+                currModule = currMap
+            }, label: {
+                if currModule == currMap {
+                    Image("mapFrameSelected\(currMap.id)")
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    Image("mapFrame\(currMap.id)")
+                        .resizable()
+                        .scaledToFit()
+                }
+            })
+            
+            HStack {
+                Spacer()
+                VStack {
+                    HStack(spacing: 0) {
+                        Image(systemName: "trophy.fill")
+                            .foregroundStyle(Color.orange)
+                        Text("\(currMap.finishedTimes)")
+                            .foregroundStyle(Color.orange)
+                            .bold()
+                    }
+                    .padding(8)
+                    .padding(.horizontal, 5)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    
+                    Spacer()
+                }
+                .padding(5)
+                
+                Spacer()
             }
-        })
+        }
     }
 }
