@@ -187,7 +187,6 @@ extension ReviveManager {
         myMaps[getMyMapIndex(map: currExploringMap!)].currTime += selectedTime
         myMaps[getMyMapIndex(map: currExploringMap!)].totalTime += selectedTime
         
-        
         rewardsAddToBag()
         updateMapData()
         
@@ -205,6 +204,8 @@ extension ReviveManager {
             currPanelItem = myItems[0]
         }
         
+        currExploringMap = myMaps[0]
+        
     }
     
     func saveNewMap(id : Int) {
@@ -212,7 +213,7 @@ extension ReviveManager {
     }
     
     func updateMapData() {
-        DataManager.shared.updateMapData(for: currExploringMap?.id ?? 0, with: currExploringMap!.currTime + selectedTime, newTotalTime: currExploringMap!.totalTime + selectedTime, newFinishedTimes: currExploringMap!.finishedTimes , myMaps: myMaps)
+        DataManager.shared.updateMapData(for: currExploringMap?.id ?? 0, with: myMaps[getMyMapIndex(map: currExploringMap!)].currTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].totalTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes , myMaps: myMaps)
     }
     
     func initMyMap() {

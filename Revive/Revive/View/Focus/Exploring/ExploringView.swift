@@ -37,6 +37,9 @@ struct ExploringView: View {
                                 if i < manager.myMaps.count {
                                     HStack {
                                         MapListImage(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
+                                            .onAppear {
+                                                manager.currExploringMap = manager.myMaps[0]
+                                            }
                                         
                                         VStack {
                                             Text("Total Time:")
@@ -137,6 +140,7 @@ struct ExploringView: View {
                     Button(action: {
                         withAnimation(.bouncy(duration: 0.3)){isMapSelected = true}
                         withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = false}
+                        manager.currExploringSpecies = manager.mySpecies[0]
                     }, label: {
                         Text("Next")
                             .font(.custom("Georgia-Italic", size: 18))
@@ -175,6 +179,7 @@ struct ExploringView: View {
                     Button(action: {
                         withAnimation(.bouncy(duration: 0.3)){isMapSelected = false}
                         withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
+                        manager.currExploringMap = manager.myMaps[0]
                     }, label: {
                         Text("Back")
                             .font(.custom("Georgia-Italic", size: 18))

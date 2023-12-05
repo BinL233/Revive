@@ -26,7 +26,7 @@ extension DataManager {
         }
     }
     
-    func updateMapData(for id: Int, with newCurrTime: Int, newTotalTime: Int, newFinishedTimes: Int, myMaps: [MyMaps]) {
+    func updateMapData(for id: Int, with newCurrTime: Int, with newTotalTime: Int, with newFinishedTimes: Int, myMaps: [MyMaps]) {
         var data = myMaps
         if let index = data.firstIndex(where: { $0.id == id }) {
             data[index].currTime = newCurrTime

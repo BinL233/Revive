@@ -53,6 +53,7 @@ struct ActionButtons: View {
                 Button(action: {
                     withAnimation(.bouncy(duration: 0.2)) {
                         manager.currAction = .exploring
+                        manager.currExploringMap = manager.myMaps[0]
                         manager.isStartButtonDisabled = true
                     }
                     withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
