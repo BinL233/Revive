@@ -12,30 +12,22 @@ struct TreasureProgressBar: View {
     @Environment(ReviveManager.self) var manager
     var widthPercent : Double
     @State var timeRemain : Int
+    @Binding var percentBinding : CGFloat
     
     var body: some View {
         @Bindable var manager = manager
-        var percentBinding: Binding<CGFloat> {
-            Binding<CGFloat>(
-                get: {
-                    if manager.getLastNextPoint() == (-1, -1) {
-                        return CGFloat(1)
-                    }
-                     return CGFloat(Double(manager.currExploringMap!.currTime - manager.getLastNextPoint().0) / Double(manager.getLastNextPoint().1 - manager.getLastNextPoint().0))
-                },
-                set: { _ in }
-            )
-        }
         
-        ProgressBar(color1: .cDarkOrange, color2: .cDarkOrange, percent: percentBinding, widthPercent: widthPercent, height: 10)
+        ProgressBar(color1: .cDarkOrange, color2: .cDarkOrange, percent: $percentBinding, widthPercent: widthPercent, height: 10)
             .onReceive(timer, perform: { _ in
                 manager.isTreasureBarCompleted = false
                 
                 if timeRemain > 0 {
                     manager.currExploringMap!.currTime += 10
+                    
                     timeRemain -= 10
                 } else {
                     timer.upstream.connect().cancel()
+                    manager.currExploringMap = manager.myMaps[0]
                     manager.isTreasureBarCompleted = true
                 }
             })

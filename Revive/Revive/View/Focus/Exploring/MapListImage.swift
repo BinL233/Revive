@@ -44,6 +44,16 @@ struct MapListImage: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     
                     Spacer()
+                    
+                    HStack(spacing: 0) {
+                        Text("\(String(format: "%.1f", Double(manager.myMaps[manager.getMyMapIndex(map: currMap)].currTime) / Double(manager.getMap(map: currMap).totalTime)*100))%")
+                            .foregroundStyle(Color.orange)
+                            .bold()
+                    }
+                    .padding(8)
+                    .padding(.horizontal, 5)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
                 .padding(5)
                 

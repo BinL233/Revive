@@ -60,6 +60,19 @@ extension ReviveManager {
         return String(hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
     }
     
+    func bindingSecTimeToString(time: Binding<Int>) -> String {
+        let time = time.wrappedValue
+        var hour : Int = 0
+        var min : Int = 0
+        var sec : Int = 0
+        
+        hour = time / 3600
+        min = time % 3600 / 60
+        sec = time % 60
+        
+        return String(hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
+    }
+    
     func secTimeToString2(time: Int) -> String {
         let time = time
         var hour : Int = 0

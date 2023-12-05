@@ -13,6 +13,28 @@ struct ExploringComplete: View {
     
     var body: some View {
         @Bindable var manager = manager
+        var percentBinding: Binding<CGFloat> {
+            Binding<CGFloat>(
+                get: {
+                    if manager.getLastNextPoint() == (-1, -1) {
+                        return CGFloat(1)
+                    }
+                     return CGFloat(Double(manager.currExploringMap!.currTime - manager.getLastNextPoint().0) / Double(manager.getLastNextPoint().1 - manager.getLastNextPoint().0))
+                },
+                set: { _ in }
+            )
+        }
+        
+        var timeLeft: Binding<Int> {
+            Binding<Int>(
+                get: {
+                    manager.getLastNextPoint().1 - manager.currExploringMap!.currTime
+                },
+                set: { _ in }
+            )
+        }
+        
+        
         ZStack {
             Color.init(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 18))
@@ -31,7 +53,29 @@ struct ExploringComplete: View {
 //                Image("mapFrame\(manager.currExploringMap?.id ?? 5001)")
 //                    .resizable()
 //                    .scaledToFit()
-                
+                HStack {
+                    Text("Exploration Speed:")
+                        .font(.custom("Georgia-Italic", size: 12))
+                        .foregroundStyle(Color.cBlack)
+                    
+                    let rate = manager.typeUp(increase: false)
+                    Text("\(String(format: "%.2f", rate))")
+                        .font(.title3)
+                        .bold()
+                        .italic()
+                        .foregroundStyle(
+                            rate == 1 ? Color.black : (
+                                rate < 1.1 ? Color.green : (
+                                    rate < 1.3 ? Color.blue : (
+                                        rate < 1.5 ? Color.purple : (
+                                            rate < 2.0 ? Color.yellow : Color.red
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                }
+
                 HStack {
                     Image("2001")
                         .resizable()
@@ -49,39 +93,82 @@ struct ExploringComplete: View {
                         
                         let intValue = manager.selectedTime
                         
-                        TreasureProgressBar(widthPercent: 0.5, timeRemain: intValue)
+                        TreasureProgressBar(widthPercent: 0.5, timeRemain: intValue, percentBinding: percentBinding)
+                        
+                        HStack {
+                            Text("\(manager.bindingSecTimeToString(time: timeLeft))")
+                                .font(.custom("Georgia-Italic", size: 12))
+                                .bold()
+                                .foregroundStyle(Color.cBlackBrown)
+                            Text("Left")
+                                .font(.custom("Georgia-Italic", size: 12))
+                                .bold()
+                                .foregroundStyle(Color.cBlackBrown)
+                        }
                     }
                     .padding(.vertical)
                 }
                 .padding(.vertical)
                 
-                VStack {
-                    Text("Rewards")
-                        .font(.custom("Georgia-Italic", size: 16))
-                        .bold()
-                        .foregroundStyle(Color.cBlackBrown)
-                        .shadow(radius: 0.7, x: 0, y: 2)
-                        .padding(13)
-                        .background(Color.cLightYellow)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .shadow(radius: 0.7, x: 0, y: 2)
-                    
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
-                        ForEach(Array(manager.currExploringItems.keys), id: \.self) { key in
-                            ItemsListImage(
-                                isUsedforSelection: false,
-                                currItem: $manager.itemList[key - 2001],
-                                currItemNum: manager.currExploringItems[key]!,
-                                currModule: $manager.currPanelItem
-                            )
+                ScrollView {
+                    if !manager.currExploringFixedRewards.isEmpty {
+                        VStack {
+                            Text("Treasure")
+                                .font(.custom("Georgia-Italic", size: 16))
+                                .bold()
+                                .foregroundStyle(Color.cBlackBrown)
+                                .shadow(radius: 0.7, x: 0, y: 2)
+                                .padding(13)
+                                .background(Color.cLightYellow)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(radius: 0.7, x: 0, y: 2)
+                            
+                            LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
+                                ForEach(Array(manager.currExploringFixedRewards.keys), id: \.self) { key in
+                                    ItemsListImage(
+                                        isUsedforSelection: false,
+                                        currItem: $manager.itemList[key - 2001],
+                                        currItemNum: manager.currExploringFixedRewards[key]!,
+                                        currModule: $manager.currPanelItem
+                                    )
+                                }
+                            })
                         }
-                    })
+                        .padding()
+                        .background(Color.cDarkOrange)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(radius: 2, x: 0, y: 4)
+                        .padding(.bottom)
+                    }
+                    
+                    VStack {
+                        Text("Rewards")
+                            .font(.custom("Georgia-Italic", size: 16))
+                            .bold()
+                            .foregroundStyle(Color.cBlackBrown)
+                            .shadow(radius: 0.7, x: 0, y: 2)
+                            .padding(13)
+                            .background(Color.cLightYellow)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .shadow(radius: 0.7, x: 0, y: 2)
+                        
+                        LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
+                            ForEach(Array(manager.currExploringItems.keys), id: \.self) { key in
+                                ItemsListImage(
+                                    isUsedforSelection: false,
+                                    currItem: $manager.itemList[key - 2001],
+                                    currItemNum: manager.currExploringItems[key]!,
+                                    currModule: $manager.currPanelItem
+                                )
+                            }
+                        })
+                    }
+                    .padding()
+                    .background(Color.cDarkOrange)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 2, x: 0, y: 4)
+                    .padding(.bottom)
                 }
-                .padding()
-                .background(Color.cDarkOrange)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(radius: 2, x: 0, y: 4)
-                .padding(.bottom)
                     
                 
                 Spacer()
@@ -104,7 +191,7 @@ struct ExploringComplete: View {
             .padding(.vertical, 20)
             .padding(.horizontal)
         }
-        .padding(.horizontal, 50)
-        .padding(.vertical, 180)
+        .padding(.horizontal, 30)
+        .padding(.vertical, 50)
     }
 }

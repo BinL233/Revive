@@ -24,7 +24,7 @@ struct SpeciesPanelImage: View {
                     .resizable()
                     .scaledToFit()
                     .shadow(radius: 6, x: 0, y: 4)
-                    .padding(10)
+                    .padding(5)
             }
         } else {
                 ZStack {

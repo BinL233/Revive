@@ -70,7 +70,7 @@ struct ExploringView: View {
                                                 .font(.custom("Georgia-Italic", size: 13))
                                                 .bold()
                                                 .foregroundStyle(.white)
-                                            Text("\(manager.secTimeToString(time: manager.getNextRewardTimeRemain()))")
+                                            Text("\(manager.secTimeToString(time: manager.getNextRewardTimeRemain(map: manager.myMaps[i])))")
                                                 .font(.custom("Georgia-Italic", size: 15))
                                                 .bold()
                                                 .foregroundStyle(.white)

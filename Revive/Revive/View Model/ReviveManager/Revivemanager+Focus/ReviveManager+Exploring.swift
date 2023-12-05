@@ -43,6 +43,7 @@ extension ReviveManager {
                     guard let lastPoint : Int = Int(sortedPoints[i-1].key) else {
                         return (0, 0)
                     }
+                    
                     return (lastPoint, pointTime)
                 }
             }
@@ -58,12 +59,12 @@ extension ReviveManager {
         myMaps[getMyMapIndex(map: currExploringMap!)].currTime = 0
         selectedTime = 0
         
-        saveNewMap(id: myMaps.count + 5001)
+        saveNewMap(id: myMaps.count + 5000)
         updateMapData()
     }
     
-    func getNextRewardTimeRemain() -> Int {
-        let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
+    func getNextRewardTimeRemain(map: MyMaps) -> Int {
+        let points : [String:[String:Int]] = getMap(map: map).rewardPoint
         let sortedPoints = points.sorted { Int($0.key)! < Int($1.key)! }
         
         for point in sortedPoints {
@@ -71,9 +72,7 @@ extension ReviveManager {
                 return 0
             }
             
-            guard let currMapTime = currExploringMap?.currTime else {
-                return 0
-            }
+            let currMapTime = map.currTime
             
             if pointTime > currMapTime {
                 return pointTime - currMapTime
@@ -164,11 +163,30 @@ extension ReviveManager {
         return false
     }
     
+    func typeUp(increase: Bool) -> Double {
+        var rate : Double = 1
+        
+        for type in getMap(map: currExploringMap!).type {
+            if getSpecies(mySpecies: currExploringSpecies!).area.keys.contains(type.rawValue) {
+                rate += getSpecies(mySpecies: currExploringSpecies!).area[type.rawValue]! - 1
+            }
+        }
+        
+        if increase {
+            myMaps[getMyMapIndex(map: currExploringMap!)].currTime += Int(Double(selectedTime) * rate)
+            myMaps[getMyMapIndex(map: currExploringMap!)].totalTime += Int(Double(selectedTime) * rate)
+        }
+
+        
+        return rate
+    }
+    
     func changeToExploringState1() {
         currExploringState = .state1
         UIApplication.shared.isIdleTimerDisabled = false
         currPanelSpecies = mySpecies[0]
         currExploringSpecies = mySpecies[0]
+        currExploringMap = myMaps[0]
         isTimerStart.toggle()
         timeRemaining = 30 * 60
         activeAlert = .none
@@ -176,6 +194,7 @@ extension ReviveManager {
     
     func changeToExploringState2() {
         currExploringState = .state2
+        currExploringFixedRewards = [:]
         
         currExploringFixedRewards = getTreasureRewards()
         
@@ -184,8 +203,7 @@ extension ReviveManager {
         UserDefaults.standard.set(totalExploringTime, forKey: "TotalExploringTime")
         UserDefaults.standard.set(totalTime, forKey: "TotalTime")
         
-        myMaps[getMyMapIndex(map: currExploringMap!)].currTime += selectedTime
-        myMaps[getMyMapIndex(map: currExploringMap!)].totalTime += selectedTime
+        _ = typeUp(increase: true)
         
         rewardsAddToBag()
         updateMapData()
@@ -203,9 +221,6 @@ extension ReviveManager {
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
         }
-        
-        currExploringMap = myMaps[0]
-        
     }
     
     func saveNewMap(id : Int) {
