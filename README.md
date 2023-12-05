@@ -74,5 +74,7 @@ The path of life is a circle; the scene's end and beginning are the same. The ex
 | Feature - Backyard - Items | 12/11/2023 |  |
 | Feature - Analysis - Distribution | 12/11/2023 | Finished |
 | Feature - Cloud Sync | 12/11/2023 |  |
+| Widget | 12/30/2023 |  |
+| Live Activity Notification | 12/30/2023 |  |
 | Test | 12/11/2023 |  |
 
