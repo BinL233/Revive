@@ -24,20 +24,20 @@ struct FocusSetting: View {
                         }
                 }
                 
-                HStack {
-                    Text("Allow Timer to Run in Background")
-                    Spacer()
-                    Toggle("", isOn: $manager.backgroundRunning)
-                        .labelsHidden()
-                        .onChange(of: manager.backgroundRunning) { oldValue, newValue in
-                            UserDefaults.standard.set(manager.backgroundRunning, forKey: "backgroundRunning")
-                        }
-                }
+//                HStack {
+//                    Text("Timer to Run in Background")
+//                    Spacer()
+//                    Toggle("", isOn: $manager.backgroundRunning)
+//                        .labelsHidden()
+//                        .onChange(of: manager.backgroundRunning) { oldValue, newValue in
+//                            UserDefaults.standard.set(manager.backgroundRunning, forKey: "backgroundRunning")
+//                        }
+//                }
             }
         } header: {
             Text("FOCUS")
-        } footer: {
-            Text("Display will not off when you are focusing.")
-        }
+        }// footer: {
+//            Text("Display will not off when you are focusing.")
+//        }
     }
 }

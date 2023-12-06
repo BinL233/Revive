@@ -25,9 +25,12 @@ struct ReviveWidgetLiveActivity: Widget {
                 VStack {
                     if context.state.timeLeft == "0:00:00" {
                         Text("You focused successfully!")
-                            .font(.custom("Georgia-Italic", size: 33))
+                            .font(.custom("Georgia-Italic", size: 20))
                             .padding(5)
                             .bold()
+                            .foregroundStyle(Color.cBlack)
+                        Text("Click to check the result.")
+                            .padding(5)
                             .foregroundStyle(Color.cBlack)
                     } else {
                         Text("\(context.attributes.action.capitalized)")
@@ -45,7 +48,8 @@ struct ReviveWidgetLiveActivity: Widget {
                 
                 Spacer()
             }
-            .activityBackgroundTint(Color(red: 0.8672, green: 0.9961, blue: 0.9922).opacity(0.6))
+            .activityBackgroundTint(.clear.opacity(0.4))
+//            Color(red: 0.8672, green: 0.9961, blue: 0.9922)
             .activitySystemActionForegroundColor(Color.black)
 
         } dynamicIsland: { context in
@@ -57,17 +61,16 @@ struct ReviveWidgetLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.trailing) {
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Time Left: \(context.state.timeLeft)")
-                        .font(.title3)
+//                    Text("Time Left: \(context.state.timeLeft)")
+//                        .font(.title3)
                 }
             } compactLeading: {
-                Text(context.attributes.action.capitalized)
+//                Text(context.attributes.action.capitalized)
             } compactTrailing: {
             } minimal: {
-                Text("\(context.state.timeLeft)")
+//                Text("\(context.state.timeLeft)")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
         }
     }
 }

@@ -47,7 +47,9 @@ extension ReviveManager {
         DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
         DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
         
-        currPanelItem = myItems[0]
+        if !myItems.isEmpty {
+            currPanelItem = myItems[0]
+        }
         
         totalTrainingTime += selectedTime
         totalTime += selectedTime

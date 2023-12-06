@@ -21,6 +21,33 @@ class DataManager {
         }
     }
     
+    //CloudKit
+//    let persistentContainer: NSPersistentCloudKitContainer
+//    
+//    init() {
+//        persistentContainer = NSPersistentCloudKitContainer(name: "MySpeciesModel")
+//        
+//        guard let URL = persistentContainer.persistentStoreDescriptions.first?.url else {
+//            fatalError("Could not find Container")
+//        }
+//                
+//        print("Core Data:", URL)
+//        
+//        let storeDescription = NSPersistentStoreDescription(url: URL)
+//        storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.fun.binltools.Revive")
+//        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+//        
+//        persistentContainer.persistentStoreDescriptions = [storeDescription]
+//        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+//        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+//        
+//        persistentContainer.loadPersistentStores { (description, error) in
+//            if let error = error {
+//                fatalError("Core Data store failed to load with error: \(error)")
+//            }
+//        }
+//    }
+    
     func saveData(customItem: MySpecies) {
         let context = persistentContainer.viewContext
         let entity = NSEntityDescription.insertNewObject(forEntityName: "SpeciesEntity", into: context) as! SpeciesEntity
