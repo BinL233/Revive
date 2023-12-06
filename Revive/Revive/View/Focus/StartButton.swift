@@ -60,16 +60,17 @@ struct StartButton: View {
                         }
                     }
                     
+                    
                     let attributes = ReviveWidgetAttributes(action: manager.currAction.rawValue)
-                    var content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: Date())
+                    var content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
                     
                     switch manager.currAction {
                     case .hatching:
-                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: Date())
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
                     case .training:
-                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: Date())
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
                     case .exploring:
-                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: Date())
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
                     }
                     
                     widgetManager.timeRemainingAct = try? Activity<ReviveWidgetAttributes>.request(attributes: attributes, content: content)
@@ -103,6 +104,7 @@ struct StartButton: View {
                     message: alertMessage,
                     primaryButton: .destructive(Text("Confirm")) {
                         withAnimation{
+                            widgetManager.endActivity()
                             if manager.currAction == .hatching {
                                 manager.changeToHatchingState1()
                             } else if manager.currAction == .training {
@@ -114,23 +116,6 @@ struct StartButton: View {
                     },
                     secondaryButton: .cancel() {
                         manager.activeAlert = .none
-                    }
-                )
-            case .testMode:
-                return Alert(
-                    title: Text("TEST MODE ACTIVATED"),
-                    message: Text("You are now in Test Mode."),
-                    dismissButton: .default(Text("OK")) {
-                        manager.activeAlert = .none
-                    }
-                )
-            case .testModeOff:
-                return Alert(
-                    title: Text("TEST MODE DEACTIVATED"),
-                    message: Text("You are now in User Mode."),
-                    dismissButton: .default(Text("OK")) {
-                        manager.activeAlert = .none
-                        manager.timeRemaining = 30*60
                     }
                 )
             }

@@ -64,6 +64,7 @@ class ReviveManager {
     var keepDisplay : Bool
     var reminderOn : Bool
     var reminderTime : String
+    var backgroundRunning : Bool
     
     // Analysis Details
     var totalTime : Int
@@ -172,6 +173,12 @@ class ReviveManager {
         keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")
         reminderOn = UserDefaults.standard.bool(forKey: "isRemindOn")
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
+        
+        if  UserDefaults.standard.object(forKey: "backgroundRunning") == nil {
+            backgroundRunning = true
+        } else {
+            backgroundRunning = UserDefaults.standard.bool(forKey: "backgroundRunning")
+        }
         
         totalTime = UserDefaults.standard.integer(forKey: "TotalTime")
         totalHatchingTime = UserDefaults.standard.integer(forKey: "TotalHatchingTime")

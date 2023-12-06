@@ -23,6 +23,16 @@ struct FocusSetting: View {
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
                         }
                 }
+                
+                HStack {
+                    Text("Allow Timer to Run in Background")
+                    Spacer()
+                    Toggle("", isOn: $manager.backgroundRunning)
+                        .labelsHidden()
+                        .onChange(of: manager.backgroundRunning) { oldValue, newValue in
+                            UserDefaults.standard.set(manager.backgroundRunning, forKey: "backgroundRunning")
+                        }
+                }
             }
         } header: {
             Text("FOCUS")

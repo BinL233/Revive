@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HatchingComplete: View {
     @Environment(ReviveManager.self) var manager
+    @Environment(WidgetManager.self) var widgetManager
+    
     var body: some View {
         ZStack {
             Color.init(Color.white)
@@ -59,6 +61,7 @@ struct HatchingComplete: View {
                 }
                 
                 Button(action: {
+                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToHatchingState1()}
                 }) {

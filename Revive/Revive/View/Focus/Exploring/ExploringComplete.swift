@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploringComplete: View {
     @Environment(ReviveManager.self) var manager
+    @Environment(WidgetManager.self) var widgetManager
     private let adaptiveCloumns = [GridItem(.adaptive(minimum: 70))]
     
     var body: some View {
@@ -174,6 +175,7 @@ struct ExploringComplete: View {
                 Spacer()
                 
                 Button(action: {
+                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToExploringState1()}
                 }) {

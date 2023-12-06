@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TrainingComplete: View {
     @Environment(ReviveManager.self) var manager
+    @Environment(WidgetManager.self) var widgetManager
     
     var body: some View {
         @Bindable var manager = manager
@@ -64,6 +65,7 @@ struct TrainingComplete: View {
                 }
                 
                 Button(action: {
+                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToTrainingState1()}
                 }) {

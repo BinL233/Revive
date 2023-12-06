@@ -55,12 +55,14 @@
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
 		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
 		B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */; };
-		B39D61CB2B200A0F001BFA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
 		B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
-		B39D61D72B200BE6001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
 		B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */; };
-		B39D61DA2B200FA5001BFA00 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
+		B39D622C2B201917001BFA00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C774022ACCE69A00387FDC /* Preview Assets.xcassets */; };
+		B39D622D2B201934001BFA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
+		B39D62352B201965001BFA00 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
+		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
+		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
 		B3C738EC2AF9E7F2006709C9 /* CurrFocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */; };
@@ -77,6 +79,7 @@
 		B3C774322ACD0F6500387FDC /* FocusTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774312ACD0F6500387FDC /* FocusTitle.swift */; };
 		B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774332ACD11CF00387FDC /* ActionButtons.swift */; };
 		B3C774362ACD151600387FDC /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C774352ACD151500387FDC /* StartButton.swift */; };
+		B3CD02D12B20BFAB00116384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD02D02B20BFAB00116384 /* AppDelegate.swift */; };
 		B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */; };
 		B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */; };
 		B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */; };
@@ -204,7 +207,10 @@
 		B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListImage.swift; sourceTree = "<group>"; };
 		B39D61D52B200BCF001BFA00 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
 		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
+		B39D62372B20203C001BFA00 /* Revive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Revive.entitlements; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
+		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
 		B3C738EB2AF9E7F2006709C9 /* CurrFocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrFocusState.swift; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 		B3C774312ACD0F6500387FDC /* FocusTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTitle.swift; sourceTree = "<group>"; };
 		B3C774332ACD11CF00387FDC /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		B3C774352ACD151500387FDC /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		B3CD02D02B20BFAB00116384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringComplete.swift; sourceTree = "<group>"; };
 		B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAnimation.swift; sourceTree = "<group>"; };
@@ -392,10 +399,11 @@
 			isa = PBXGroup;
 			children = (
 				B35006C72B1CDE3E00F030D6 /* Enums */,
+				B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */,
+				B3ADC09A2B20B5270039611E /* BackgroundTask */,
 				B34F1BC42AF5CE6700737872 /* ReviveManager.swift */,
 				B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */,
 				B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */,
-				B3FF6B9E2B1BB74600327E93 /* Revivemanager+Focus */,
 				B349D5D92B09541900270661 /* ReviveManager+Notification.swift */,
 				B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */,
 				B34F1BCA2AF5D67200737872 /* ReviveManager+Timer.swift */,
@@ -466,6 +474,15 @@
 			path = WidgetManager;
 			sourceTree = "<group>";
 		};
+		B3ADC09A2B20B5270039611E /* BackgroundTask */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADC0982B20B3090039611E /* BackgroundTask.swift */,
+				B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */,
+			);
+			path = BackgroundTask;
+			sourceTree = "<group>";
+		};
 		B3C773EF2ACCE69800387FDC = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +509,7 @@
 		B3C773FA2ACCE69800387FDC /* Revive */ = {
 			isa = PBXGroup;
 			children = (
+				B39D62372B20203C001BFA00 /* Revive.entitlements */,
 				B3FB819E2B199212004CB417 /* Assets.xcassets */,
 				B34F1BD82AF6045300737872 /* Info.plist */,
 				B34F1BB92AF5C27B00737872 /* Persistences */,
@@ -551,6 +569,7 @@
 				B359FE4B2AFBF9DD00A58A87 /* DataManager */,
 				B359FE4A2AFBF9CB00A58A87 /* ReviveManager */,
 				B34F1BC62AF5CE9700737872 /* Persistences.swift */,
+				B3CD02D02B20BFAB00116384 /* AppDelegate.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -793,7 +812,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39D61CB2B200A0F001BFA00 /* Assets.xcassets in Resources */,
+				B39D622C2B201917001BFA00 /* Preview Assets.xcassets in Resources */,
+				B39D622D2B201934001BFA00 /* Assets.xcassets in Resources */,
 				B3D67D7E2B1FF890004BA91A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -805,6 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CD02D12B20BFAB00116384 /* AppDelegate.swift in Sources */,
 				B3FF6BA42B1BD4E700327E93 /* ItemsListImage.swift in Sources */,
 				B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */,
 				B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */,
@@ -836,6 +857,7 @@
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
+				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
@@ -884,6 +906,7 @@
 				B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */,
 				B3FB81782B192209004CB417 /* ExploringMap.swift in Sources */,
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
+				B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
 				B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */,
@@ -917,9 +940,8 @@
 				B3D67D892B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
 				B3D67D782B1FF88F004BA91A /* ReviveWidgetBundle.swift in Sources */,
 				B3D67D7C2B1FF88F004BA91A /* ReviveWidget.swift in Sources */,
+				B39D62352B201965001BFA00 /* Color.swift in Sources */,
 				B3D67D7A2B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift in Sources */,
-				B39D61D72B200BE6001BFA00 /* WidgetManager.swift in Sources */,
-				B39D61DA2B200FA5001BFA00 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,6 +1091,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
@@ -1089,7 +1112,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.Revive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1106,6 +1129,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
@@ -1126,7 +1150,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.Revive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1148,7 +1172,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveTests;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.ReviveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1168,7 +1192,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveTests;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.ReviveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1186,7 +1210,7 @@
 				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.ReviveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1204,7 +1228,7 @@
 				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.ReviveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1225,13 +1249,14 @@
 				INFOPLIST_FILE = ReviveWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ReviveWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive.ReviveWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.Revive.ReviveWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1252,13 +1277,14 @@
 				INFOPLIST_FILE = ReviveWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ReviveWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive.ReviveWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = fun.binltools.Revive.ReviveWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

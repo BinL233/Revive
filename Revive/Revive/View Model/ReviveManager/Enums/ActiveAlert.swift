@@ -9,5 +9,5 @@ import Foundation
 
 enum ActiveAlert : Identifiable {
     var id: Self { self }
-    case stop, testMode, testModeOff
+    case stop
 }

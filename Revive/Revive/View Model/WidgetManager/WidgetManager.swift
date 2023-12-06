@@ -18,7 +18,7 @@ class WidgetManager {
     
     func endActivity() {
         let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: "", ImageName: ""), staleDate: Date())
-                                                        
+                           
         Task {
             await timeRemainingAct?.end(content)
         }

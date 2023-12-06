@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import UserNotifications
 import ActivityKit
 
 struct TimerModule: View {
@@ -29,9 +30,20 @@ struct TimerModule: View {
             if !manager.isTimerStart {
                 TimerSlider()
             } else {
-                ProgressBar(percent: percentBinding)
-                    .animation(.spring, value: manager.timeRemaining)
-                    .padding(5)
+                if manager.backgroundRunning {
+                    ProgressBar(percent: percentBinding)
+                        .animation(.spring, value: manager.timeRemaining)
+                        .padding(5)
+                        .onChange(of: manager.timeRemaining) {
+//                            manager.scheduleAppRefresh()
+//                            manager.scheduleProcessing()
+                        }
+                } else {
+                    ProgressBar(percent: percentBinding)
+                        .animation(.spring, value: manager.timeRemaining)
+                        .padding(5)
+                }
+
             }
             Text(manager.timeStringGetter())
                 .bold()
@@ -53,30 +65,35 @@ struct TimerModule: View {
 extension TimerModule {
     func timerTick() {
         if manager.isTimerStart && manager.timeRemaining > 0 {
-            let attributes = ReviveWidgetAttributes(action: manager.currAction.rawValue)
             manager.timeRemaining -= 1
             
             // For Hatching
             if manager.currAction == .hatching {
                 if Int(manager.timeRemaining) == manager.selectedTime / 2 {
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: Date())
+                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
                     Task {
                         await widgetManager.timeRemainingAct?.update(content)
                     }
-                    widgetManager.timeRemainingAct = try? Activity<ReviveWidgetAttributes>.request(attributes: attributes, content: content)
                     
                     withAnimation{manager.changeToHatchingState2()}
+                    
                 } else if Int(manager.timeRemaining) == 0 {
+                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+                    Task {
+                        await widgetManager.timeRemainingAct?.update(content)
+                    }
+                    
                     withAnimation{manager.changeToHatchingState3()}
+                    
                 } else {
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: Date())
+                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: nil)
                     Task {
                         await widgetManager.timeRemainingAct?.update(content)
                     }
                 }
             // For Training
             } else if manager.currAction == .training {
-                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: Date())
+                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
                 Task {
                     await widgetManager.timeRemainingAct?.update(content)
                 }
@@ -88,7 +105,7 @@ extension TimerModule {
             }
             // For Exploring
             else {
-                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: Date())
+                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
                 Task {
                     await widgetManager.timeRemainingAct?.update(content)
                 }

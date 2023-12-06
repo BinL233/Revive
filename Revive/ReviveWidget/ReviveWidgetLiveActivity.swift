@@ -18,51 +18,53 @@ struct ReviveWidgetLiveActivity: Widget {
                     .resizable()
                     .scaledToFit()
                     .padding(30)
+                    .shadow(radius: 6, x: 0, y: 4)
                 
                 Spacer()
                 
                 VStack {
-                    Text("Time left")
-                        .font(.custom("Georgia-Italic", size: 20))
-                        .padding(5)
-                        .bold()
-                        .foregroundStyle(Color.cBlack)
-                    Text("\(context.state.timeLeft)")
-                        .font(.custom("Georgia-Italic", size: 30))
-                        .padding(5)
-                        .bold()
-                        .foregroundStyle(Color.cBlack)
+                    if context.state.timeLeft == "0:00:00" {
+                        Text("You focused successfully!")
+                            .font(.custom("Georgia-Italic", size: 33))
+                            .padding(5)
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+                    } else {
+                        Text("\(context.attributes.action.capitalized)")
+                            .font(.custom("Georgia-Italic", size: 20))
+                            .padding(5)
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+                        Text("\(context.state.timeLeft)")
+                            .font(.custom("Georgia-Italic", size: 30))
+                            .padding(5)
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+                    }
                 }
                 
                 Spacer()
             }
-            .background(Color(red: 0.8672, green: 0.9961, blue: 0.9922))
-            .activityBackgroundTint(Color.cyan)
+            .activityBackgroundTint(Color(red: 0.8672, green: 0.9961, blue: 0.9922).opacity(0.6))
             .activitySystemActionForegroundColor(Color.black)
-            .onAppear {
-                print(123123)
-            }
 
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.timeLeft)")
-                    // more content
+                    Text("Time Left: \(context.state.timeLeft)")
+                        .font(.title3)
                 }
             } compactLeading: {
-                Text("L")
+                Text(context.attributes.action.capitalized)
             } compactTrailing: {
-                Text("T \(context.state.timeLeft)")
             } minimal: {
-                Text(context.state.timeLeft)
+                Text("\(context.state.timeLeft)")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -80,14 +82,10 @@ struct ReviveWidgetLiveActivity: Widget {
 //    fileprivate static var test: ReviveWidgetAttributes.ContentState {
 //        ReviveWidgetAttributes.ContentState(timeLeft: "10", ImageName: "1001")
 //     }
-//     
-//     fileprivate static var starEyes: ReviveWidgetAttributes.ContentState {
-//         ReviveWidgetAttributes.ContentState(emoji: "🤩")
-//     }
 //}
-
-    //#Preview("Notification", as: .content, using: ReviveWidgetAttributes.preview) {
-    //   ReviveWidgetLiveActivity()
-    //} contentStates: {
-    //    ReviveWidgetAttributes.ContentState.test
-    //}
+//
+//#Preview("Notification", as: .content, using: ReviveWidgetAttributes.preview) {
+//   ReviveWidgetLiveActivity()
+//} contentStates: {
+//    ReviveWidgetAttributes.ContentState.test
+//}
