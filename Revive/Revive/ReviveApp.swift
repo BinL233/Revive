@@ -13,6 +13,7 @@ struct ReviveApp: App {
         WindowGroup {
             LaunchView()
                 .environment(ReviveManager())
+                .environment(WidgetManager())
         }
     }
 }

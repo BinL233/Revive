@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ActivityKit
 
 struct StartButton: View {
     @Environment(ReviveManager.self) var manager
+    @Environment(WidgetManager.self) var widgetManager
     
     var body: some View {
         @Bindable var manager = manager
@@ -57,6 +59,20 @@ struct StartButton: View {
                             manager.currExploringState = .state1
                         }
                     }
+                    
+                    let attributes = ReviveWidgetAttributes(action: manager.currAction.rawValue)
+                    var content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: Date())
+                    
+                    switch manager.currAction {
+                    case .hatching:
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: Date())
+                    case .training:
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: Date())
+                    case .exploring:
+                        content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: Date())
+                    }
+                    
+                    widgetManager.timeRemainingAct = try? Activity<ReviveWidgetAttributes>.request(attributes: attributes, content: content)
                     
                 }
             }

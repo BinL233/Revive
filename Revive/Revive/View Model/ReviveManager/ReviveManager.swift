@@ -9,6 +9,7 @@ import Foundation
 import Observation
 import CoreData
 import SwiftUI
+import ActivityKit
 
 @Observable
 class ReviveManager {

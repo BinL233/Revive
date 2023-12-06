@@ -55,6 +55,11 @@
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
 		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
 		B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */; };
+		B39D61CB2B200A0F001BFA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
+		B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
+		B39D61D72B200BE6001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
+		B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */; };
+		B39D61DA2B200FA5001BFA00 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
@@ -76,6 +81,15 @@
 		B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */; };
 		B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */; };
 		B3D5529A2B1AD52E0046F4FF /* TreasureProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */; };
+		B3D67D732B1FF88F004BA91A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D67D722B1FF88F004BA91A /* WidgetKit.framework */; };
+		B3D67D752B1FF88F004BA91A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D67D742B1FF88F004BA91A /* SwiftUI.framework */; };
+		B3D67D782B1FF88F004BA91A /* ReviveWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D772B1FF88F004BA91A /* ReviveWidgetBundle.swift */; };
+		B3D67D7A2B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D792B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift */; };
+		B3D67D7C2B1FF88F004BA91A /* ReviveWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D7B2B1FF88F004BA91A /* ReviveWidget.swift */; };
+		B3D67D7E2B1FF890004BA91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D67D7D2B1FF890004BA91A /* Assets.xcassets */; };
+		B3D67D822B1FF890004BA91A /* ReviveWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3D67D702B1FF88F004BA91A /* ReviveWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */; };
+		B3D67D892B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */; };
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
@@ -115,7 +129,28 @@
 			remoteGlobalIDString = B3C773F72ACCE69800387FDC;
 			remoteInfo = Revive;
 		};
+		B3D67D802B1FF890004BA91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3C773F02ACCE69800387FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3D67D6F2B1FF88F004BA91A;
+			remoteInfo = ReviveWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3D67D832B1FF890004BA91A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3D67D822B1FF890004BA91A /* ReviveWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
@@ -167,6 +202,8 @@
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
 		B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListView.swift; sourceTree = "<group>"; };
 		B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListImage.swift; sourceTree = "<group>"; };
+		B39D61D52B200BCF001BFA00 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
+		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
@@ -191,6 +228,15 @@
 		B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringComplete.swift; sourceTree = "<group>"; };
 		B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAnimation.swift; sourceTree = "<group>"; };
 		B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureProgressBar.swift; sourceTree = "<group>"; };
+		B3D67D702B1FF88F004BA91A /* ReviveWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReviveWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3D67D722B1FF88F004BA91A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B3D67D742B1FF88F004BA91A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B3D67D772B1FF88F004BA91A /* ReviveWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveWidgetBundle.swift; sourceTree = "<group>"; };
+		B3D67D792B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		B3D67D7B2B1FF88F004BA91A /* ReviveWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveWidget.swift; sourceTree = "<group>"; };
+		B3D67D7D2B1FF890004BA91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3D67D7F2B1FF890004BA91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePolldWidgetAttributes.swift; sourceTree = "<group>"; };
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
@@ -234,6 +280,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D67D6D2B1FF88F004BA91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D67D752B1FF88F004BA91A /* SwiftUI.framework in Frameworks */,
+				B3D67D732B1FF88F004BA91A /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +457,23 @@
 			path = SpeciesList;
 			sourceTree = "<group>";
 		};
+		B39D61D42B200BB0001BFA00 /* WidgetManager */ = {
+			isa = PBXGroup;
+			children = (
+				B39D61D52B200BCF001BFA00 /* WidgetManager.swift */,
+				B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */,
+			);
+			path = WidgetManager;
+			sourceTree = "<group>";
+		};
 		B3C773EF2ACCE69800387FDC = {
 			isa = PBXGroup;
 			children = (
 				B3C773FA2ACCE69800387FDC /* Revive */,
 				B3C7740B2ACCE69A00387FDC /* ReviveTests */,
 				B3C774152ACCE69A00387FDC /* ReviveUITests */,
+				B3D67D762B1FF88F004BA91A /* ReviveWidget */,
+				B3D67D712B1FF88F004BA91A /* Frameworks */,
 				B3C773F92ACCE69800387FDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -418,6 +484,7 @@
 				B3C773F82ACCE69800387FDC /* Revive.app */,
 				B3C774082ACCE69A00387FDC /* ReviveTests.xctest */,
 				B3C774122ACCE69A00387FDC /* ReviveUITests.xctest */,
+				B3D67D702B1FF88F004BA91A /* ReviveWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +547,7 @@
 		B3C774262ACCE6AD00387FDC /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				B39D61D42B200BB0001BFA00 /* WidgetManager */,
 				B359FE4B2AFBF9DD00A58A87 /* DataManager */,
 				B359FE4A2AFBF9CB00A58A87 /* ReviveManager */,
 				B34F1BC62AF5CE9700737872 /* Persistences.swift */,
@@ -517,6 +585,28 @@
 				B3C774352ACD151500387FDC /* StartButton.swift */,
 			);
 			path = Focus;
+			sourceTree = "<group>";
+		};
+		B3D67D712B1FF88F004BA91A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3D67D722B1FF88F004BA91A /* WidgetKit.framework */,
+				B3D67D742B1FF88F004BA91A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3D67D762B1FF88F004BA91A /* ReviveWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B3D67D772B1FF88F004BA91A /* ReviveWidgetBundle.swift */,
+				B3D67D792B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift */,
+				B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */,
+				B3D67D7B2B1FF88F004BA91A /* ReviveWidget.swift */,
+				B3D67D7D2B1FF890004BA91A /* Assets.xcassets */,
+				B3D67D7F2B1FF890004BA91A /* Info.plist */,
+			);
+			path = ReviveWidget;
 			sourceTree = "<group>";
 		};
 		B3E1B9462B082B0700AD7AA7 /* Training */ = {
@@ -559,10 +649,12 @@
 				B3C773F42ACCE69800387FDC /* Sources */,
 				B3C773F52ACCE69800387FDC /* Frameworks */,
 				B3C773F62ACCE69800387FDC /* Resources */,
+				B3D67D832B1FF890004BA91A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B3D67D812B1FF890004BA91A /* PBXTargetDependency */,
 			);
 			name = Revive;
 			productName = Revive;
@@ -605,6 +697,23 @@
 			productReference = B3C774122ACCE69A00387FDC /* ReviveUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B3D67D6F2B1FF88F004BA91A /* ReviveWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3D67D862B1FF890004BA91A /* Build configuration list for PBXNativeTarget "ReviveWidgetExtension" */;
+			buildPhases = (
+				B3D67D6C2B1FF88F004BA91A /* Sources */,
+				B3D67D6D2B1FF88F004BA91A /* Frameworks */,
+				B3D67D6E2B1FF88F004BA91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReviveWidgetExtension;
+			productName = ReviveWidgetExtension;
+			productReference = B3D67D702B1FF88F004BA91A /* ReviveWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -626,6 +735,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = B3C773F72ACCE69800387FDC;
 					};
+					B3D67D6F2B1FF88F004BA91A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = B3C773F32ACCE69800387FDC /* Build configuration list for PBXProject "Revive" */;
@@ -644,6 +756,7 @@
 				B3C773F72ACCE69800387FDC /* Revive */,
 				B3C774072ACCE69A00387FDC /* ReviveTests */,
 				B3C774112ACCE69A00387FDC /* ReviveUITests */,
+				B3D67D6F2B1FF88F004BA91A /* ReviveWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -676,6 +789,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3D67D6E2B1FF88F004BA91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39D61CB2B200A0F001BFA00 /* Assets.xcassets in Resources */,
+				B3D67D7E2B1FF890004BA91A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -684,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FF6BA42B1BD4E700327E93 /* ItemsListImage.swift in Sources */,
+				B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */,
 				B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */,
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */,
@@ -707,6 +830,7 @@
 				B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */,
 				B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */,
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
+				B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */,
 				B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
@@ -715,6 +839,7 @@
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
+				B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrFocusState.swift in Sources */,
 				B35304072B1D2EB400F5E2D3 /* SpeciesFeed.swift in Sources */,
@@ -785,6 +910,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3D67D6C2B1FF88F004BA91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D67D892B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
+				B3D67D782B1FF88F004BA91A /* ReviveWidgetBundle.swift in Sources */,
+				B3D67D7C2B1FF88F004BA91A /* ReviveWidget.swift in Sources */,
+				B3D67D7A2B1FF88F004BA91A /* ReviveWidgetLiveActivity.swift in Sources */,
+				B39D61D72B200BE6001BFA00 /* WidgetManager.swift in Sources */,
+				B39D61DA2B200FA5001BFA00 /* Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -797,6 +935,11 @@
 			isa = PBXTargetDependency;
 			target = B3C773F72ACCE69800387FDC /* Revive */;
 			targetProxy = B3C774132ACCE69A00387FDC /* PBXContainerItemProxy */;
+		};
+		B3D67D812B1FF890004BA91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3D67D6F2B1FF88F004BA91A /* ReviveWidgetExtension */;
+			targetProxy = B3D67D802B1FF890004BA91A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -923,6 +1066,7 @@
 		B3C7741D2ACCE69A00387FDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -932,6 +1076,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Revive/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -958,6 +1103,7 @@
 		B3C7741E2ACCE69A00387FDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -967,6 +1113,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Revive/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -997,7 +1144,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R3AJS3U748;
+				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -1017,7 +1164,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R3AJS3U748;
+				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -1036,7 +1183,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R3AJS3U748;
+				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveUITests;
@@ -1054,7 +1201,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R3AJS3U748;
+				DEVELOPMENT_TEAM = A48878X7MD;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.ReviveUITests;
@@ -1063,6 +1210,60 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Revive;
+			};
+			name = Release;
+		};
+		B3D67D842B1FF890004BA91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A48878X7MD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReviveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReviveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive.ReviveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3D67D852B1FF890004BA91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A48878X7MD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReviveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReviveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.kmy5261.Revive.ReviveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1101,6 +1302,15 @@
 			buildConfigurations = (
 				B3C774232ACCE69A00387FDC /* Debug */,
 				B3C774242ACCE69A00387FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3D67D862B1FF890004BA91A /* Build configuration list for PBXNativeTarget "ReviveWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3D67D842B1FF890004BA91A /* Debug */,
+				B3D67D852B1FF890004BA91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
