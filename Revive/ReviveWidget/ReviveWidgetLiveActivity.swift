@@ -24,13 +24,15 @@ struct ReviveWidgetLiveActivity: Widget {
                 
                 VStack {
                     if context.state.timeLeft == "0:00:00" {
-                        Text("You focused successfully!")
-                            .font(.custom("Georgia-Italic", size: 20))
+                        Text("Congratulations!")
+                            .font(.custom("Georgia-Italic", size: 18))
                             .padding(5)
                             .bold()
                             .foregroundStyle(Color.cBlack)
-                        Text("Click to check the result.")
+                        Text("You made it")
+                            .font(.custom("Georgia-Italic", size: 17))
                             .padding(5)
+                            .bold()
                             .foregroundStyle(Color.cBlack)
                     } else {
                         Text("\(context.attributes.action.capitalized)")
@@ -48,7 +50,7 @@ struct ReviveWidgetLiveActivity: Widget {
                 
                 Spacer()
             }
-            .activityBackgroundTint(.clear.opacity(0.4))
+            .activityBackgroundTint(Color(red: 0.8672, green: 0.9961, blue: 0.9922).opacity(0.4))
 //            Color(red: 0.8672, green: 0.9961, blue: 0.9922)
             .activitySystemActionForegroundColor(Color.black)
 
@@ -57,18 +59,30 @@ struct ReviveWidgetLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
+//                    Image(context.state.ImageName)
+//                        .resizable()
+//                        .scaledToFit()
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                 }
+                DynamicIslandExpandedRegion(.center) {
+                    Text("Time Left:  \(context.state.timeLeft)")
+                        .font(.title2)
+                        .bold()
+                }
                 DynamicIslandExpandedRegion(.bottom) {
-//                    Text("Time Left: \(context.state.timeLeft)")
-//                        .font(.title3)
+                    Text(context.attributes.action.capitalized)
+                        .font(.title3)
                 }
             } compactLeading: {
-//                Text(context.attributes.action.capitalized)
+                Image(context.state.ImageName)
+                    .resizable()
+                    .scaledToFit()
             } compactTrailing: {
+                Text("\(context.state.timeLeft)")
+                
             } minimal: {
-//                Text("\(context.state.timeLeft)")
+                Text("\(context.state.timeLeft)")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
         }

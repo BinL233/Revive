@@ -46,6 +46,7 @@ class ReviveManager {
     var panelInfoAction : PanelButtonsInfoAction
     var speciesListSort : SpeciesListSorter
     var itemListSort : ItemListSorter
+    var isExpItemChooseSpecies : Bool
     
     // State
     var currHatchingState : CurrHatchingState
@@ -105,7 +106,7 @@ class ReviveManager {
         }
         
         myItems = localMyItems
-        
+        isExpItemChooseSpecies = false
         
         focusLog = localFocusLog
         selectedTime2 = 0

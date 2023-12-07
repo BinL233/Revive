@@ -65,7 +65,6 @@ struct TrainingComplete: View {
                 }
                 
                 Button(action: {
-                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToTrainingState1()}
                 }) {

@@ -49,7 +49,6 @@
 		B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */; };
 		B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */; };
 		B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */; };
-		B35304072B1D2EB400F5E2D3 /* SpeciesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304062B1D2EB400F5E2D3 /* SpeciesFeed.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
@@ -63,6 +62,7 @@
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */; };
 		B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */; };
+		B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16052B215F83003D13EE /* SpeciesFeed.swift */; };
 		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
 		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
@@ -201,7 +201,6 @@
 		B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesAction.swift; sourceTree = "<group>"; };
 		B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesInfo.swift; sourceTree = "<group>"; };
 		B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Items.swift"; sourceTree = "<group>"; };
-		B35304062B1D2EB400F5E2D3 /* SpeciesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesFeed.swift; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesEvolve.swift; sourceTree = "<group>"; };
 		B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardListSorter.swift; sourceTree = "<group>"; };
+		B3AD16052B215F83003D13EE /* SpeciesFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesFeed.swift; sourceTree = "<group>"; };
 		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 			children = (
 				B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */,
 				B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */,
-				B35304062B1D2EB400F5E2D3 /* SpeciesFeed.swift */,
+				B3AD16052B215F83003D13EE /* SpeciesFeed.swift */,
 				B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */,
 			);
 			path = Action;
@@ -870,7 +870,6 @@
 				B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
 				B3C738EC2AF9E7F2006709C9 /* CurrFocusState.swift in Sources */,
-				B35304072B1D2EB400F5E2D3 /* SpeciesFeed.swift in Sources */,
 				B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
@@ -902,6 +901,7 @@
 				B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
+				B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */,
 				B3FF6B9B2B1BB71000327E93 /* SpeciesPanelActionButtons.swift in Sources */,
 				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
 				B3FB81802B192F94004CB417 /* DataManager+Item.swift in Sources */,

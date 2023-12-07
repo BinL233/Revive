@@ -58,8 +58,6 @@ extension ReviveManager {
         }
     }
     
-    
-    
     func evolveToNextStage() {
         let targetSpecies = speciesList[currPanelSpecies!.speciesID+1]
         let maxHeight = targetSpecies.height.L

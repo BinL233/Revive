@@ -61,7 +61,6 @@ struct HatchingComplete: View {
                 }
                 
                 Button(action: {
-                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToHatchingState1()}
                 }) {

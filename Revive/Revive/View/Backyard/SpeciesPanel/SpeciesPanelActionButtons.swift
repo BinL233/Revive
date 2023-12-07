@@ -57,19 +57,27 @@ struct SpeciesPanelActionButtons: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .shadow(radius: 0.7, x: 2, y: 3)
             } else {
-                Button(action: {
-                    
-                }, label: {
-                    Text("Use")
+                if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
+                    Button(action: {
+                    }, label: {
+                        Text("Use")
+                            .font(.custom("Georgia-Italic", size: 15))
+                            .padding(.horizontal, 30)
+                            .padding(7)
+                            .bold()
+                            .foregroundStyle(Color.cWhite)
+                    })
+                    .background(Color.cBlueGreen)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .shadow(radius: 0.7, x: 2, y: 3)
+                } else {
+                    Text("Feed your Species!")
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 30)
                         .padding(7)
                         .bold()
-                        .foregroundStyle(Color.cWhite)
-                })
-                .background(Color.cBlueGreen)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .shadow(radius: 0.7, x: 2, y: 3)
+                        .foregroundStyle(Color.cBlack)
+                }
             }
         }
     }

@@ -175,7 +175,6 @@ struct ExploringComplete: View {
                 Spacer()
                 
                 Button(action: {
-                    widgetManager.endActivity()
                     manager.isStartButtonDisabled = false
                     withAnimation{manager.changeToExploringState1()}
                 }) {
