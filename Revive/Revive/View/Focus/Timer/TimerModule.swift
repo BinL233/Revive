@@ -40,12 +40,27 @@ struct TimerModule: View {
                         case .background:
                             print("In background phase")
                             manager.lastBackgroundTime = Date()
+                            
+                            if let noti = manager.bgNotification {
+                                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [noti])
+                            }
+                            
+                            manager.bgNotification = manager.addNotification(title: "Revive \(manager.currAction.rawValue.capitalized) Completed", subtitle: "Check it out!", date: manager.lastBackgroundTime!.addingTimeInterval( manager.timeRemaining ))
                         
                         case .active:
                             print("In active phase")
                             if let lastBackgroundTime = manager.lastBackgroundTime {
                                 let timePassed = Date().timeIntervalSince(lastBackgroundTime)
-                                manager.timeRemaining -= Double(Int(timePassed))
+                                if manager.timeRemaining > Double(Int(timePassed)) {
+                                    manager.timeRemaining -= Double(Int(timePassed))
+                                } else {
+                                    manager.timeRemaining = 1
+                                    
+                                    if let noti = manager.bgNotification {
+                                        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [noti])
+                                    }
+                                }
+                                
                                 manager.lastBackgroundTime = nil
                             }
                         default:
@@ -91,42 +106,42 @@ extension TimerModule {
             if manager.currAction == .hatching {
                 if Int(manager.timeRemaining) == manager.selectedTime / 2 {
                     // Live Activity
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-                    Task {
-                        await widgetManager.timeRemainingAct?.update(content)
-                    }
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
                     
                     withAnimation{manager.changeToHatchingState2()}
                     
                 } else if Int(manager.timeRemaining) == 0 {
                     // Live Activity
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-                    Task {
-                        await widgetManager.timeRemainingAct?.update(content)
-                    }
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
                     
                     withAnimation{manager.changeToHatchingState3()}
                     
                 } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
                     // Live Activity
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-                    Task {
-                        await widgetManager.timeRemainingAct?.update(content)
-                    }
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
                 } else {
                     // Live Activity
-                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: nil)
-                    Task {
-                        await widgetManager.timeRemainingAct?.update(content)
-                    }
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
                 }
             // For Training
             } else if manager.currAction == .training {
                 // Live Activity
-                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
-                Task {
-                    await widgetManager.timeRemainingAct?.update(content)
-                }
+//                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
+//                Task {
+//                    await widgetManager.timeRemainingAct?.update(content)
+//                }
                 
                 if Int(manager.timeRemaining) == 0 {
                     let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!, exp: manager.selectedTime)
@@ -137,10 +152,10 @@ extension TimerModule {
             // For Exploring
             else {
                 // Live Activity
-                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
-                Task {
-                    await widgetManager.timeRemainingAct?.update(content)
-                }
+//                let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
+//                Task {
+//                    await widgetManager.timeRemainingAct?.update(content)
+//                }
                 
                 if Int(manager.timeRemaining) == 0 {
                     manager.currExploringItems = manager.getRewards()

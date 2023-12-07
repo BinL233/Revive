@@ -101,4 +101,47 @@ extension ReviveManager {
         
         return -1
     }
+    
+    func getMap(map: MyMaps) -> ExploringMap {
+        return mapList[map.id-5001]
+    }
+    
+    func getMyMapIndex(map: MyMaps) -> Int {
+        for i in 0..<myMaps.count {
+            if myMaps[i].id == map.id {
+                return i
+            }
+        }
+        
+        return 0
+    }
+    
+    func saveNewMap(id : Int) {
+        DataManager.shared.saveMapData(customItem: MyMaps(id: id, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
+    }
+    
+    func updateMapData() {
+        DataManager.shared.updateMapData(for: currExploringMap?.id ?? 0, with: myMaps[getMyMapIndex(map: currExploringMap!)].currTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].totalTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes , myMaps: myMaps)
+    }
+    
+    func saveStaData() {
+        DataManager.shared.saveStaData(customItem: sta[0])
+    }
+    
+    func deleteStaData() {
+        DataManager.shared.deleteSta(sta: sta[0])
+    }
+    
+    func updateItemAmount(id: Int, newAmount: Int) {
+        DataManager.shared.updateItemCurrTimeData(for: id, with: newAmount, myItems: myItems)
+    }
+    
+    func saveNewItem(id: Int, amount: Int) {
+        DataManager.shared.saveItemData(customItem: MyItems(id: id, amount: amount))
+    }
+    
+    func deleteItem(id: Int) {
+        DataManager.shared.deleteItemData(for: id)
+    }
+    
 }

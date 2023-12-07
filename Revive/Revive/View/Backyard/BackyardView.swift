@@ -22,6 +22,10 @@ struct BackyardView: View {
                     .padding(.bottom, 5)
                 SpeciesListView()
             }
+            
+            if manager.isReleaseConfirm {
+                ReleaseConfirm()
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ struct SpeciesPanelName: View {
                             if trimmedString.isEmpty {
                                 manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName = manager.getSpecies(mySpecies: manager.currPanelSpecies!).name
                             } else {
-                                let newValue = String(trimmedString.prefix(10))
+                                let newValue = String(trimmedString.prefix(23))
                                 manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName = newValue
                             }
                         })

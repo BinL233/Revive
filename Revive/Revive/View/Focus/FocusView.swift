@@ -17,12 +17,26 @@ struct FocusView: View {
                 VStack {
                     FocusTitle()
                     Spacer()
-                    DisplayView()
-                        .padding(.bottom, 10)
-                        .padding(.top, 10)
+                    
+                    ZStack {
+                        DisplayView()
+                            .padding(.bottom, 10)
+                            .padding(.top, 10)
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                BuffListView()
+                                    .padding(.leading, 20)
+                                Spacer()
+                            }
+                        }
+                    }
+                    
                     ActionButtons()
                         .padding(.horizontal, 30)
-                        .padding(.vertical, 10)
+                        .padding(.top, (manager.isHatchingBuff || manager.isRarityBuff || manager.isTrainingBuff || manager.isExploringBuff) ? 0 : 10)
+                        .padding(.bottom, 10)
                     
                     if !manager.isMapStartSelect {
                         TimerModule()

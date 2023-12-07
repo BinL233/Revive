@@ -17,7 +17,7 @@ extension DataManager {
         
         do {
             try context.save()
-            print("User data:", context, "saved")
+            print("Item data:", context, "saved")
         } catch {
             print("Failed to save custom items: \(error)")
         }
@@ -50,10 +50,10 @@ extension DataManager {
                 if let entityToUpdate = results.first {
                     entityToUpdate.amount = Int32(newData)
                     try context.save()
-                    print("Updated \(context)")
+                    print("Updated Item \(context)")
                 }
             } catch {
-                print("Update failed: \(error)")
+                print("Item Update failed: \(error)")
             }
         }
     }
@@ -71,7 +71,7 @@ extension DataManager {
                 print("Deleted item with id \(id)")
             }
         } catch {
-            print("Delete failed: \(error)")
+            print("Item Delete failed: \(error)")
         }
     }
 

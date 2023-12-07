@@ -29,6 +29,7 @@ extension ReviveManager {
         
         return (num, currExp)
     }
+    
     func changeToTrainingState1() {
         currTrainingState = .state1
         UIApplication.shared.isIdleTimerDisabled = false
@@ -51,10 +52,14 @@ extension ReviveManager {
             currPanelItem = myItems[0]
         }
         
-        totalTrainingTime += selectedTime
-        totalTime += selectedTime
-        UserDefaults.standard.set(totalTrainingTime, forKey: "TotalTrainingTime")
-        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        sta[0].totalTrainingTime += selectedTime
+        sta[0].totalTime += selectedTime
+        
+        deleteStaData()
+        saveStaData()
+        
+        updatePendingItem()
+        resetBuffRate()
         
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "training")

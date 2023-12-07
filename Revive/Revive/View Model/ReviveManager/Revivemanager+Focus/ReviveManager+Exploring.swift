@@ -9,20 +9,6 @@ import Foundation
 import SwiftUI
 
 extension ReviveManager {
-    func getMap(map: MyMaps) -> ExploringMap {
-        return mapList[map.id-5001]
-    }
-    
-    func getMyMapIndex(map: MyMaps) -> Int {
-        for i in 0..<myMaps.count {
-            if myMaps[i].id == map.id {
-                return i
-            }
-        }
-        
-        return 0
-    }
-    
     func getLastNextPoint() -> (Int, Int) {
         let points : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
         let sortedPoints = points.sorted { Int($0.key)! < Int($1.key)! }
@@ -58,6 +44,9 @@ extension ReviveManager {
         myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes += 1
         myMaps[getMyMapIndex(map: currExploringMap!)].currTime = 0
         selectedTime = 0
+        
+        sta[0].numOfMap += 1
+        sta[0].numOfFinishedMap += 1
         
         saveNewMap(id: myMaps.count + 5000)
         updateMapData()
@@ -100,6 +89,10 @@ extension ReviveManager {
                 rewards[targetKey] = 1
             }
         }
+        
+        sta[0].numOfItems += Int(selectedTime/60/10)
+        deleteStaData()
+        saveStaData()
         
         return rewards
     }
@@ -198,19 +191,22 @@ extension ReviveManager {
         
         currExploringFixedRewards = getTreasureRewards()
         
-        totalExploringTime += selectedTime
-        totalTime += selectedTime
-        UserDefaults.standard.set(totalExploringTime, forKey: "TotalExploringTime")
-        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
+        sta[0].totalExploringTime += selectedTime
+        sta[0].totalTime += selectedTime
         
         _ = typeUp(increase: true)
         
         rewardsAddToBag()
         updateMapData()
+        updatePendingItem()
+        resetBuffRate()
         
         if currExploringMap!.currTime + selectedTime >= getMap(map: currExploringMap!).totalTime {
             mapFinished()
         }
+        
+        deleteStaData()
+        saveStaData()
         
         let currentDate = Date()
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "exploring")
@@ -221,14 +217,6 @@ extension ReviveManager {
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
         }
-    }
-    
-    func saveNewMap(id : Int) {
-        DataManager.shared.saveMapData(customItem: MyMaps(id: id, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
-    }
-    
-    func updateMapData() {
-        DataManager.shared.updateMapData(for: currExploringMap?.id ?? 0, with: myMaps[getMyMapIndex(map: currExploringMap!)].currTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].totalTime, with: myMaps[getMyMapIndex(map: currExploringMap!)].finishedTimes , myMaps: myMaps)
     }
     
     func initMyMap() {

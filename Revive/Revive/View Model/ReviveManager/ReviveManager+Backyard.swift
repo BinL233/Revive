@@ -124,6 +124,7 @@ extension ReviveManager {
     }
     
     func deleteSpecies(id: Int, date: Date) {
+        mySpecies.remove(at: getSpeciesIndex(id: id, date: date))
         DataManager.shared.deleteMySpecies(for: id, for: date, mySpecies: mySpecies)
     }
     

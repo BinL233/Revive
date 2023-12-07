@@ -24,6 +24,11 @@ struct SpeciesListView: View {
                     SpeciesList()
                 } else {
                     SpeciesAction()
+                        .onAppear {
+                            if !manager.myItems.isEmpty {
+                                manager.currPanelItem = manager.myItems[0]
+                            }
+                        }
                 }
             }
         }

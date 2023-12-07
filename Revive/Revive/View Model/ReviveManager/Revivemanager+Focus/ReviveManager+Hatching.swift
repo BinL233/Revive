@@ -12,7 +12,16 @@ extension ReviveManager {
     private func getRandomHatchingSpecies() -> Species {
         let superRarePercent = HatchingMechanics().superRare
         let upRate = HatchingMechanics().superRareUpRate * Double(selectedTime / 60)
-        let rarityToFilter = Int.random(in: 0..<(100-Int(upRate))) < Int(superRarePercent * 100) ? "SR" : "R"
+        let randomNum = Int.random(in: 0..<(100-Int(upRate)-Int(rarityBuffRate*100)))
+        print(Double(10/(100-Int(upRate)-Int(rarityBuffRate*100))))
+        var rarityToFilter = "R"
+        
+        if randomNum <= 0 {
+            rarityToFilter = "SR"
+        } else {
+            rarityToFilter = randomNum < Int(superRarePercent * 100) ? "SR" : "R"
+        }
+        
         var filteredSpeciesIDs = speciesList.filter { $0.stage == 1 && $0.rarity == rarityToFilter && $0.hatchTime*60 <= selectedTime }.map { $0.id }
         
         if filteredSpeciesIDs.isEmpty {
@@ -25,6 +34,10 @@ extension ReviveManager {
     
 
     func hatchingStartButton() -> Species {
+        if isHatchingBuff {
+            timeRemaining = timeRemaining * hatchingBuffRate
+        }
+        
         return getRandomHatchingSpecies()
     }
     
@@ -58,21 +71,23 @@ extension ReviveManager {
         DataManager.shared.saveData(customItem: currS)
         
         // Save Details
-        totalHatchingTime += selectedTime
-        totalTime += selectedTime
-        numOfSpecies += 1
+        sta[0].totalHatchingTime += selectedTime
+        sta[0].totalTime += selectedTime
+        sta[0].numOfSpecies += 1
         
         if getSpecies(mySpecies: currS).rarity == "R" {
-            numOfRSpecies += 1
-            UserDefaults.standard.set(numOfRSpecies, forKey: "NumOfRSpecies")
+            sta[0].numOfRSpecies += 1
         } else if getSpecies(mySpecies: currS).rarity == "SR" {
-            numOfSRSpecies += 1
-            UserDefaults.standard.set(numOfSRSpecies, forKey: "NumOfSRSpecies")
+            sta[0].numOfSRSpecies += 1
+        } else {
+            sta[0].numOfSSRSpecies += 1
         }
         
-        UserDefaults.standard.set(totalHatchingTime, forKey: "TotalHatchingTime")
-        UserDefaults.standard.set(totalTime, forKey: "TotalTime")
-        UserDefaults.standard.set(numOfSpecies, forKey: "NumOfSpecies")
+        deleteStaData()
+        saveStaData()
+        
+        updatePendingItem()
+        resetBuffRate()
         
         // Save log
         let logg = FocusLog(date: currentDate, duration: Int(selectedTime/60), action: "hatching")

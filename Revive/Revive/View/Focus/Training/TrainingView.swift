@@ -30,6 +30,7 @@ struct TrainingView: View {
                     Image(speciesImage)
                         .resizable()
                         .scaledToFit()
+                        .shadow(radius: 6, x: 0, y: 4)
                         .padding(15)
                     
                     ForEach(0..<5, id: \.self) { _ in
@@ -40,7 +41,8 @@ struct TrainingView: View {
             } else {
                 VStack {
                     Text("Select a Species for training")
-                        .font(.custom("Georgia-Italic", size: 15))
+                        .font(.custom("Georgia-Italic", size: 18))
+                        .padding()
                         .bold()
                         .foregroundStyle(Color.black)
                         //.background(Color.cDarkOrange)

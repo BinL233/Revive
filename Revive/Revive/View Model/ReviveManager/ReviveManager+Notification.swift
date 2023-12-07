@@ -19,7 +19,7 @@ extension ReviveManager {
         }
     }
     
-    func addNotification(title: String, subtitle: String, date: Date) {
+    func addNotification(title: String, subtitle: String, date: Date) -> String{
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = subtitle
@@ -28,13 +28,16 @@ extension ReviveManager {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.hour, .minute], from: date)
 
+        let identifier = UUID().uuidString
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
 
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
                 print("Error \(error.localizedDescription)")
             }
         }
+        
+        return identifier
     }
 }

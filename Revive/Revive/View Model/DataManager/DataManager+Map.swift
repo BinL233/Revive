@@ -20,9 +20,9 @@ extension DataManager {
         
         do {
             try context.save()
-            print("User data:", context, "saved")
+            print("Map data:", context, "saved")
         } catch {
-            print("Failed to save custom items: \(error)")
+            print("Failed to save custom map: \(error)")
         }
     }
     
@@ -44,10 +44,10 @@ extension DataManager {
                     entityToUpdate.totalTime = Int32(newTotalTime)
                     entityToUpdate.finishedTimes = Int16(newFinishedTimes)
                     try context.save()
-                    print("Updated \(context)")
+                    print("Updated Map \(context)")
                 }
             } catch {
-                print("Update failed: \(error)")
+                print("Map Update failed: \(error)")
             }
         }
     }
@@ -60,7 +60,7 @@ extension DataManager {
             let entities = try context.fetch(fetchRequest)
             return entities.map { MyMaps(id: Int($0.id), isFinished: $0.isFinished, finishedTimes: Int($0.finishedTimes), currTime: Int($0.currTime), totalTime: Int($0.totalTime)) }
         } catch {
-            print("Failed to fetch custom items: \(error)")
+            print("Failed to fetch custom map: \(error)")
             return []
         }
     }

@@ -41,12 +41,24 @@ class ReviveManager {
     var currPanelItem : MyItems?
     var currExploringItems : [Int:Int]
     var currExploringFixedRewards : [Int:Int]
+    var pendingItem : [Int:Int]
+    
+    // Item Buff
+    var isHatchingBuff : Bool
+    var hatchingBuffRate : Double
+    var isTrainingBuff : Bool
+    var trainingBuffRate : Double
+    var isExploringBuff : Bool
+    var exploringBuffRate : Double
+    var isRarityBuff : Bool
+    var rarityBuffRate : Double
     
     // Backyard
     var panelInfoAction : PanelButtonsInfoAction
     var speciesListSort : SpeciesListSorter
     var itemListSort : ItemListSorter
     var isExpItemChooseSpecies : Bool
+    var isReleaseConfirm : Bool
     
     // State
     var currHatchingState : CurrHatchingState
@@ -63,6 +75,7 @@ class ReviveManager {
     var isExpGain : Bool
     var isStartButtonDisabled : Bool
     var lastBackgroundTime : Date?
+    var bgNotification : String?
     
     // Setting
     var keepDisplay : Bool
@@ -71,15 +84,18 @@ class ReviveManager {
     var backgroundRunning : Bool
     
     // Analysis Details
-    var totalTime : Int
-    var totalHatchingTime : Int
-    var totalTrainingTime : Int
-    var totalExploringTime : Int
-    var numOfSpecies : Int
-    var numOfRSpecies : Int
-    var numOfSRSpecies : Int
-    var numOfItems : Int
-    var numOfCoins : Int
+    var sta : [Statistics]
+    
+//    var totalTime : Int
+//    var totalHatchingTime : Int
+//    var totalTrainingTime : Int
+//    var totalExploringTime : Int
+//    var numOfSpecies : Int
+//    var numOfRSpecies : Int
+//    var numOfSRSpecies : Int
+//    var numOfSSRSpecies : Int
+//    var numOfItems : Int
+//    var numOfCoins : Int
     
     var focusLog : [FocusLog]
     var currFocusLog : [(key: String, value: Int)]
@@ -92,6 +108,7 @@ class ReviveManager {
         let localFocusLog = DataManager.shared.loadLogData()
         let localMyItems = DataManager.shared.loadItemData()
         let localMyMaps = DataManager.shared.loadMapData()
+        let localSta = DataManager.shared.loadStaData()
         
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
@@ -109,13 +126,16 @@ class ReviveManager {
         myItems = localMyItems
         isExpItemChooseSpecies = false
         lastBackgroundTime = nil
+        bgNotification = nil
         
         focusLog = localFocusLog
         selectedTime2 = 0
         
+        sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0)] : localSta
+        
         currDistTimeSpanSelection = .week
         currDistActionSelection = .total
-        
+        pendingItem = [:]
         isTreasureBarCompleted = false
         panelInfoAction = .none
         
@@ -159,11 +179,18 @@ class ReviveManager {
         selectedTime = Int(localTimeRemaining)
         isTimerStart = false
         activeAlert = .none
-        
+        isHatchingBuff = false
+        isTrainingBuff = false
+        isExploringBuff = false
+        isRarityBuff = false
+        hatchingBuffRate = 1
+        trainingBuffRate = 1
+        exploringBuffRate = 1
+        rarityBuffRate = 0
         currHatchingState = .state1
         currTrainingState = .none
         currExploringState = .none
-        
+        isReleaseConfirm = false
         testMode = .off
         standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date())]
         
@@ -188,15 +215,16 @@ class ReviveManager {
             backgroundRunning = UserDefaults.standard.bool(forKey: "backgroundRunning")
         }
         
-        totalTime = UserDefaults.standard.integer(forKey: "TotalTime")
-        totalHatchingTime = UserDefaults.standard.integer(forKey: "TotalHatchingTime")
-        totalTrainingTime = UserDefaults.standard.integer(forKey: "TotalTrainingTime")
-        totalExploringTime = UserDefaults.standard.integer(forKey: "TotalExploringTime")
-        numOfSpecies = UserDefaults.standard.integer(forKey: "NumOfSpecies")
-        numOfRSpecies = UserDefaults.standard.integer(forKey: "NumOfRSpecies")
-        numOfSRSpecies = UserDefaults.standard.integer(forKey: "NumOfSRSpecies")
-        numOfItems = UserDefaults.standard.integer(forKey: "NumOfItems")
-        numOfCoins = UserDefaults.standard.integer(forKey: "NumOfCoins")
+//        totalTime = UserDefaults.standard.integer(forKey: "TotalTime")
+//        totalHatchingTime = UserDefaults.standard.integer(forKey: "TotalHatchingTime")
+//        totalTrainingTime = UserDefaults.standard.integer(forKey: "TotalTrainingTime")
+//        totalExploringTime = UserDefaults.standard.integer(forKey: "TotalExploringTime")
+//        numOfSpecies = UserDefaults.standard.integer(forKey: "NumOfSpecies")
+//        numOfRSpecies = UserDefaults.standard.integer(forKey: "NumOfRSpecies")
+//        numOfSRSpecies = UserDefaults.standard.integer(forKey: "NumOfSRSpecies")
+//        numOfSSRSpecies = 0
+//        numOfItems = UserDefaults.standard.integer(forKey: "NumOfItems")
+//        numOfCoins = UserDefaults.standard.integer(forKey: "NumOfCoins")
         
         userNotificationCenter()
     }

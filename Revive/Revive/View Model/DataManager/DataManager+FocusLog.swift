@@ -18,9 +18,9 @@ extension DataManager {
         
         do {
             try context.save()
-            print("User data:", context, "saved")
+            print("Log data:", context, "saved")
         } catch {
-            print("Failed to save custom items: \(error)")
+            print("Failed to save custom log: \(error)")
         }
     }
     
@@ -32,7 +32,7 @@ extension DataManager {
             let entities = try context.fetch(fetchRequest)
             return entities.map { FocusLog(date: $0.date!, duration: Int($0.duration), action: $0.action ?? "") }
         } catch {
-            print("Failed to fetch custom items: \(error)")
+            print("Failed to fetch custom log: \(error)")
             return []
         }
     }

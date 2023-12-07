@@ -23,4 +23,5 @@ extension Color {
     static let cMidYellow = Color(red: 0.8648, green: 0.8594, blue: 0.4336)
     static let cRed = Color(red: 0.9023, green: 0.2969, blue: 0.2344)
     static let cGreen = Color(red: 0.1797, green: 0.7969, blue: 0.4414)
+    static let cdimBlue = Color(red: 0.8532, green: 0.4258, blue: 0.4922)
 }

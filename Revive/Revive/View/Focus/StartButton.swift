@@ -28,6 +28,7 @@ struct StartButton: View {
         Button(action: {
             if manager.isTimerStart {
                 manager.activeAlert = .stop
+                
             } else {
                 withAnimation{
                     if manager.keepDisplay {
@@ -49,6 +50,7 @@ struct StartButton: View {
                             manager.currHatchingState = .none
                             manager.currExploringState = .none
                             manager.currTrainingState = .state1
+                            manager.timeRemaining = manager.timeRemaining * manager.trainingBuffRate
                         }
                     } else {
                         // For Exploring
@@ -57,32 +59,33 @@ struct StartButton: View {
                             manager.currHatchingState = .none
                             manager.currTrainingState = .none
                             manager.currExploringState = .state1
+                            manager.timeRemaining = manager.timeRemaining * manager.exploringBuffRate
                         }
                     }
                 }
                 
                 // Live Activity
                 
-                let attributes = ReviveWidgetAttributes(action: manager.currAction.rawValue)
-                var content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                let attributes = ReviveWidgetAttributes(action: manager.currAction.rawValue)
+//                var content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
                 
-                switch manager.currAction {
-                case .hatching:
-                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-                case .training:
-                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
-                case .exploring:
-                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
-                }
-                
-                if widgetManager.timeRemainingAct == nil {
-                    widgetManager.endActivity()
-                    widgetManager.timeRemainingAct = try? Activity<ReviveWidgetAttributes>.request(attributes: attributes, content: content)
-                } else {
-                    Task {
-                        await widgetManager.timeRemainingAct?.update(content)
-                    }
-                }
+//                switch manager.currAction {
+//                case .hatching:
+//                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                case .training:
+//                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currTrainingSpecies!.speciesID)), staleDate: nil)
+//                case .exploring:
+//                    content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(format: "%03d",  manager.currExploringSpecies!.speciesID)), staleDate: nil)
+//                }
+//                
+//                if widgetManager.timeRemainingAct == nil {
+//                    widgetManager.endActivity()
+//                    widgetManager.timeRemainingAct = try? Activity<ReviveWidgetAttributes>.request(attributes: attributes, content: content)
+//                } else {
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
+//                }
             }
         }) {
             if manager.isTimerStart {
@@ -111,7 +114,7 @@ struct StartButton: View {
                     message: alertMessage,
                     primaryButton: .destructive(Text("Confirm")) {
                         withAnimation{
-                            widgetManager.endActivity()
+//                            widgetManager.endActivity()
                             if manager.currAction == .hatching {
                                 manager.changeToHatchingState1()
                             } else if manager.currAction == .training {
@@ -120,6 +123,14 @@ struct StartButton: View {
                                 manager.changeToExploringState1()
                             }
                         }
+                        
+                        if let noti = manager.bgNotification {
+                            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [noti])
+                            manager.bgNotification = nil
+                        }
+                        
+                        manager.updatePendingItem()
+                        manager.resetBuffRate()
                     },
                     secondaryButton: .cancel() {
                         manager.activeAlert = .none
