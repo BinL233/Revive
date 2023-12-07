@@ -62,6 +62,7 @@ class ReviveManager {
     var testMode : TestMode
     var isExpGain : Bool
     var isStartButtonDisabled : Bool
+    var lastBackgroundTime : Date?
     
     // Setting
     var keepDisplay : Bool
@@ -107,6 +108,7 @@ class ReviveManager {
         
         myItems = localMyItems
         isExpItemChooseSpecies = false
+        lastBackgroundTime = nil
         
         focusLog = localFocusLog
         selectedTime2 = 0

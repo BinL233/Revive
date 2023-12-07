@@ -14,6 +14,7 @@ struct TimerModule: View {
     @Environment(ReviveManager.self) var manager
     @State private var timer : AnyCancellable?
     @Environment(WidgetManager.self) var widgetManager
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         @Bindable var manager = manager
@@ -30,19 +31,38 @@ struct TimerModule: View {
             if !manager.isTimerStart {
                 TimerSlider()
             } else {
-                if manager.backgroundRunning {
-                    ProgressBar(percent: percentBinding)
-                        .animation(.spring, value: manager.timeRemaining)
-                        .padding(5)
-                        .onChange(of: manager.timeRemaining) {
-//                            manager.scheduleAppRefresh()
-//                            manager.scheduleProcessing()
+                //                if manager.backgroundRunning {
+                ProgressBar(percent: percentBinding)
+                    .animation(.spring, value: manager.timeRemaining)
+                    .padding(5)
+                    .onChange(of: scenePhase) { oldValue, newScenePhase in
+                        switch newScenePhase {
+                        case .background:
+                            print("In background phase")
+                            manager.lastBackgroundTime = Date()
+                        
+                        case .active:
+                            print("In active phase")
+                            if let lastBackgroundTime = manager.lastBackgroundTime {
+                                let timePassed = Date().timeIntervalSince(lastBackgroundTime)
+                                manager.timeRemaining -= Double(Int(timePassed))
+                                manager.lastBackgroundTime = nil
+                            }
+                        default:
+                            break
                         }
-                } else {
-                    ProgressBar(percent: percentBinding)
-                        .animation(.spring, value: manager.timeRemaining)
-                        .padding(5)
-                }
+                    }
+                
+//                    .onChange(of: manager.timeRemaining) {
+//                        .
+//                        //                            manager.scheduleAppRefresh()
+//                        //                            manager.scheduleProcessing()
+//                    }
+//                } else {
+//                    ProgressBar(percent: percentBinding)
+//                        .animation(.spring, value: manager.timeRemaining)
+//                        .padding(5)
+//                }
 
             }
             Text(manager.timeStringGetter())
