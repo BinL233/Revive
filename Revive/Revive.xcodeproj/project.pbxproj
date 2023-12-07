@@ -61,6 +61,8 @@
 		B39D622D2B201934001BFA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
 		B39D62352B201965001BFA00 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
+		B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */; };
+		B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */; };
 		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
 		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
@@ -209,6 +211,8 @@
 		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
 		B39D62372B20203C001BFA00 /* Revive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Revive.entitlements; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
+		B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesEvolve.swift; sourceTree = "<group>"; };
+		B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardListSorter.swift; sourceTree = "<group>"; };
 		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 				B34831992B03C82000545E46 /* SpeciesItems.swift */,
 				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
 				B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */,
+				B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				B35006CE2B1CE13700F030D6 /* SpeciesAction.swift */,
 				B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */,
 				B35304062B1D2EB400F5E2D3 /* SpeciesFeed.swift */,
+				B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -868,6 +874,7 @@
 				B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
+				B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */,
 				B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */,
 				B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */,
 				B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */,
@@ -889,6 +896,7 @@
 				B3FB817E2B192EDA004CB417 /* MyItems.swift in Sources */,
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
+				B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B3FB81852B193C1F004CB417 /* ItemBYListImage.swift in Sources */,
 				B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */,

@@ -44,6 +44,8 @@ class ReviveManager {
     
     // Backyard
     var panelInfoAction : PanelButtonsInfoAction
+    var speciesListSort : SpeciesListSorter
+    var itemListSort : ItemListSorter
     
     // State
     var currHatchingState : CurrHatchingState
@@ -115,6 +117,9 @@ class ReviveManager {
         panelInfoAction = .none
         
         isStartButtonDisabled = false
+        
+        speciesListSort = .alphabet
+        itemListSort = .alphabet
         
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {

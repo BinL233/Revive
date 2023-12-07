@@ -23,14 +23,37 @@ struct SpeciesList: View {
             .background(Color.cLightBrown)
             
             if manager.speciesItemsSelection == .Species {
-                    ScrollView {
-                        LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                            ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                SpeciesListImage(mode: "Backyard", currSpecies: $manager.mySpecies[i], currModule: $manager.currPanelSpecies)
-                            }
-                        })
+                HStack (spacing: 0) {
+                    Spacer()
+                    Text("Sorted by")
+                        .bold()
+                        .foregroundStyle(Color.cBlackBrown)
+                    Picker("SpeciesListSorter", selection: $manager.speciesListSort) {
+                        Text("Name").tag(SpeciesListSorter.alphabet)
+                        Text("Favorite").tag(SpeciesListSorter.favorite)
+                        Text("Level").tag(SpeciesListSorter.level)
+                        Text("Rarity").tag(SpeciesListSorter.rarity)
+                        Text("Hatching Date").tag(SpeciesListSorter.hatchingDate)
                     }
-                    .background(Color.cDarkBrown)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                .background(Color.white)
+
+                ScrollView {
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                        ForEach(manager.mySpecies.indices, id: \.self) { i in
+                            SpeciesListImage(mode: "Backyard", currSpecies: $manager.mySpecies[i], currModule: $manager.currPanelSpecies)
+                        }
+                    })
+                    .onAppear {
+                        manager.changeSpeciesListSorter()
+                    }
+                    .onChange(of: manager.speciesListSort) {
+                        manager.changeSpeciesListSorter()
+                    }
+                }
+                .background(Color.cDarkBrown)
             } else {
                 if manager.myItems.count == 0 {
                     VStack {
@@ -47,12 +70,32 @@ struct SpeciesList: View {
                         Spacer()
                     }
                 } else {
+                    HStack (spacing: 0) {
+                        Spacer()
+                        Text("Sorted by")
+                            .bold()
+                            .foregroundStyle(Color.cBlackBrown)
+                        Picker("ItemListSorter", selection: $manager.itemListSort) {
+                            Text("Name").tag(ItemListSorter.alphabet)
+                            Text("Amount").tag(ItemListSorter.amount)
+                        }
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    .background(Color.white)
+                    
                     ScrollView {
                         LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
                             ForEach(manager.myItems.indices, id: \.self) { i in
                                 ItemBYListImage(currItem: $manager.myItems[i], currModule: $manager.currPanelItem)
                             }
                         })
+                        .onAppear {
+                            manager.changeItemListSorter()
+                        }
+                        .onChange(of: manager.itemListSort) {
+                            manager.changeItemListSorter()
+                        }
                     }
                     .background(Color.cDarkBrown)
                 }

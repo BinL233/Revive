@@ -44,8 +44,8 @@ extension ReviveManager {
 //        let idx = self.getSpeciesIndex(id: id, date: date)
 //        self.mySpecies[idx].currExp = currExp
 //        self.mySpecies[idx].level += levelUpNum
-        DataManager.shared.updateMySpeciesLevel(for: id, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
-        DataManager.shared.updateMySpeciesCurrExp(for: id, with: currExp, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesLevel(for: id, for: date, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesCurrExp(for: id, for: date, with: currExp, mySpecies: mySpecies)
         
         if !myItems.isEmpty {
             currPanelItem = myItems[0]

@@ -104,14 +104,16 @@ class DataManager {
         }
     }
     
-    func updateMySpeciesLevel(for speciesID: Int, with newData: Int, mySpecies: [MySpecies]) {
+    func updateMySpeciesLevel(for speciesID: Int, for date: Date, with newData: Int, mySpecies: [MySpecies]) {
         var data = mySpecies
-        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID && Calendar.current.isDate($0.hatchDate, equalTo: date, toGranularity: .second) }) {
             data[index].level = newData
             
             let context = persistentContainer.viewContext
             let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let idPredicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let datePredicate = NSPredicate(format: "hatchDate == %@", date as NSDate)
+            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, datePredicate])
             
             do {
                 let results = try context.fetch(fetchRequest)
@@ -126,14 +128,16 @@ class DataManager {
         }
     }
     
-    func updateMySpeciesCurrExp(for speciesID: Int, with newData: Int, mySpecies: [MySpecies]) {
+    func updateMySpeciesCurrExp(for speciesID: Int, for date: Date, with newData: Int, mySpecies: [MySpecies]) {
         var data = mySpecies
-        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID && Calendar.current.isDate($0.hatchDate, equalTo: date, toGranularity: .second) }) {
             data[index].currExp = newData
             
             let context = persistentContainer.viewContext
             let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let idPredicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let datePredicate = NSPredicate(format: "hatchDate == %@", date as NSDate)
+            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, datePredicate])
             
             do {
                 let results = try context.fetch(fetchRequest)
@@ -148,14 +152,16 @@ class DataManager {
         }
     }
     
-    func updateMySpeciesFavorite(for speciesID: Int, with newData: Bool, mySpecies: [MySpecies]) {
+    func updateMySpeciesFavorite(for speciesID: Int, for date: Date, with newData: Bool, mySpecies: [MySpecies]) {
         var data = mySpecies
-        if let index = data.firstIndex(where: { $0.speciesID == speciesID }) {
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID && Calendar.current.isDate($0.hatchDate, equalTo: date, toGranularity: .second) }) {
             data[index].favorite = newData
             
             let context = persistentContainer.viewContext
             let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let idPredicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let datePredicate = NSPredicate(format: "hatchDate == %@", date as NSDate)
+            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, datePredicate])
             
             do {
                 let results = try context.fetch(fetchRequest)
@@ -169,4 +175,25 @@ class DataManager {
             }
         }
     }
+    
+    func deleteMySpecies(for speciesID: Int, for date: Date, mySpecies: [MySpecies]) {
+        let context = persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+        
+        let idPredicate = NSPredicate(format: "speciesID == %d", speciesID)
+        let datePredicate = NSPredicate(format: "hatchDate == %@", date as NSDate)
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, datePredicate])
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for entity in results {
+                context.delete(entity)
+            }
+            try context.save()
+            print("Successfully deleted records for speciesID: \(speciesID) and hatchDate: \(date)")
+        } catch {
+            print("Deletion failed: \(error)")
+        }
+    }
+
 }

@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct MySpecies : Equatable {
+struct MySpecies : Equatable, Comparable {
+    static func < (lhs: MySpecies, rhs: MySpecies) -> Bool {
+        return lhs.nickName < rhs.nickName
+    }
+    
     let speciesID : Int
     var nickName : String = ""
     var level : Int

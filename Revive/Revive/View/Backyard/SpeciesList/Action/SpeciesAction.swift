@@ -14,7 +14,7 @@ struct SpeciesAction: View {
         
         NavigationStack {
             if manager.panelInfoAction == .evolve {
-                
+                SpeciesEvolve()
             } else if manager.panelInfoAction == .info {
                 SpeciesInfo()
             } else {
