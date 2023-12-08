@@ -73,9 +73,10 @@ struct SpeciesPanelActionButtons: View {
                             .foregroundStyle(Color.cWhite)
                             .frame(width: 100)
                     })
-                    .background(manager.mySpecies.count == 1 ? .gray.opacity(0.5) : Color.cdimBlue)
+                    .background(manager.mySpecies.count == 1 ? .gray : Color.cdimBlue)
+                    .opacity(manager.mySpecies.count == 1 ? 0.5 : 1)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .shadow(radius: 0.7, x: 2, y: 3)
+                    .shadow(radius: manager.mySpecies.count == 1 ? 0 : 0.7, x: manager.mySpecies.count == 1 ? 0 : 2, y: manager.mySpecies.count == 1 ? 0 : 3)
                     .disabled(manager.mySpecies.count == 1)
                 }
                 .padding([.bottom, .trailing], 3)
