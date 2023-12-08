@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304B74A2B22B7ED0067371D /* AnimationView.swift */; };
 		B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31319882B1FB83A00FFC760 /* ContactUs.swift */; };
 		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
@@ -162,6 +163,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B304B74A2B22B7ED0067371D /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
@@ -314,6 +316,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B304B7472B22B7CD0067371D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				B304B74A2B22B7ED0067371D /* AnimationView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		B319E67E2B0A65FC000B9FD4 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +604,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B304B7472B22B7CD0067371D /* Animation */,
 				B349D5E32B09892700270661 /* Analysis */,
 				B349D5D62B09509700270661 /* Setting */,
 				B3629B002AFDDD6300F3D135 /* Backyard */,
@@ -876,6 +887,7 @@
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
+				B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
 				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
 				B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */,
