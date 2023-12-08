@@ -138,7 +138,6 @@ class ReviveManager {
         pendingItem = [:]
         isTreasureBarCompleted = false
         panelInfoAction = .none
-        
         isStartButtonDisabled = false
         
         speciesListSort = .alphabet

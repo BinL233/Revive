@@ -12,8 +12,26 @@ struct ReleaseConfirm: View {
     
     var body: some View {
         VStack {
-            Text("Are you sure to RELEASE \(manager.currPanelSpecies?.nickName ?? "")?")
-                .font(.custom("Georgia-Italic", size: 15))
+            VStack {
+                Text("Are you sure to RELEASE")
+                    .font(.custom("Georgia-Italic", size: 15))
+                    .padding(.horizontal, 30)
+                    .padding([.top, .horizontal], 7)
+                    .bold()
+                    .foregroundStyle(Color.cBlackBrown)
+                Text("\(manager.currPanelSpecies?.nickName ?? "")?")
+                    .font(.custom("Georgia-Italic", size: 15))
+                    .padding(.horizontal, 30)
+                    .padding(7)
+                    .bold()
+                    .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
+            }
+                .background(Color.cWhite)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(7)
+            
+            Text("(Press \"YES\" button for 3 seconds)")
+                .font(.custom("Georgia-Italic", size: 13))
                 .padding(.horizontal, 30)
                 .padding(7)
                 .bold()
@@ -31,27 +49,37 @@ struct ReleaseConfirm: View {
                 }
                 .background(.gray)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 0.7, x: 2, y: 3)
                 
-                Button {
-                    manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)
-                    withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
-                } label: {
-                    Text("YES")
-                        .font(.custom("Georgia-Italic", size: 15))
-                        .padding(.horizontal, 30)
-                        .padding(7)
-                        .bold()
-                        .foregroundStyle(Color.cWhite)
+                ZStack {
+                    Button {
+                    } label: {
+                        Text("YES")
+                            .font(.custom("Georgia-Italic", size: 15))
+                            .padding(.horizontal, 30)
+                            .padding(7)
+                            .bold()
+                            .foregroundStyle(Color.cWhite)
+                    }
+                    .background(.red)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 0.7, x: 2, y: 3)
                 }
-                .background(.red)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .simultaneousGesture(
+                    LongPressGesture(minimumDuration: 3)
+                        .onEnded { _ in
+                            withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
+                            manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate, action: "Release")
+                        }
+                )
 
 
             }
         }
         .padding()
-        .background(Color.cDarkBrown)
+        .background(Color.cDarkBrown.opacity(0.9))
         .clipShape(RoundedRectangle(cornerRadius: 15))
+        .shadow(radius: 0.7, x: 2, y: 3)
     }
     
 }

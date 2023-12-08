@@ -128,19 +128,52 @@ struct SpeciesPanel: View {
             .padding()
             .background(Color.black.opacity(0.05))
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-            HStack {
-                if manager.speciesItemsSelection == .Species {
-                    SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
-                } else {
-                    ItemPanelImage(currPanelItem: $manager.currPanelItem)
+            
+            VStack {
+                HStack {
+                    if manager.currPanelSpecies != nil {
+                        SpeciesPanelActionButtons()
+                    }
+                    
+                    Spacer()
+                    
+                    if manager.speciesItemsSelection == .Species {
+                        SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
+                    } else {
+                        ItemPanelImage(currPanelItem: $manager.currPanelItem)
+                    }
+                    
+                    Spacer()
+                }
+                
+                if manager.speciesItemsSelection == .Items && !manager.myItems.isEmpty && manager.currPanelItem == nil {
+                    if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
+                        Button(action: {
+                            manager.itemBuff()
+                        }, label: {
+                            Text("Use")
+                                .font(.custom("Georgia-Italic", size: 15))
+                                .padding(.horizontal, 30)
+                                .padding(7)
+                                .bold()
+                                .foregroundStyle(Color.cWhite)
+                        })
+                        .background(manager.currPanelItem!.amount == 0 ? .gray : Color.cBlueGreen)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .shadow(radius: 0.7, x: 2, y: 3)
+                        .disabled(manager.currPanelItem!.amount == 0)
+                    } else {
+                        Text("Feed your Species!")
+                            .font(.custom("Georgia-Italic", size: 15))
+                            .padding(.horizontal, 30)
+                            .padding(7)
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
+                    }
                 }
             }
             
             Spacer()
-            
-            if manager.currPanelSpecies != nil {
-                SpeciesPanelActionButtons()
-            }
         }
     }
 }

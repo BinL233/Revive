@@ -79,7 +79,7 @@ extension ReviveManager {
             hatchDate: currPanelSpecies!.hatchDate
         )
         
-        deleteSpecies(id: currPanelSpecies!.speciesID, date: currPanelSpecies!.hatchDate)
+        deleteSpecies(id: currPanelSpecies!.speciesID, date: currPanelSpecies!.hatchDate, action: "Evolve")
         currPanelSpecies = mySpecies[index]
         saveNewSpecies(mySpecies: mySpecies[index])
     }
@@ -123,9 +123,22 @@ extension ReviveManager {
         }
     }
     
-    func deleteSpecies(id: Int, date: Date) {
-        mySpecies.remove(at: getSpeciesIndex(id: id, date: date))
-        DataManager.shared.deleteMySpecies(for: id, for: date, mySpecies: mySpecies)
+    func deleteSpecies(id: Int, date: Date, action: String) {
+        if action == "Release" {
+            let currS = currPanelSpecies
+            
+            if mySpecies.count == 1 {
+                currPanelSpecies = nil
+            } else {
+                currPanelSpecies = mySpecies[0]
+            }
+            
+            mySpecies.remove(at: getSpeciesIndex(id: currS!.speciesID, date: currS!.hatchDate))
+            DataManager.shared.deleteMySpecies(for: currS!.speciesID, for: currS!.hatchDate, mySpecies: mySpecies)
+        } else {
+            mySpecies.remove(at: getSpeciesIndex(id: id, date: date))
+            DataManager.shared.deleteMySpecies(for: id, for: date, mySpecies: mySpecies)
+        }
     }
     
     func saveNewSpecies(mySpecies: MySpecies) {

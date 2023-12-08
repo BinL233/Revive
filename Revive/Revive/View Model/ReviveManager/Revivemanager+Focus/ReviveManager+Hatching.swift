@@ -13,7 +13,6 @@ extension ReviveManager {
         let superRarePercent = HatchingMechanics().superRare
         let upRate = HatchingMechanics().superRareUpRate * Double(selectedTime / 60)
         let randomNum = Int.random(in: 0..<(100-Int(upRate)-Int(rarityBuffRate*100)))
-        print(Double(10/(100-Int(upRate)-Int(rarityBuffRate*100))))
         var rarityToFilter = "R"
         
         if randomNum <= 0 {
