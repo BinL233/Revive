@@ -20,6 +20,7 @@ struct FocusSetting: View {
                     Toggle("", isOn: $manager.keepDisplay)
                         .labelsHidden()
                         .onChange(of: manager.keepDisplay) { oldValue, newValue in
+                            manager.keepDisplay = newValue
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
                         }
                 }

@@ -18,6 +18,8 @@ struct FocusTitle: View {
                 .bold()
                 .foregroundStyle(Color.cBlack)
             HStack {
+                Reminder()
+                    .padding(.leading, 5)
                 Spacer()
                 NavigationLink(destination: SettingView()) {
                     Image(systemName: "gearshape")

@@ -15,24 +15,16 @@ struct SpeciesPanelImage: View {
     var body: some View {
         if currPanelSpecies != nil {
             let speciesImage = String(format: "%03d", currPanelSpecies!.speciesID)
-            ZStack {
-//                Ellipse()
-//                    .fill(.gray)
-//                    .opacity(0.5)
-//                    .frame(width: 150, height: 50)
-//                    .scaledToFit()
-//                    .offset(CGSize(width: 0, height: 40.0))
-                if speciesImage == "007" {
-                    AnimationView(frames: frames)
-                        .shadow(radius: 6, x: 0, y: 4)
-                } else {
+//                if speciesImage == "007" {
+//                    AnimationView(frames: frames)
+//                        .shadow(radius: 6, x: 0, y: 4)
+//                } else {
                     Image(speciesImage)
                         .resizable()
                         .scaledToFit()
                         .shadow(radius: 6, x: 0, y: 4)
                         .padding(5)
-                }
-            }
+//                }
         } else {
                 ZStack {
 //                    Ellipse()

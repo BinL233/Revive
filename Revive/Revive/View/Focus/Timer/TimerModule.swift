@@ -93,6 +93,9 @@ struct TimerModule: View {
                             timerTick()
                         }
                 }
+                .onDisappear {
+                    timer?.cancel()
+                }
         }
     }
 }

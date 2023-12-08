@@ -22,34 +22,9 @@ struct ReminderSetting: View {
                     Toggle("", isOn: $manager.reminderOn)
                         .labelsHidden()
                         .onChange(of: manager.reminderOn) { oldValue, newValue in
+                            manager.reminderOn = newValue
                             UserDefaults.standard.set(manager.reminderOn, forKey: "isRemindOn")
                         }
-                }
-                HStack {
-                    Text("Reminder")
-                    Spacer()
-                    Button {
-                        isTimerSelectorShow = true
-                    } label: {
-                        Text(manager.reminderTime)
-                    }
-                    .sheet(isPresented: $isTimerSelectorShow) {
-                        NavigationStack {
-                            DatePicker("Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
-                                .labelsHidden()
-                                .datePickerStyle(WheelDatePickerStyle())
-                                .toolbar {
-                                    ToolbarItem(placement: .topBarTrailing) {
-                                        Button("Confirm") {
-                                            isTimerSelectorShow.toggle()
-                                            manager.reminderTime = manager.dateToString(date: selectedTime, format: "HH:mm")
-                                            UserDefaults.standard.set(manager.reminderTime, forKey: "ReminderTime")
-                                            _ = manager.addNotification(title: "Revive Reminder", subtitle: "Let's focus right now!", date: selectedTime)
-                                        }
-                                    }
-                                }
-                        }
-                    }
                 }
             }
         } header: {
