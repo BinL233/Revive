@@ -1,3 +1,7 @@
+## Download Link
+
+https://testflight.apple.com/join/TfxHXkvb
+
 ## Introduction
 Revive is a Focus App based on taking care of endangered or extinct species. In Revive, you can take care of a species from 0 to 1, starting with an egg. For your  species to thrive, you need to do anything in a focused way-----such as studying, working, or other activities, which is the core of Revive.
 In Revive, you can discover all kinds of endangered or extinct species and revive them with the power of focus. During this journey, you will improve your focus skills, increase your knowledge of species, and finally become the master of revive.
