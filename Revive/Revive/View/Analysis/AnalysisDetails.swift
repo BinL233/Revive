@@ -110,12 +110,48 @@ struct AnalysisDetails: View {
                 }
                 
                 HStack {
+                    Text("Number of Stage 2 Species")
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                    Spacer()
+                    Text(String(manager.sta[0].numOfStageTwoSpecies))
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                }
+                
+                HStack {
                     Text("Number of Items")
                         .font(.callout)
                         .italic()
                         .padding(.bottom, 5)
                     Spacer()
                     Text(String(manager.sta[0].numOfItems))
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                }
+                
+                HStack {
+                    Text("Number of Maps")
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                    Spacer()
+                    Text(String(manager.sta[0].numOfMap))
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                }
+                
+                HStack {
+                    Text("Number of Finished Maps")
+                        .font(.callout)
+                        .italic()
+                        .padding(.bottom, 5)
+                    Spacer()
+                    Text(String(manager.sta[0].numOfFinishedMap))
                         .font(.callout)
                         .italic()
                         .padding(.bottom, 5)
