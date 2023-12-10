@@ -146,7 +146,7 @@ struct SpeciesPanel: View {
                     Spacer()
                 }
                 
-                if manager.speciesItemsSelection == .Items && !manager.myItems.isEmpty && manager.currPanelItem == nil {
+                if manager.speciesItemsSelection == .Items && !manager.myItems.isEmpty && manager.currPanelItem != nil {
                     if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
                         Button(action: {
                             manager.itemBuff()
