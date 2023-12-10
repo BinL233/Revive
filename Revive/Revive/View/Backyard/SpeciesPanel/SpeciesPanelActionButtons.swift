@@ -56,11 +56,11 @@ struct SpeciesPanelActionButtons: View {
                             .foregroundStyle(Color.cWhite)
                             .frame(width: 100)
                     })
-                    .background(manager.canEvolve() ? .orange : .gray)
-                    .disabled(!manager.canEvolve())
-                    .opacity(manager.canEvolve() ? 1 : 0.5)
+                    .background((manager.canEvolve() && !manager.isTimerStart) ? .orange : .gray)
+                    .disabled(!manager.canEvolve() || manager.isTimerStart)
+                    .opacity((manager.canEvolve() && !manager.isTimerStart) ? 1 : 0.5)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .shadow(radius: manager.canEvolve() ? 0.7 : 0, x: manager.canEvolve() ? 2 : 0, y: manager.canEvolve() ? 3 : 0)
+                    .shadow(radius: (manager.canEvolve() && !manager.isTimerStart) ? 0.7 : 0, x: (manager.canEvolve() && !manager.isTimerStart) ? 2 : 0, y: (manager.canEvolve() && !manager.isTimerStart) ? 3 : 0)
                     
                     Button(action: {
                         withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm = true }
@@ -73,11 +73,11 @@ struct SpeciesPanelActionButtons: View {
                             .foregroundStyle(Color.cWhite)
                             .frame(width: 100)
                     })
-                    .background(manager.mySpecies.count == 1 ? .gray : Color.cdimBlue)
-                    .opacity(manager.mySpecies.count == 1 ? 0.5 : 1)
+                    .background(manager.mySpecies.count == 1 || manager.isTimerStart ? .gray : Color.cdimBlue)
+                    .opacity(manager.mySpecies.count == 1 || manager.isTimerStart ? 0.5 : 1)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-                    .shadow(radius: manager.mySpecies.count == 1 ? 0 : 0.7, x: manager.mySpecies.count == 1 ? 0 : 2, y: manager.mySpecies.count == 1 ? 0 : 3)
-                    .disabled(manager.mySpecies.count == 1)
+                    .shadow(radius: manager.mySpecies.count == 1 || manager.isTimerStart ? 0 : 0.7, x: manager.mySpecies.count == 1 || manager.isTimerStart ? 0 : 2, y: manager.mySpecies.count == 1 || manager.isTimerStart ? 0 : 3)
+                    .disabled(manager.mySpecies.count == 1 || manager.isTimerStart)
                 }
                 .padding([.bottom, .trailing], 3)
             }

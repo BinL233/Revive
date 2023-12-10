@@ -30,7 +30,7 @@ struct ReleaseConfirm: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(7)
             
-            Text("(Press \"YES\" button for 3 seconds)")
+            Text("(Hold \"YES\" button for 3 seconds)")
                 .font(.custom("Georgia-Italic", size: 13))
                 .padding(.horizontal, 30)
                 .padding(7)

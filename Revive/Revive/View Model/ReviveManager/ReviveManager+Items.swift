@@ -33,19 +33,19 @@ extension ReviveManager {
             switch getItem(id: currPanelItem!.id).functionType[i].rawValue {
             case "hatching_time":
                 ItemsforHatchingTime(index: i)
-                useItem(save: false)
+                useItem(save: false, isFeed: false)
             case "training_time":
                 ItemsforTrainingTime(index: i)
-                useItem(save: false)
+                useItem(save: false, isFeed: false)
             case "exploring_time":
                 ItemsforExploringTime(index: i)
-                useItem(save: false)
+                useItem(save: false, isFeed: false)
             case "rarity_up":
                 RarityUp(index: i)
-                useItem(save: false)
+                useItem(save: false, isFeed: false)
             case "exp":
                 ItemsAddEXP(index: i)
-                useItem(save: true)
+                useItem(save: true, isFeed: true)
                 
             default:
                 continue
@@ -75,17 +75,19 @@ extension ReviveManager {
         exploringBuffRate = 1
     }
     
-    func useItem(save: Bool) {
+    func useItem(save: Bool, isFeed: Bool) {
         myItems[getMyItemIndex(id: currPanelItem!.id)].amount -= 1
         currPanelItem = myItems[getMyItemIndex(id: currPanelItem!.id)]
         
         if save {
             updateItemAmount(id: currPanelItem!.id, newAmount: myItems[getMyItemIndex(id: currPanelItem!.id)].amount)
+            DataManager.shared.updateMySpeciesCurrExp(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.currExp, mySpecies: mySpecies)
+            DataManager.shared.updateMySpeciesLevel(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.level, mySpecies: mySpecies)
             
             if myItems[getMyItemIndex(id: currPanelItem!.id)].amount == 0 {
                 deleteItem(id: currPanelItem!.id)
                 myItems.remove(at: getMyItemIndex(id: currPanelItem!.id))
-                if myItems.count == 0 {
+                if myItems.count == 0 || isFeed {
                     currPanelItem = nil
                 } else {
                     currPanelItem = myItems[0]

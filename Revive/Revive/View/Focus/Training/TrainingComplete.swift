@@ -35,7 +35,7 @@ struct TrainingComplete: View {
                         .font(.system(size: 25))
                         .italic()
                         .bold()
-                        .foregroundStyle(manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
+                        .foregroundStyle(manager.getSpecies(mySpecies: manager.currTrainingSpecies!).rarity == "R" ? .blue : .purple)
                         .padding()
                     
                     HStack {
