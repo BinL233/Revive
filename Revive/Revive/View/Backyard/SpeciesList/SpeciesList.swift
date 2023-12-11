@@ -28,12 +28,12 @@ struct SpeciesList: View {
                     Text("Sorted by")
                         .bold()
                         .foregroundStyle(Color.cBlackBrown)
-                    Picker("SpeciesListSorter", selection: $manager.speciesListSort) {
-                        Text("Name").tag(SpeciesListSorter.alphabet)
-                        Text("Favorite").tag(SpeciesListSorter.favorite)
-                        Text("Level").tag(SpeciesListSorter.level)
-                        Text("Rarity").tag(SpeciesListSorter.rarity)
-                        Text("Hatching Date").tag(SpeciesListSorter.hatchingDate)
+                    Picker("SpeciesListSorter", selection: $manager.UDSpeciesListSort) {
+                        Text("Name").tag(SpeciesListSorter.name.rawValue)
+                        Text("Favorite").tag(SpeciesListSorter.favorite.rawValue)
+                        Text("Level").tag(SpeciesListSorter.level.rawValue)
+                        Text("Rarity").tag(SpeciesListSorter.rarity.rawValue)
+                        Text("Hatching Date").tag(SpeciesListSorter.hatchingDate.rawValue)
                     }
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -49,7 +49,8 @@ struct SpeciesList: View {
                     .onAppear {
                         manager.changeSpeciesListSorter()
                     }
-                    .onChange(of: manager.speciesListSort) {
+                    .onChange(of: manager.UDSpeciesListSort) {
+                        UserDefaults.standard.set(manager.UDSpeciesListSort, forKey: "UDSpeciesListSort")
                         manager.changeSpeciesListSorter()
                     }
                 }
@@ -75,9 +76,9 @@ struct SpeciesList: View {
                         Text("Sorted by")
                             .bold()
                             .foregroundStyle(Color.cBlackBrown)
-                        Picker("ItemListSorter", selection: $manager.itemListSort) {
-                            Text("Name").tag(ItemListSorter.alphabet)
-                            Text("Amount").tag(ItemListSorter.amount)
+                        Picker("ItemListSorter", selection: $manager.UDItemListSort) {
+                            Text("Name").tag(ItemListSorter.name.rawValue)
+                            Text("Amount").tag(ItemListSorter.amount.rawValue)
                         }
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -93,7 +94,8 @@ struct SpeciesList: View {
                         .onAppear {
                             manager.changeItemListSorter()
                         }
-                        .onChange(of: manager.itemListSort) {
+                        .onChange(of: manager.UDItemListSort) {
+                            UserDefaults.standard.set(manager.UDItemListSort, forKey: "UDItemListSort")
                             manager.changeItemListSorter()
                         }
                     }

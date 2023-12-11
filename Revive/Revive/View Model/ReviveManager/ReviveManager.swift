@@ -54,9 +54,9 @@ class ReviveManager {
     var rarityBuffRate : Double
     
     // Backyard
+    var UDSpeciesListSort : String
+    var UDItemListSort : String
     var panelInfoAction : PanelButtonsInfoAction
-    var speciesListSort : SpeciesListSorter
-    var itemListSort : ItemListSorter
     var isExpItemChooseSpecies : Bool
     var isReleaseConfirm : Bool
     
@@ -85,17 +85,6 @@ class ReviveManager {
     
     // Analysis Details
     var sta : [Statistics]
-    
-//    var totalTime : Int
-//    var totalHatchingTime : Int
-//    var totalTrainingTime : Int
-//    var totalExploringTime : Int
-//    var numOfSpecies : Int
-//    var numOfRSpecies : Int
-//    var numOfSRSpecies : Int
-//    var numOfSSRSpecies : Int
-//    var numOfItems : Int
-//    var numOfCoins : Int
     
     var focusLog : [FocusLog]
     var currFocusLog : [(key: String, value: Int)]
@@ -139,9 +128,6 @@ class ReviveManager {
         isTreasureBarCompleted = false
         panelInfoAction = .none
         isStartButtonDisabled = false
-        
-        speciesListSort = .alphabet
-        itemListSort = .alphabet
         
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {
@@ -207,23 +193,14 @@ class ReviveManager {
         keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")
         reminderOn = UserDefaults.standard.bool(forKey: "isRemindOn")
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
+        UDSpeciesListSort = UserDefaults.standard.string(forKey: "UDSpeciesListSort") ?? "name"
+        UDItemListSort = UserDefaults.standard.string(forKey: "UDItemListSort") ?? "name"
         
         if  UserDefaults.standard.object(forKey: "backgroundRunning") == nil {
             backgroundRunning = true
         } else {
             backgroundRunning = UserDefaults.standard.bool(forKey: "backgroundRunning")
         }
-        
-//        totalTime = UserDefaults.standard.integer(forKey: "TotalTime")
-//        totalHatchingTime = UserDefaults.standard.integer(forKey: "TotalHatchingTime")
-//        totalTrainingTime = UserDefaults.standard.integer(forKey: "TotalTrainingTime")
-//        totalExploringTime = UserDefaults.standard.integer(forKey: "TotalExploringTime")
-//        numOfSpecies = UserDefaults.standard.integer(forKey: "NumOfSpecies")
-//        numOfRSpecies = UserDefaults.standard.integer(forKey: "NumOfRSpecies")
-//        numOfSRSpecies = UserDefaults.standard.integer(forKey: "NumOfSRSpecies")
-//        numOfSSRSpecies = 0
-//        numOfItems = UserDefaults.standard.integer(forKey: "NumOfItems")
-//        numOfCoins = UserDefaults.standard.integer(forKey: "NumOfCoins")
         
         userNotificationCenter()
     }

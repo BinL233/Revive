@@ -7,12 +7,40 @@
 
 import Foundation
 
-enum SpeciesListSorter : Identifiable {
+enum SpeciesListSorter : String, Identifiable {
     var id: Self { self }
-    case alphabet, favorite, level, rarity, hatchingDate
+    case name, favorite, level, rarity, hatchingDate
+    
+    init?(stringValue: String) {
+        switch stringValue {
+        case "name":
+            self = .name
+        case "favorite":
+            self = .favorite
+        case "level":
+            self = .level
+        case "rarity":
+            self = .rarity
+        case "hatchingDate":
+            self = .hatchingDate
+        default:
+            return nil
+        }
+    }
 }
 
-enum ItemListSorter : Identifiable {
+enum ItemListSorter : String, Identifiable {
     var id: Self { self }
-    case alphabet, amount
+    case name, amount
+    
+    init?(stringValue: String) {
+        switch stringValue {
+        case "name":
+            self = .name
+        case "amount":
+            self = .amount
+        default:
+            return nil
+        }
+    }
 }

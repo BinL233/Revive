@@ -85,31 +85,34 @@ extension ReviveManager {
     }
     
     func changeItemListSorter() {
-        switch itemListSort {
-        case .alphabet:
+        switch UDItemListSort {
+        case "name":
             myItems.sort()
             
-        case .amount:
+        case "amount":
             myItems = myItems.sorted{ $0.amount > $1.amount }
+            
+        default:
+            return
         }
     }
     
     func changeSpeciesListSorter() {
-        switch speciesListSort {
-        case .alphabet:
+        switch UDSpeciesListSort {
+        case "name":
             mySpecies.sort()
             
-        case .favorite:
+        case "favorite":
             var favor = mySpecies.filter{ $0.favorite == true }
             var unfavor = mySpecies.filter{ $0.favorite == false }
             favor.sort()
             unfavor.sort()
             mySpecies = favor + unfavor
             
-        case .level:
+        case "level":
             mySpecies = mySpecies.sorted{ $0.level > $1.level }
             
-        case .rarity:
+        case "rarity":
             var SSR = mySpecies.filter{ getSpecies(mySpecies: $0).rarity == "SSR" }
             var SR = mySpecies.filter{ getSpecies(mySpecies: $0).rarity == "SR" }
             var R = mySpecies.filter{ getSpecies(mySpecies: $0).rarity == "R" }
@@ -118,9 +121,14 @@ extension ReviveManager {
             R.sort()
             mySpecies = SSR + SR + R
             
-        case .hatchingDate:
+        case "hatchingDate":
             mySpecies = mySpecies.sorted{ $0.hatchDate > $1.hatchDate }
+            
+        default:
+            return
+            
         }
+        
     }
     
     func deleteSpecies(id: Int, date: Date, action: String) {
