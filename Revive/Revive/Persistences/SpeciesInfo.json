@@ -154,7 +154,7 @@
     },
 
     {
-        "name": "Dodo Bird",
+        "name": "Passenger Pigeon",
         "id": 9,
         "stage": 1,
         "rarity": "R",
@@ -168,13 +168,13 @@
         "egg": 1103,
         "flip": true,
         "area": {
-            "River": 1.1
+            "Sky": 1.1
         },
         "intro": "Will I be able to fly one day?"
     },
 
     {
-        "name": "Dodo Bird",
+        "name": "Passenger Pigeon",
         "id": 10,
         "stage": 2,
         "rarity": "R",
@@ -185,9 +185,9 @@
         "trait": "carnivore",
         "era": "15th century",
         "egg": 1103,
-        "flip": true,
+        "flip": false,
         "area": {
-            "River": 1.3
+            "Sky": 1.3
         },
         "intro": "I have no idea why everyone thinks I'm delicious."
     },
@@ -226,7 +226,7 @@
         "egg": 1103,
         "flip": true,
         "area": {
-            "Plain": 1.1
+            "Wetland": 1.1
         },
         "intro": "I will have the strongest power in future!"
     },
@@ -245,7 +245,7 @@
         "egg": 1103,
         "flip": true,
         "area": {
-            "Plain": 1.3
+            "Wetland": 1.3
         },
         "intro": "I love Jackson's chameleon because we all have three horns."
     },
@@ -256,13 +256,14 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [25],
         "height": {"S": 0.4, "M": 0.6, "L": 0.8, "offset": 0.05},
         "weight": {"S": 35, "M": 65, "L": 100, "offset": 10},
         "trait": "carnivore",
         "era": "Mesozoic",
         "egg": 1102,
-        "flip": true,
+        "flip": false,
         "area": {
             "Sky": 1.1
         },
@@ -294,6 +295,7 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [22],
         "height": {"S": 0.5, "M": 0.6, "L": 0.7, "offset": 0},
         "weight": {"S": 125, "M": 140, "L": 155, "offset": 0},
@@ -332,6 +334,7 @@
         "stage": 1,
         "rarity": "SR",
         "hatch_time": 120,
+        "evolve_at": 35,
         "life_span": [30, 50],
         "height": {"S": 1, "M": 2, "L": 3, "offset": 0.2},
         "weight": {"S": 1500, "M": 2500, "L": 3500, "offset": 250},
@@ -340,11 +343,10 @@
         "egg": 1201,
         "flip": false,
         "area": {
-            "Plain": 1.5,
-            "Volcano": 1.4,
-            "Rainforest": 1.3
+            "Wetland": 1.5,
+            "Rainforest": 1.4
         },
-        "intro": "I admire my brother Gozila...he can walk with only two legs!"
+        "intro": "I admire my brother...he can walk with only two legs!"
     },
 
     {
@@ -361,9 +363,8 @@
         "egg": 1201,
         "flip": true,
         "area": {
-            "Plain": 2.0,
-            "Volcano": 1.8,
-            "Rainforest": 1.6
+            "Wetland": 2.0,
+            "Rainforest": 1.8
         },
         "intro": "The most vulnerable part on me is belly."
     },
@@ -374,17 +375,17 @@
         "stage": 1,
         "rarity": "SR",
         "hatch_time": 120,
+        "evolve_at": 35,
         "life_span": [20, 50],
         "height": {"S": 0.25, "M": 0.4, "L": 0.55, "offset": 0.05},
         "weight": {"S": 40, "M": 50, "L": 60, "offset": 2.5},
         "trait": "omnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1202,
-        "flip": false,
+        "flip": true,
         "area": {
             "Mountain": 1.5,
-            "Plain": 1.4,
-            "River": 1.3
+            "Plain": 1.4
         },
         "intro": "I love bamboo."
     },
@@ -399,13 +400,12 @@
         "height": {"S": 0.5, "M": 0.8, "L": 1.1, "offset": 0.1},
         "weight": {"S": 80, "M": 100, "L": 120, "offset": 5},
         "trait": "omnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1202,
-        "flip": true,
+        "flip": false,
         "area": {
             "Mountain": 2.0,
-            "Plain": 1.8,
-            "River": 1.6
+            "Plain": 1.8
         },
         "intro": "I am the emperor's mount in Chinese mythology."
     },
@@ -416,15 +416,16 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [12],
         "height": {"S": 0.15, "M": 0.3, "L": 0.45, "offset": 0.05},
         "weight": {"S": 7.5, "M": 12.5, "L": 17.5, "offset": 1.5},
         "trait": "carnivore",
-        "era": "20 century",
+        "era": "20th century",
         "egg": 1102,
-        "flip": false,
+        "flip": true,
         "area": {
-            "Desert": 1.1
+            "Mountain": 1.1
         },
         "intro": "I am not a Hyenya..."
     },
@@ -439,11 +440,11 @@
         "height": {"S": 0.3, "M": 0.6, "L": 0.9, "offset": 0.1},
         "weight": {"S": 15, "M": 25, "L": 35, "offset": 5},
         "trait": "carnivore",
-        "era": "20 century",
+        "era": "20th century",
         "egg": 1102,
-        "flip": false,
+        "flip": true,
         "area": {
-            "Desert": 1.3
+            "Mountain": 1.3
         },
         "intro": "Have you ever heard of Tasmanian Tiger?"
     },
@@ -454,13 +455,14 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [20],
         "height": {"S": 0.15, "M": 0.35, "L": 0.55, "offset": 0.05},
         "weight": {"S": 2.5, "M": 7.5, "L": 12.5, "offset": 1},
         "trait": "carnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1101,
-        "flip": true,
+        "flip": false,
         "area": {
             "Desert": 1.1
         },
@@ -477,13 +479,13 @@
         "height": {"S": 0.3, "M": 0.7, "L": 1.1, "offset": 0.1},
         "weight": {"S": 5, "M": 15, "L": 25, "offset": 2},
         "trait": "carnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1101,
-        "flip": true,
+        "flip": false,
         "area": {
             "Desert": 1.3
         },
-        "intro": "There is no medical use on my scale."
+        "intro": "I don't think there is a medical use on my scale."
     },
 
     {
@@ -492,15 +494,16 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [30],
         "height": {"S": 1, "M": 1.25, "L": 1.5, "offset": 0.1},
         "weight": {"S": 250, "M": 400, "L": 550, "offset": 50},
         "trait": "herbivore",
-        "era": "1000 AD",
+        "era": "17th century",
         "egg": 1103,
         "flip": false,
         "area": {
-            "Desert": 1.1
+            "Volcano": 1.1
         },
         "intro": "I will be the biggest bird on Earth!"
     },
@@ -515,11 +518,11 @@
         "height": {"S": 2, "M": 2.5, "L": 3.0, "offset": 0.2},
         "weight": {"S": 500, "M": 800, "L": 1100, "offset": 100},
         "trait": "herbivore",
-        "era": "1000 AD",
+        "era": "17th century",
         "egg": 1103,
-        "flip": true,
+        "flip": false,
         "area": {
-            "Desert": 1.3
+            "Volcano": 1.3
         },
         "intro": "I am the biggest bird on Earth."
     },
@@ -530,15 +533,16 @@
         "stage": 1,
         "rarity": "R",
         "hatch_time": 30,
+        "evolve_at": 35,
         "life_span": [100, 175],
         "height": {"S": 0.6, "M": 0.7, "L": 0.8, "offset": 0.05},
         "weight": {"S": 75, "M": 90, "L": 100, "offset": 5},
         "trait": "omnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1103,
-        "flip": false,
+        "flip": true,
         "area": {
-            "Desert": 1.1
+            "Plain": 1.1
         },
         "intro": "I became a sea turtle last night!"
     },
@@ -553,12 +557,1283 @@
         "height": {"S": 1.2, "M": 1.4, "L": 1.6, "offset": 0.1},
         "weight": {"S": 150, "M": 180, "L": 200, "offset": 10},
         "trait": "omnivore",
-        "era": "21 century",
+        "era": "21st century",
         "egg": 1103,
+        "flip": true,
+        "area": {
+            "Plain": 1.3
+        },
+        "intro": "If you know Lonesome George, you will remember us."
+    },
+
+    {
+        "name": "Dodo Bird",
+        "id": 30,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [100, 175],
+        "height": {"S": 0.6, "M": 0.7, "L": 0.8, "offset": 0.05},
+        "weight": {"S": 75, "M": 90, "L": 100, "offset": 5},
+        "trait": "omnivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "Glad I'm not the only flightless bird."
+    },
+
+    {
+        "name": "Giant Anteater",
+        "id": 31,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [15, 26],
+        "height": {"S": 0.25, "M": 0.3, "L": 0.35, "offset": 0.01},
+        "weight": {"S": 17.5, "M": 20, "L": 25, "offset": 2.5},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Desert": 1.1
+        },
+        "intro": "Guess how long my tongue can get...45cm!"
+    },
+
+    {
+        "name": "Giant Anteater",
+        "id": 32,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [15, 26],
+        "height": {"S": 0.5, "M": 0.6, "L": 0.7, "offset": 0.02},
+        "weight": {"S": 25, "M": 40, "L": 50, "offset": 5},
+        "trait": "carnivore",
+        "era": "21 century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Desert": 1.3
+        },
+        "intro": "Based on my name, you know what I eat."
+    },
+
+    {
+        "name": "Black Rhino",
+        "id": 33,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [35, 50],
+        "height": {"S": 0.55, "M": 0.75, "L": 0.9, "offset": 0.05},
+        "weight": {"S": 400, "M": 550, "L": 700, "offset":50},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Wetland": 1.1
+        },
+        "intro": "I know there is a pink pig who also likes to roll in mud ponds."
+    },
+
+    {
+        "name": "Black Rhino",
+        "id": 34,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [35, 50],
+        "height": {"S": 1.3, "M": 1.5, "L": 1.8, "offset": 0.1},
+        "weight": {"S": 800, "M": 1100, "L": 1400, "offset":100},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Wetland": 1.3
+        },
+        "intro": "I never thought the horn would become dangerous for me one day."
+    },
+
+    {
+        "name": "Amur Leopard",
+        "id": 35,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [10, 20],
+        "height": {"S": 0.2, "M": 0.3, "L": 0.4, "offset": 0.05},
+        "weight": {"S": 14, "M": 22.5, "L": 30, "offset":2.5},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Mountain": 1.1
+        },
+        "intro": "Surfing yesterday, 84 of us were counted by humans, over."
+    },
+
+    {
+        "name": "Amur Leopard",
+        "id": 36,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [10, 20],
+        "height": {"S": 0.4, "M": 0.6, "L": 0.8, "offset": 0.1},
+        "weight": {"S": 28, "M": 45, "L": 60, "offset":5},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Mountain": 1.3
+        },
+        "intro": "Recover prey population before recovering me please."
+    },
+
+    {
+        "name": "Ground Sloth",
+        "id": 37,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [15, 20],
+        "height": {"S": 1, "M": 1.4, "L": 1.75, "offset": 0.1},
+        "weight": {"S": 1000, "M": 1500, "L": 2000, "offset":150},
+        "trait": "herbivore",
+        "era": "Neogene",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Plain": 1.1
+        },
+        "intro": "Hope I will work in DMV like Mr. Flash one day."
+    },
+
+    {
+        "name": "Ground Sloth",
+        "id": 38,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [15, 20],
+        "height": {"S": 2, "M": 2.8, "L": 3.5, "offset": 0.2},
+        "weight": {"S": 2000, "M": 3000, "L": 4000, "offset":300},
+        "trait": "herbivore",
+        "era": "Neogene",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Plain": 1.3
+        },
+        "intro": "Hel... lo... how... are... you... to... day...?"
+    },
+
+    {
+        "name": "Ankylosaurus",
+        "id": 39,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [70, 80],
+        "height": {"S": 0.7, "M": 0.8, "L": 0.9, "offset": 0.05},
+        "weight": {"S": 2500, "M": 2900, "L": 3250, "offset":100},
+        "trait": "herbivore",
+        "era": "Late Cretaceous",
+        "egg": 1102,
+        "flip": false,
+        "area": {
+            "Desert": 1.1
+        },
+        "intro": "My tail is heavy."
+    },
+
+    {
+        "name": "Ankylosaurus",
+        "id": 40,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [70, 80],
+        "height": {"S": 1.5, "M": 1.65, "L": 1.8, "offset": 0.1},
+        "weight": {"S": 5000, "M": 5800, "L": 6500, "offset":200},
+        "trait": "herbivore",
+        "era": "Late Cretaceous",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Desert": 1.3
+        },
+        "intro": "Armour up and get your tail ready."
+    },
+
+    {
+        "name": "Velociraptor",
+        "id": 41,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [15, 20],
+        "height": {"S": 0.45, "M": 0.7, "L": 0.9, "offset": 0.1},
+        "weight": {"S": 15, "M": 19, "L": 22.5, "offset":2},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.1
+        },
+        "intro": "As you can see, I have feathers, not scales."
+    },
+
+    {
+        "name": "Velociraptor",
+        "id": 42,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [15, 20],
+        "height": {"S": 0.9, "M": 1.4, "L": 1.8, "offset": 0.2},
+        "weight": {"S": 30, "M": 38, "L": 45, "offset":4},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "My brother is popular in movies."
+    },
+
+    {
+        "name": "Spinosaurus",
+        "id": 43,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [25, 30],
+        "height": {"S": 3, "M": 3.5, "L": 4, "offset": 0.1},
+        "weight": {"S": 3200, "M": 3450, "L": 3700, "offset":100},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Beach": 1.1
+        },
+        "intro": "Have a look at the sail on my back...in the future."
+    },
+
+    {
+        "name": "Spinosaurus",
+        "id": 44,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [25, 30],
+        "height": {"S": 6.1, "M": 7, "L": 7.8, "offset": 0.2},
+        "weight": {"S": 6400, "M": 6900, "L": 7400, "offset":200},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Beach": 1.3
+        },
+        "intro": "A semi-Aquatic lifestyle is the perfect choice."
+    },
+
+    {
+        "name": "Brachiosaurus",
+        "id": 45,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [100],
+        "height": {"S": 4.5, "M": 5.5, "L": 6.5, "offset": 0.5},
+        "weight": {"S": 10000, "M": 11250, "L": 12500, "offset":500},
+        "trait": "herbivore",
+        "era": "Late Jurassic",
+        "egg": 1103,
+        "flip": false,
+        "area": {
+            "Plain": 1.1
+        },
+        "intro": "Scientists believe I had a bird-like respiratory system in order to get enough oxygen."
+    },
+
+    {
+        "name": "Brachiosaurus",
+        "id": 46,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [100],
+        "height": {"S": 9, "M": 11, "L": 13, "offset": 1},
+        "weight": {"S": 20000, "M": 22500, "L": 25000, "offset":1000},
+        "trait": "herbivore",
+        "era": "Late Jurassic",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Plain": 1.3
+        },
+        "intro": "Be aware of the blind area of my vision."
+    },
+
+    {
+        "name": "Cave Bear",
+        "id": 47,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [15, 29],
+        "height": {"S": 0.9, "M": 1, "L": 1.1, "offset": 0.05},
+        "weight": {"S": 200, "M": 350, "L": 500, "offset":50},
+        "trait": "omnivore",
+        "era": "Late Pleistocene",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Mountain": 1.1
+        },
+        "intro": "Cave bear is supposed to stay in the cave."
+    },
+
+    {
+        "name": "Cave Bear",
+        "id": 48,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [15, 29],
+        "height": {"S": 1.8, "M": 2, "L": 2.2, "offset": 0.1},
+        "weight": {"S": 400, "M": 700, "L": 1000, "offset":100},
+        "trait": "omnivore",
+        "era": "Late Pleistocene",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Mountain": 1.3
+        },
+        "intro": "A healthy diet plan always comes with plants, fruits, and animal protein."
+    },
+
+    {
+        "name": "Great Auk",
+        "id": 49,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [20, 25],
+        "height": {"S": 0.35, "M": 0.4, "L": 0.45, "offset": 0},
+        "weight": {"S": 1.5, "M": 2.25, "L": 3, "offset":0},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Sky": 1.1
+        },
+        "intro": "I'm not a penguin, I can fly."
+    },
+
+    {
+        "name": "Great Auk",
+        "id": 50,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [20, 25],
+        "height": {"S": 0.7, "M": 0.8, "L": 0.9, "offset": 0},
+        "weight": {"S": 3, "M": 4.5, "L": 6, "offset":0},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Sky": 1.3
+        },
+        "intro": "Proud of letting bird species extinction be noticed by scientists."
+    },
+
+    {
+        "name": "Yunnan Lake Newt",
+        "id": 51,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [],
+        "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
+        "weight": {"S": 0.1, "M": 0.2, "L": 0.3, "offset":0},
+        "trait": "carnivore",
+        "era": "20th century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Wetland": 1.3
+        },
+        "intro": "Endemic species means I was only in Yunnan Province."
+    },
+
+    {
+        "name": "Ainsworth's Salamander",
+        "id": 52,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [20],
+        "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
+        "weight": {"S": 0.1, "M": 0.2, "L": 0.3, "offset":0},
+        "trait": "carnivore",
+        "era": "20th century",
+        "egg": 1103,
+        "flip": false,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "Lungless salamander uses skin for respiration."
+    },
+
+    {
+        "name": "Kronosaurus",
+        "id": 53,
+        "stage": 1,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "evolve_at": 35,
+        "life_span": [30, 50],
+        "height": {"S": 3.5, "M": 4, "L": 5, "offset": 0.25},
+        "weight": {"S": 4500, "M": 5000, "L": 6000, "offset":250},
+        "trait": "carnivore",
+        "era": "Cretaceous",
+        "egg": 1203,
+        "flip": true,
+        "area": {
+            "Ocean": 1.5,
+            "Beach": 1.4
+        },
+        "intro": "Everyone looked cute in childhood."
+    },
+
+    {
+        "name": "Kronosaurus",
+        "id": 54,
+        "stage": 2,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": [30, 50],
+        "height": {"S": 7, "M": 8.5, "L": 10, "offset": 0.5},
+        "weight": {"S": 9000, "M": 10000, "L": 12000, "offset":500},
+        "trait": "carnivore",
+        "era": "Cretaceous",
+        "egg": 1203,
+        "flip": false,
+        "area": {
+            "Ocean": 2.0,
+            "Beach": 1.8
+        },
+        "intro": "Short-necked plesiosaur, not dinosaur. "
+    },
+
+    {
+        "name": "Elasmosaurus",
+        "id": 55,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [40, 80],
+        "height": {"S": 4.5, "M": 5.5, "L": 7, "offset": 0.5},
+        "weight": {"S": 950, "M": 1050, "L": 1200, "offset":50},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.1
+        },
+        "intro": "An extraordinarily long neck is here!"
+    },
+
+    {
+        "name": "Elasmosaurus",
+        "id": 56,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [40, 80],
+        "height": {"S": 9, "M": 11, "L": 14, "offset": 1},
+        "weight": {"S": 1900, "M": 2100, "L": 2400, "offset":100},
+        "trait": "carnivore",
+        "era": "Late Cretaceous",
+        "egg": 1103,
+        "flip": false,
+        "area": {
+            "Ocean": 1.3
+        },
+        "intro": "Slow down in swimming, slow down in life."
+    },
+
+    {
+        "name": "Pyrenean Ibex",
+        "id": 57,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [12, 17],
+        "height": {"S": 0.3, "M": 0.35, "L": 0.4, "offset": 0},
+        "weight": {"S": 25, "M": 32.5, "L": 40, "offset":1},
+        "trait": "herbivore",
+        "era": "Late Ice Age",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Mountain": 1.1
+        },
+        "intro": "Extremely good at playing leap frog!"
+    },
+
+    {
+        "name": "Pyrenean Ibex",
+        "id": 58,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [12, 17],
+        "height": {"S": 0.6, "M": 0.7, "L": 0.8, "offset": 0},
+        "weight": {"S": 50, "M": 65, "L": 80, "offset":2},
+        "trait": "herbivore",
+        "era": "Late Ice Age",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Mountain": 1.3
+        },
+        "intro": "Use to be resurrected through cloning, but failed."
+    },
+
+    {
+        "name": "Guam Flying Fox",
+        "id": 59,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [5, 8],
+        "height": {"S": 0.06, "M": 0.07, "L": 0.09, "offset": 0},
+        "weight": {"S": 0.05, "M": 0.1, "L": 0.15, "offset":0},
+        "trait": "herbivore",
+        "era": "20th century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Sky": 1.1
+        },
+        "intro": "Fox is cute, I'm cuter."
+    },
+
+    {
+        "name": "Guam Flying Fox",
+        "id": 60,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [5, 8],
+        "height": {"S": 0.12, "M": 0.15, "L": 0.18, "offset": 0},
+        "weight": {"S": 0.1, "M": 0.2, "L": 0.3, "offset":0},
+        "trait": "herbivore",
+        "era": "20th century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Sky": 1.3
+        },
+        "intro": "A long journey deserved with the best fruit."
+    },
+
+    {
+        "name": "Barbary Lion",
+        "id": 61,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [12, 15],
+        "height": {"S": 0.5, "M": 0.6, "L": 0.7, "offset": 0.05},
+        "weight": {"S": 80, "M": 115, "L": 150, "offset":10},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Plain": 1.1
+        },
+        "intro": "Practice roaring everyday."
+    },
+
+    {
+        "name": "Barbary Lion",
+        "id": 62,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [12, 15],
+        "height": {"S": 1.1, "M": 1.25, "L": 1.4, "offset": 0.1},
+        "weight": {"S": 160, "M": 230, "L": 300, "offset":20},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Plain": 1.3
+        },
+        "intro": "A king always comes with a magnificent mane."
+    },
+
+    {
+        "name": "Caribbean Monk Seal",
+        "id": 63,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [20],
+        "height": {"S": 0.9, "M": 1.1, "L": 1.3, "offset": 0.1},
+        "weight": {"S": 85, "M": 110, "L": 135, "offset":10},
+        "trait": "carnivore",
+        "era": "20th century",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Ocean": 1.1
+        },
+        "intro": "Lanugo helps me prevent colds!"
+    },
+
+    {
+        "name": "Caribbean Monk Seal",
+        "id": 64,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [20],
+        "height": {"S": 1.8, "M": 2.3, "L": 2.7, "offset": 0.2},
+        "weight": {"S": 170, "M": 220, "L": 270, "offset":20},
+        "trait": "carnivore",
+        "era": "20th century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Ocean": 1.3
+        },
+        "intro": "Please leave some fish for me next time."
+    },
+
+    {
+        "name": "Schomburgk's Deer",
+        "id": 65,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [20],
+        "height": {"S": 0.6, "M": 0.7, "L": 0.8, "offset": 0.05},
+        "weight": {"S": 40, "M": 45, "L": 50, "offset":5},
+        "trait": "herbivore",
+        "era": "19th century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Wetland": 1.1
+        },
+        "intro": "We were named after a naturalist found us."
+    },
+
+    {
+        "name": "Schomburgk's Deer",
+        "id": 66,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [50],
+        "height": {"S": 1.2, "M": 1.35, "L": 1.5, "offset": 0.1},
+        "weight": {"S": 80, "M": 90, "L": 100, "offset":5},
+        "trait": "herbivore",
+        "era": "19th century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Wetland": 1.3
+        },
+        "intro": "Not every deer can become the urban animal."
+    },
+
+    {
+        "name": "Ezo Wolf",
+        "id": 67,
+        "stage": 1,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "evolve_at": 35,
+        "life_span": [13, 15],
+        "height": {"S": 0.25, "M": 0.3, "L": 0.4, "offset": 0},
+        "weight": {"S": 20, "M": 22.5, "L": 25, "offset":2},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1204,
+        "flip": true,
+        "area": {
+            "Volcano": 1.5,
+            "Glacier": 1.4
+        },
+        "intro": "Both Ezo and Hokkaido wolf go for me."
+    },
+
+    {
+        "name": "Ezo Wolf",
+        "id": 68,
+        "stage": 2,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": [13, 15],
+        "height": {"S": 0.5, "M": 0.65, "L": 0.8, "offset": 0.1},
+        "weight": {"S": 30, "M": 40, "L": 50, "offset":5},
+        "trait": "carnivore",
+        "era": "18th century",
+        "egg": 1204,
+        "flip": false,
+        "area": {
+            "Volcano": 2.0,
+            "Glacier": 1.8
+        },
+        "intro": "Developers want some special effect on me."
+    },
+
+    {
+        "name": "Toolache Wallaby",
+        "id": 69,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [14],
+        "height": {"S": 0.3, "M": 0.4, "L": 0.5, "offset": 0},
+        "weight": {"S": 4, "M": 5, "L": 6, "offset":0.5},
+        "trait": "herbivore",
+        "era": "Late Pleistocene",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Desert": 1.1
+        },
+        "intro": "Consider the most agile and swift!"
+    },
+
+    {
+        "name": "Toolache Wallaby",
+        "id": 70,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [14],
+        "height": {"S": 0.7, "M": 0.8, "L": 0.9, "offset": 0.05},
+        "weight": {"S": 8, "M": 10, "L": 12, "offset":1},
+        "trait": "herbivore",
+        "era": "Late Pleistocene",
+        "egg": 1104,
         "flip": false,
         "area": {
             "Desert": 1.3
         },
-        "intro": "If you know Lonesome George, you will remember us."
+        "intro": "Two legs leaping are never faster than four legs running."
+    },
+
+    {
+        "name": "Steller's Sea Cow",
+        "id": 71,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [50, 80],
+        "height": {"S": 3.5, "M": 4, "L": 4.5, "offset": 0.25},
+        "weight": {"S": 4000, "M": 4250, "L": 4500, "offset":100},
+        "trait": "herbivore",
+        "era": "18th century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.1
+        },
+        "intro": "Swimming in the sea is sleepy...Zzz"
+    },
+
+    {
+        "name": "Steller's Sea Cow",
+        "id": 72,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [50, 80],
+        "height": {"S": 7, "M": 8, "L": 9, "offset": 0.5},
+        "weight": {"S": 8000, "M": 8500, "L": 9000, "offset":200},
+        "trait": "herbivore",
+        "era": "18th century",
+        "egg": 1103,
+        "flip": false,
+        "area": {
+            "Ocean": 1.3
+        },
+        "intro": "Seaweed only."
+    },
+
+    {
+        "name": "Bramble Cay Melomys",
+        "id": 73,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [2, 4],
+        "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
+        "weight": {"S": 0.05, "M": 0.08, "L": 0.1, "offset":0},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Beach": 1.3
+        },
+        "intro": "Climate change has claimed its first mammal extinction-me."
+    },
+
+    {
+        "name": "Desert Rat-kangaroo",
+        "id": 74,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [5, 8],
+        "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
+        "weight": {"S": 0.1, "M": 0.15, "L": 0.2, "offset":0},
+        "trait": "herbivore",
+        "era": "2oth century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Desert": 1.3
+        },
+        "intro": "Minimal water is enough for me."
+    },
+
+    {
+        "name": "Tarpan",
+        "id": 75,
+        "stage": 1,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "evolve_at": 35,
+        "life_span": [25, 30],
+        "height": {"S": 0.7, "M": 0.75, "L": 0.8, "offset": 0},
+        "weight": {"S": 150, "M": 175, "L": 200, "offset":15},
+        "trait": "herbivore",
+        "era": "19th century",
+        "egg": 1205,
+        "flip": false,
+        "area": {
+            "Plain": 1.5,
+            "Desert": 1.4
+        },
+        "intro": "No one can stop my desire for freedom."
+    },
+
+    {
+        "name": "Tarpan",
+        "id": 76,
+        "stage": 2,
+        "rarity": "SR",
+        "hatch_time": 120,
+        "life_span": [25, 30],
+        "height": {"S": 1.4, "M": 1.5, "L": 1.6, "offset": 0.05},
+        "weight": {"S": 300, "M": 350, "L": 400, "offset":30},
+        "trait": "herbivore",
+        "era": "19th century",
+        "egg": 1205,
+        "flip": false,
+        "area": {
+            "Plain": 2.0,
+            "Desert": 1.8
+        },
+        "intro": "Not every horse needs a rider."
+    },
+    
+    {
+        "name": "Blue-footed Booby",
+        "id": 77,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [17],
+        "height": {"S": 0.3, "M": 0.35, "L": 0.45, "offset": 0},
+        "weight": {"S": 0.5, "M": 0.7, "L": 1, "offset":0},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": false,
+        "area": {
+            "Sky": 1.1
+        },
+        "intro": "My cousin's feet have a separate color, blue and red."
+    },
+
+    {
+        "name": "Blue-footed Booby",
+        "id": 78,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [17],
+        "height": {"S": 0.6, "M": 0.75, "L": 0.9, "offset": 0},
+        "weight": {"S": 1, "M": 1.5, "L": 2, "offset":0},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Sky": 1.3
+        },
+        "intro": "I want to go to the pier and get some fries as well."
+    },
+
+    {
+        "name": "Vaquita",
+        "id": 79,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [21],
+        "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
+        "weight": {"S": 22.5, "M": 27.5, "L": 30, "offset":1},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.1
+        },
+        "intro": "Don't you think I'm cute with w mouth?"
+    },
+
+    {
+        "name": "Vaquita",
+        "id": 80,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [21],
+        "height": {"S": 0.3, "M": 0.35, "L": 0.4, "offset": 0},
+        "weight": {"S": 45, "M": 53, "L": 60, "offset":2},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.3
+        },
+        "intro": "There is a total of 20 family members being counted by the scientists."
+    },
+
+    {
+        "name": "Bactrian Camel",
+        "id": 81,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [40],
+        "height": {"S": 0.8, "M": 0.85, "L": 0.9, "offset": 0},
+        "weight": {"S": 300, "M": 400, "L": 500, "offset":25},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": false,
+        "area": {
+            "Desert": 1.1
+        },
+        "intro": "Double hump, double cool."
+    },
+
+    {
+        "name": "Bactrian Camel",
+        "id": 82,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [40],
+        "height": {"S": 1.6, "M": 1.7, "L": 1.8, "offset": 0.05},
+        "weight": {"S": 600, "M": 800, "L": 1000, "offset":50},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Desert": 1.3
+        },
+        "intro": "I can drink up to 40 gallons at once."
+    },
+
+    {
+        "name": "Cobra",
+        "id": 83,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [20],
+        "height": {"S": 1.5, "M": 2, "L": 3, "offset": 0},
+        "weight": {"S": 2.5, "M": 4, "L": 6, "offset":1},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.1
+        },
+        "intro": "Attention, we have different venom potency."
+    },
+
+    {
+        "name": "Cobra",
+        "id": 84,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [20],
+        "height": {"S": 3, "M": 4.5, "L": 6, "offset": 0.5},
+        "weight": {"S": 5, "M": 8, "L": 12, "offset":2},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1102,
+        "flip": false,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "Glad to help in medical advancement."
+    },
+
+    {
+        "name": "Saola",
+        "id": 85,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [8, 12],
+        "height": {"S": 0.6, "M": 0.65, "L": 0.7, "offset": 0},
+        "weight": {"S": 40, "M": 47.5, "L": 55, "offset":2.5},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.1
+        },
+        "intro": "Asian Unicorn is another name for me."
+    },
+
+    {
+        "name": "Saola",
+        "id": 86,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [8, 12],
+        "height": {"S": 1.2, "M": 1.3, "L": 1.4, "offset": 0},
+        "weight": {"S": 80, "M": 95, "L": 110, "offset":5},
+        "trait": "herbivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "One of the most recent large mammals to be discovered."
+    },
+
+    {
+        "name": "African Wild Dog",
+        "id": 87,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [10],
+        "height": {"S": 0.35, "M": 0.45, "L": 0.55, "offset": 0},
+        "weight": {"S": 9, "M": 14, "L": 19, "offset":1.5},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Plain": 1.1
+        },
+        "intro": "I have a big family with more than 40 members!"
+    },
+
+    {
+        "name": "African Wild Dog",
+        "id": 88,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [10],
+        "height": {"S": 0.7, "M": 0.9, "L": 1.1, "offset": 0.1},
+        "weight": {"S": 18, "M": 28, "L": 38, "offset":3},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1102,
+        "flip": true,
+        "area": {
+            "Plain": 1.3
+        },
+        "intro": "I have only four toes per foot...no digitigrade."
+    },
+
+    {
+        "name": "Bornean Orangutan",
+        "id": 89,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [35, 45],
+        "height": {"S": 0.5, "M": 0.6, "L": 0.75, "offset": 0},
+        "weight": {"S": 25, "M": 35, "L": 45, "offset":4},
+        "trait": "omnivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": false,
+        "area": {
+            "Rainforest": 1.1
+        },
+        "intro": "Prefer to stay on the trees forever if possible."
+    },
+
+    {
+        "name": "Bornean Orangutan",
+        "id": 90,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [35, 45],
+        "height": {"S": 1, "M": 1.3, "L": 1.5, "offset": 0.1},
+        "weight": {"S": 50, "M": 70, "L": 90, "offset":8},
+        "trait": "omnivore",
+        "era": "21st century",
+        "egg": 1101,
+        "flip": true,
+        "area": {
+            "Rainforest": 1.3
+        },
+        "intro": "We use Long Calls for communication."
+    },
+
+    {
+        "name": "Cross River Gorilla",
+        "id": 91,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [35, 50],
+        "height": {"S": 0.75, "M": 0.8, "L": 0.9, "offset": 0},
+        "weight": {"S": 65, "M": 82.5, "L": 100, "offset":7.5},
+        "trait": "omnivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Mountain": 1.1
+        },
+        "intro": "When I grow up, I want to have a silverback!"
+    },
+
+    {
+        "name": "Cross River Gorilla",
+        "id": 92,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [35, 50],
+        "height": {"S": 1.5, "M": 1.65, "L": 1.8, "offset": 0.05},
+        "weight": {"S": 130, "M": 165, "L": 200, "offset":15},
+        "trait": "omnivore",
+        "era": "21st century",
+        "egg": 1104,
+        "flip": true,
+        "area": {
+            "Mountain": 1.3
+        },
+        "intro": "You know what, Cross River is a state in Nigeria."
+    },
+
+    {
+        "name": "Blue Whale",
+        "id": 93,
+        "stage": 1,
+        "rarity": "R",
+        "hatch_time": 30,
+        "evolve_at": 35,
+        "life_span": [80, 90],
+        "height": {"S": 6.5, "M": 7.5, "L": 9, "offset": 0.5},
+        "weight": {"S": 45000, "M": 60000, "L": 75000, "offset":5000},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.1
+        },
+        "intro": "My heart will grow bigger than a car in the future."
+    },
+
+    {
+        "name": "Blue Whale",
+        "id": 94,
+        "stage": 2,
+        "rarity": "R",
+        "hatch_time": 30,
+        "life_span": [80, 90],
+        "height": {"S": 13, "M": 15, "L": 18, "offset": 1},
+        "weight": {"S": 90000, "M": 120000, "L": 150000, "offset":10000},
+        "trait": "carnivore",
+        "era": "21st century",
+        "egg": 1103,
+        "flip": true,
+        "area": {
+            "Ocean": 1.3
+        },
+        "intro": "4 tons of krill a day, keep the doctor away."
     }
 ]
