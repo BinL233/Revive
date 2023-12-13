@@ -78,10 +78,9 @@ extension ReviveManager {
             favorite: currPanelSpecies!.favorite,
             hatchDate: currPanelSpecies!.hatchDate
         )
-        
-        deleteSpecies(id: currPanelSpecies!.speciesID, date: currPanelSpecies!.hatchDate, action: "Evolve")
         currPanelSpecies = mySpecies[index]
         saveNewSpecies(mySpecies: mySpecies[index])
+        changeSpeciesListSorter()
     }
     
     func changeItemListSorter() {

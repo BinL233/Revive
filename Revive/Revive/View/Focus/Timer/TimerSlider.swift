@@ -20,9 +20,11 @@ struct TimerSlider: View {
             )
             .onChange(of: manager.timeRemaining, { oldValue, newValue in
                 if manager.currAction == .hatching && newValue < 30*60 && !manager.isTimerStart {
-                    manager.currAction = .training
+                    manager.isStartButtonDisabled2 = true
                 } else if manager.currAction == .exploring && newValue < 10*60 && !manager.isTimerStart {
-                    manager.currAction = .training
+                    manager.isStartButtonDisabled2 = true
+                } else {
+                    manager.isStartButtonDisabled2 = false
                 }
             })
             .disabled(manager.isTimerStart)

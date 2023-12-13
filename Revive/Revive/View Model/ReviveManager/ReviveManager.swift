@@ -74,6 +74,7 @@ class ReviveManager {
     var testMode : TestMode
     var isExpGain : Bool
     var isStartButtonDisabled : Bool
+    var isStartButtonDisabled2 : Bool
     var lastBackgroundTime : Date?
     var bgNotification : String?
     
@@ -129,7 +130,7 @@ class ReviveManager {
         isTreasureBarCompleted = false
         panelInfoAction = .none
         isStartButtonDisabled = false
-        
+        isStartButtonDisabled2 = false
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {
                 if let date = calendar.date(from: components) {

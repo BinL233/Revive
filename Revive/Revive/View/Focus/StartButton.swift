@@ -102,10 +102,10 @@ struct StartButton: View {
                     .foregroundStyle(Color.cWhite)
             }
         }
-        .background(manager.isStartButtonDisabled ? .gray : Color.cDarkOrange)
+        .background(manager.isStartButtonDisabled || manager.isStartButtonDisabled2 ? .gray : Color.cDarkOrange)
         .clipShape(Circle())
         .shadow(radius: 6, x: 0, y: 4)
-        .disabled(manager.isStartButtonDisabled)
+        .disabled(manager.isStartButtonDisabled || manager.isStartButtonDisabled2)
         .alert(item: $manager.activeAlert) { alertType in
             switch alertType {
             case .stop:
