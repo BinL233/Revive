@@ -60,13 +60,16 @@ struct MainTabView: View {
                 AnalysisView()
                     .tabItem {
                         Image(systemName: "chart.line.uptrend.xyaxis")
+                            .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
                         Text("Analysis")
+                            .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
                     }
                     .tag("analysis")
                     .onAppear {
                         manager.focusLog = DataManager.shared.loadLogData()
                         manager.sta = DataManager.shared.loadStaData()
                     }
+                    .disabled(manager.mySpecies.isEmpty)
             }
             .tint(.cBlackBrown)
             .onAppear {
