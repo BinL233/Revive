@@ -138,7 +138,11 @@ extension ReviveManager {
             if mySpecies.count == 1 {
                 currPanelSpecies = nil
             } else {
-                currPanelSpecies = mySpecies[0]
+                if currPanelSpecies == mySpecies[0] {
+                    currPanelSpecies = mySpecies[1]
+                } else {
+                    currPanelSpecies = mySpecies[0]
+                }
             }
             
             mySpecies.remove(at: getSpeciesIndex(id: currS!.speciesID, date: currS!.hatchDate))

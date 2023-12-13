@@ -26,6 +26,20 @@ struct MainTabView: View {
                         Text("Backyard")
                     }
                     .tag("backyard")
+                    .onAppear {
+                        manager.mySpecies = DataManager.shared.loadData()
+                        manager.changeSpeciesListSorter()
+                        manager.myItems = DataManager.shared.loadItemData()
+                        manager.changeItemListSorter()
+                        
+                        if !manager.mySpecies.isEmpty {
+                            manager.currPanelSpecies = manager.mySpecies[0]
+                        }
+                        
+                        if !manager.myItems.isEmpty {
+                            manager.currPanelItem = manager.myItems[0]
+                        }
+                    }
                 
                 FocusView()
                     .tabItem {
@@ -33,6 +47,15 @@ struct MainTabView: View {
                         Text("Focus")
                     }
                     .tag("focus")
+                    .onAppear {
+                        manager.myMaps = DataManager.shared.loadMapData()
+                        manager.mySpecies = DataManager.shared.loadData()
+                        manager.changeSpeciesListSorter()
+                        
+                        if !manager.mySpecies.isEmpty {
+                            manager.currPanelSpecies = manager.mySpecies[0]
+                        }
+                    }
                 
                 AnalysisView()
                     .tabItem {
@@ -40,6 +63,10 @@ struct MainTabView: View {
                         Text("Analysis")
                     }
                     .tag("analysis")
+                    .onAppear {
+                        manager.focusLog = DataManager.shared.loadLogData()
+                        manager.sta = DataManager.shared.loadStaData()
+                    }
             }
             .tint(.cBlackBrown)
             .onAppear {

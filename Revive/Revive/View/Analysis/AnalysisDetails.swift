@@ -74,7 +74,7 @@ struct AnalysisDetails: View {
                 }
                 
                 HStack {
-                    Text("Number of Rare Species")
+                    Text("Number of R Species")
                         .font(.callout)
                         .italic()
                         .padding(.bottom, 5)
@@ -86,7 +86,7 @@ struct AnalysisDetails: View {
                 }
                 
                 HStack {
-                    Text("Number of Super Rare Species")
+                    Text("Number of SR Species")
                         .font(.callout)
                         .italic()
                         .padding(.bottom, 5)
@@ -98,7 +98,7 @@ struct AnalysisDetails: View {
                 }
                 
                 HStack {
-                    Text("Number of Super Species Rare Species")
+                    Text("Number of SSR Species")
                         .font(.callout)
                         .italic()
                         .padding(.bottom, 5)

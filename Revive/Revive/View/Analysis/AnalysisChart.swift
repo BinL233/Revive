@@ -49,15 +49,15 @@ struct AnalysisChart: View {
                     }
                 }
                 
-                if manager.currFocusLog.count != 0 {
-                    RuleMark(y: .value("Average", Double(manager.calculateAverage())/60))
-                        .foregroundStyle(Color.cBlackRed)
-                        .annotation(position: .bottom, alignment: .bottomLeading) {
-                            Text("Average \(manager.secTimeToString2(time: manager.calculateAverage()))")
-                                .foregroundStyle(Color.cBlackRed)
-                                
-                        }
-                }
+//                if manager.currFocusLog.count != 0 {
+//                    RuleMark(y: .value("Average", Double(manager.calculateAverage())/60))
+//                        .foregroundStyle(Color.cBlackRed)
+//                        .annotation(position: .bottom, alignment: .bottomLeading) {
+//                            Text("Average \(manager.secTimeToString2(time: manager.calculateAverage()))")
+//                                .foregroundStyle(Color.cBlackRed)
+//                                
+//                        }
+//                }
             }
             .padding()
         }

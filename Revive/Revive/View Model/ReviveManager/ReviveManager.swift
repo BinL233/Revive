@@ -105,14 +105,15 @@ class ReviveManager {
         
         isMapStartSelect = false
 
-        mySpecies = localMySpecies
+        mySpecies = localMySpecies.sorted()
 
         myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0)] : localMyMaps
+        
         if localMyMaps.isEmpty {
             DataManager.shared.saveMapData(customItem: MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0))
         }
         
-        myItems = localMyItems
+        myItems = localMyItems.sorted()
         isExpItemChooseSpecies = false
         lastBackgroundTime = nil
         bgNotification = nil

@@ -41,11 +41,11 @@ struct SpeciesList: View {
                 .background(Color.white)
 
                 ScrollView {
-                    LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                        ForEach(manager.mySpecies.indices, id: \.self) { i in
-                            SpeciesListImage(mode: "Backyard", currSpecies: $manager.mySpecies[i], currModule: $manager.currPanelSpecies)
+                    LazyVGrid(columns: adaptiveCloumns, spacing: 20) {
+                        ForEach(manager.mySpecies, id: \.self) { species in
+                            SpeciesListImage(mode: "Backyard", currSpecies: Binding.constant(species), currModule: $manager.currPanelSpecies)
                         }
-                    })
+                    }
                     .onAppear {
                         manager.changeSpeciesListSorter()
                     }

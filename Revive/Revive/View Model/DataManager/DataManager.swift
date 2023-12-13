@@ -10,23 +10,36 @@ import CoreData
 
 class DataManager {
     static let shared = DataManager()
-    let persistentContainer: NSPersistentContainer
+//    let persistentContainer: NSPersistentContainer
+    
+//    init() {
+//        persistentContainer = NSPersistentContainer(name: "MySpeciesModel")
+//        persistentContainer.loadPersistentStores { (description, error) in
+//            if let error = error {
+//                fatalError("Core Data store failed to load with error: \(error)")
+//            }
+//        }
+//    }
+    
+    //CloudKit
+    let persistentContainer: NSPersistentCloudKitContainer
     
     init() {
-        persistentContainer = NSPersistentContainer(name: "MySpeciesModel")
-        persistentContainer.loadPersistentStores { (description, error) in
+        persistentContainer = NSPersistentCloudKitContainer(name: "MySpeciesModel")
+        
+        persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error {
                 fatalError("Core Data store failed to load with error: \(error)")
             }
+        })
+        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        do {
+              try persistentContainer.viewContext.setQueryGenerationFrom(.current)
+        } catch {
+             fatalError("Failed to pin viewContext to the current generation:\(error)")
         }
-    }
-    
-    //CloudKit
-//    let persistentContainer: NSPersistentCloudKitContainer
-//    
-//    init() {
-//        persistentContainer = NSPersistentCloudKitContainer(name: "MySpeciesModel")
-//        
+        
 //        guard let URL = persistentContainer.persistentStoreDescriptions.first?.url else {
 //            fatalError("Could not find Container")
 //        }
@@ -38,15 +51,21 @@ class DataManager {
 //        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
 //        
 //        persistentContainer.persistentStoreDescriptions = [storeDescription]
-//        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
 //        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+//        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
 //        
 //        persistentContainer.loadPersistentStores { (description, error) in
 //            if let error = error {
 //                fatalError("Core Data store failed to load with error: \(error)")
 //            }
 //        }
-//    }
+//        
+//        do {
+//              try persistentContainer.viewContext.setQueryGenerationFrom(.current)
+//        } catch {
+//             fatalError("Failed to pin viewContext to the current generation:\(error)")
+//        }
+    }
     
     func saveData(customItem: MySpecies) {
         let context = persistentContainer.viewContext

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MySpecies : Equatable, Comparable {
+struct MySpecies : Equatable, Comparable, Hashable {
     static func < (lhs: MySpecies, rhs: MySpecies) -> Bool {
         return lhs.nickName < rhs.nickName
     }
