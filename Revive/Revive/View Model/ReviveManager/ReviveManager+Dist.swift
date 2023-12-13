@@ -17,8 +17,7 @@ extension ReviveManager {
             case .week:
                 return calendar.dateComponents([.year, .month, .weekOfYear, .day], from: log.date)
             case .year:
-                let weekOfYear = calendar.component(.weekOfYear, from: log.date)
-                return DateComponents(year: calendar.component(.year, from: log.date), weekOfYear: weekOfYear)
+                return calendar.dateComponents([.year], from: log.date)
             case .month:
                 return calendar.dateComponents([.year, .month], from: log.date)
             case .total:
@@ -127,17 +126,17 @@ extension ReviveManager {
         dateFormatter.dateFormat = "YYYY"
         _ = dateFormatter.string(from: Date())
         
-        var lastTenYears: [String] = []
+        var lastFiveYears: [String] = []
 
         for year in 0..<5 {
             if let date = Calendar.current.date(byAdding: .year, value: -year, to: Date()) {
                 let dateString = dateFormatter.string(from: date)
-                lastTenYears.append(dateString)
+                lastFiveYears.append(dateString)
             }
         }
         
-        lastTenYears.reverse()
+        lastFiveYears.reverse()
         
-        return lastTenYears
+        return lastFiveYears
     }
 }

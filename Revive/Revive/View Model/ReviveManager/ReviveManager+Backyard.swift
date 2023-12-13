@@ -78,7 +78,9 @@ extension ReviveManager {
             favorite: currPanelSpecies!.favorite,
             hatchDate: currPanelSpecies!.hatchDate
         )
+        
         currPanelSpecies = mySpecies[index]
+        deleteSpecies(id: currPanelSpecies!.speciesID-1, date: currPanelSpecies!.hatchDate, action: "Evolve")
         saveNewSpecies(mySpecies: mySpecies[index])
         changeSpeciesListSorter()
     }
@@ -146,6 +148,8 @@ extension ReviveManager {
             
             mySpecies.remove(at: getSpeciesIndex(id: currS!.speciesID, date: currS!.hatchDate))
             DataManager.shared.deleteMySpecies(for: currS!.speciesID, for: currS!.hatchDate, mySpecies: mySpecies)
+        } else if action == "Evolve" {
+            DataManager.shared.deleteMySpecies(for: id, for: date, mySpecies: mySpecies)
         } else {
             mySpecies.remove(at: getSpeciesIndex(id: id, date: date))
             DataManager.shared.deleteMySpecies(for: id, for: date, mySpecies: mySpecies)
