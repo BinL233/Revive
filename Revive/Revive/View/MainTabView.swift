@@ -57,19 +57,31 @@ struct MainTabView: View {
                         }
                     }
                 
-                AnalysisView()
-                    .tabItem {
-                        Image(systemName: "chart.line.uptrend.xyaxis")
-                            .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
-                        Text("Analysis")
-                            .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
-                    }
-                    .tag("analysis")
-                    .onAppear {
-                        manager.focusLog = DataManager.shared.loadLogData()
-                        manager.sta = DataManager.shared.loadStaData()
-                    }
-                    .disabled(manager.mySpecies.isEmpty)
+                if !manager.mySpecies.isEmpty {
+                    AnalysisView()
+                        .tabItem {
+                            Image(systemName: "chart.line.uptrend.xyaxis")
+                                .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
+                            Text("Analysis")
+                                .opacity(manager.mySpecies.isEmpty ? 0.5 : 1)
+                        }
+                        .tag("analysis")
+                        .onAppear {
+                            manager.focusLog = DataManager.shared.loadLogData()
+                            manager.sta = DataManager.shared.loadStaData()
+                        }
+                } else {
+                    Text("Let's hatch one Species!")
+                        .font(.custom("Georgia-Italic", size: 20))
+                        .padding(15)
+                        .bold()
+                        .foregroundStyle(Color.cBlack)
+                        .tabItem {
+                            Image(systemName: "chart.line.uptrend.xyaxis")
+                            Text("Analysis")
+                        }
+                        .tag("analysis_non")
+                }
             }
             .tint(.cBlackBrown)
             .onAppear {
