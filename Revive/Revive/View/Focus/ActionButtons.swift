@@ -54,6 +54,7 @@ struct ActionButtons: View {
             
             if ((manager.currAction == .exploring) || !manager.isTimerStart) {
                 Button(action: {
+                    manager.deleteDuplicatedMaps()
                     withAnimation(.bouncy(duration: 0.2)) {
                         manager.currAction = .exploring
                         manager.currExploringMap = manager.myMaps[0]

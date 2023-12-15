@@ -65,4 +65,20 @@ extension DataManager {
         }
     }
 
+    func deleteMapData(for id: Int) {
+        let context = persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<MapEntity> = MapEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let entityToDelete = results.first {
+                context.delete(entityToDelete)
+                try context.save()
+                print("Deleted map with id \(id)")
+            }
+        } catch {
+            print("Item map Delete failed: \(error)")
+        }
+    }
 }

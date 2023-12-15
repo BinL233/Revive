@@ -41,5 +41,11 @@
         <attribute name="totalTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="totalTrainingTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
-    <configuration name="Local"/>
+    <configuration name="Local">
+        <memberEntity name="FocusEntity"/>
+        <memberEntity name="ItemEntity"/>
+        <memberEntity name="MapEntity"/>
+        <memberEntity name="SpeciesEntity"/>
+        <memberEntity name="StatisticsEntity"/>
+    </configuration>
 </model>

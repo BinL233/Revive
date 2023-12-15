@@ -10,22 +10,37 @@ import CoreData
 
 class DataManager {
     static let shared = DataManager()
-//    let persistentContainer: NSPersistentContainer
     
-//    init() {
-//        persistentContainer = NSPersistentContainer(name: "MySpeciesModel")
-//        persistentContainer.loadPersistentStores { (description, error) in
-//            if let error = error {
-//                fatalError("Core Data store failed to load with error: \(error)")
-//            }
-//        }
-//    }
-    
-    //CloudKit
     let persistentContainer: NSPersistentCloudKitContainer
     
     init() {
         persistentContainer = NSPersistentCloudKitContainer(name: "MySpeciesModel")
+        
+//        // Local
+//        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let localStoreURL = documentsDirectoryURL.appendingPathComponent("LocalStore.sqlite")
+//        let localStoreDescription =
+//            NSPersistentStoreDescription(url: localStoreURL)
+//        localStoreDescription.configuration = "Local"
+//
+//        // iCloud
+//        let iCloudStoreURL = documentsDirectoryURL.appendingPathComponent("iCloudStore.sqlite")
+//        let cloudStoreDescription =
+//            NSPersistentStoreDescription(url: iCloudStoreURL)
+//        cloudStoreDescription.configuration = "Default"
+//
+//        persistentContainer.persistentStoreDescriptions = [
+//            cloudStoreDescription,
+//            localStoreDescription
+//        ]
+//
+//        persistentContainer.loadPersistentStores { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
+//            }
+//        }
+
+        // iCloud
         
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error {
@@ -39,32 +54,6 @@ class DataManager {
         } catch {
              fatalError("Failed to pin viewContext to the current generation:\(error)")
         }
-        
-//        guard let URL = persistentContainer.persistentStoreDescriptions.first?.url else {
-//            fatalError("Could not find Container")
-//        }
-//                
-//        print("Core Data:", URL)
-//        
-//        let storeDescription = NSPersistentStoreDescription(url: URL)
-//        storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.fun.binltools.Revive")
-//        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
-//        
-//        persistentContainer.persistentStoreDescriptions = [storeDescription]
-//        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-//        persistentContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-//        
-//        persistentContainer.loadPersistentStores { (description, error) in
-//            if let error = error {
-//                fatalError("Core Data store failed to load with error: \(error)")
-//            }
-//        }
-//        
-//        do {
-//              try persistentContainer.viewContext.setQueryGenerationFrom(.current)
-//        } catch {
-//             fatalError("Failed to pin viewContext to the current generation:\(error)")
-//        }
     }
     
     func saveData(customItem: MySpecies) {

@@ -224,4 +224,20 @@ extension ReviveManager {
             myMaps.append(MyMaps(id: 5001, isFinished: true, finishedTimes: 0, currTime: 0, totalTime: 0))
         }
     }
+    
+    func deleteDuplicatedMaps() {
+        let map5001 = myMaps.filter{ $0.id == 5001 }
+        var num = map5001.count
+        
+        if num > 1 {
+            let num2 = myMaps.count
+            for i in 0..<num2 {
+                if myMaps[i].id == 5001 && num > 1 {
+                    myMaps.remove(at: i)
+                    DataManager.shared.deleteMapData(for: 5001)
+                    num -= 1
+                }
+            }
+        }
+    }
 }

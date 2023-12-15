@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304B74A2B22B7ED0067371D /* AnimationView.swift */; };
+		B30767802B2BF8E700AF19D0 /* SingleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */; };
 		B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31319882B1FB83A00FFC760 /* ContactUs.swift */; };
 		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
@@ -33,7 +34,7 @@
 		B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5DF2B09598C00270661 /* ReminderSetting.swift */; };
 		B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */; };
 		B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E42B09894F00270661 /* AnalysisView.swift */; };
-		B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E62B098B6700270661 /* AnalysisDetails.swift */; };
+		B349D5E72B098B6700270661 /* AnalysisDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E62B098B6700270661 /* AnalysisDetailsView.swift */; };
 		B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E82B0996F500270661 /* AnalysisTitle.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
@@ -165,6 +166,7 @@
 
 /* Begin PBXFileReference section */
 		B304B74A2B22B7ED0067371D /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDetails.swift; sourceTree = "<group>"; };
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
@@ -190,7 +192,7 @@
 		B349D5DF2B09598C00270661 /* ReminderSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSetting.swift; sourceTree = "<group>"; };
 		B349D5E12B0980BD00270661 /* ReviveManager+Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Setting.swift"; sourceTree = "<group>"; };
 		B349D5E42B09894F00270661 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
-		B349D5E62B098B6700270661 /* AnalysisDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDetails.swift; sourceTree = "<group>"; };
+		B349D5E62B098B6700270661 /* AnalysisDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDetailsView.swift; sourceTree = "<group>"; };
 		B349D5E82B0996F500270661 /* AnalysisTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTitle.swift; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
@@ -326,6 +328,15 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		B307677E2B2BF8B800AF19D0 /* AnalysisDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B349D5E62B098B6700270661 /* AnalysisDetailsView.swift */,
+				B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */,
+			);
+			path = AnalysisDetails;
+			sourceTree = "<group>";
+		};
 		B319E67E2B0A65FC000B9FD4 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,7 +385,7 @@
 		B349D5E32B09892700270661 /* Analysis */ = {
 			isa = PBXGroup;
 			children = (
-				B349D5E62B098B6700270661 /* AnalysisDetails.swift */,
+				B307677E2B2BF8B800AF19D0 /* AnalysisDetails */,
 				B349D5E42B09894F00270661 /* AnalysisView.swift */,
 				B349D5E82B0996F500270661 /* AnalysisTitle.swift */,
 				B3234E8D2B15052300A730D1 /* AnalysisChart.swift */,
@@ -913,6 +924,7 @@
 				B3CE6F4C2B2268CE006727AB /* ReleaseConfirm.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
+				B30767802B2BF8E700AF19D0 /* SingleDetails.swift in Sources */,
 				B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */,
 				B3C774362ACD151600387FDC /* StartButton.swift in Sources */,
 				B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */,
@@ -938,7 +950,7 @@
 				B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */,
 				B3FB81802B192F94004CB417 /* DataManager+Item.swift in Sources */,
 				B349D5E02B09598C00270661 /* ReminderSetting.swift in Sources */,
-				B349D5E72B098B6700270661 /* AnalysisDetails.swift in Sources */,
+				B349D5E72B098B6700270661 /* AnalysisDetailsView.swift in Sources */,
 				B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */,
 				B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */,
 				B3234E962B150B5F00A730D1 /* DataManager+FocusLog.swift in Sources */,
