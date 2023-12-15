@@ -84,7 +84,7 @@ extension ReviveManager {
             DataManager.shared.updateMySpeciesCurrExp(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.currExp, mySpecies: mySpecies)
             DataManager.shared.updateMySpeciesLevel(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.level, mySpecies: mySpecies)
             
-            if myItems[getMyItemIndex(id: currPanelItem!.id)].amount == 0 {
+            if myItems[getMyItemIndex(id: currPanelItem!.id)].amount <= 0 {
                 deleteItem(id: currPanelItem!.id)
                 myItems.remove(at: getMyItemIndex(id: currPanelItem!.id))
                 if myItems.count == 0 || isFeed {

@@ -158,10 +158,10 @@ struct SpeciesPanel: View {
                                 .bold()
                                 .foregroundStyle(Color.cWhite)
                         })
-                        .background(manager.currPanelItem!.amount == 0 || manager.isTimerStart ? .gray : Color.cBlueGreen)
+                        .background(manager.currPanelItem!.amount <= 0 || manager.isTimerStart ? .gray : Color.cBlueGreen)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                         .shadow(radius: 0.7, x: 2, y: 3)
-                        .disabled(manager.currPanelItem!.amount == 0 || manager.isTimerStart)
+                        .disabled(manager.currPanelItem!.amount <= 0 || manager.isTimerStart)
                     } else {
                         Text("Feed your Species!")
                             .font(.custom("Georgia-Italic", size: 15))
