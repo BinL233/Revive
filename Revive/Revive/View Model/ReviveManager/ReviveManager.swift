@@ -34,7 +34,7 @@ class ReviveManager {
     var myMaps : [MyMaps]
     var isTreasureBarCompleted : Bool
     var selectedTime2 : Int
-    var isMapStartSelect : Bool
+    var isScaledSelectView : Bool
     
     // Item
     var myItems : [MyItems]
@@ -104,7 +104,7 @@ class ReviveManager {
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
         
-        isMapStartSelect = false
+        isScaledSelectView = false
 
         mySpecies = localMySpecies.sorted()
 

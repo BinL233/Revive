@@ -19,7 +19,7 @@ struct ActionButtons: View {
                         withAnimation(.bouncy(duration: 0.2)) {
                             manager.currAction = .hatching
                             manager.isStartButtonDisabled = false
-                            manager.isMapStartSelect = false
+                            manager.isScaledSelectView = false
                         }
                     }) {
                         Text("Hatching")
@@ -40,7 +40,7 @@ struct ActionButtons: View {
                         manager.currAction = .training
                         manager.isStartButtonDisabled = false
                     }
-                    withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = false}
+                    withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = false}
                 }) {
                     Text("Training")
                         .foregroundStyle(Color.cBlack)
@@ -60,7 +60,7 @@ struct ActionButtons: View {
                         manager.currExploringMap = manager.myMaps[0]
                         manager.isStartButtonDisabled = true
                     }
-                    withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
+                    withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = true}
                 }) {
                     Text("Exploring")
                         .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 10*60) ? .gray : Color.cBlack})

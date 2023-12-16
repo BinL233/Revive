@@ -54,10 +54,35 @@ struct HatchingComplete: View {
                             .foregroundStyle(Color.orange)
                     }
                     
-                    Image(speciesImage)
-                        .resizable()
-                        .scaledToFill()
-                        .shadow(radius: 6, x: 0, y: 4)
+                    ZStack {
+                        Image(speciesImage)
+                            .resizable()
+                            .scaledToFill()
+                            .padding()
+                            .shadow(radius: 6, x: 0, y: 4)
+//                            .background(.gray.opacity(0.3))
+//                            .clipShape(RoundedRectangle(cornerRadius: 15))
+//                            .padding()
+                        
+                        VStack {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "seal.fill")
+                                        .font(.system(size: 50))
+                                        .foregroundStyle(Color.orange)
+                                        .shadow(radius: 6, x: 0, y: 4)
+                                    
+                                    Text(species.rarity)
+                                        .font(.custom("Georgia-Italic", size: 35))
+                                        .padding()
+                                        .bold()
+                                        .foregroundStyle(Color.white)
+                                }
+                                Spacer()
+                            }
+                            Spacer()
+                        }
+                    }
                 }
                 
                 Button(action: {

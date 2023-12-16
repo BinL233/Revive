@@ -184,10 +184,10 @@ struct ExploringComplete: View {
                         .foregroundStyle(.white)
                 }
                 .padding(15)
-                .background(manager.isTreasureBarCompleted ? Color.cDarkOrange : .gray)
+                .background(Color.cDarkOrange)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(radius: 4, x: 0, y: 4)
-                .disabled(!manager.isTreasureBarCompleted)
+                //.disabled(!manager.isTreasureBarCompleted)
             }
             .padding(.vertical, 20)
             .padding(.horizontal)

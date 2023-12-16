@@ -139,7 +139,7 @@ struct ExploringView: View {
                     
                     Button(action: {
                         withAnimation(.bouncy(duration: 0.3)){isMapSelected = true}
-                        withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = false}
+                        withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = false}
                         manager.currExploringSpecies = manager.mySpecies[0]
                     }, label: {
                         Text("Next")
@@ -165,20 +165,40 @@ struct ExploringView: View {
                             manager.isStartButtonDisabled = false
                         }
                     
-                    ScrollView {
-                        LazyVGrid(columns: adaptiveSpeciesCloumns, spacing: 20, content: {
-                            ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                SpeciesListImage(mode: "Exploring", currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
+                    ZStack {
+                        ScrollView {
+                            LazyVGrid(columns: adaptiveSpeciesCloumns, spacing: 20, content: {
+                                ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                    SpeciesListImage(mode: "Exploring", currSpecies: $manager.mySpecies[i], currModule: $manager.currExploringSpecies)
+                                }
+                            })
+                        }
+                        .background(Color.cDarkBrown)
+                        .padding(10)
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    withAnimation(.bouncy(duration: 0.4)){ manager.isScaledSelectView.toggle() }
+                                }, label: {
+                                    Image(systemName: (manager.isScaledSelectView) ? "arrow.down.forward.and.arrow.up.backward" : "arrow.up.backward.and.arrow.down.forward")
+                                        .font(.title2)
+                                        .padding(10)
+                                })
+                                .background(Color.cWhite.opacity(0.8))
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
                             }
-                        })
+                        }
                     }
-                    .padding()
+                    .padding(5)
                     .background(Color.cDarkBrown)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     
                     Button(action: {
                         withAnimation(.bouncy(duration: 0.3)){isMapSelected = false}
-                        withAnimation(.bouncy(duration: 0.4)){manager.isMapStartSelect = true}
+                        withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = true}
                         manager.currExploringMap = manager.myMaps[0]
                     }, label: {
                         Text("Back")

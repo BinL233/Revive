@@ -67,5 +67,9 @@ extension ReviveManager {
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
     }
+    
+    func quickFinishCompleteView() {
+        
+    }
 
 }

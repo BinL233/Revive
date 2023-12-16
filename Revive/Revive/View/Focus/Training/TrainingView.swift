@@ -48,14 +48,34 @@ struct TrainingView: View {
                         //.background(Color.cDarkOrange)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    ScrollView {
-                        LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
-                            ForEach(manager.mySpecies.indices, id: \.self) { i in
-                                SpeciesListImage(mode: "Training", currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
+                    ZStack {
+                        ScrollView {
+                            LazyVGrid(columns: adaptiveCloumns, spacing: 20, content: {
+                                ForEach(manager.mySpecies.indices, id: \.self) { i in
+                                    SpeciesListImage(mode: "Training", currSpecies: $manager.mySpecies[i], currModule: $manager.currTrainingSpecies)
+                                }
+                            })
+                        }
+                        .background(Color.cDarkBrown)
+                        .padding(10)
+                        
+                        VStack {
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    withAnimation(.bouncy(duration: 0.4)){ manager.isScaledSelectView.toggle() }
+                                }, label: {
+                                    Image(systemName: (manager.isScaledSelectView) ? "arrow.down.forward.and.arrow.up.backward" : "arrow.up.backward.and.arrow.down.forward")
+                                        .font(.title2)
+                                        .padding(10)
+                                })
+                                .background(Color.cWhite.opacity(0.8))
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
                             }
-                        })
+                        }
                     }
-                    .padding()
+                    .padding(5)
                     .background(Color.cDarkBrown)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 }

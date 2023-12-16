@@ -74,10 +74,10 @@ struct TrainingComplete: View {
                         .foregroundStyle(.white)
                 }
                 .padding(15)
-                .background(manager.isExpGain ? Color.cDarkOrange : .gray)
+                .background(Color.cDarkOrange)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(radius: 4, x: 0, y: 4)
-                .disabled(!manager.isExpGain)
+                //.disabled(!manager.isExpGain)
             }
             .padding(.vertical, 20)
             .padding(.horizontal)

@@ -38,7 +38,7 @@ struct FocusView: View {
                         .padding(.top, (manager.isHatchingBuff || manager.isRarityBuff || manager.isTrainingBuff || manager.isExploringBuff) ? 0 : 10)
                         .padding(.bottom, 10)
                     
-                    if !manager.isMapStartSelect {
+                    if !manager.isScaledSelectView {
                         TimerModule()
                             .padding(.horizontal, 40)
 
