@@ -19,6 +19,7 @@ struct FocusView: View {
                     Spacer()
                     
                     ZStack {
+                        FocusInfo()
                         DisplayView()
                             .padding(.bottom, 10)
                             .padding(.top, 10)

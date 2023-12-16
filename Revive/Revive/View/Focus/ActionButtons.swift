@@ -11,27 +11,24 @@ struct ActionButtons: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
-            
         HStack {
             if ((manager.currAction == .hatching) || !manager.isTimerStart) {
-                ZStack {
-                    Button(action: {
-                        withAnimation(.bouncy(duration: 0.2)) {
-                            manager.currAction = .hatching
-                            manager.isStartButtonDisabled = false
-                            manager.isScaledSelectView = false
-                        }
-                    }) {
-                        Text("Hatching")
-                            .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 30*60) ? .gray : Color.cBlack})
-                            .font(.custom("Georgia-Italic", size: 15))
+                Button(action: {
+                    withAnimation(.bouncy(duration: 0.2)) {
+                        manager.currAction = .hatching
+                        manager.isStartButtonDisabled = false
+                        manager.isScaledSelectView = false
                     }
-                    .padding(15)
-                    .background((manager.currAction == .hatching) ? Color.cLightBrown : .clear)
-                    .animation(.easeInOut(duration: 0.2), value: manager.currAction)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .disabled(!manager.isTimerStart && manager.timeRemaining < 30*60)
+                }) {
+                    Text("Hatching")
+                        .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 30*60) ? .gray : Color.cBlack})
+                        .font(.custom("Georgia-Italic", size: 15))
                 }
+                .padding(15)
+                .background((manager.currAction == .hatching) ? Color.cLightBrown : .clear)
+                .animation(.easeInOut(duration: 0.2), value: manager.currAction)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .disabled(!manager.isTimerStart && manager.timeRemaining < 30*60)
             }
             
             if ((manager.currAction == .training) || !manager.isTimerStart) {
