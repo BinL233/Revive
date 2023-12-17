@@ -20,6 +20,16 @@ struct MainTabView: View {
     var body: some View {
         ZStack {
             TabView (selection: $selectedTab) {
+                StoreView()
+                    .tabItem {
+                        Image(systemName: "storefront.fill")
+                        Text("Store")
+                    }
+                    .tag("store")
+                    .onAppear {
+                        manager.sta = DataManager.shared.loadStaData()
+                    }
+                
                 BackyardView()
                     .tabItem {
                         Image(systemName: "house.and.flag.fill")

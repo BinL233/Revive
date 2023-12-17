@@ -21,6 +21,8 @@
 		B3234E962B150B5F00A730D1 /* DataManager+FocusLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */; };
 		B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E972B150D4E00A730D1 /* DistributionMode.swift */; };
 		B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */; };
+		B327E9622B2EAA6E003BDF76 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327E9612B2EAA6E003BDF76 /* StoreView.swift */; };
+		B327E9642B2EAB3F003BDF76 /* StoreTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */; };
 		B32D8EDB2B1C329200FD5235 /* SpeciesPanelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDA2B1C329200FD5235 /* SpeciesPanelName.swift */; };
 		B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */; };
 		B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */; };
@@ -89,6 +91,7 @@
 		B3CE6F4C2B2268CE006727AB /* ReleaseConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE6F4B2B2268CE006727AB /* ReleaseConfirm.swift */; };
 		B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */; };
 		B3D3FE132B2D57FD00D04D8F /* FocusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D3FE122B2D57FD00D04D8F /* FocusInfo.swift */; };
+		B3D3FE152B2EA14600D04D8F /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D3FE142B2EA14600D04D8F /* CoinView.swift */; };
 		B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */; };
 		B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */; };
 		B3D5529A2B1AD52E0046F4FF /* TreasureProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */; };
@@ -180,6 +183,8 @@
 		B3234E952B150B5F00A730D1 /* DataManager+FocusLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+FocusLog.swift"; sourceTree = "<group>"; };
 		B3234E972B150D4E00A730D1 /* DistributionMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionMode.swift; sourceTree = "<group>"; };
 		B3234E992B15128000A730D1 /* ReviveManager+Dist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Dist.swift"; sourceTree = "<group>"; };
+		B327E9612B2EAA6E003BDF76 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTitle.swift; sourceTree = "<group>"; };
 		B32D8EDA2B1C329200FD5235 /* SpeciesPanelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelName.swift; sourceTree = "<group>"; };
 		B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelName.swift; sourceTree = "<group>"; };
 		B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelImage.swift; sourceTree = "<group>"; };
@@ -250,6 +255,7 @@
 		B3CE6F4B2B2268CE006727AB /* ReleaseConfirm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseConfirm.swift; sourceTree = "<group>"; };
 		B3CE7AFC2B0317E1002472AF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		B3D3FE122B2D57FD00D04D8F /* FocusInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusInfo.swift; sourceTree = "<group>"; };
+		B3D3FE142B2EA14600D04D8F /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringComplete.swift; sourceTree = "<group>"; };
 		B3D552972B1A9BA20046F4FF /* TrainingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAnimation.swift; sourceTree = "<group>"; };
 		B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureProgressBar.swift; sourceTree = "<group>"; };
@@ -359,6 +365,16 @@
 				B3FF6BA32B1BD4E700327E93 /* ItemsListImage.swift */,
 			);
 			path = Exploring;
+			sourceTree = "<group>";
+		};
+		B327E9602B2EAA60003BDF76 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B327E9612B2EAA6E003BDF76 /* StoreView.swift */,
+				B3D3FE142B2EA14600D04D8F /* CoinView.swift */,
+				B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		B32D8ED92B1C327400FD5235 /* Panel */ = {
@@ -619,6 +635,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B327E9602B2EAA60003BDF76 /* Store */,
 				B304B7472B22B7CD0067371D /* Animation */,
 				B349D5E32B09892700270661 /* Analysis */,
 				B349D5D62B09509700270661 /* Setting */,
@@ -915,8 +932,10 @@
 				B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
 				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
+				B327E9642B2EAB3F003BDF76 /* StoreTitle.swift in Sources */,
 				B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */,
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
+				B327E9622B2EAA6E003BDF76 /* StoreView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
 				B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
@@ -945,6 +964,7 @@
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
 				B3BCC2D22B22D7D4008CF924 /* Reminder.swift in Sources */,
 				B3FA42D72AFF1E99009C6C41 /* SpeciesPanelImage.swift in Sources */,
+				B3D3FE152B2EA14600D04D8F /* CoinView.swift in Sources */,
 				B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */,
 				B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */,
 				B3FB817E2B192EDA004CB417 /* MyItems.swift in Sources */,

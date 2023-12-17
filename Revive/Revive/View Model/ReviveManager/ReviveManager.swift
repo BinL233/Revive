@@ -122,7 +122,7 @@ class ReviveManager {
         focusLog = localFocusLog
         selectedTime2 = 0
         
-        sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0)] : localSta
+        sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0, currCoins: 0)] : localSta
         
         currDistTimeSpanSelection = .week
         currDistActionSelection = .total

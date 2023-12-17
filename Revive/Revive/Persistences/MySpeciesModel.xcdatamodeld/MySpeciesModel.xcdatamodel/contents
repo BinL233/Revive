@@ -27,6 +27,7 @@
         <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="StatisticsEntity" representedClassName="StatisticsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="currCoins" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="numOfCoins" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="numOfFinishedMap" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="numOfItems" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
