@@ -11,23 +11,16 @@ struct StoreTitle: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
-        ZStack {
-            Text("Seasome Hu's Store")
-                .font(.custom("Georgia-Italic", size: 40))
-                .padding(15)
+        VStack (spacing: 5) {
+            Text("Seasome Hu's")
+                .font(.custom("Georgia-Italic", size: 35))
                 .bold()
                 .foregroundStyle(Color.cBlack)
-            HStack {
-                Reminder()
-                    .padding(.leading, 5)
-                Spacer()
-                NavigationLink(destination: SettingView()) {
-                    Image(systemName: "gearshape")
-                        .font(.title2)
-                        .foregroundStyle(Color.cBlackBrown)
-                }
-            }
-            .padding(.horizontal, 20)
+            
+            Text("Store")
+                .font(.custom("Georgia-Italic", size: 37))
+                .bold()
+                .foregroundStyle(Color.cBlack)
         }
     }
 }

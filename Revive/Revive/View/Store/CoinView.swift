@@ -11,11 +11,15 @@ struct CoinView: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
-        ZStack {
+        ZStack (alignment: .trailing) {
             Image("CoinsFrame")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 70, height: 70)
+                .frame(width: 130, height: 130)
+            
+            Text("\(manager.sta[0].currCoins)")
+                .foregroundStyle(.white)
+                .offset(CGSize(width: -8, height: 0))
         }
     }
 }

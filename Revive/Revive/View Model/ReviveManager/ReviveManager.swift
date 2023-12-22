@@ -77,6 +77,7 @@ class ReviveManager {
     var isStartButtonDisabled2 : Bool
     var lastBackgroundTime : Date?
     var bgNotification : String?
+    var currCoins : Int
     
     // Setting
     var keepDisplay : Bool
@@ -180,7 +181,7 @@ class ReviveManager {
         isReleaseConfirm = false
         testMode = .off
         standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date())]
-        
+        currCoins = 0
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
         

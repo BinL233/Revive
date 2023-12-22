@@ -154,6 +154,8 @@ struct ExploringComplete: View {
                             .shadow(radius: 0.7, x: 0, y: 2)
                         
                         LazyVGrid(columns: adaptiveCloumns, spacing: 15, content: {
+                            CoinListView(currItemNum: manager.currCoins)
+                            
                             ForEach(Array(manager.currExploringItems.keys), id: \.self) { key in
                                 ItemsListImage(
                                     isUsedforSelection: false,

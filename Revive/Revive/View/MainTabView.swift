@@ -20,14 +20,20 @@ struct MainTabView: View {
     var body: some View {
         ZStack {
             TabView (selection: $selectedTab) {
-                StoreView()
+                FocusView()
                     .tabItem {
-                        Image(systemName: "storefront.fill")
-                        Text("Store")
+                        Image(systemName: "pawprint")
+                        Text("Focus")
                     }
-                    .tag("store")
+                    .tag("focus")
                     .onAppear {
-                        manager.sta = DataManager.shared.loadStaData()
+                        manager.myMaps = DataManager.shared.loadMapData()
+                        manager.mySpecies = DataManager.shared.loadData()
+                        manager.changeSpeciesListSorter()
+                        
+                        if !manager.mySpecies.isEmpty {
+                            manager.currPanelSpecies = manager.mySpecies[0]
+                        }
                     }
                 
                 BackyardView()
@@ -51,20 +57,14 @@ struct MainTabView: View {
                         }
                     }
                 
-                FocusView()
+                StoreView()
                     .tabItem {
-                        Image(systemName: "pawprint")
-                        Text("Focus")
+                        Image(systemName: "storefront.fill")
+                        Text("Store")
                     }
-                    .tag("focus")
+                    .tag("store")
                     .onAppear {
-                        manager.myMaps = DataManager.shared.loadMapData()
-                        manager.mySpecies = DataManager.shared.loadData()
-                        manager.changeSpeciesListSorter()
-                        
-                        if !manager.mySpecies.isEmpty {
-                            manager.currPanelSpecies = manager.mySpecies[0]
-                        }
+                        manager.sta = DataManager.shared.loadStaData()
                     }
                 
                 if !manager.mySpecies.isEmpty {

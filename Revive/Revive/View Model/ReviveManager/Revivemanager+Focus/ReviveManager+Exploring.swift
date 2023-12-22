@@ -97,6 +97,11 @@ extension ReviveManager {
         return rewards
     }
     
+    func getCoins() {
+        let num = Int(selectedTime / 60 / 10)
+        currCoins = num * Int.random(in: getMap(map: currExploringMap!).coins[0]...getMap(map: currExploringMap!).coins[1])
+    }
+    
     func getTreasureRewards() -> [Int:Int] {
         let treasureRewards : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
         var rewards : [Int:Int] = [:]
@@ -175,6 +180,7 @@ extension ReviveManager {
     }
     
     func changeToExploringState1() {
+        currCoins = 0
         currExploringState = .state1
         UIApplication.shared.isIdleTimerDisabled = false
         currPanelSpecies = mySpecies[0]
@@ -193,6 +199,8 @@ extension ReviveManager {
         
         sta[0].totalExploringTime += selectedTime
         sta[0].totalTime += selectedTime
+        sta[0].currCoins += currCoins
+        sta[0].numOfCoins += currCoins
         
         _ = typeUp(increase: true)
         

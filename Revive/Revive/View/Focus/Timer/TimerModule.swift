@@ -161,6 +161,7 @@ extension TimerModule {
 //                }
                 
                 if Int(manager.timeRemaining) == 0 {
+                    manager.getCoins()
                     manager.currExploringItems = manager.getRewards()
                     withAnimation{manager.changeToExploringState2()}
                 }

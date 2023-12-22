@@ -14,6 +14,7 @@ struct ExploringMap : Identifiable, Decodable {
     let rewardPoint : [String:[String:Int]]
     let type : [MapType]
     let rewards : [String:[Int]]
+    let coins : [Int]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -22,6 +23,7 @@ struct ExploringMap : Identifiable, Decodable {
         case rewardPoint = "reward_point"
         case type
         case rewards
+        case coins
     }
     
     static var maps : [ExploringMap]? = {
@@ -38,6 +40,7 @@ extension ExploringMap {
         rewardPoint = try values.decode([String:[String:Int]].self, forKey: .rewardPoint)
         type = try values.decode([MapType].self, forKey: .type)
         rewards = try values.decode([String:[Int]].self, forKey: .rewards)
+        coins = try values.decode([Int].self, forKey: .coins)
     }
 }
 

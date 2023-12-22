@@ -9,6 +9,28 @@ import SwiftUI
 
 struct StoreView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                Background()
+                
+                VStack (spacing: 0) {
+                    StoreTitle()
+                    Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        CoinView()
+                            .padding(.horizontal)
+                    }
+                    .padding(.bottom, -70)
+                    
+                    SeasomeHuStore()
+                    ScrollView {
+                        
+                    }
+                    .background(Color.cBlackBrown)
+                }
+            }
+        }
     }
 }

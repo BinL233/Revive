@@ -104,6 +104,8 @@
 		B3D67D822B1FF890004BA91A /* ReviveWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3D67D702B1FF88F004BA91A /* ReviveWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */; };
 		B3D67D892B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */; };
+		B3E17BA72B2F7B9700F3A808 /* SeasomeHuStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E17BA62B2F7B9700F3A808 /* SeasomeHuStore.swift */; };
+		B3E17BA92B35256000F3A808 /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E17BA82B35256000F3A808 /* CoinListView.swift */; };
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
 		B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */; };
@@ -268,6 +270,8 @@
 		B3D67D7D2B1FF890004BA91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D67D7F2B1FF890004BA91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D67D872B1FF92B004BA91A /* LivePolldWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePolldWidgetAttributes.swift; sourceTree = "<group>"; };
+		B3E17BA62B2F7B9700F3A808 /* SeasomeHuStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasomeHuStore.swift; sourceTree = "<group>"; };
+		B3E17BA82B35256000F3A808 /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
 		B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Statistics.swift"; sourceTree = "<group>"; };
@@ -363,6 +367,7 @@
 				B3D552952B1A8DC60046F4FF /* ExploringComplete.swift */,
 				B3D552992B1AD52E0046F4FF /* TreasureProgressBar.swift */,
 				B3FF6BA32B1BD4E700327E93 /* ItemsListImage.swift */,
+				B3E17BA82B35256000F3A808 /* CoinListView.swift */,
 			);
 			path = Exploring;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				B327E9612B2EAA6E003BDF76 /* StoreView.swift */,
 				B3D3FE142B2EA14600D04D8F /* CoinView.swift */,
 				B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */,
+				B3E17BA62B2F7B9700F3A808 /* SeasomeHuStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -896,6 +902,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E17BA92B35256000F3A808 /* CoinListView.swift in Sources */,
 				B3CD02D12B20BFAB00116384 /* AppDelegate.swift in Sources */,
 				B3FF6BA42B1BD4E700327E93 /* ItemsListImage.swift in Sources */,
 				B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */,
@@ -910,6 +917,7 @@
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
 				B3FF6BA02B1BB78200327E93 /* ReviveManager+Training.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
+				B3E17BA72B2F7B9700F3A808 /* SeasomeHuStore.swift in Sources */,
 				B3CE6F4A2B225558006727AB /* BuffListView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
 				B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */,
