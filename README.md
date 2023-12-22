@@ -59,27 +59,3 @@ The path of life is a circle; the scene's end and beginning are the same. The ex
 ### Notification
   If the time set by users is reached, the user will be alerted via notification.
 
-| Task | Deadline | Status |
-| --- | --- | --- |
-| Screen Mock-up | 10/28/2023 | Finished |
-| Icon | 10/28/2023 | Finished |
-| Design - 5 Items | 11/15/2023 | Finished |
-| Design - 10 Species | 11/15/2023 | Finished |
-| Data Init | 11/19/2023 | Finished |
-| Basic View (Focus, Backyard, Analysis, Setting) | 11/19/2023 | Finished |
-| Feature - Focus - Hatching | 11/19/2023 | Finished |
-| Feature - Focus - Training | 11/19/2023 | Finished |
-| Feature - Backyard - Species Info | 11/19/2023 | Finished |
-| Feature - Analysis - Details | 11/19/2023 | Finished |
-| Feature - Notification | 11/19/2023 | Finished |
-| Test | 11/19/2023 | Finished |
-| Design - 20 Items | 12/05/2023 | Finished |
-| Design - 20 Species | 12/05/2023 | Finished |
-| Feature Reminder | 12/11/2023 | Finished |
-| Feature - Focus - Exploring | 12/11/2023 | Finished |
-| Feature - Backyard - Items | 12/11/2023 | Finished |
-| Feature - Analysis - Distribution | 12/11/2023 | Finished |
-| Feature - Cloud Sync | 12/11/2023 |  |
-| Test | 12/11/2023 |  |
-| Animation |  |
-
