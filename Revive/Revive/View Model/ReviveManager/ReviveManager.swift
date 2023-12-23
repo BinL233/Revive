@@ -29,6 +29,11 @@ class ReviveManager {
     
     var speciesItemsSelection : SpeciesItems
     
+    // Store
+    var storeItems : [StoreItems]
+    var currStoreItems : [StoreItems]
+    var totalStoreItemsProbility : Int
+    
     // Map
     var currExploringMap : MyMaps?
     var myMaps : [MyMaps]
@@ -100,15 +105,24 @@ class ReviveManager {
         let localMyItems = DataManager.shared.loadItemData()
         let localMyMaps = DataManager.shared.loadMapData()
         let localSta = DataManager.shared.loadStaData()
+        let localStoreItems = StoreItems.storeItems ?? []
         
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
+        storeItems = localStoreItems
         
         isScaledSelectView = false
-
+        totalStoreItemsProbility = {
+            var prob = 0
+            for x in localStoreItems {
+                prob += x.probility
+            }
+            return prob
+        }()
+        
         mySpecies = localMySpecies.sorted()
-
+        currStoreItems = []
         myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0)] : localMyMaps
         
         if localMyMaps.isEmpty {
@@ -123,7 +137,7 @@ class ReviveManager {
         focusLog = localFocusLog
         selectedTime2 = 0
         
-        sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0, currCoins: 0)] : localSta
+        sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0, currCoins: 0, storeLvl: 0)] : localSta
         
         currDistTimeSpanSelection = .week
         currDistActionSelection = .total

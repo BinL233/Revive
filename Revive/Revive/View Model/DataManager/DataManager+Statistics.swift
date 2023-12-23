@@ -26,6 +26,7 @@ extension DataManager {
         entity.numOfFinishedMap = Int32(customItem.numOfFinishedMap)
         entity.numOfCoins = Int64(customItem.numOfCoins)
         entity.currCoins = Int64(customItem.currCoins)
+        entity.storeLvl = Int32(customItem.storeLvl)
         
         do {
             try context.save()
@@ -42,7 +43,7 @@ extension DataManager {
         do {
             print("Loading Statistics data...")
             let entities = try context.fetch(fetchRequest)
-            return entities.map { Statistics(totalTime: Int($0.totalTime), totalHatchingTime: Int($0.totalHatchingTime), totalTrainingTime: Int($0.totalTrainingTime), totalExploringTime: Int($0.totalExploringTime), numOfSpecies: Int($0.numOfSpecies), numOfRSpecies: Int($0.numOfRSpecies), numOfSRSpecies: Int($0.numOfSRSpecies), numOfSSRSpecies: Int($0.numOfSSRSpecies), numOfStageTwoSpecies: Int($0.numOfStageTwoSpecies), numOfItems: Int($0.numOfItems), numOfMap: Int($0.numOfMap), numOfFinishedMap: Int($0.numOfFinishedMap), numOfCoins: Int($0.numOfCoins), currCoins: Int($0.currCoins)) }
+            return entities.map { Statistics(totalTime: Int($0.totalTime), totalHatchingTime: Int($0.totalHatchingTime), totalTrainingTime: Int($0.totalTrainingTime), totalExploringTime: Int($0.totalExploringTime), numOfSpecies: Int($0.numOfSpecies), numOfRSpecies: Int($0.numOfRSpecies), numOfSRSpecies: Int($0.numOfSRSpecies), numOfSSRSpecies: Int($0.numOfSSRSpecies), numOfStageTwoSpecies: Int($0.numOfStageTwoSpecies), numOfItems: Int($0.numOfItems), numOfMap: Int($0.numOfMap), numOfFinishedMap: Int($0.numOfFinishedMap), numOfCoins: Int($0.numOfCoins), currCoins: Int($0.currCoins), storeLvl: Int($0.storeLvl)) }
         } catch {
             print("Failed to fetch custom data: \(error)")
             return []

@@ -22,4 +22,5 @@ struct Statistics {
     var numOfFinishedMap : Int
     var numOfCoins : Int
     var currCoins : Int
+    var storeLvl : Int
 }

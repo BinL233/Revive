@@ -1,0 +1,71 @@
+[
+    {
+        "id" : 2004,
+        "name": "Incubator",
+        "probability": 50,
+        "price": 500
+    },
+
+    {
+        "id" : 2005,
+        "name": "Dumbbell",
+        "probability": 50,
+        "price": 500
+    },
+
+    {
+        "id" : 2006,
+        "name": "Pocketwatch",
+        "probability": 50,
+        "price": 500
+    },
+
+    {
+        "id" : 2007,
+        "name": "Compass",
+        "probability": 5,
+        "price": 3000
+    },
+
+    {
+        "id" : 2008,
+        "name": "Cookie",
+        "probability": 250,
+        "price": 50
+    },
+
+    {
+        "id" : 2009,
+        "name": "Meat",
+        "probability": 130,
+        "price": 100
+    },
+
+    {
+        "id" : 2010,
+        "name": "Vegetables",
+        "probability": 130,
+        "price": 100
+    },
+
+    {
+        "id" : 2011,
+        "name": "datepalm",
+        "probability": 70,
+        "price": 250
+    },
+
+    {
+        "id" : 2012,
+        "name": "Berrybush",
+        "probability": 70,
+        "price": 250
+    },
+
+    {
+        "id" : 2013,
+        "name": "Firn",
+        "probability": 70,
+        "price": 250
+    }
+]

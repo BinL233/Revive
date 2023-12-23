@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StoreImage: View {
+struct StoreItemImage: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
