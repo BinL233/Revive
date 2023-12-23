@@ -26,8 +26,12 @@ struct StoreView: View {
                     
                     SeasomeHuStore()
                     ScrollView {
-                        
+                        ForEach(0..<4) { i in
+                            StoreImage()
+                        }
                     }
+                    .padding(.vertical)
+                    .padding(.horizontal, 10)
                     .background(Color.cBlackBrown)
                 }
             }

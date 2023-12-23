@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304B74A2B22B7ED0067371D /* AnimationView.swift */; };
 		B30767802B2BF8E700AF19D0 /* SingleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */; };
+		B3096DD32B37600A0067131D /* StoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3096DD22B37600A0067131D /* StoreImage.swift */; };
 		B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31319882B1FB83A00FFC760 /* ContactUs.swift */; };
 		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
@@ -173,6 +174,7 @@
 /* Begin PBXFileReference section */
 		B304B74A2B22B7ED0067371D /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDetails.swift; sourceTree = "<group>"; };
+		B3096DD22B37600A0067131D /* StoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImage.swift; sourceTree = "<group>"; };
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				B3D3FE142B2EA14600D04D8F /* CoinView.swift */,
 				B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */,
 				B3E17BA62B2F7B9700F3A808 /* SeasomeHuStore.swift */,
+				B3096DD22B37600A0067131D /* StoreImage.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -961,6 +964,7 @@
 				B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */,
 				B3CE6F4C2B2268CE006727AB /* ReleaseConfirm.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
+				B3096DD32B37600A0067131D /* StoreImage.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
 				B30767802B2BF8E700AF19D0 /* SingleDetails.swift in Sources */,
 				B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */,
