@@ -10,13 +10,13 @@ import Foundation
 struct StoreItems : Identifiable, Decodable {
     let id : Int
     let name : String
-    let probility : Int
+    let probability : Int
     let price : Int
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case probility
+        case probability
         case price
     }
     
@@ -30,7 +30,7 @@ extension StoreItems {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
-        probility = try values.decode(Int.self, forKey: .probility)
+        probability = try values.decode(Int.self, forKey: .probability)
         price = try values.decode(Int.self, forKey: .price)
     }
 }

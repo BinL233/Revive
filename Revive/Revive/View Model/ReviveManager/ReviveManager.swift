@@ -32,7 +32,11 @@ class ReviveManager {
     // Store
     var storeItems : [StoreItems]
     var currStoreItems : [StoreItems]
-    var totalStoreItemsProbility : Int
+    var totalStoreItemsProbability : Int
+    var storeItem1 : Int
+    var storeItem2 : Int
+    var storeItem3 : Int
+    var storeItem4 : Int
     
     // Map
     var currExploringMap : MyMaps?
@@ -104,8 +108,15 @@ class ReviveManager {
         let localFocusLog = DataManager.shared.loadLogData()
         let localMyItems = DataManager.shared.loadItemData()
         let localMyMaps = DataManager.shared.loadMapData()
-        let localSta = DataManager.shared.loadStaData()
+        var localSta = DataManager.shared.loadStaData()
         let localStoreItems = StoreItems.storeItems ?? []
+        
+        if localSta.count > 1 {
+            for i in 1..<localSta.count {
+                DataManager.shared.deleteSta(sta: localSta[i])
+            }
+            localSta = DataManager.shared.loadStaData()
+        }
         
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
@@ -113,16 +124,28 @@ class ReviveManager {
         storeItems = localStoreItems
         
         isScaledSelectView = false
-        totalStoreItemsProbility = {
+        totalStoreItemsProbability = {
             var prob = 0
             for x in localStoreItems {
-                prob += x.probility
+                prob += x.probability
             }
             return prob
         }()
         
         mySpecies = localMySpecies.sorted()
-        currStoreItems = []
+        currStoreItems = {
+            var output : [StoreItems] = []
+            
+            if UserDefaults.standard.integer(forKey: "StoreItem1") != 0 {
+                output.append(localStoreItems.first(where: { $0.id == UserDefaults.standard.integer(forKey: "StoreItem1") })!)
+                output.append(localStoreItems.first(where: { $0.id == UserDefaults.standard.integer(forKey: "StoreItem2") })!)
+                output.append(localStoreItems.first(where: { $0.id == UserDefaults.standard.integer(forKey: "StoreItem3") })!)
+                output.append(localStoreItems.first(where: { $0.id == UserDefaults.standard.integer(forKey: "StoreItem4") })!)
+            }
+            
+            return output
+        }()
+        
         myMaps = (localMyMaps.isEmpty) ? [MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0)] : localMyMaps
         
         if localMyMaps.isEmpty {
@@ -136,7 +159,6 @@ class ReviveManager {
         
         focusLog = localFocusLog
         selectedTime2 = 0
-        
         sta = localSta.isEmpty ? [Statistics(totalTime: 0, totalHatchingTime: 0, totalTrainingTime: 0, totalExploringTime: 0, numOfSpecies: 0, numOfRSpecies: 0, numOfSRSpecies: 0, numOfSSRSpecies: 0, numOfStageTwoSpecies: 0, numOfItems: 0, numOfMap: 1, numOfFinishedMap: 0, numOfCoins: 0, currCoins: 0, storeLvl: 0)] : localSta
         
         currDistTimeSpanSelection = .week
@@ -218,6 +240,11 @@ class ReviveManager {
         } else {
             backgroundRunning = UserDefaults.standard.bool(forKey: "backgroundRunning")
         }
+        
+        storeItem1 = UserDefaults.standard.integer(forKey: "StoreItem1") 
+        storeItem2 = UserDefaults.standard.integer(forKey: "StoreItem2")
+        storeItem3 = UserDefaults.standard.integer(forKey: "StoreItem3")
+        storeItem4 = UserDefaults.standard.integer(forKey: "StoreItem4")
         
         userNotificationCenter()
     }

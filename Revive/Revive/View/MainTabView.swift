@@ -64,7 +64,9 @@ struct MainTabView: View {
                     }
                     .tag("store")
                     .onAppear {
-                        manager.sta = DataManager.shared.loadStaData()
+                        if !DataManager.shared.loadStaData().isEmpty {
+                            manager.sta = DataManager.shared.loadStaData()
+                        }
                     }
                 
                 if !manager.mySpecies.isEmpty {
@@ -78,7 +80,9 @@ struct MainTabView: View {
                         .tag("analysis")
                         .onAppear {
                             manager.focusLog = DataManager.shared.loadLogData()
-                            manager.sta = DataManager.shared.loadStaData()
+                            if !DataManager.shared.loadStaData().isEmpty {
+                                manager.sta = DataManager.shared.loadStaData()
+                            }
                         }
                 } else {
                     Text("Let's hatch one Species!")

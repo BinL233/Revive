@@ -239,11 +239,17 @@ extension ReviveManager {
         
         if num > 1 {
             let num2 = myMaps.count
-            for i in 0..<num2 {
+            var i = 0
+            while i < num2 {
                 if myMaps[i].id == 5001 && num > 1 {
                     myMaps.remove(at: i)
                     DataManager.shared.deleteMapData(for: 5001)
                     num -= 1
+                    if num == 1 {
+                        break
+                    }
+                } else {
+                    i += 1
                 }
             }
         }

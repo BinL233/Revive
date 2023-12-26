@@ -23,14 +23,14 @@
     {
         "id" : 2007,
         "name": "Compass",
-        "probability": 5,
+        "probability": 10,
         "price": 3000
     },
 
     {
         "id" : 2008,
         "name": "Cookie",
-        "probability": 250,
+        "probability": 400,
         "price": 50
     },
 

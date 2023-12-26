@@ -11,16 +11,16 @@ struct HatchingView: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
-        VStack {
-            Spacer()
-            Ellipse()
-                .fill(.gray)
-                .opacity(0.5)
-                .frame(width: 90, height: 35)
-                .scaledToFit()
-        }
+        Ellipse()
+            .fill(.gray)
+            .opacity(0.5)
+            .frame(width: 90, height: 35)
+            .scaledToFit()
+            .offset(CGSize(width: 0, height: 46))
+        
         Image(String(manager.currHatchingEgg))
             .resizable()
             .scaledToFit()
+            .frame(width: 120)
     }
 }

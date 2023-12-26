@@ -17,7 +17,6 @@ struct StoreView: View {
                 
                 VStack (spacing: 0) {
                     StoreTitle()
-                    Spacer()
                     
                     HStack {
                         Spacer()
@@ -26,56 +25,70 @@ struct StoreView: View {
                     }
                     .padding(.bottom, -70)
                     
+                    Spacer()
+                    
                     SeasomeHuStore()
                     
-                    if manager.sta[0].storeLvl == 0 {
-                        ScrollView {
-                            Spacer()
-                            Image(systemName: "lock.fill")
-                                .foregroundStyle(Color.cWhite)
-                                .font(.largeTitle)
-                                .padding()
-                                .padding(.top, 50)
-                            
-                            HStack (spacing: 5) {
-                                Image("3001")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 35, height: 35)
-                                Text("1000")
-                                    .bold()
-                                    .foregroundStyle(.white)
-                                    .italic()
-                            }
-                            .padding()
-                            
-                            Button(action: {
-                                manager.sta[0].storeLvl += 1
-                                manager.sta[0].currCoins -= 1000
-                                manager.currStoreItems = manager.getCurrStoreItems()
-                            }, label: {
-                                Text("Unlock")
-                                    .bold()
-                                    .foregroundStyle(Color.cWhite)
-                                    .padding(.horizontal)
-                                    .padding(.vertical, 5)
-                            })
-                            .disabled(manager.sta[0].currCoins >= 1000 ? false : true)
-                            .background(manager.sta[0].currCoins >= 1000 ? Color.cGreen : .gray)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                        }
-                        .disabled(true)
-                        .frame(width: UIScreen.main.bounds.width)
-                        .background(Color.cBlackBrown)
+                    if manager.mySpecies.count == 0 {
+                        Text("Let's hatch one Species!")
+                            .font(.custom("Georgia-Italic", size: 20))
+                            .padding(15)
+                            .padding(.vertical, 80)
+                            .bold()
+                            .foregroundStyle(Color.cBlack)
                     } else {
-                        ScrollView {
-                            ForEach(manager.currStoreItems) { item in
-                                StoreItemImage()
+                        if manager.sta[0].storeLvl == 0 {
+                            NavigationStack {
+                                Spacer()
+                                Image(systemName: "lock.fill")
+                                    .foregroundStyle(Color.cWhite)
+                                    .font(.largeTitle)
+                                    .padding()
+                                    .padding(.top, 50)
+                                
+                                HStack (spacing: 5) {
+                                    Image("3001")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 35, height: 35)
+                                    Text("1000")
+                                        .bold()
+                                        .foregroundStyle(.white)
+                                        .italic()
+                                }
+                                .padding()
+                                
+                                Button(action: {
+                                    manager.sta[0].storeLvl += 1
+                                    manager.sta[0].currCoins -= 1000
+                                    manager.currStoreItems = manager.getCurrStoreItems()
+                                    manager.saveStoreItems()
+                                    manager.saveStaData()
+                                }, label: {
+                                    Text("Unlock")
+                                        .bold()
+                                        .foregroundStyle(Color.cWhite)
+                                        .padding(.horizontal)
+                                        .padding(.vertical, 5)
+                                })
+                                .disabled(!(manager.sta[0].currCoins >= 1000))
+                                .background(manager.sta[0].currCoins >= 1000 ? Color.cGreen : .gray)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                
+                                Spacer()
                             }
+                            .frame(width: UIScreen.main.bounds.width)
+                            .background(Color.cBlackBrown)
+                        } else {
+                            ScrollView {
+                                ForEach(manager.currStoreItems) { item in
+                                    StoreItemImage(item: item)
+                                }
+                            }
+                            .padding(.vertical)
+                            .padding(.horizontal, 10)
+                            .background(Color.cBlackBrown)
                         }
-                        .padding(.vertical)
-                        .padding(.horizontal, 10)
-                        .background(Color.cBlackBrown)
                     }
                 }
             }

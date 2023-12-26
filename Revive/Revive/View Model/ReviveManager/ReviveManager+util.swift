@@ -125,6 +125,7 @@ extension ReviveManager {
     }
     
     func saveStaData() {
+        DataManager.shared.deleteSta(sta: sta[0])
         DataManager.shared.saveStaData(customItem: sta[0])
     }
     
