@@ -14,6 +14,10 @@ extension ReviveManager {
             var rand = Int.random(in: 1...totalStoreItemsProbability)
             for i in 0..<storeItems.count {
                 if rand <= storeItems[i].probability {
+                    if output.contains(where: {$0.id == storeItems[i].id}) {
+                        continue
+                    }
+                    
                     output.append(storeItems[i])
                     break
                 }
