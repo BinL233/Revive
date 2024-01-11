@@ -7,21 +7,27 @@
 
 import SwiftUI
 
-struct ReleaseConfirm: View {
+struct ConfirmView: View {
     @Environment(ReviveManager.self) var manager
+    var title: String
+    var subTitle: String
+    var isHold: Bool = false
+    var yesColor: Color = .green
+    var noColor: Color = .red
+    var method: String
     
     var body: some View {
         VStack {
             VStack {
-                Text("Are you sure to RELEASE")
+                Text(title)
                     .font(.custom("Georgia-Italic", size: 15))
                     .padding(.horizontal, 30)
                     .padding([.top, .horizontal], 7)
                     .bold()
                     .foregroundStyle(Color.cBlackBrown)
-                Text("\(manager.currPanelSpecies?.nickName ?? "")?")
+                Text(subTitle)
                     .font(.custom("Georgia-Italic", size: 15))
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 28)
                     .padding(7)
                     .bold()
                     .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
@@ -30,15 +36,22 @@ struct ReleaseConfirm: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(7)
             
-            Text("(Hold \"YES\" button for 3 seconds)")
-                .font(.custom("Georgia-Italic", size: 13))
-                .padding(.horizontal, 30)
-                .padding(7)
-                .bold()
-                .foregroundStyle(Color.cWhite)
+            if isHold {
+                Text("(Hold \"YES\" button for 3 seconds)")
+                    .font(.custom("Georgia-Italic", size: 13))
+                    .padding(.horizontal, 30)
+                    .padding(7)
+                    .bold()
+                    .foregroundStyle(Color.cWhite)
+            }
+            
             HStack {
                 Button {
-                    withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
+                    if method == "release" {
+                        withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
+                    } else if method == "purchase" {
+                        withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
+                    }
                 } label: {
                     Text("NO")
                         .font(.custom("Georgia-Italic", size: 15))
@@ -47,7 +60,7 @@ struct ReleaseConfirm: View {
                         .bold()
                         .foregroundStyle(Color.cWhite)
                 }
-                .background(.gray)
+                .background(noColor)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(radius: 0.7, x: 2, y: 3)
                 
@@ -61,15 +74,19 @@ struct ReleaseConfirm: View {
                             .bold()
                             .foregroundStyle(Color.cWhite)
                     }
-                    .background(.red)
+                    .background(yesColor)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(radius: 0.7, x: 2, y: 3)
                 }
                 .simultaneousGesture(
-                    LongPressGesture(minimumDuration: 3)
+                    LongPressGesture(minimumDuration: isHold ? 3 : 0)
                         .onEnded { _ in
-                            withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
-                            manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate, action: "Release")
+                            if method == "release" {
+                                withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
+                                manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate, action: "Release")
+                            } else if method == "purchase" {
+                                
+                            }
                         }
                 )
 

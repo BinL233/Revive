@@ -11,6 +11,8 @@ struct StoreView: View {
     @Environment(ReviveManager.self) var manager
     
     var body: some View {
+        @Bindable var manager = manager
+        
         NavigationStack {
             ZStack {
                 Background()
@@ -82,7 +84,7 @@ struct StoreView: View {
                         } else {
                             ScrollView {
                                 ForEach(manager.currStoreItems) { item in
-                                    StoreItemImage(item: item)
+                                    StoreItemImage(item: item, isConfirmViewShow: $manager.isPurchaseConfirmViewShow)
                                 }
                             }
                             .padding(.vertical)
@@ -90,6 +92,13 @@ struct StoreView: View {
                             .background(Color.cBlackBrown)
                         }
                     }
+                }
+                .allowsHitTesting(!manager.isPurchaseConfirmViewShow)
+                
+                if manager.isPurchaseConfirmViewShow {
+                    Color.black.ignoresSafeArea()
+                        .opacity(0.4)
+                    ConfirmView(title: "Do you want to purchase", subTitle: manager.currSelectStoreItem?.name ?? "", method: "purchase")
                 }
             }
         }

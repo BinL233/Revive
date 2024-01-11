@@ -10,10 +10,11 @@ import SwiftUI
 struct StoreItemImage: View {
     @Environment(ReviveManager.self) var manager
     @State var item: StoreItems
+    @Binding var isConfirmViewShow: Bool
     
     var body: some View {
         Button {
-            
+            isConfirmViewShow = true
         } label: {
             ZStack {
                 Image("StoreItems")

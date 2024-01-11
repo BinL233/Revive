@@ -33,6 +33,8 @@ class ReviveManager {
     var storeItems : [StoreItems]
     var currStoreItems : [StoreItems]
     var totalStoreItemsProbability : Int
+    var currSelectStoreItem : StoreItems?
+    var isPurchaseConfirmViewShow: Bool
     var storeItem1 : Int
     var storeItem2 : Int
     var storeItem3 : Int
@@ -220,7 +222,7 @@ class ReviveManager {
         currCoins = 0
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
-        
+        isPurchaseConfirmViewShow = false
         speciesItemsSelection = .Species
         
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
@@ -228,7 +230,7 @@ class ReviveManager {
         currExploringMap = localMyMaps.count == 0 ? MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0) : localMyMaps[0]
         
         isExpGain = false
-        
+        currSelectStoreItem = nil
         keepDisplay = UserDefaults.standard.bool(forKey: "isKeepDisplay")
         reminderOn = UserDefaults.standard.bool(forKey: "isRemindOn")
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
