@@ -59,7 +59,7 @@ extension ReviveManager {
     }
     
     func evolveToNextStage() {
-        let targetSpecies = speciesList[currPanelSpecies!.speciesID+1]
+        let targetSpecies = speciesList[currPanelSpecies!.speciesID]
         let maxHeight = targetSpecies.height.L
         let minHeight = targetSpecies.height.S
         let maxWeight = targetSpecies.weight.L
