@@ -404,6 +404,14 @@
 			path = Panel;
 			sourceTree = "<group>";
 		};
+		B3335ADE2B506ECA006CCA31 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE6F4B2B2268CE006727AB /* ConfirmView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		B349D5D62B09509700270661 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,6 +660,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3335ADE2B506ECA006CCA31 /* SubViews */,
 				B327E9602B2EAA60003BDF76 /* Store */,
 				B304B7472B22B7CD0067371D /* Animation */,
 				B349D5E32B09892700270661 /* Analysis */,
@@ -664,7 +673,6 @@
 				B34F1BD02AF5EFBB00737872 /* DisplayView.swift */,
 				B3C7742B2ACD07B000387FDC /* Background.swift */,
 				B34F1BD22AF5F29200737872 /* MainTabView.swift */,
-				B3CE6F4B2B2268CE006727AB /* ConfirmView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

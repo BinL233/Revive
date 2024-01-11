@@ -101,7 +101,7 @@
     
     {
         "id" : 2011,
-        "name": "datepalm",
+        "name": "Datepalm",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
         "amount": [1000],

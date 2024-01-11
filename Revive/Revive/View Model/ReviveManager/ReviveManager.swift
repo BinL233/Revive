@@ -35,6 +35,7 @@ class ReviveManager {
     var totalStoreItemsProbability : Int
     var currSelectStoreItem : StoreItems?
     var isPurchaseConfirmViewShow: Bool
+    var isInsufficientGoldViewShow: Bool
     var storeItem1 : Int
     var storeItem2 : Int
     var storeItem3 : Int
@@ -224,7 +225,7 @@ class ReviveManager {
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
         isPurchaseConfirmViewShow = false
         speciesItemsSelection = .Species
-        
+        isInsufficientGoldViewShow = false
         currTrainingSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currExploringSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currExploringMap = localMyMaps.count == 0 ? MyMaps(id: 5001, isFinished: false, finishedTimes: 0, currTime: 0, totalTime: 0) : localMyMaps[0]

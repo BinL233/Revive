@@ -15,6 +15,7 @@ struct StoreItemImage: View {
     var body: some View {
         Button {
             isConfirmViewShow = true
+            manager.currSelectStoreItem = item
         } label: {
             ZStack {
                 Image("StoreItems")

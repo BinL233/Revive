@@ -39,4 +39,26 @@ extension ReviveManager {
     func getStoreItem(id: Int) -> StoreItems {
         return storeItems.first(where: { $0.id == id })!
     }
+    
+    func addStoreItemToBag() {
+        cost()
+        
+        if myItems.contains(where: { $0.id == currSelectStoreItem?.id }) {
+            for i in 0..<myItems.count {
+                if myItems[i].id == currSelectStoreItem?.id {
+                    myItems[i].amount += 1
+                    updateItemAmount(id: myItems[i].id, newAmount: myItems[i].amount)
+                }
+            }
+        } else {
+            myItems.append(MyItems(id: currSelectStoreItem?.id ?? 0, amount: 1))
+            saveNewItem(id: currSelectStoreItem?.id ?? 0, amount: 1)
+        }
+    }
+    
+    func cost() {
+        sta[0].currCoins -= currSelectStoreItem?.price ?? 0
+        deleteStaData()
+        saveStaData()
+    }
 }

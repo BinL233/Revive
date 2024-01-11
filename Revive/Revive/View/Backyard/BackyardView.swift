@@ -24,7 +24,7 @@ struct BackyardView: View {
             }
             
             if manager.isReleaseConfirm {
-                ConfirmView(title: "Are you sure to RELEASE", subTitle: "\(manager.currPanelSpecies?.nickName ?? "")?", isHold: true, yesColor: .red, noColor: .gray, method: "release")
+                ConfirmView(title: "Are you sure to RELEASE", subTitle: "\(manager.currPanelSpecies?.nickName ?? "")", isHold: true, yesColor: .red, noColor: .gray, method: "release")
             }
         }
     }
