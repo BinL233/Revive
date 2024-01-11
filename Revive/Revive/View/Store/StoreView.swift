@@ -100,6 +100,10 @@ struct StoreView: View {
                         .opacity(0.4)
                     ConfirmView(title: "Do you want to purchase", subTitle: manager.currSelectStoreItem?.name ?? "", method: "purchase")
                 }
+                
+                if manager.isInsufficientGoldViewShow {
+                    ConfirmView(title: "Insufficient Gold", subTitle: "", method: "Insufficient Gold")
+                }
             }
         }
     }

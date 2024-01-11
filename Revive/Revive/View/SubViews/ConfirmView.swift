@@ -27,14 +27,15 @@ struct ConfirmView: View {
                     .foregroundStyle(Color.cBlackBrown)
                 Text(subTitle)
                     .font(.custom("Georgia-Italic", size: 15))
-                    .padding(.horizontal, 28)
+                    .padding(.horizontal, 32)
                     .padding(7)
                     .bold()
                     .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
             }
-                .background(Color.cWhite)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding(7)
+            .padding(.vertical)
+            .background(Color.cWhite)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(7)
             
             if isHold {
                 Text("(Hold \"YES\" button for 3 seconds)")
@@ -46,28 +47,30 @@ struct ConfirmView: View {
             }
             
             HStack {
-                Button {
-                    if method == "release" {
-                        withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
-                    } else if method == "purchase" {
-                        withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
+                if method != "Insufficient Gold" {
+                    Button {
+                        if method == "release" {
+                            withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
+                        } else if method == "purchase" {
+                            withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
+                        }
+                    } label: {
+                        Text("NO")
+                            .font(.custom("Georgia-Italic", size: 15))
+                            .padding(.horizontal, 30)
+                            .padding(7)
+                            .bold()
+                            .foregroundStyle(Color.cWhite)
                     }
-                } label: {
-                    Text("NO")
-                        .font(.custom("Georgia-Italic", size: 15))
-                        .padding(.horizontal, 30)
-                        .padding(7)
-                        .bold()
-                        .foregroundStyle(Color.cWhite)
+                    .background(noColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: 0.7, x: 2, y: 3)
                 }
-                .background(noColor)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(radius: 0.7, x: 2, y: 3)
                 
                 ZStack {
                     Button {
                     } label: {
-                        Text("YES")
+                        Text(method == "Insufficient Gold" ? "Confirm" : "YES")
                             .font(.custom("Georgia-Italic", size: 15))
                             .padding(.horizontal, 30)
                             .padding(7)
@@ -85,7 +88,15 @@ struct ConfirmView: View {
                                 withAnimation(.bouncy(duration: 0.3)) { manager.isReleaseConfirm.toggle() }
                                 manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate, action: "Release")
                             } else if method == "purchase" {
-                                
+                                withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
+                                if manager.sta[0].currCoins < manager.currSelectStoreItem?.price ?? 0 {
+                                    manager.isInsufficientGoldViewShow = true
+                                } else {
+                                    manager.addStoreItemToBag()
+                                    manager.currSelectStoreItem = nil
+                                }
+                            } else {
+                                withAnimation(.bouncy(duration: 0.3)) { manager.isInsufficientGoldViewShow.toggle() }
                             }
                         }
                 )
