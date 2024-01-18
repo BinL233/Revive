@@ -44,11 +44,12 @@ struct StoreItemImage: View {
                         
                         Text("\(item.price)")
                             .font(.title3)
-                            .foregroundStyle(Color.cBlackBrown)
+                            .foregroundStyle((manager.sta[0].currCoins >= item.price) ? Color.cBlackBrown : .red)
                     }
                 }
                 .padding(.horizontal)
             }
         }
+        .disabled(manager.sta[0].currCoins < item.price)
     }
 }

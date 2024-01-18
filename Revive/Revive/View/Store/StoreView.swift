@@ -21,6 +21,8 @@ struct StoreView: View {
                     StoreTitle()
                     
                     HStack {
+                        StoreItemsShuffle()
+                            .padding(.horizontal)
                         Spacer()
                         CoinView()
                             .padding(.horizontal)
