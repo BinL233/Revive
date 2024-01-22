@@ -12,16 +12,24 @@ struct StoreItemsShuffle: View {
     
     var body: some View {
         HStack {
-            Button(action: {manager.currStoreItems = manager.getCurrStoreItems()}, label: {
+            Button(action: {
+                if manager.sta[0].currCoins >= 100 {
+                    manager.currStoreItems = manager.getCurrStoreItems()
+                    manager.sta[0].currCoins -= 100
+                    manager.deleteStaData()
+                    manager.saveStaData()
+                }
+            }, label: {
                 Image(systemName: "arrow.triangle.2.circlepath")
                     .font(.headline)
                     .foregroundStyle(.white)
                     .bold()
                     .padding(8)
-                    .background(Color.cGreen)
+                    .background(manager.sta[0].currCoins >= 100 ? Color.cGreen : .gray)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             })
             .padding(.trailing, 5)
+            .disabled(manager.sta[0].currCoins < 100)
             
             HStack (spacing: 5) {
                 Image("3001")

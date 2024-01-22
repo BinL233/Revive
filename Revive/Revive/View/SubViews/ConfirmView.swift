@@ -101,6 +101,9 @@ struct ConfirmView: View {
                                 withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
                                 manager.addStoreItemToBag()
                                 manager.currSelectStoreItem = nil
+                                manager.currStoreItems = manager.getCurrStoreItems()
+                                manager.deleteStaData()
+                                manager.saveStaData()
                             } else {
                                 withAnimation(.bouncy(duration: 0.3)) { manager.isInsufficientGoldViewShow.toggle() }
                             }
