@@ -25,12 +25,22 @@ struct ConfirmView: View {
                     .padding([.top, .horizontal], 7)
                     .bold()
                     .foregroundStyle(Color.cBlackBrown)
-                Text(subTitle)
-                    .font(.custom("Georgia-Italic", size: 15))
-                    .padding(.horizontal, 32)
-                    .padding(7)
-                    .bold()
-                    .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
+                
+                if method == "release" {
+                    Text(subTitle)
+                        .font(.custom("Georgia-Italic", size: 15))
+                        .padding(.horizontal, 32)
+                        .padding(7)
+                        .bold()
+                        .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
+                } else {
+                    Text(subTitle)
+                        .font(.custom("Georgia-Italic", size: 15))
+                        .padding(.horizontal, 32)
+                        .padding(7)
+                        .bold()
+                        .foregroundStyle(.black)
+                }
             }
             .padding(.vertical)
             .background(Color.cWhite)
@@ -89,12 +99,11 @@ struct ConfirmView: View {
                                 manager.deleteSpecies(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate, action: "Release")
                             } else if method == "purchase" {
                                 withAnimation(.bouncy(duration: 0.3)) { manager.isPurchaseConfirmViewShow.toggle() }
-                                if manager.sta[0].currCoins < manager.currSelectStoreItem?.price ?? 0 {
-                                    manager.isInsufficientGoldViewShow = true
-                                } else {
-                                    manager.addStoreItemToBag()
-                                    manager.currSelectStoreItem = nil
-                                }
+                                manager.addStoreItemToBag()
+                                manager.currSelectStoreItem = nil
+                                manager.currStoreItems = manager.getCurrStoreItems()
+                                manager.deleteStaData()
+                                manager.saveStaData()
                             } else {
                                 withAnimation(.bouncy(duration: 0.3)) { manager.isInsufficientGoldViewShow.toggle() }
                             }

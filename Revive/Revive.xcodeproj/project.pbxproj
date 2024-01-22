@@ -67,6 +67,7 @@
 		B39D622C2B201917001BFA00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C774022ACCE69A00387FDC /* Preview Assets.xcassets */; };
 		B39D622D2B201934001BFA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
 		B39D62352B201965001BFA00 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7742F2ACD0BA000387FDC /* Color.swift */; };
+		B3A481C42B59C0CF00FE7310 /* StoreItemsShuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A481C32B59C0CF00FE7310 /* StoreItemsShuffle.swift */; };
 		B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */; };
 		B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */; };
 		B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */; };
@@ -234,6 +235,7 @@
 		B39D61D52B200BCF001BFA00 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
 		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
 		B39D62372B20203C001BFA00 /* Revive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Revive.entitlements; sourceTree = "<group>"; };
+		B3A481C32B59C0CF00FE7310 /* StoreItemsShuffle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsShuffle.swift; sourceTree = "<group>"; };
 		B3A9B14F2AFB3E4A002C25F5 /* HatchingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingComplete.swift; sourceTree = "<group>"; };
 		B3AD15FF2B211A3D003D13EE /* SpeciesEvolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesEvolve.swift; sourceTree = "<group>"; };
 		B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardListSorter.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				B327E9632B2EAB3F003BDF76 /* StoreTitle.swift */,
 				B3E17BA62B2F7B9700F3A808 /* SeasomeHuStore.swift */,
 				B3096DD22B37600A0067131D /* StoreItemImage.swift */,
+				B3A481C32B59C0CF00FE7310 /* StoreItemsShuffle.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
 				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
 				B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */,
+				B3A481C42B59C0CF00FE7310 /* StoreItemsShuffle.swift in Sources */,
 				B3D5529A2B1AD52E0046F4FF /* TreasureProgressBar.swift in Sources */,
 				B3FB81822B192F9F004CB417 /* DataManager+Map.swift in Sources */,
 				B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */,
