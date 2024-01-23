@@ -22,6 +22,7 @@ struct FocusSetting: View {
                         .onChange(of: manager.keepDisplay) { oldValue, newValue in
                             manager.keepDisplay = newValue
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
+                            manager.setDisplay()
                         }
                 }
                 
