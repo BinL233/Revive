@@ -127,5 +127,105 @@
         "amount": [1000],
         "description": "An ice with more density.",
         "function": "Special reward in Glacier, 1000 EXP."
+    },
+
+    {
+        "id" : 2014,
+        "name": "Obsidian",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2015,
+        "name": "Cloud",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2016,
+        "name": "Guanabana",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2017,
+        "name": "Seaweed",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2018,
+        "name": "Seashell",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2019,
+        "name": "Acorn",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2020,
+        "name": "Gemstone",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2021,
+        "name": "Lollipop",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2022,
+        "name": "Toast",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "",
+        "function": ""
+    },
+
+    {
+        "id" : 2023,
+        "name": "Croissant",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "",
+        "function": ""
     }
 ]
