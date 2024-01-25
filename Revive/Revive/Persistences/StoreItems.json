@@ -67,5 +67,26 @@
         "name": "Firn",
         "probability": 70,
         "price": 250
+    },
+
+    {
+        "id" : 2021,
+        "name": "Lollipop",
+        "probability": 400,
+        "price": 50
+    },
+
+    {
+        "id" : 2022,
+        "name": "Toast",
+        "probability": 400,
+        "price": 50
+    },
+
+    {
+        "id" : 2023,
+        "name": "Croissant",
+        "probability": 400,
+        "price": 50
     }
 ]
