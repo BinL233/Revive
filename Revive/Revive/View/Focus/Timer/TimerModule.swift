@@ -12,7 +12,7 @@ import ActivityKit
 
 struct TimerModule: View {
     @Environment(ReviveManager.self) var manager
-    @State private var timer : AnyCancellable?
+    // @State private var timer : AnyCancellable?
     @Environment(WidgetManager.self) var widgetManager
     @Environment(\.scenePhase) private var scenePhase
     
@@ -35,6 +35,11 @@ struct TimerModule: View {
                 ProgressBar(percent: percentBinding)
                     .animation(.spring, value: manager.timeRemaining)
                     .padding(5)
+                    .onAppear() {
+                        if (Double(manager.selectedTime) == manager.timeRemaining) {
+                            manager.timerStart()
+                        }
+                    }
                     .onChange(of: scenePhase) { oldValue, newScenePhase in
                         switch newScenePhase {
                         case .background:
@@ -80,21 +85,14 @@ struct TimerModule: View {
 //                }
 
             }
+            
             Text(manager.timeStringGetter())
                 .bold()
                 .italic()
                 .font(.system(size: 35))
                 .foregroundStyle(Color.cBlackBrown)
-                .onAppear {
-                    timer?.cancel()
-                    timer = Timer.publish(every: manager.testMode == .on ? 0.001 : 1, on: .main, in: .common)
-                        .autoconnect()
-                        .sink { _ in
-                            timerTick()
-                        }
-                }
-                .onDisappear {
-                    timer?.cancel()
+                .onChange(of: manager.timeStringGetter()) {
+                    timerTick()
                 }
         }
     }
@@ -102,8 +100,7 @@ struct TimerModule: View {
 
 extension TimerModule {
     func timerTick() {
-        if manager.isTimerStart && manager.timeRemaining > 0 {
-            manager.timeRemaining -= 1
+        if manager.isTimerStart {
             
             // For Hatching
             if manager.currAction == .hatching {
@@ -122,7 +119,7 @@ extension TimerModule {
 //                    Task {
 //                        await widgetManager.timeRemainingAct?.update(content)
 //                    }
-                    
+                    manager.focusTimer?.cancel()
                     withAnimation{manager.changeToHatchingState3()}
                     
                 } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
@@ -147,6 +144,7 @@ extension TimerModule {
 //                }
                 
                 if Int(manager.timeRemaining) == 0 {
+                    manager.focusTimer?.cancel()
                     let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!, exp: manager.selectedTime)
                     withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
 //                                    }
@@ -161,6 +159,7 @@ extension TimerModule {
 //                }
                 
                 if Int(manager.timeRemaining) == 0 {
+                    manager.focusTimer?.cancel()
                     manager.getCoins()
                     manager.currExploringItems = manager.getRewards()
                     withAnimation{manager.changeToExploringState2()}

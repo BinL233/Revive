@@ -25,7 +25,7 @@ struct StoreItemsShuffle: View {
                     .foregroundStyle(.white)
                     .bold()
                     .padding(8)
-                    .background(manager.sta[0].currCoins >= 100 ? Color.cGreen : .gray)
+                    .background((manager.sta[0].currCoins >= 100 && manager.sta[0].storeLvl > 0) ? Color.cGreen : .gray)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             })
             .padding(.trailing, 5)
