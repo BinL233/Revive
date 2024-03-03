@@ -10,9 +10,12 @@ import Observation
 import CoreData
 import SwiftUI
 import ActivityKit
+import Combine
 
 @Observable
 class ReviveManager {
+    var focusTimer : AnyCancellable?
+    
     // Total list
     var speciesList : [Species]
     var mapList : [ExploringMap]

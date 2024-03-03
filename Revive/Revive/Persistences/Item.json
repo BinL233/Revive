@@ -117,15 +117,5 @@
         "amount": [1000],
         "description": "I have more than 1000 relatives on a single bunch.",
         "function": "Special reward in Desert area, 1000 EXP."
-    },
-
-    {
-        "id" : 2013,
-        "name": "Firn",
-        "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
-        "description": "An ice with more density.",
-        "function": "Special reward in Glacier, 1000 EXP."
     }
 ]

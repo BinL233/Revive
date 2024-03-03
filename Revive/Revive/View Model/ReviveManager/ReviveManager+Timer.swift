@@ -20,4 +20,14 @@ extension ReviveManager {
         
         return String(format: "%02d", hour) + ":" + String(format: "%02d", min) + ":" + String(format: "%02d", sec)
     }
+    
+    func timerStart() {
+        focusTimer?.cancel()
+        focusTimer = Timer.publish(every: testMode == .on ? 0.001 : 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                self.timeRemaining -= 1
+            }
+    }
+
 }

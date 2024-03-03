@@ -131,6 +131,7 @@ struct StartButton: View {
                         
                         manager.updatePendingItem()
                         manager.resetBuffRate()
+                        manager.focusTimer?.cancel()
                     },
                     secondaryButton: .cancel() {
                         manager.activeAlert = .none
