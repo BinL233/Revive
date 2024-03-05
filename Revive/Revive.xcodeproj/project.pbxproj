@@ -58,6 +58,8 @@
 		B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */; };
 		B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
+		B35D00482B96C91A00F44AD1 /* TutorialFocusHatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D00472B96C91A00F44AD1 /* TutorialFocusHatching.swift */; };
+		B35D004A2B96CA3100F44AD1 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B35D00492B96CA3100F44AD1 /* Item.json */; };
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
 		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
@@ -127,7 +129,6 @@
 		B3FB81852B193C1F004CB417 /* ItemBYListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81842B193C1F004CB417 /* ItemBYListImage.swift */; };
 		B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB81862B19421E004CB417 /* MapListImage.swift */; };
 		B3FB819B2B19920B004CB417 /* ExploringMap.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81982B19920A004CB417 /* ExploringMap.json */; };
-		B3FB819C2B19920B004CB417 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB81992B19920A004CB417 /* Item.json */; };
 		B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819A2B19920B004CB417 /* SpeciesInfo.json */; };
 		B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FB819E2B199212004CB417 /* Assets.xcassets */; };
 		B3FF6B9B2B1BB71000327E93 /* SpeciesPanelActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FF6B9A2B1BB71000327E93 /* SpeciesPanelActionButtons.swift */; };
@@ -228,6 +229,8 @@
 		B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesInfo.swift; sourceTree = "<group>"; };
 		B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Items.swift"; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B35D00472B96C91A00F44AD1 /* TutorialFocusHatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFocusHatching.swift; sourceTree = "<group>"; };
+		B35D00492B96CA3100F44AD1 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Item.json; sourceTree = "<group>"; };
 		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
 		B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListView.swift; sourceTree = "<group>"; };
@@ -298,7 +301,6 @@
 		B3FB81842B193C1F004CB417 /* ItemBYListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBYListImage.swift; sourceTree = "<group>"; };
 		B3FB81862B19421E004CB417 /* MapListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListImage.swift; sourceTree = "<group>"; };
 		B3FB81982B19920A004CB417 /* ExploringMap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExploringMap.json; sourceTree = "<group>"; };
-		B3FB81992B19920A004CB417 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Item.json; sourceTree = "<group>"; };
 		B3FB819A2B19920B004CB417 /* SpeciesInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesInfo.json; sourceTree = "<group>"; };
 		B3FB819E2B199212004CB417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3FF6B9A2B1BB71000327E93 /* SpeciesPanelActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanelActionButtons.swift; sourceTree = "<group>"; };
@@ -441,9 +443,9 @@
 		B34F1BB92AF5C27B00737872 /* Persistences */ = {
 			isa = PBXGroup;
 			children = (
+				B35D00492B96CA3100F44AD1 /* Item.json */,
 				B3096DD42B3764C80067131D /* StoreItems.json */,
 				B3FB81982B19920A004CB417 /* ExploringMap.json */,
-				B3FB81992B19920A004CB417 /* Item.json */,
 				B3FB819A2B19920B004CB417 /* SpeciesInfo.json */,
 				B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */,
 				B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */,
@@ -506,6 +508,14 @@
 				B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		B35D00462B96C8AC00F44AD1 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B35D00472B96C91A00F44AD1 /* TutorialFocusHatching.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		B3629B002AFDDD6300F3D135 /* Backyard */ = {
@@ -663,6 +673,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B35D00462B96C8AC00F44AD1 /* Tutorial */,
 				B3335ADE2B506ECA006CCA31 /* SubViews */,
 				B327E9602B2EAA60003BDF76 /* Store */,
 				B304B7472B22B7CD0067371D /* Animation */,
@@ -885,7 +896,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FB819C2B19920B004CB417 /* Item.json in Resources */,
+				B35D004A2B96CA3100F44AD1 /* Item.json in Resources */,
 				B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
 				B3096DD52B3764C80067131D /* StoreItems.json in Resources */,
@@ -958,6 +969,7 @@
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
 				B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */,
 				B3234E9A2B15128000A730D1 /* ReviveManager+Dist.swift in Sources */,
+				B35D00482B96C91A00F44AD1 /* TutorialFocusHatching.swift in Sources */,
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,

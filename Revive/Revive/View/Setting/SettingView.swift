@@ -17,7 +17,7 @@ struct SettingView: View {
                 Background()
                 Form {
                     FocusSetting()
-                    ReminderSetting()
+                    // ReminderSetting()
                     ContactUs()
                 }
                 .scrollContentBackground(.hidden)
