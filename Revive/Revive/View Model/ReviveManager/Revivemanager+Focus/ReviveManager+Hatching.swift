@@ -31,8 +31,16 @@ extension ReviveManager {
         return speciesList[filteredSpeciesIDs[randomSpecies] - 1]
     }
     
+    func newUsergetSpecies() -> Species{
+        return speciesList[6]
+    }
+    
 
     func hatchingStartButton() -> Species {
+        if (checkNoSpecies()) {
+            return newUsergetSpecies()
+        }
+        
         if isHatchingBuff {
             timeRemaining = timeRemaining * hatchingBuffRate
         }

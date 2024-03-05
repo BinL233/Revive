@@ -12,7 +12,3 @@ struct Background: View {
         Color.init(red: 0.9412, green: 0.9294, blue: 0.8941).ignoresSafeArea()
     }
 }
-
-#Preview {
-    Background()
-}

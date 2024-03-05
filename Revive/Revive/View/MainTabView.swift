@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @State private var selectedTab = "focus"
+    @State private var isTutorialHFinished = false
     @Environment(ReviveManager.self) var manager
     @Binding var isTestModeOn : Bool
     
@@ -104,6 +105,10 @@ struct MainTabView: View {
                 } else {
                     manager.testMode = .off
                 }
+            }
+            
+            if (manager.checkNoSpecies() && !isTutorialHFinished) {
+                TutorialFocusHatching(isTutorialHFinished: $isTutorialHFinished)
             }
         }
     }

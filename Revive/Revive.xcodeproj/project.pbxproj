@@ -76,6 +76,7 @@
 		B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16052B215F83003D13EE /* SpeciesFeed.swift */; };
 		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
 		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
+		B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */; };
 		B3BCC2D22B22D7D4008CF924 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCC2D12B22D7D3008CF924 /* Reminder.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
@@ -245,6 +246,7 @@
 		B3AD16052B215F83003D13EE /* SpeciesFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesFeed.swift; sourceTree = "<group>"; };
 		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
+		B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Tutorial.swift"; sourceTree = "<group>"; };
 		B3BCC2D12B22D7D3008CF924 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 				B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */,
 				B3096DD82B3767020067131D /* ReviveManager+Store.swift */,
+				B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -975,6 +978,7 @@
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
 				B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
+				B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */,
 				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
 				B327E9642B2EAB3F003BDF76 /* StoreTitle.swift in Sources */,
 				B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */,

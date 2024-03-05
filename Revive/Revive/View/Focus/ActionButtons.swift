@@ -21,14 +21,14 @@ struct ActionButtons: View {
                     }
                 }) {
                     Text("Hatching")
-                        .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 30*60) ? .gray : Color.cBlack})
+                        .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies()) ? .gray : Color.cBlack})
                         .font(.custom("Georgia-Italic", size: 15))
                 }
                 .padding(15)
                 .background((manager.currAction == .hatching) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .disabled(!manager.isTimerStart && manager.timeRemaining < 30*60)
+                .disabled(!manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies())
             }
             
             if ((manager.currAction == .training) || !manager.isTimerStart) {
@@ -40,13 +40,14 @@ struct ActionButtons: View {
                     withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = false}
                 }) {
                     Text("Training")
-                        .foregroundStyle(Color.cBlack)
+                        .foregroundStyle(withAnimation{(manager.checkNoSpecies()) ? .gray : Color.cBlack})
                         .font(.custom("Georgia-Italic", size: 15))
                 }
                 .padding(15)
                 .background((manager.currAction == .training) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
+                .disabled(manager.checkNoSpecies())
             }
             
             if ((manager.currAction == .exploring) || !manager.isTimerStart) {
@@ -60,14 +61,14 @@ struct ActionButtons: View {
                     withAnimation(.bouncy(duration: 0.4)){manager.isScaledSelectView = true}
                 }) {
                     Text("Exploring")
-                        .foregroundStyle(withAnimation{(!manager.isTimerStart && manager.timeRemaining < 10*60) ? .gray : Color.cBlack})
+                        .foregroundStyle(withAnimation{((!manager.isTimerStart && manager.timeRemaining < 10*60) || manager.checkNoSpecies()) ? .gray : Color.cBlack})
                         .font(.custom("Georgia-Italic", size: 15))
                 }
                 .padding(15)
                 .background((manager.currAction == .exploring) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .disabled(!manager.isTimerStart && manager.timeRemaining < 10*60)
+                .disabled((!manager.isTimerStart && manager.timeRemaining < 10*60) || manager.checkNoSpecies())
             }
         }
     }
