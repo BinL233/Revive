@@ -117,5 +117,133 @@
         "amount": [1000],
         "description": "I have more than 1000 relatives on a single bunch.",
         "function": "Special reward in Desert area, 1000 EXP."
+    },
+
+    {
+        "id" : 2013,
+        "name": "Firn",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "An ice with more density.",
+        "function": "Special reward in Glacier area, 1000 EXP."
+    },
+
+    {
+        "id" : 2014,
+        "name": "Obsidian",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Formed by rapid cooling of lava.",
+        "function": "Special reward in Volcano area, 1000 EXP."
+    },
+
+    {
+        "id" : 2015,
+        "name": "Cloud",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Will become marshmellow if add some sugar.",
+        "function": "Special reward in Sky area, 1000 EXP."
+    },
+
+    {
+        "id" : 2016,
+        "name": "Guanabana",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Another name for me is Soursop, but I'm not sour.",
+        "function": "Special reward in Rainforest area, 1000 EXP."
+    },
+
+    {
+        "id" : 2017,
+        "name": "Seaweed",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Nori always tastes good...and healthy!",
+        "function": "Special reward in Ocean area, 1000 EXP."
+    },
+
+    {
+        "id" : 2018,
+        "name": "Seashell",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Hear the voice of the sea.",
+        "function": "Special reward in Beach area, 1000 EXP."
+    },
+
+    {
+        "id" : 2019,
+        "name": "Acorn",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Special reward in Mountain area, 1000 EXP.",
+        "function": "Guess who hides me here?"
+    },
+
+    {
+        "id" : 2020,
+        "name": "Gemstone",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [1000],
+        "description": "Aways iridescent.",
+        "function": "Special reward in Wetland area, 1000 EXP."
+    },
+
+    {
+        "id" : 2021,
+        "name": "Lollipop",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "Beware of cavity.",
+        "function": "100 EXP for any species."
+    },
+
+    {
+        "id" : 2022,
+        "name": "Toast",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "What topping makes the best toast?",
+        "function": "100 EXP for any species."
+    },
+
+    {
+        "id" : 2023,
+        "name": "Croissant",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "Glad there isn't a cow in the world who knows the law.",
+        "function": "100 EXP for any species."
+    },
+    {
+        "id" : 2024,
+        "name": "Baozi",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "Dangerously tasty steamed bao buns.",
+        "function": "100 EXP for any species."
+    },
+    {
+        "id" : 2025,
+        "name": "pizza",
+        "trait": ["carnivore", "herbivore", "omnivore"],
+        "function_type": ["exp"],
+        "amount": [100],
+        "description": "Cheese always be my best bud.",
+        "function": "100 EXP for any species."
     }
 ]
