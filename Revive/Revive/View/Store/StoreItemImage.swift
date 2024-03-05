@@ -30,9 +30,23 @@ struct StoreItemImage: View {
                     
                     Spacer()
                     
-                    Text("\(item.name)")
-                        .font(.title3)
-                        .foregroundStyle(Color.cBlackBrown)
+                    VStack {
+                        
+                        Spacer()
+
+                        Text("\(item.name)")
+                            .font(.title3)
+                            .foregroundStyle(Color.cBlackBrown)
+
+                        Text("\(manager.getItem(id: item.id).function)")
+                            .font(.caption2)
+                            .foregroundStyle(Color.cBlack)
+                            .padding(3)
+                            .background(Color.cLightBrown.opacity(0.4))
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                        
+                        Spacer()
+                    }
                     
                     Spacer()
                     
