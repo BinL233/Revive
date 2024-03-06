@@ -1,5 +1,3 @@
-import json
-
 def create(speciesID, action, startID, endID, interval):
     data = []
     i = 0

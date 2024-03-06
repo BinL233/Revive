@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct SeasomeHuStore: View {
+    @Environment(ReviveManager.self) var manager
+    @State var animationType: String = "idle"
+    
     var body: some View {
-        let frames = ["idle_000", "idle_006", "idle_012", "idle_018", "idle_024", "idle_030", "idle_036", "idle_042", "idle_048", "idle_054", "idle_060", "idle_066", "idle_072", "idle_078", "idle_084", "idle_090", "idle_096", "idle_102", "idle_108", "idle_114", "idle_120", "idle_126", "idle_132", "idle_138", "idle_144", "idle_150", "idle_156", "idle_162", "idle_168", "idle_174", "idle_180", "idle_186", "idle_192", "idle_198", "idle_204", "idle_210"]
+        let framesIdle = manager.animations.id["4001"]?.idle
+        let framesPurchase = manager.animations.id["4001"]?.purchase
+        let framesTouch = manager.animations.id["4001"]?.touch
+        
         
 //        Image("4001")
 //            .resizable()
@@ -17,6 +23,29 @@ struct SeasomeHuStore: View {
 //            .frame(width: UIScreen.main.bounds.width)
 //            .clipped()
         
-        StoreAnimationView(frames: frames)
+        ZStack {
+            if animationType == "idle" {
+                if let frames = framesIdle {
+                    StoreAnimationView(frames: frames, isIdle: true, animationType: $animationType)
+                }
+            } else if animationType == "purchase" {
+                if let frames = framesPurchase {
+                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
+                }
+            } else {
+                if let frames = framesTouch {
+                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
+                }
+            }
+            
+            Circle()
+                .frame(width: 150, height: 150)
+                .foregroundStyle(Color.cWhite.opacity(0.01))
+                .onTapGesture {
+                    if let frames = framesTouch {
+                        animationType = "touch"
+                    }
+                }
+        }
     }
 }
