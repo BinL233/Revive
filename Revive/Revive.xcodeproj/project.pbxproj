@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304B74A2B22B7ED0067371D /* AnimationView.swift */; };
+		B304B74B2B22B7ED0067371D /* StoreAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304B74A2B22B7ED0067371D /* StoreAnimationView.swift */; };
 		B30767802B2BF8E700AF19D0 /* SingleDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */; };
 		B3096DD32B37600A0067131D /* StoreItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3096DD22B37600A0067131D /* StoreItemImage.swift */; };
 		B3096DD52B3764C80067131D /* StoreItems.json in Resources */ = {isa = PBXBuildFile; fileRef = B3096DD42B3764C80067131D /* StoreItems.json */; };
@@ -31,6 +31,9 @@
 		B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */; };
 		B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */; };
 		B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */; };
+		B330E5472B97E50A002B74C9 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E5462B97E50A002B74C9 /* Animations.swift */; };
+		B330E5492B97E60D002B74C9 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = B330E5482B97E60D002B74C9 /* Animations.json */; };
+		B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E54A2B97E6DE002B74C9 /* IDs.swift */; };
 		B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34831992B03C82000545E46 /* SpeciesItems.swift */; };
 		B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D22B0927C200270661 /* ReviveManager+util.swift */; };
 		B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D42B09296400270661 /* SpeciesExpBar.swift */; };
@@ -76,6 +79,7 @@
 		B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD16052B215F83003D13EE /* SpeciesFeed.swift */; };
 		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
 		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
+		B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */; };
 		B3BCC2D22B22D7D4008CF924 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCC2D12B22D7D3008CF924 /* Reminder.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
 		B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E92AF9E72C006709C9 /* HatchingView.swift */; };
@@ -177,7 +181,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B304B74A2B22B7ED0067371D /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		B304B74A2B22B7ED0067371D /* StoreAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAnimationView.swift; sourceTree = "<group>"; };
 		B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDetails.swift; sourceTree = "<group>"; };
 		B3096DD22B37600A0067131D /* StoreItemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemImage.swift; sourceTree = "<group>"; };
 		B3096DD42B3764C80067131D /* StoreItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoreItems.json; sourceTree = "<group>"; };
@@ -201,6 +205,9 @@
 		B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelName.swift; sourceTree = "<group>"; };
 		B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelImage.swift; sourceTree = "<group>"; };
 		B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringStartView.swift; sourceTree = "<group>"; };
+		B330E5462B97E50A002B74C9 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		B330E5482B97E60D002B74C9 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
+		B330E54A2B97E6DE002B74C9 /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
 		B34831992B03C82000545E46 /* SpeciesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesItems.swift; sourceTree = "<group>"; };
 		B349D5D22B0927C200270661 /* ReviveManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+util.swift"; sourceTree = "<group>"; };
 		B349D5D42B09296400270661 /* SpeciesExpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesExpBar.swift; sourceTree = "<group>"; };
@@ -245,6 +252,7 @@
 		B3AD16052B215F83003D13EE /* SpeciesFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesFeed.swift; sourceTree = "<group>"; };
 		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
+		B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Tutorial.swift"; sourceTree = "<group>"; };
 		B3BCC2D12B22D7D3008CF924 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
 		B3C738E92AF9E72C006709C9 /* HatchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchingView.swift; sourceTree = "<group>"; };
@@ -347,7 +355,7 @@
 		B304B7472B22B7CD0067371D /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				B304B74A2B22B7ED0067371D /* AnimationView.swift */,
+				B304B74A2B22B7ED0067371D /* StoreAnimationView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -443,6 +451,7 @@
 		B34F1BB92AF5C27B00737872 /* Persistences */ = {
 			isa = PBXGroup;
 			children = (
+				B330E5482B97E60D002B74C9 /* Animations.json */,
 				B35D00492B96CA3100F44AD1 /* Item.json */,
 				B3096DD42B3764C80067131D /* StoreItems.json */,
 				B3FB81982B19920A004CB417 /* ExploringMap.json */,
@@ -464,6 +473,7 @@
 				B3234E972B150D4E00A730D1 /* DistributionMode.swift */,
 				B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */,
 				B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */,
+				B330E54A2B97E6DE002B74C9 /* IDs.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -494,6 +504,7 @@
 				B349D5D22B0927C200270661 /* ReviveManager+util.swift */,
 				B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */,
 				B3096DD82B3767020067131D /* ReviveManager+Store.swift */,
+				B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */,
 			);
 			path = ReviveManager;
 			sourceTree = "<group>";
@@ -654,6 +665,7 @@
 				B3FB817D2B192EDA004CB417 /* MyItems.swift */,
 				B3FA3C8C2B22099200FE8D4D /* Statistics.swift */,
 				B3096DD62B3764DD0067131D /* StoreItems.swift */,
+				B330E5462B97E50A002B74C9 /* Animations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -898,6 +910,7 @@
 			files = (
 				B35D004A2B96CA3100F44AD1 /* Item.json in Resources */,
 				B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */,
+				B330E5492B97E60D002B74C9 /* Animations.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
 				B3096DD52B3764C80067131D /* StoreItems.json in Resources */,
 				B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */,
@@ -973,8 +986,9 @@
 				B3C773FE2ACCE69800387FDC /* FocusView.swift in Sources */,
 				B3FB817C2B192E4C004CB417 /* MyMaps.swift in Sources */,
 				B3C773FC2ACCE69800387FDC /* ReviveApp.swift in Sources */,
-				B304B74B2B22B7ED0067371D /* AnimationView.swift in Sources */,
+				B304B74B2B22B7ED0067371D /* StoreAnimationView.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
+				B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */,
 				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
 				B327E9642B2EAB3F003BDF76 /* StoreTitle.swift in Sources */,
 				B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */,
@@ -1017,11 +1031,13 @@
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B3096DD72B3764DD0067131D /* StoreItems.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
+				B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */,
 				B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,
 				B3FB81852B193C1F004CB417 /* ItemBYListImage.swift in Sources */,
 				B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */,
 				B3D3FE132B2D57FD00D04D8F /* FocusInfo.swift in Sources */,
+				B330E5472B97E50A002B74C9 /* Animations.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */,

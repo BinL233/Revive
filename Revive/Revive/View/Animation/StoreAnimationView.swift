@@ -1,0 +1,35 @@
+//
+//  Animation.swift
+//  Revive
+//
+//  Created by Kaile Ying on 12/7/23.
+//
+
+import SwiftUI
+
+struct StoreAnimationView: View {
+    @State private var currentFrame = 0
+    @State var frames : [String]
+    @State var isIdle : Bool
+    @Binding var animationType: String
+    let sequenceIdle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    let sequencePAT = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    
+    var body: some View {
+        TimelineView(.animation(minimumInterval: 0.15, paused: false)) { context in
+            if let image = UIImage(named: frames[isIdle ? sequenceIdle[currentFrame] : sequencePAT[currentFrame]]) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: UIScreen.main.bounds.width)
+                    .clipped()
+                    .onChange(of: context.date) {
+                        currentFrame = isIdle ? (currentFrame + 1) % sequenceIdle.count : (currentFrame + 1) % sequencePAT.count
+                        if (!isIdle && currentFrame == sequencePAT.count - 1) {
+                            animationType = "idle"
+                        }
+                    }
+            }
+        }
+    }
+}

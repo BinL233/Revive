@@ -20,6 +20,7 @@ class ReviveManager {
     var speciesList : [Species]
     var mapList : [ExploringMap]
     var itemList : [Item]
+    var animations : Animations
     
     // My species
     var mySpecies : [MySpecies]
@@ -127,6 +128,7 @@ class ReviveManager {
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
+        animations = Animations.animations!
         storeItems = localStoreItems
         
         isScaledSelectView = false
