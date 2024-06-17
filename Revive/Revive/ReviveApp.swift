@@ -17,6 +17,7 @@ struct ReviveApp: App {
             LaunchView()
                 .environment(ReviveManager())
                 .environment(WidgetManager())
+                .environment(DialogManager())
         }
     }
 }

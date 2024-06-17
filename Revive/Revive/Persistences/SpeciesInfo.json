@@ -1051,7 +1051,7 @@
             "Ocean": 2.0,
             "Beach": 1.8
         },
-        "intro": "Short-necked plesiosaur, not dinosaur. "
+        "intro": "Short-necked plesiosaur, not dinosaur."
     },
 
     {
@@ -1436,7 +1436,7 @@
         "height": {"S": 0.1, "M": 0.15, "L": 0.2, "offset": 0},
         "weight": {"S": 0.1, "M": 0.15, "L": 0.2, "offset":0},
         "trait": "herbivore",
-        "era": "2oth century",
+        "era": "20th century",
         "egg": 1102,
         "flip": true,
         "area": {

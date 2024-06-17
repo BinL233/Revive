@@ -1,0 +1,1288 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "？"
+          }
+        }
+      }
+    },
+    "???" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "？？？"
+          }
+        }
+      }
+    },
+    "(Hold \"YES\" button for 3 seconds)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "（长按3秒“确认”）"
+          }
+        }
+      }
+    },
+    "#%@" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ kg" : {
+
+    },
+    "%@ m" : {
+
+    },
+    "%@: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@"
+          }
+        }
+      }
+    },
+    "%@%%" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "1. Exploring through focus to get items." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 以「探索」来获取资源"
+          }
+        }
+      }
+    },
+    "1. Hatching eggs through focus." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 在「专注」中孵化更多的物种"
+          }
+        }
+      }
+    },
+    "1. Training your own species through focus to gain EXP for them." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 用「训练」来强化你的物种"
+          }
+        }
+      }
+    },
+    "2. EXP = 60 * Training Time (min)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 经验 = 60 * 训练时长（分钟）"
+          }
+        }
+      }
+    },
+    "2. Exploring time should >= 10 minutes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 最低「探索」时长为10分钟"
+          }
+        }
+      }
+    },
+    "2. Hatching time should >= 30 minutes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 最低「孵化」时长为30分钟"
+          }
+        }
+      }
+    },
+    "3. Minimum hatching times are different between species. Only selecting a time greater than the certain's Species' minimum hatching time will make it possible to hatch them" : {
+      "extractionState" : "manual"
+    },
+    "3. The next map can only be unlocked if the previous map is 100% explored." : {
+      "extractionState" : "manual"
+    },
+    "4 tons of krill a day, keep the doctor away." : {
+      "extractionState" : "manual"
+    },
+    "4. Each map has random Rewards and fixed Treasure." : {
+      "extractionState" : "manual"
+    },
+    "4. SR Species probability = 10% + 0.34% * Hatching Time (min)" : {
+      "extractionState" : "manual"
+    },
+    "5. Random Rewards are earned every 10 minutes, and Fixed Treasure must reach the required Exploring time to be earned." : {
+      "extractionState" : "manual"
+    },
+    "5. Random Rewards are earned every 10 minutes, and Fixed Treasure must reach the required Exploring time to be earned. " : {
+
+    },
+    "6. Each map has its own terrain, and Species will have Exploring Buffs for the terrain they specialize in." : {
+      "extractionState" : "manual"
+    },
+    "15th century" : {
+      "extractionState" : "manual"
+    },
+    "17th century" : {
+      "extractionState" : "manual"
+    },
+    "18th century" : {
+      "extractionState" : "manual"
+    },
+    "19th century" : {
+      "extractionState" : "manual"
+    },
+    "20th century" : {
+      "extractionState" : "manual"
+    },
+    "21st century" : {
+      "extractionState" : "manual"
+    },
+    "100" : {
+
+    },
+    "100 EXP for any species." : {
+      "extractionState" : "manual"
+    },
+    "200 EXP, carnivore only." : {
+      "extractionState" : "manual"
+    },
+    "200 EXP, herbivore only." : {
+      "extractionState" : "manual"
+    },
+    "1000" : {
+
+    },
+    "A healthy diet plan always comes with plants, fruits, and animal protein." : {
+      "extractionState" : "manual"
+    },
+    "A king always comes with a magnificent mane." : {
+      "extractionState" : "manual"
+    },
+    "A long journey deserved with the best fruit." : {
+      "extractionState" : "manual"
+    },
+    "A semi-Aquatic lifestyle is the perfect choice." : {
+      "extractionState" : "manual"
+    },
+    "Acorn" : {
+      "extractionState" : "manual"
+    },
+    "Advantage Areas" : {
+      "extractionState" : "manual"
+    },
+    "African Wild Dog" : {
+      "extractionState" : "manual"
+    },
+    "Ainsworth's Salamander" : {
+      "extractionState" : "manual"
+    },
+    "Although I have a reliable coat, I still feel chilly in the Ice Age." : {
+      "extractionState" : "manual"
+    },
+    "Amount" : {
+
+    },
+    "Amur Leopard" : {
+      "extractionState" : "manual"
+    },
+    "An extraordinarily long neck is here!" : {
+      "extractionState" : "manual"
+    },
+    "An ice with more density." : {
+      "extractionState" : "manual"
+    },
+    "Analysis" : {
+      "extractionState" : "manual"
+    },
+    "Ankylosaurus" : {
+      "extractionState" : "manual"
+    },
+    "Another name for me is Soursop, but I'm not sour." : {
+      "extractionState" : "manual"
+    },
+    "Are you sure to RELEASE" : {
+      "extractionState" : "manual"
+    },
+    "Are you sure?" : {
+      "extractionState" : "manual"
+    },
+    "Armour up and get your tail ready." : {
+      "extractionState" : "manual"
+    },
+    "As you can see, I have feathers, not scales." : {
+      "extractionState" : "manual"
+    },
+    "Asian Unicorn is another name for me." : {
+      "extractionState" : "manual"
+    },
+    "Attention, we have different venom potency." : {
+      "extractionState" : "manual"
+    },
+    "Aways iridescent." : {
+      "extractionState" : "manual"
+    },
+    "Back" : {
+      "extractionState" : "manual"
+    },
+    "Backyard" : {
+      "extractionState" : "manual"
+    },
+    "Bactrian Camel" : {
+      "extractionState" : "manual"
+    },
+    "Ball" : {
+      "extractionState" : "manual"
+    },
+    "Baozi" : {
+      "extractionState" : "manual"
+    },
+    "Barbary Lion" : {
+      "extractionState" : "manual"
+    },
+    "Based on my name, you know what I eat." : {
+      "extractionState" : "manual"
+    },
+    "Be aware of FUNGUS!" : {
+      "extractionState" : "manual"
+    },
+    "Be aware of the blind area of my vision." : {
+      "extractionState" : "manual"
+    },
+    "Beach" : {
+      "extractionState" : "manual"
+    },
+    "Berrybush" : {
+      "extractionState" : "manual"
+    },
+    "Beware of cavity." : {
+      "extractionState" : "manual"
+    },
+    "Black Rhino" : {
+      "extractionState" : "manual"
+    },
+    "Blue Whale" : {
+      "extractionState" : "manual"
+    },
+    "Blue-footed Booby" : {
+      "extractionState" : "manual"
+    },
+    "Bornean Orangutan" : {
+      "extractionState" : "manual"
+    },
+    "Both Ezo and Hokkaido wolf go for me." : {
+      "extractionState" : "manual"
+    },
+    "Brachiosaurus" : {
+      "extractionState" : "manual"
+    },
+    "Bramble Cay Melomys" : {
+      "extractionState" : "manual"
+    },
+    "Brave people enjoy the world first." : {
+      "extractionState" : "manual"
+    },
+    "Buff" : {
+      "extractionState" : "manual"
+    },
+    "Caribbean Monk Seal" : {
+      "extractionState" : "manual"
+    },
+    "carnivore" : {
+      "extractionState" : "manual"
+    },
+    "Carnivore" : {
+      "extractionState" : "manual"
+    },
+    "Carnivore's favorite." : {
+      "extractionState" : "manual"
+    },
+    "Cave Bear" : {
+      "extractionState" : "manual"
+    },
+    "Cave bear is supposed to stay in the cave." : {
+      "extractionState" : "manual"
+    },
+    "Cheese always be my best bud." : {
+      "extractionState" : "manual"
+    },
+    "Climate change has claimed its first mammal extinction-me." : {
+      "extractionState" : "manual"
+    },
+    "Cloud" : {
+      "extractionState" : "manual"
+    },
+    "Cobra" : {
+      "extractionState" : "manual"
+    },
+    "Collect to unlock SSR species!" : {
+      "extractionState" : "manual"
+    },
+    "Compass" : {
+      "extractionState" : "manual"
+    },
+    "Confirm" : {
+      "extractionState" : "manual"
+    },
+    "Consider the most agile and swift!" : {
+      "extractionState" : "manual"
+    },
+    "Contact Us" : {
+      "extractionState" : "manual"
+    },
+    "Contact us if you have any problem." : {
+      "extractionState" : "manual"
+    },
+    "Container for Exploration Map prizes." : {
+      "extractionState" : "manual"
+    },
+    "Cookie" : {
+      "extractionState" : "manual"
+    },
+    "Copied!" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Cretaceous" : {
+      "extractionState" : "manual"
+    },
+    "Croissant" : {
+      "extractionState" : "manual"
+    },
+    "Cross River Gorilla" : {
+      "extractionState" : "manual"
+    },
+    "currDistAction" : {
+
+    },
+    "currDistTimeSpan" : {
+
+    },
+    "Current Time:" : {
+      "extractionState" : "manual"
+    },
+    "Cute color, more power." : {
+      "extractionState" : "manual"
+    },
+    "Dangerously tasty steamed bao buns." : {
+      "extractionState" : "manual"
+    },
+    "Date" : {
+      "extractionState" : "manual"
+    },
+    "Datepalm" : {
+      "extractionState" : "manual"
+    },
+    "Day" : {
+      "extractionState" : "manual"
+    },
+    "Desert" : {
+      "extractionState" : "manual"
+    },
+    "Desert Rat-kangaroo" : {
+      "extractionState" : "manual"
+    },
+    "Details" : {
+      "extractionState" : "manual"
+    },
+    "Developers want some special effect on me." : {
+      "extractionState" : "manual"
+    },
+    "Direct to the rarest." : {
+      "extractionState" : "manual"
+    },
+    "Dismiss" : {
+      "extractionState" : "manual"
+    },
+    "Do you want to purchase" : {
+      "extractionState" : "manual"
+    },
+    "Doctor said the recommended calorie count for me is 40,000...daily." : {
+      "extractionState" : "manual"
+    },
+    "Dodo Bird" : {
+      "extractionState" : "manual"
+    },
+    "Don't you think I'm cute with w mouth?" : {
+      "extractionState" : "manual"
+    },
+    "Donkey existed, Zebra existed, Quagga extinct...a sad story bro." : {
+      "extractionState" : "manual"
+    },
+    "Double hump, double cool." : {
+      "extractionState" : "manual"
+    },
+    "Dumbbell" : {
+      "extractionState" : "manual"
+    },
+    "Early Eocene" : {
+      "extractionState" : "manual"
+    },
+    "Elasmosaurus" : {
+      "extractionState" : "manual"
+    },
+    "Elephant bird" : {
+      "extractionState" : "manual"
+    },
+    "Email Address" : {
+      "extractionState" : "manual"
+    },
+    "Endemic species means I was only in Yunnan Province." : {
+      "extractionState" : "manual"
+    },
+    "Everyone looked cute in childhood." : {
+      "extractionState" : "manual"
+    },
+    "Everyone loves cookie!" : {
+      "extractionState" : "manual"
+    },
+    "Evolve" : {
+      "extractionState" : "manual"
+    },
+    "Evolve Successfully" : {
+      "extractionState" : "manual"
+    },
+    "Exploration Speed:" : {
+      "extractionState" : "manual"
+    },
+    "Exploring" : {
+      "extractionState" : "manual"
+    },
+    "Exploring Complete!" : {
+      "extractionState" : "manual"
+    },
+    "Exploring Time: -%@%%" : {
+
+    },
+    "Extremely good at playing leap frog!" : {
+      "extractionState" : "manual"
+    },
+    "Ezo Wolf" : {
+      "extractionState" : "manual"
+    },
+    "Favorite" : {
+      "extractionState" : "manual"
+    },
+    "Feed" : {
+      "extractionState" : "manual"
+    },
+    "Feed your Species!" : {
+      "extractionState" : "manual"
+    },
+    "Firn" : {
+      "extractionState" : "manual"
+    },
+    "Focus" : {
+      "extractionState" : "manual"
+    },
+    "FOCUS" : {
+      "extractionState" : "manual"
+    },
+    "Focus Information" : {
+      "extractionState" : "manual"
+    },
+    "Formed by rapid cooling of lava." : {
+      "extractionState" : "manual"
+    },
+    "Fox is cute, I'm cuter." : {
+      "extractionState" : "manual"
+    },
+    "Gemstone" : {
+      "extractionState" : "manual"
+    },
+    "Giant Anteater" : {
+      "extractionState" : "manual"
+    },
+    "Glacier" : {
+      "extractionState" : "manual"
+    },
+    "Glad I'm not the only flightless bird." : {
+      "extractionState" : "manual"
+    },
+    "Glad there isn't a cow in the world who knows the law." : {
+      "extractionState" : "manual"
+    },
+    "Glad to help in medical advancement." : {
+      "extractionState" : "manual"
+    },
+    "Golden Toad" : {
+      "extractionState" : "manual"
+    },
+    "Got it" : {
+      "extractionState" : "manual"
+    },
+    "Great Auk" : {
+      "extractionState" : "manual"
+    },
+    "Ground Sloth" : {
+      "extractionState" : "manual"
+    },
+    "Guam Flying Fox" : {
+      "extractionState" : "manual"
+    },
+    "Guanabana" : {
+      "extractionState" : "manual"
+    },
+    "Guess how long my tongue can get...45cm!" : {
+      "extractionState" : "manual"
+    },
+    "Guess who hides me here?" : {
+      "extractionState" : "manual"
+    },
+    "Hatching" : {
+      "extractionState" : "manual"
+    },
+    "Hatching Complete!" : {
+      "extractionState" : "manual"
+    },
+    "Hatching Date" : {
+      "extractionState" : "manual"
+    },
+    "Hatching Time: -%@%%" : {
+
+    },
+    "Have a look at the sail on my back...in the future." : {
+      "extractionState" : "manual"
+    },
+    "Have you ever heard of Tasmanian Tiger?" : {
+      "extractionState" : "manual"
+    },
+    "Hear the voice of the sea." : {
+      "extractionState" : "manual"
+    },
+    "Height" : {
+      "extractionState" : "manual"
+    },
+    "Hel... lo... how... are... you... to... day...?" : {
+      "extractionState" : "manual"
+    },
+    "herbivore" : {
+      "extractionState" : "manual"
+    },
+    "Herbivore" : {
+      "extractionState" : "manual"
+    },
+    "Herbivore's favorite." : {
+      "extractionState" : "manual"
+    },
+    "Hide on bush." : {
+      "extractionState" : "manual"
+    },
+    "Hope I will work in DMV like Mr. Flash one day." : {
+      "extractionState" : "manual"
+    },
+    "Hours" : {
+      "extractionState" : "manual"
+    },
+    "I admire my brother...he can walk with only two legs!" : {
+      "extractionState" : "manual"
+    },
+    "I always feel hungry...just like now." : {
+      "extractionState" : "manual"
+    },
+    "I am not a Hyenya..." : {
+      "extractionState" : "manual"
+    },
+    "I am the biggest bird on Earth." : {
+      "extractionState" : "manual"
+    },
+    "I am the emperor's mount in Chinese mythology." : {
+      "extractionState" : "manual"
+    },
+    "I became a sea turtle last night!" : {
+      "extractionState" : "manual"
+    },
+    "I can drink up to 40 gallons at once." : {
+      "extractionState" : "manual"
+    },
+    "I do not know the function of my hands." : {
+      "extractionState" : "manual"
+    },
+    "I don't have external ears, so I feel vibrations by putting my head on the ground." : {
+      "extractionState" : "manual"
+    },
+    "I don't think there is a medical use on my scale." : {
+      "extractionState" : "manual"
+    },
+    "I have a big family with more than 40 members!" : {
+      "extractionState" : "manual"
+    },
+    "I have more than 1000 relatives on a single bunch." : {
+      "extractionState" : "manual"
+    },
+    "I have no idea how to use my nose." : {
+      "extractionState" : "manual"
+    },
+    "I have no idea why everyone thinks I'm delicious." : {
+      "extractionState" : "manual"
+    },
+    "I have only four toes per foot...no digitigrade." : {
+      "extractionState" : "manual"
+    },
+    "I know there is a pink pig who also likes to roll in mud ponds." : {
+      "extractionState" : "manual"
+    },
+    "I love bamboo." : {
+      "extractionState" : "manual"
+    },
+    "I love Jackson's chameleon because we all have three horns." : {
+      "extractionState" : "manual"
+    },
+    "I never thought the horn would become dangerous for me one day." : {
+      "extractionState" : "manual"
+    },
+    "I want to go to the pier and get some fries as well." : {
+      "extractionState" : "manual"
+    },
+    "I will be the biggest bird on Earth!" : {
+      "extractionState" : "manual"
+    },
+    "I will have the strongest power in future!" : {
+      "extractionState" : "manual"
+    },
+    "I'm not a penguin, I can fly." : {
+      "extractionState" : "manual"
+    },
+    "Ice Age" : {
+      "extractionState" : "manual"
+    },
+    "If you do not believe a whale can walk, look at me." : {
+      "extractionState" : "manual"
+    },
+    "If you know Lonesome George, you will remember us." : {
+      "extractionState" : "manual"
+    },
+    "Increase 100 Affection for any species." : {
+      "extractionState" : "manual"
+    },
+    "Increase the probability of hatching rare species in next focus." : {
+      "extractionState" : "manual"
+    },
+    "Incubator" : {
+      "extractionState" : "manual"
+    },
+    "Info" : {
+      "extractionState" : "manual"
+    },
+    "Insect are my favorite!" : {
+      "extractionState" : "manual"
+    },
+    "Insufficient Gold" : {
+      "extractionState" : "manual"
+    },
+    "ItemListSorter" : {
+
+    },
+    "Items" : {
+
+    },
+    "Jurassic" : {
+      "extractionState" : "manual"
+    },
+    "Keep Screen On" : {
+      "extractionState" : "manual"
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "kg" : {
+      "extractionState" : "manual"
+    },
+    "Kronosaurus" : {
+      "extractionState" : "manual"
+    },
+    "Lanugo helps me prevent colds!" : {
+      "extractionState" : "manual"
+    },
+    "Late Cretaceous" : {
+      "extractionState" : "manual"
+    },
+    "Late Ice Age" : {
+      "extractionState" : "manual"
+    },
+    "Late Jurassic" : {
+      "extractionState" : "manual"
+    },
+    "Late Pleistocene" : {
+      "extractionState" : "manual"
+    },
+    "Left" : {
+      "extractionState" : "manual"
+    },
+    "Let me repeat it one more time: Pterosaur is NOT a dinosaur." : {
+      "extractionState" : "manual"
+    },
+    "Let's hatch one Species!" : {
+      "extractionState" : "manual"
+    },
+    "Level" : {
+      "extractionState" : "manual"
+    },
+    "Loading..." : {
+      "extractionState" : "manual"
+    },
+    "Lollipop" : {
+      "extractionState" : "manual"
+    },
+    "Lungless salamander uses skin for respiration." : {
+      "extractionState" : "manual"
+    },
+    "Lv" : {
+      "extractionState" : "manual"
+    },
+    "m" : {
+      "extractionState" : "manual"
+    },
+    "Mammoth" : {
+      "extractionState" : "manual"
+    },
+    "mapFrame %d" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "mapFrame %d"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "mapFrame %d"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Meat" : {
+      "extractionState" : "manual"
+    },
+    "Mesozoic" : {
+      "extractionState" : "manual"
+    },
+    "Minimal water is enough for me." : {
+      "extractionState" : "manual"
+    },
+    "MODE SELECTION" : {
+
+    },
+    "Mom said she ran out of ink when I was born." : {
+      "extractionState" : "manual"
+    },
+    "Month" : {
+      "extractionState" : "manual"
+    },
+    "My brother is popular in movies." : {
+      "extractionState" : "manual"
+    },
+    "My cousin's feet have a separate color, blue and red." : {
+      "extractionState" : "manual"
+    },
+    "My heart will grow bigger than a car in the future." : {
+      "extractionState" : "manual"
+    },
+    "My tail is heavy." : {
+      "extractionState" : "manual"
+    },
+    "Mysterious puzzle with summon power." : {
+      "extractionState" : "manual"
+    },
+    "Name" : {
+      "extractionState" : "manual"
+    },
+    "Neogene" : {
+      "extractionState" : "manual"
+    },
+    "Next" : {
+      "extractionState" : "manual"
+    },
+    "Next Treasure" : {
+      "extractionState" : "manual"
+    },
+    "Next Treasure:" : {
+      "extractionState" : "manual"
+    },
+    "Nick Name" : {
+      "extractionState" : "manual"
+    },
+    "NO" : {
+
+    },
+    "No Buff" : {
+      "extractionState" : "manual"
+    },
+    "No one can stop my desire for freedom." : {
+      "extractionState" : "manual"
+    },
+    "Nori always tastes good...and healthy!" : {
+      "extractionState" : "manual"
+    },
+    "Not every deer can become the urban animal." : {
+      "extractionState" : "manual"
+    },
+    "Not every horse needs a rider." : {
+      "extractionState" : "manual"
+    },
+    "Nothing in your bag pack yet" : {
+      "extractionState" : "manual"
+    },
+    "Number of Coins" : {
+      "extractionState" : "manual"
+    },
+    "Number of Finished Maps" : {
+      "extractionState" : "manual"
+    },
+    "Number of Items" : {
+      "extractionState" : "manual"
+    },
+    "Number of Maps" : {
+      "extractionState" : "manual"
+    },
+    "Number of R Species" : {
+      "extractionState" : "manual"
+    },
+    "Number of Species" : {
+      "extractionState" : "manual"
+    },
+    "Number of SR Species" : {
+      "extractionState" : "manual"
+    },
+    "Number of SSR Species" : {
+      "extractionState" : "manual"
+    },
+    "Number of Stage 2 Species" : {
+      "extractionState" : "manual"
+    },
+    "Obsidian" : {
+      "extractionState" : "manual"
+    },
+    "Ocean" : {
+      "extractionState" : "manual"
+    },
+    "omnivore" : {
+      "extractionState" : "manual"
+    },
+    "Omnivore" : {
+      "extractionState" : "manual"
+    },
+    "One of the most recent large mammals to be discovered." : {
+      "extractionState" : "manual"
+    },
+    "Oops..." : {
+      "extractionState" : "manual"
+    },
+    "Panda" : {
+      "extractionState" : "manual"
+    },
+    "Pangolin" : {
+      "extractionState" : "manual"
+    },
+    "Passenger Pigeon" : {
+      "extractionState" : "manual"
+    },
+    "Pinta Island tortoise" : {
+      "extractionState" : "manual"
+    },
+    "pizza" : {
+      "extractionState" : "manual"
+    },
+    "Plain" : {
+      "extractionState" : "manual"
+    },
+    "Please leave some fish for me next time." : {
+      "extractionState" : "manual"
+    },
+    "Pleistocene Epoch" : {
+      "extractionState" : "manual"
+    },
+    "Pocketwatch" : {
+      "extractionState" : "manual"
+    },
+    "Practice roaring everyday." : {
+      "extractionState" : "manual"
+    },
+    "Prefer to stay on the trees forever if possible." : {
+      "extractionState" : "manual"
+    },
+    "Product from a crazy inventor." : {
+      "extractionState" : "manual"
+    },
+    "Proud of letting bird species extinction be noticed by scientists." : {
+      "extractionState" : "manual"
+    },
+    "Pterosaur" : {
+      "extractionState" : "manual"
+    },
+    "Puzzle" : {
+      "extractionState" : "manual"
+    },
+    "Pyrenean Ibex" : {
+      "extractionState" : "manual"
+    },
+    "Quagga" : {
+      "extractionState" : "manual"
+    },
+    "R" : {
+      "extractionState" : "manual"
+    },
+    "Rainforest" : {
+      "extractionState" : "manual"
+    },
+    "Rarity" : {
+      "extractionState" : "manual"
+    },
+    "Recover prey population before recovering me please" : {
+      "extractionState" : "manual"
+    },
+    "Reduce time in exploring in next focus." : {
+      "extractionState" : "manual"
+    },
+    "Reduce time in hatching in next focus." : {
+      "extractionState" : "manual"
+    },
+    "Reduce time in training in next focus." : {
+      "extractionState" : "manual"
+    },
+    "Release" : {
+      "extractionState" : "manual"
+    },
+    "REMINDER" : {
+      "extractionState" : "manual"
+    },
+    "Reminder Notification" : {
+      "extractionState" : "manual"
+    },
+    "Revive" : {
+
+    },
+    "Rewards" : {
+      "extractionState" : "manual"
+    },
+    "River" : {
+      "extractionState" : "manual"
+    },
+    "Rolling everyday." : {
+      "extractionState" : "manual"
+    },
+    "Sabertooth" : {
+      "extractionState" : "manual"
+    },
+    "Saola" : {
+      "extractionState" : "manual"
+    },
+    "Schomburgk's Deer" : {
+      "extractionState" : "manual"
+    },
+    "Scientists believe I had a bird-like respiratory system in order to get enough oxygen." : {
+      "extractionState" : "manual"
+    },
+    "Seashell" : {
+      "extractionState" : "manual"
+    },
+    "Seasome Hu's" : {
+      "extractionState" : "manual"
+    },
+    "Seaweed" : {
+      "extractionState" : "manual"
+    },
+    "Seaweed only." : {
+      "extractionState" : "manual"
+    },
+    "Select a Species for training" : {
+      "extractionState" : "manual"
+    },
+    "Select adventure buddy" : {
+      "extractionState" : "manual"
+    },
+    "Select Map" : {
+      "extractionState" : "manual"
+    },
+    "Select remind time" : {
+      "extractionState" : "manual"
+    },
+    "Short-necked plesiosaur, not dinosaur." : {
+      "extractionState" : "manual"
+    },
+    "Sky" : {
+      "extractionState" : "manual"
+    },
+    "Slow down in swimming, slow down in life." : {
+      "extractionState" : "manual"
+    },
+    "Sorted by" : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Beach area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Desert area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Glacier area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Mountain area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Ocean area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Plain area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Rainforest area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Sky area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Volcano area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Special reward in Wetland area, 1000 EXP." : {
+      "extractionState" : "manual"
+    },
+    "Species" : {
+
+    },
+    "Species Get" : {
+      "extractionState" : "manual"
+    },
+    "SpeciesListSorter" : {
+
+    },
+    "SpeciesOrItems" : {
+
+    },
+    "Spinosaurus" : {
+      "extractionState" : "manual"
+    },
+    "SR" : {
+      "extractionState" : "manual"
+    },
+    "SR hatching rate" : {
+      "extractionState" : "manual"
+    },
+    "SR hatching rate: +%@%%" : {
+
+    },
+    "Start" : {
+      "extractionState" : "manual"
+    },
+    "Stegosaurus" : {
+      "extractionState" : "manual"
+    },
+    "Steller's Sea Cow" : {
+      "extractionState" : "manual"
+    },
+    "Stop" : {
+      "extractionState" : "manual"
+    },
+    "Store" : {
+      "extractionState" : "manual"
+    },
+    "Surfing yesterday, 84 of us were counted by humans, over." : {
+      "extractionState" : "manual"
+    },
+    "Swimming in the sea is sleepy...Zzz" : {
+      "extractionState" : "manual"
+    },
+    "T-Rex" : {
+      "extractionState" : "manual"
+    },
+    "Tarpan" : {
+      "extractionState" : "manual"
+    },
+    "TEST MODE" : {
+
+    },
+    "The most vulnerable part on me is belly." : {
+      "extractionState" : "manual"
+    },
+    "The owner might from last centry." : {
+      "extractionState" : "manual"
+    },
+    "The reason why I'm extinct...is my food is extinct." : {
+      "extractionState" : "manual"
+    },
+    "There is a total of 20 family members being counted by the scientists." : {
+      "extractionState" : "manual"
+    },
+    "Thylacine" : {
+      "extractionState" : "manual"
+    },
+    "Time" : {
+
+    },
+    "Toast" : {
+      "extractionState" : "manual"
+    },
+    "Toolache Wallaby" : {
+      "extractionState" : "manual"
+    },
+    "Total" : {
+      "extractionState" : "manual"
+    },
+    "Total Exploring Time" : {
+      "extractionState" : "manual"
+    },
+    "Total Hatching Time" : {
+      "extractionState" : "manual"
+    },
+    "Total Time" : {
+      "extractionState" : "manual"
+    },
+    "Total Time:" : {
+      "extractionState" : "manual"
+    },
+    "Total Training Time" : {
+      "extractionState" : "manual"
+    },
+    "Training" : {
+      "extractionState" : "manual"
+    },
+    "Training Complete!" : {
+      "extractionState" : "manual"
+    },
+    "Training Time: -%@%%" : {
+
+    },
+    "Trait" : {
+      "extractionState" : "manual"
+    },
+    "Treasure" : {
+      "extractionState" : "manual"
+    },
+    "Triceratops" : {
+      "extractionState" : "manual"
+    },
+    "Two legs leaping are never faster than four legs running." : {
+      "extractionState" : "manual"
+    },
+    "Unlock" : {
+      "extractionState" : "manual"
+    },
+    "Use" : {
+      "extractionState" : "manual"
+    },
+    "Use to be resurrected through cloning, but failed." : {
+      "extractionState" : "manual"
+    },
+    "USER MODE" : {
+
+    },
+    "Vaquita" : {
+      "extractionState" : "manual"
+    },
+    "Vegetables" : {
+      "extractionState" : "manual"
+    },
+    "Velociraptor" : {
+      "extractionState" : "manual"
+    },
+    "Volcano" : {
+      "extractionState" : "manual"
+    },
+    "Walk Whale" : {
+      "extractionState" : "manual"
+    },
+    "We use Long Calls for communication." : {
+      "extractionState" : "manual"
+    },
+    "We were named after a naturalist found us." : {
+      "extractionState" : "manual"
+    },
+    "Weight" : {
+      "extractionState" : "manual"
+    },
+    "What topping makes the best toast?" : {
+      "extractionState" : "manual"
+    },
+    "When I grow up, I want to have a silverback!" : {
+      "extractionState" : "manual"
+    },
+    "Will become marshmellow if add some sugar." : {
+      "extractionState" : "manual"
+    },
+    "Will I be able to fly one day?" : {
+      "extractionState" : "manual"
+    },
+    "Year" : {
+      "extractionState" : "manual"
+    },
+    "YES" : {
+
+    },
+    "You know what, Cross River is a state in Nigeria." : {
+      "extractionState" : "manual"
+    },
+    "You will fail to explore." : {
+      "extractionState" : "manual"
+    },
+    "You will fail to hatch this Species." : {
+      "extractionState" : "manual"
+    },
+    "You will fail to train this Species." : {
+      "extractionState" : "manual"
+    },
+    "Yummy mammoth everyday!" : {
+      "extractionState" : "manual"
+    },
+    "Yunnan Lake Newt" : {
+      "extractionState" : "manual"
+    }
+  },
+  "version" : "1.0"
+}
