@@ -16,19 +16,38 @@ struct SpeciesPanelName: View {
         @Bindable var manager = manager
         
         HStack {
-            Button(action: { withAnimation(.spring(duration: 0.2)) { details = true }}, label: {
-                if (!details) {
-                    Image("FriendlinessLevel1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.cBlue.opacity(0.5))
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .shadow(radius: 0.7, x: 2, y: 3)
+            ZStack {
+                Button(action: { withAnimation(.spring(duration: 0.2)) { details = true }}, label: {
+                    if (!details) {
+                        switch manager.currPanelSpecies?.friendship {
+                            
+                        case .some(let friendship) where friendship < 30:
+                            FriendshipImage(imageName: "FriendshipLevel1")
+                            
+                        case.some(let friendship) where friendship < 120:
+                            FriendshipImage(imageName: "FriendshipLevel2")
+                            
+                        case.some(let friendship) where friendship < 300:
+                            FriendshipImage(imageName: "FriendshipLevel3")
+                            
+                        case.some(let friendship) where friendship < 900:
+                            FriendshipImage(imageName: "FriendshipLevel4")
+                            
+                        case.some(let friendship) where friendship < 1800:
+                            FriendshipImage(imageName: "FriendshipLevel5")
+                            
+                        default:
+                            FriendshipImage(imageName: "FriendshipLevel6")
+                        }
+                    }
+                })
+                
+                // Friendship details
+                if (details) {
+                    SpeciesFriendshipDetails(details: $details)
+                        .frame(width: 46, height: 38)
                 }
-            })
+            }
             
             Button(action: { isTextFieldFocused = true }, label: {
                 Image(systemName: "square.and.pencil")

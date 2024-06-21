@@ -107,12 +107,9 @@ struct MainTabView: View {
                 }
             }
             
-            if (!isTutorialHFinished) {
+            if (manager.checkNoSpecies() && !isTutorialHFinished) {
                 InitTutorial(isTutorialHFinished: $isTutorialHFinished)
             }
-//            if (manager.checkNoSpecies() && !isTutorialHFinished) {
-//                TutorialFocusHatching(isTutorialHFinished: $isTutorialHFinished)
-//            }
         }
     }
 }

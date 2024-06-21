@@ -20,4 +20,5 @@ struct MySpecies : Equatable, Comparable, Hashable {
     let weight : Double
     var favorite : Bool
     let hatchDate : Date
+    var friendship : Int
 }

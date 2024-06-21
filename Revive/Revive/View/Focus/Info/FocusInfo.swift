@@ -42,7 +42,7 @@ struct FocusInfo: View {
                                 }
                                 .padding(5)
                                 .background(Color.cBlackBrown.opacity(0.3))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
                                 
                                 
                                 Text("Training")
@@ -59,7 +59,7 @@ struct FocusInfo: View {
                                 }
                                 .padding(5)
                                 .background(Color.cBlackBrown.opacity(0.3))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
                                 
                                 
                                 Text("Exploring")
@@ -84,7 +84,7 @@ struct FocusInfo: View {
                             }
                             .padding(5)
                             .background(Color.cBlackBrown.opacity(0.3))
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
                                 
                             }
                         }

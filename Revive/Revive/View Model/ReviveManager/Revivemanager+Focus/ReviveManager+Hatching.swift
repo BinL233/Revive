@@ -73,7 +73,7 @@ extension ReviveManager {
         
         let currentDate = Date()
         
-        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date())
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date(), friendship: 0)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
         

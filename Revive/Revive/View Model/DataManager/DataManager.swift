@@ -67,6 +67,7 @@ class DataManager {
         entity.favorite = customItem.favorite
         entity.hatchDate = customItem.hatchDate
         entity.currExp = Int32(customItem.currExp)
+        entity.friendship = Int16(customItem.friendship)
         
         do {
             try context.save()
@@ -83,7 +84,7 @@ class DataManager {
         do {
             print("Loading user data...")
             let entities = try context.fetch(fetchRequest)
-            return entities.map { MySpecies(speciesID: Int($0.speciesID), nickName: $0.nickName ?? "", level: Int($0.level), currExp: Int($0.currExp), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!)}
+            return entities.map { MySpecies(speciesID: Int($0.speciesID), nickName: $0.nickName ?? "", level: Int($0.level), currExp: Int($0.currExp), height: $0.height, weight: $0.weight, favorite: $0.favorite, hatchDate: $0.hatchDate!, friendship: Int($0.friendship)) }
         } catch {
             print("Failed to fetch custom items: \(error)")
             return []
@@ -151,6 +152,30 @@ class DataManager {
                 let results = try context.fetch(fetchRequest)
                 if let entityToUpdate = results.first {
                     entityToUpdate.currExp = Int32(newData)
+                    try context.save()
+                    print("Updated \(context)")
+                }
+            } catch {
+                print("Update failed: \(error)")
+            }
+        }
+    }
+    
+    func updateMySpeciesFriendship(for speciesID: Int, for date: Date, with newData: Int, mySpecies: [MySpecies]) {
+        var data = mySpecies
+        if let index = data.firstIndex(where: { $0.speciesID == speciesID && Calendar.current.isDate($0.hatchDate, equalTo: date, toGranularity: .second) }) {
+            data[index].friendship = newData
+            
+            let context = persistentContainer.viewContext
+            let fetchRequest: NSFetchRequest<SpeciesEntity> = SpeciesEntity.fetchRequest()
+            let idPredicate = NSPredicate(format: "speciesID == %d", speciesID)
+            let datePredicate = NSPredicate(format: "hatchDate == %@", date as NSDate)
+            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPredicate, datePredicate])
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if let entityToUpdate = results.first {
+                    entityToUpdate.friendship = Int16(newData)
                     try context.save()
                     print("Updated \(context)")
                 }

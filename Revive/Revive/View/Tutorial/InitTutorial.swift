@@ -26,7 +26,7 @@ struct InitTutorial: View {
                             if currentIndex1 < manager.tutorialDialog1.count - 1 {
                                 currentIndex1 += 1
                             } else {
-                                state += 1
+                                withAnimation(.bouncy) { state += 1 }
                             }
                         }
                     

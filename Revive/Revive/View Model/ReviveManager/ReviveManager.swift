@@ -224,7 +224,7 @@ class ReviveManager {
         currExploringState = .none
         isReleaseConfirm = false
         testMode = .off
-        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date())]
+        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date(), friendship: 0)]
         currCoins = 0
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
