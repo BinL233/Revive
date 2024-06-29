@@ -58,6 +58,7 @@ class ReviveManager {
     var currExploringItems : [Int:Int]
     var currExploringFixedRewards : [Int:Int]
     var pendingItem : [Int:Int]
+    var isItemUsed : Bool
     
     // Item Buff
     var isHatchingBuff : Bool
@@ -215,6 +216,7 @@ class ReviveManager {
         isTrainingBuff = false
         isExploringBuff = false
         isRarityBuff = false
+        isItemUsed = false
         hatchingBuffRate = 1
         trainingBuffRate = 1
         exploringBuffRate = 1

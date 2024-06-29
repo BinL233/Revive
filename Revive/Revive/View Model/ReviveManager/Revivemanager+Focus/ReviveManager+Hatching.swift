@@ -106,6 +106,8 @@ extension ReviveManager {
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
         }
+        
+        isItemUsed = false
     }
 
 }

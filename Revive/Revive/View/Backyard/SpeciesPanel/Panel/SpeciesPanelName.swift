@@ -70,7 +70,7 @@ struct SpeciesPanelName: View {
                             }
                         })
             )
-            .font(.system(size: 25))
+            .font(manager.mySpecies[manager.getSpeciesIndex(id: manager.currPanelSpecies!.speciesID, date: manager.currPanelSpecies!.hatchDate)].nickName.count <= 10 ? .system(size: 25) : .system(size: 20))
             .italic()
             .bold()
             .foregroundStyle(manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)

@@ -31,5 +31,6 @@ struct TreasureProgressBar: View {
                     manager.isTreasureBarCompleted = true
                 }
             })
+            .shadow(radius: 0.8, x: 0, y: 1)
     }
 }

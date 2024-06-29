@@ -155,6 +155,7 @@ struct SpeciesPanel: View {
                         if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
                             Button(action: {
                                 manager.itemBuff()
+                                manager.isItemUsed = true
                             }, label: {
                                 Text("Use")
                                     .font(.custom("Georgia-Italic", size: 15))
@@ -163,10 +164,10 @@ struct SpeciesPanel: View {
                                     .bold()
                                     .foregroundStyle(Color.cWhite)
                             })
-                            .background(manager.currPanelItem!.amount <= 0 || manager.isTimerStart ? .gray : Color.cBlueGreen)
+                            .background(manager.currPanelItem!.amount <= 0 || manager.isTimerStart || manager.isItemUsed ? .gray : Color.cBlueGreen)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                             .shadow(radius: 0.7, x: 2, y: 3)
-                            .disabled(manager.currPanelItem!.amount <= 0 || manager.isTimerStart)
+                            .disabled(manager.currPanelItem!.amount <= 0 || manager.isTimerStart || manager.isItemUsed)
                         } else {
                             Button(action: {
                                 manager.speciesItemsSelection = .Species

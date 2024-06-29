@@ -13,19 +13,37 @@ struct NewUserDialog1: View {
     
     var body: some View {
         Spacer()
-        ZStack {
-            Image("DialogBox")
-                .resizable()
-                .scaledToFit()
-                .shadow(radius: 6, x: 0, y: 4)
+        VStack {
+            Spacer()
             
-            if !manager.tutorialDialog1.isEmpty {
-                Text(manager.tutorialDialog1[currentIndex])
-                    .font(.custom("Georgia-Italic", size: 15))
-                    .padding(30)
-                    .foregroundStyle(Color.cBlack)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+            ZStack {
+                HStack {
+                        Image("XX")
+                        .resizable()
+                        .scaledToFit()
+                        .shadow(radius: 6, x: 0, y: 4)
+                        .scaleEffect(x: -1, y: 1)
+                        .frame(width: 300, height: 300)
+                        .offset(x: -60, y: -60)
+                    
+                    Spacer()
+                }
+                
+                Image("DialogBox")
+                    .resizable()
+                    .scaledToFit()
+                    .shadow(radius: 6, x: 0, y: 4)
+                    .offset(y: 80)
+                
+                if !manager.tutorialDialog1.isEmpty {
+                    Text(manager.tutorialDialog1[currentIndex])
+                        .font(.custom("Georgia-Italic", size: 15))
+                        .padding(30)
+                        .foregroundStyle(Color.cBlack)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(y: 80)
+                }
             }
         }
         .padding(.bottom, 100)
