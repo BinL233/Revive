@@ -12,19 +12,16 @@ struct NewUserDialog1: View {
     @Binding var currentIndex: Int
     
     var body: some View {
-        Spacer()
-        VStack {
-            Spacer()
-            
-            ZStack {
+        GeometryReader { geometry in
+            ZStack(alignment: .topLeading) {
                 HStack {
-                        Image("XX")
+                    Image("XX")
                         .resizable()
                         .scaledToFit()
                         .shadow(radius: 6, x: 0, y: 4)
                         .scaleEffect(x: -1, y: 1)
                         .frame(width: 300, height: 300)
-                        .offset(x: -60, y: -60)
+                        .offset(x: -60, y: geometry.size.height - 300)
                     
                     Spacer()
                 }
@@ -33,16 +30,23 @@ struct NewUserDialog1: View {
                     .resizable()
                     .scaledToFit()
                     .shadow(radius: 6, x: 0, y: 4)
-                    .offset(y: 80)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .offset(y: (geometry.size.height - 40) / 2)
                 
                 if !manager.tutorialDialog1.isEmpty {
+                    Text("Xixi")
+                        .font(.custom("Georgia-Italic", size: 18))
+                        .foregroundStyle(Color.cBlack)
+                        .multilineTextAlignment(.leading)
+                        .position(x: geometry.size.width * 0.21, y: (geometry.size.height - 40) / 2 * 1.875)
+                    
                     Text(manager.tutorialDialog1[currentIndex])
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(30)
                         .foregroundStyle(Color.cBlack)
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .offset(y: 80)
+                        .offset(y: (geometry.size.height - 40) * 0.96)
                 }
             }
         }
