@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+@available(iOS 17.0, *)
 struct MainTabView: View {
     @State private var selectedTab = "focus"
     @State private var isTutorialHFinished = false
-    @Environment(ReviveManager.self) var manager
+    @Environment(ReviveManager_ios17.self) var manager
     @Binding var isTestModeOn : Bool
     
     init(isTestModeOn: Binding<Bool>) {

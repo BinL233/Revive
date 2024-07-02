@@ -17,10 +17,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func registerBGTaskScheduler() {
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "fun.binltools.Revive.Refresh", using: nil) { task in
-            ReviveManager().handleAppRefresh(task: task as! BGAppRefreshTask)
+            if #available(iOS 17.0, *) {
+                ReviveManager_ios17().handleAppRefresh(task: task as! BGAppRefreshTask)
+            } else if #available(iOS 16.0, *) {
+                ReviveManager_ios16().handleAppRefresh(task: task as! BGAppRefreshTask)
+            }
         }
         BGTaskScheduler.shared.register(forTaskWithIdentifier: "fun.binltools.Revive.Processing", using: nil) { task in
-            ReviveManager().handleProcessingTask(task: task as! BGProcessingTask)
+            if #available(iOS 17.0, *) {
+                ReviveManager_ios17().handleProcessingTask(task: task as! BGProcessingTask)
+            } else if #available(iOS 16.0, *) {
+                ReviveManager_ios16().handleProcessingTask(task: task as! BGProcessingTask)
+            }
+
         }
         print("Background Tasks Created")
     }
