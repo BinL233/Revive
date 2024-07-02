@@ -28,7 +28,7 @@ struct ActionButtons: View {
                 .background((manager.currAction == .hatching) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .disabled(!manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies())
+                .disabled((!manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies()) || manager.isTimerStart)
             }
             
             if ((manager.currAction == .training) || !manager.isTimerStart) {
@@ -47,7 +47,7 @@ struct ActionButtons: View {
                 .background((manager.currAction == .training) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .disabled(manager.checkNoSpecies())
+                .disabled(manager.checkNoSpecies() || manager.isTimerStart)
             }
             
             if ((manager.currAction == .exploring) || !manager.isTimerStart) {
@@ -68,7 +68,7 @@ struct ActionButtons: View {
                 .background((manager.currAction == .exploring) ? Color.cLightBrown : .clear)
                 .animation(.easeInOut(duration: 0.2), value: manager.currAction)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                .disabled((!manager.isTimerStart && manager.timeRemaining < 10*60) || manager.checkNoSpecies())
+                .disabled(((!manager.isTimerStart && manager.timeRemaining < 10*60) || manager.checkNoSpecies()) || manager.isTimerStart)
             }
         }
     }

@@ -42,9 +42,7 @@ struct SeasomeHuStore: View {
                 .frame(width: 150, height: 150)
                 .foregroundStyle(Color.cWhite.opacity(0.01))
                 .onTapGesture {
-                    if let frames = framesTouch {
-                        animationType = "touch"
-                    }
+                    animationType = "touch"
                 }
         }
     }

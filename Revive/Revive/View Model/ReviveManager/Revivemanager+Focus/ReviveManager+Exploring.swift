@@ -221,10 +221,13 @@ extension ReviveManager {
         focusLog.append(logg)
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
+        DataManager.shared.updateMySpeciesFriendship(for: currExploringSpecies!.speciesID, for: currExploringSpecies!.hatchDate, with: currExploringSpecies!.friendship/60 + selectedTime/60, mySpecies: mySpecies)
         
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
         }
+        
+        isItemUsed = false
     }
     
     func initMyMap() {

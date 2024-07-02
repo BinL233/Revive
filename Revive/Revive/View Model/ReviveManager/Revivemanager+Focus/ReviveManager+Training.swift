@@ -45,6 +45,7 @@ extension ReviveManager {
 //        let idx = self.getSpeciesIndex(id: id, date: date)
 //        self.mySpecies[idx].currExp = currExp
 //        self.mySpecies[idx].level += levelUpNum
+        DataManager.shared.updateMySpeciesFriendship(for: id, for: date, with: currTrainingSpecies!.friendship + selectedTime/60, mySpecies: mySpecies)
         DataManager.shared.updateMySpeciesLevel(for: id, for: date, with: currTrainingSpecies!.level + levelUpNum, mySpecies: mySpecies)
         DataManager.shared.updateMySpeciesCurrExp(for: id, for: date, with: currExp, mySpecies: mySpecies)
         
@@ -66,6 +67,8 @@ extension ReviveManager {
         focusLog.append(logg)
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
+        
+        isItemUsed = false
     }
     
     func quickFinishCompleteView() {

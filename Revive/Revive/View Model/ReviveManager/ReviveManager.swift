@@ -58,6 +58,7 @@ class ReviveManager {
     var currExploringItems : [Int:Int]
     var currExploringFixedRewards : [Int:Int]
     var pendingItem : [Int:Int]
+    var isItemUsed : Bool
     
     // Item Buff
     var isHatchingBuff : Bool
@@ -108,6 +109,11 @@ class ReviveManager {
     var currFocusLog : [(key: String, value: Int)]
     var currDistTimeSpanSelection : CurrDistTimeSpanSelection
     var currDistActionSelection : CurrDistActionSelection
+    
+    // Tutorial toggle
+    var isTutorialFinished : Bool
+    var hideInitTutorial : Bool
+    var tutorialState : Int
     
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
@@ -176,6 +182,8 @@ class ReviveManager {
         panelInfoAction = .none
         isStartButtonDisabled = false
         isStartButtonDisabled2 = false
+        hideInitTutorial = false
+        tutorialState = 0
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {
                 if let date = calendar.date(from: components) {
@@ -215,6 +223,7 @@ class ReviveManager {
         isTrainingBuff = false
         isExploringBuff = false
         isRarityBuff = false
+        isItemUsed = false
         hatchingBuffRate = 1
         trainingBuffRate = 1
         exploringBuffRate = 1
@@ -224,7 +233,7 @@ class ReviveManager {
         currExploringState = .none
         isReleaseConfirm = false
         testMode = .off
-        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date())]
+        standardMySpecies = [MySpecies(speciesID: 1, level: 1, currExp: 10, height: 2.2, weight: 3.3, favorite: false, hatchDate: Date(), friendship: 0)]
         currCoins = 0
         currPanelSpecies = localMySpecies.count == 0 ? nil : localMySpecies[0]
         currPanelItem = localMyItems.count == 0 ? nil : localMyItems[0]
@@ -242,6 +251,7 @@ class ReviveManager {
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
         UDSpeciesListSort = UserDefaults.standard.string(forKey: "UDSpeciesListSort") ?? "name"
         UDItemListSort = UserDefaults.standard.string(forKey: "UDItemListSort") ?? "name"
+        isTutorialFinished = UserDefaults.standard.bool(forKey: "isTutorialFinished") 
         
         if  UserDefaults.standard.object(forKey: "backgroundRunning") == nil {
             backgroundRunning = true

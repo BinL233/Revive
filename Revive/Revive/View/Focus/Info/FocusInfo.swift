@@ -26,8 +26,8 @@ struct FocusInfo: View {
                                 
                                 Text("Hatching")
                                     .bold()
-                                    .font(.title3)
-                                    .padding(.vertical, 8)
+                                    .font(.title2)
+                                    .padding(.vertical, 5)
                                     .padding(.horizontal, 5)
                                 
                                 VStack (alignment: .leading) {
@@ -40,15 +40,16 @@ struct FocusInfo: View {
                                     Text("4. SR Species probability = 10% + 0.34% * Hatching Time (min)")
                                         .padding(5)
                                 }
-                                .padding(5)
-                                .background(Color.cBlackBrown.opacity(0.3))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+//                                .background(Color.cBlackBrown.opacity(0.3))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.bottom)
                                 
                                 
                                 Text("Training")
                                     .bold()
-                                    .font(.title3)
-                                    .padding(.vertical, 8)
+                                    .font(.title2)
+                                    .padding(.vertical, 5)
+                                    .padding(.top, 5)
                                     .padding(.horizontal, 5)
                                 
                                 VStack (alignment: .leading) {
@@ -57,15 +58,16 @@ struct FocusInfo: View {
                                     Text("2. EXP = 60 * Training Time (min)")
                                         .padding(5)
                                 }
-                                .padding(5)
-                                .background(Color.cBlackBrown.opacity(0.3))
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
+//                                .background(Color.cBlackBrown.opacity(0.3))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.bottom)
                                 
                                 
                                 Text("Exploring")
                                     .bold()
-                                    .font(.title3)
-                                    .padding(.vertical, 8)
+                                    .font(.title2)
+                                    .padding(.vertical, 5)
+                                    .padding(.top, 5)
                                     .padding(.horizontal, 5)
                                 
                                 VStack (alignment: .leading) {
@@ -81,10 +83,10 @@ struct FocusInfo: View {
                                         .padding(5)
                                     Text("6. Each map has its own terrain, and Species will have Exploring Buffs for the terrain they specialize in.")
                                         .padding(5)
-                            }
-                            .padding(5)
-                            .background(Color.cBlackBrown.opacity(0.3))
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                                }
+    //                            .background(Color.cBlackBrown.opacity(0.3))
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .padding(.bottom)
                                 
                             }
                         }

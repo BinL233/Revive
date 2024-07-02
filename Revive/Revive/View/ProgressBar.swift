@@ -29,5 +29,6 @@ struct ProgressBar: View {
                 )
                 .foregroundStyle(.clear)
         }
+        .shadow(radius: 0.8, x: 1, y: 1)
     }
 }

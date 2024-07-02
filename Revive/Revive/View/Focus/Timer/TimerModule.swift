@@ -113,7 +113,7 @@ extension TimerModule {
                     
                     withAnimation{manager.changeToHatchingState2()}
                     
-                } else if Int(manager.timeRemaining) == 0 {
+                } else if Int(manager.timeRemaining) <= 0 {
                     // Live Activity
 //                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
 //                    Task {
@@ -143,7 +143,7 @@ extension TimerModule {
 //                    await widgetManager.timeRemainingAct?.update(content)
 //                }
                 
-                if Int(manager.timeRemaining) == 0 {
+                if Int(manager.timeRemaining) <= 0 {
                     manager.focusTimer?.cancel()
                     let (levelUpNum, currExp) = manager.getLevelUpNum(species: manager.currTrainingSpecies!, exp: manager.selectedTime)
                     withAnimation{manager.changeToTrainingState2(id: manager.currTrainingSpecies!.speciesID, date: manager.currTrainingSpecies!.hatchDate, currExp: currExp, levelUpNum: levelUpNum)}
@@ -158,7 +158,7 @@ extension TimerModule {
 //                    await widgetManager.timeRemainingAct?.update(content)
 //                }
                 
-                if Int(manager.timeRemaining) == 0 {
+                if Int(manager.timeRemaining) <= 0 {
                     manager.focusTimer?.cancel()
                     manager.getCoins()
                     manager.currExploringItems = manager.getRewards()

@@ -76,7 +76,8 @@ extension ReviveManager {
             height: randomHeight,
             weight: randomWeight,
             favorite: currPanelSpecies!.favorite,
-            hatchDate: currPanelSpecies!.hatchDate
+            hatchDate: currPanelSpecies!.hatchDate,
+            friendship: currPanelSpecies!.friendship
         )
         
         currPanelSpecies = mySpecies[index]

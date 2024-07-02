@@ -55,6 +55,11 @@ extension ReviveManager {
         timeRemaining = 30 * 60
         currHatchingEgg = 1001
         activeAlert = .none
+        
+        if !isTutorialFinished {
+            hideInitTutorial = false
+            tutorialState = 2
+        }
     }
     
     func changeToHatchingState2() {
@@ -73,7 +78,7 @@ extension ReviveManager {
         
         let currentDate = Date()
         
-        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date())
+        let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date(), friendship: 0)
         mySpecies.append(currS)
         DataManager.shared.saveData(customItem: currS)
         
@@ -106,6 +111,8 @@ extension ReviveManager {
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
         }
+        
+        isItemUsed = false
     }
 
 }
