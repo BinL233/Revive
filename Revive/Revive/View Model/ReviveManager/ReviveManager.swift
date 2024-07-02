@@ -110,6 +110,11 @@ class ReviveManager {
     var currDistTimeSpanSelection : CurrDistTimeSpanSelection
     var currDistActionSelection : CurrDistActionSelection
     
+    // Tutorial toggle
+    var isTutorialFinished : Bool
+    var hideInitTutorial : Bool
+    var tutorialState : Int
+    
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
@@ -177,6 +182,8 @@ class ReviveManager {
         panelInfoAction = .none
         isStartButtonDisabled = false
         isStartButtonDisabled2 = false
+        hideInitTutorial = false
+        tutorialState = 0
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {
                 if let date = calendar.date(from: components) {
@@ -244,6 +251,7 @@ class ReviveManager {
         reminderTime = UserDefaults.standard.string(forKey: "ReminderTime") ?? "Please select a time"
         UDSpeciesListSort = UserDefaults.standard.string(forKey: "UDSpeciesListSort") ?? "name"
         UDItemListSort = UserDefaults.standard.string(forKey: "UDItemListSort") ?? "name"
+        isTutorialFinished = UserDefaults.standard.bool(forKey: "isTutorialFinished") 
         
         if  UserDefaults.standard.object(forKey: "backgroundRunning") == nil {
             backgroundRunning = true

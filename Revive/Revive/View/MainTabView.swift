@@ -19,6 +19,8 @@ struct MainTabView: View {
     }
     
     var body: some View {
+        @Bindable var manager = manager
+        
         ZStack {
             TabView (selection: $selectedTab) {
                 FocusView()
@@ -107,8 +109,8 @@ struct MainTabView: View {
                 }
             }
             
-            if (manager.checkNoSpecies() && !isTutorialHFinished) {
-                InitTutorial(isTutorialHFinished: $isTutorialHFinished)
+            if (!manager.isTutorialFinished && !manager.hideInitTutorial) {
+                InitTutorial(hideInitTutorial: $manager.hideInitTutorial, state: $manager.tutorialState)
             }
         }
     }

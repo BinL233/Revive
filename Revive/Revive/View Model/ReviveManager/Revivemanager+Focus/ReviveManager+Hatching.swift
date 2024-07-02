@@ -55,6 +55,11 @@ extension ReviveManager {
         timeRemaining = 30 * 60
         currHatchingEgg = 1001
         activeAlert = .none
+        
+        if !isTutorialFinished {
+            hideInitTutorial = false
+            tutorialState = 2
+        }
     }
     
     func changeToHatchingState2() {

@@ -67,11 +67,8 @@
 		B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */; };
 		B3629B092AFDDFB300F3D135 /* SpeciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */; };
 		B3629B0F2AFDE19900F3D135 /* SpeciesListImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */; };
-		B36DE9452C1E6E50007B11FC /* Tutorial1.json in Resources */ = {isa = PBXBuildFile; fileRef = B36DE9442C1E6E50007B11FC /* Tutorial1.json */; };
 		B36DE94C2C1E7397007B11FC /* DialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94B2C1E7397007B11FC /* DialogManager.swift */; };
-		B36DE94E2C1FEAA3007B11FC /* NewUserDialog1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94D2C1FEAA3007B11FC /* NewUserDialog1.swift */; };
-		B36DE9502C1FEBE1007B11FC /* GuideHatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94F2C1FEBE1007B11FC /* GuideHatching.swift */; };
-		B36DE9522C1FED94007B11FC /* Tutorial2.json in Resources */ = {isa = PBXBuildFile; fileRef = B36DE9512C1FED94007B11FC /* Tutorial2.json */; };
+		B36DE94E2C1FEAA3007B11FC /* NewUserDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94D2C1FEAA3007B11FC /* NewUserDialog.swift */; };
 		B36DE9572C2511FF007B11FC /* FriendshipImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE9562C2511FF007B11FC /* FriendshipImage.swift */; };
 		B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
 		B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */; };
@@ -128,6 +125,9 @@
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
 		B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */; };
+		B3F6EA5F2C33848800444FA2 /* Tutorial3.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5B2C33848800444FA2 /* Tutorial3.json */; };
+		B3F6EA602C33848800444FA2 /* Tutorial2.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5C2C33848800444FA2 /* Tutorial2.json */; };
+		B3F6EA612C33848800444FA2 /* Tutorial1.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5D2C33848800444FA2 /* Tutorial1.json */; };
 		B3FA3C8D2B22099200FE8D4D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA3C8C2B22099200FE8D4D /* Statistics.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
 		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
@@ -250,11 +250,8 @@
 		B3629B032AFDDD9C00F3D135 /* BackyardTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardTitle.swift; sourceTree = "<group>"; };
 		B3629B082AFDDFB300F3D135 /* SpeciesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListView.swift; sourceTree = "<group>"; };
 		B3629B0E2AFDE19900F3D135 /* SpeciesListImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesListImage.swift; sourceTree = "<group>"; };
-		B36DE9442C1E6E50007B11FC /* Tutorial1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial1.json; path = ../../../../../../temp/Tutorial1.json; sourceTree = "<group>"; };
 		B36DE94B2C1E7397007B11FC /* DialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManager.swift; sourceTree = "<group>"; };
-		B36DE94D2C1FEAA3007B11FC /* NewUserDialog1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserDialog1.swift; sourceTree = "<group>"; };
-		B36DE94F2C1FEBE1007B11FC /* GuideHatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideHatching.swift; sourceTree = "<group>"; };
-		B36DE9512C1FED94007B11FC /* Tutorial2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial2.json; path = ../../../../../../temp/Tutorial2.json; sourceTree = "<group>"; };
+		B36DE94D2C1FEAA3007B11FC /* NewUserDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserDialog.swift; sourceTree = "<group>"; };
 		B36DE9562C2511FF007B11FC /* FriendshipImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendshipImage.swift; sourceTree = "<group>"; };
 		B39D61D52B200BCF001BFA00 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
 		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
@@ -312,6 +309,9 @@
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
 		B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Statistics.swift"; sourceTree = "<group>"; };
+		B3F6EA5B2C33848800444FA2 /* Tutorial3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial3.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial3.json; sourceTree = "<group>"; };
+		B3F6EA5C2C33848800444FA2 /* Tutorial2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial2.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial2.json; sourceTree = "<group>"; };
+		B3F6EA5D2C33848800444FA2 /* Tutorial1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial1.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial1.json; sourceTree = "<group>"; };
 		B3FA3C8C2B22099200FE8D4D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
 		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
@@ -544,8 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				B35D00472B96C91A00F44AD1 /* InitTutorial.swift */,
-				B36DE94D2C1FEAA3007B11FC /* NewUserDialog1.swift */,
-				B36DE94F2C1FEBE1007B11FC /* GuideHatching.swift */,
+				B36DE94D2C1FEAA3007B11FC /* NewUserDialog.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -594,8 +593,9 @@
 		B36DE9432C1E6D20007B11FC /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
-				B36DE9442C1E6E50007B11FC /* Tutorial1.json */,
-				B36DE9512C1FED94007B11FC /* Tutorial2.json */,
+				B3F6EA5D2C33848800444FA2 /* Tutorial1.json */,
+				B3F6EA5C2C33848800444FA2 /* Tutorial2.json */,
+				B3F6EA5B2C33848800444FA2 /* Tutorial3.json */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -965,13 +965,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F6EA602C33848800444FA2 /* Tutorial2.json in Resources */,
+				B3F6EA5F2C33848800444FA2 /* Tutorial3.json in Resources */,
 				B35D004A2B96CA3100F44AD1 /* Item.json in Resources */,
 				B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */,
 				B330E5492B97E60D002B74C9 /* Animations.json in Resources */,
+				B3F6EA612C33848800444FA2 /* Tutorial1.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
 				B3096DD52B3764C80067131D /* StoreItems.json in Resources */,
-				B36DE9522C1FED94007B11FC /* Tutorial2.json in Resources */,
-				B36DE9452C1E6E50007B11FC /* Tutorial1.json in Resources */,
 				B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */,
 				B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */,
 				B3FB819B2B19920B004CB417 /* ExploringMap.json in Resources */,
@@ -1023,7 +1024,7 @@
 				B349D5D82B0950A900270661 /* SettingView.swift in Sources */,
 				B3234E942B150A6500A730D1 /* FocusLog.swift in Sources */,
 				B3C7742E2ACD081800387FDC /* TimerModule.swift in Sources */,
-				B36DE94E2C1FEAA3007B11FC /* NewUserDialog1.swift in Sources */,
+				B36DE94E2C1FEAA3007B11FC /* NewUserDialog.swift in Sources */,
 				B3FF6BA02B1BB78200327E93 /* ReviveManager+Training.swift in Sources */,
 				B36DE9572C2511FF007B11FC /* FriendshipImage.swift in Sources */,
 				B3C738EA2AF9E72C006709C9 /* HatchingView.swift in Sources */,
@@ -1064,7 +1065,6 @@
 				B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
-				B36DE9502C1FEBE1007B11FC /* GuideHatching.swift in Sources */,
 				B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */,
 				B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */,
 				B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */,
