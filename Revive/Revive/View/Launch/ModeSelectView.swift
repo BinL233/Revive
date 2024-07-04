@@ -13,9 +13,15 @@ struct ModeSelectView: View {
     
     var body: some View {
         ZStack {
-            Color.init(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 18))
-                .shadow(radius: 6, x: 0, y: 4)
+            if #available(iOS 17.0, *) {
+                Color.init(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                    .shadow(radius: 6, x: 0, y: 4)
+            } else if #available(iOS 16.0, *) {
+                Color.white
+                    .clipShape(RoundedRectangle(cornerRadius: 18))
+                    .shadow(radius: 6, x: 0, y: 4)
+            }
             VStack {
                 Text("MODE SELECTION")
                     .font(.custom("Georgia-Italic", size: 20))

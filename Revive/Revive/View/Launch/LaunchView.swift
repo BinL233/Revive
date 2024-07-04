@@ -20,7 +20,11 @@ struct LaunchView: View {
                 if isActive && !isModeSelected {
                     ModeSelectView(isTestModeOn: $isTestModeOn, isModeSelected: $isModeSelected)
                 } else if isActive && isModeSelected {
-                    MainTabView(isTestModeOn: $isTestModeOn)
+                    if #available(iOS 17.0, *) {
+                        MainTabView_ios17(isTestModeOn: $isTestModeOn)
+                    } else if #available(iOS 16.0, *) {
+                        MainTabView_ios16(isTestModeOn: $isTestModeOn)
+                    }
                 } else {
                     Spacer()
                     Text("Revive")

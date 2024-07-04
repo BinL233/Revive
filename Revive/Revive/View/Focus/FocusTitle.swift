@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct FocusTitle: View {
-    @Environment(ReviveManager.self) var manager
     
     var body: some View {
         ZStack {
@@ -18,13 +17,28 @@ struct FocusTitle: View {
                 .bold()
                 .foregroundStyle(Color.cBlack)
             HStack {
-                Reminder()
-                    .padding(.leading, 5)
+                if #available(iOS 17.0, *) {
+                    Reminder_ios17()
+                        .padding(.leading, 5)
+                } else if #available(iOS 16.0, *) {
+                    Reminder_ios16()
+                        .padding(.leading, 5)
+                }
+                
                 Spacer()
-                NavigationLink(destination: SettingView()) {
-                    Image(systemName: "gearshape")
-                        .font(.title2)
-                        .foregroundStyle(Color.cBlackBrown)
+                
+                if #available(iOS 17.0, *) {
+                    NavigationLink(destination: SettingView_ios17()) {
+                        Image(systemName: "gearshape")
+                            .font(.title2)
+                            .foregroundStyle(Color.cBlackBrown)
+                    }
+                } else if #available(iOS 16.0, *) {
+                    NavigationLink(destination: SettingView_ios16()) {
+                        Image(systemName: "gearshape")
+                            .font(.title2)
+                            .foregroundStyle(Color.cBlackBrown)
+                    }
                 }
             }
             .padding(.horizontal, 20)

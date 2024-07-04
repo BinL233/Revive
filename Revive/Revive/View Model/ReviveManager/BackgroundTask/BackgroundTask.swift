@@ -54,7 +54,7 @@ extension ReviveManager_ios17 {
     
     func handleProcessingTask(task: BGProcessingTask) {
         // Create an operation that performs the main part of the background task.
-        let operation = BackgroundOperation(manager: self)
+        let operation = BackgroundOperation_ios17(manager: self)
         
         // Provide the background task with an expiration handler that cancels the operation.
         task.expirationHandler = {
@@ -78,7 +78,7 @@ extension ReviveManager_ios17 {
         scheduleAppRefresh()
         
         // Create an operation that performs the main part of the background task.
-        let operation = BackgroundOperation(manager: self)
+        let operation = BackgroundOperation_ios17(manager: self)
         
         // Provide the background task with an expiration handler that cancels the operation.
         task.expirationHandler = {
@@ -143,7 +143,7 @@ extension ReviveManager_ios16 {
     
     func handleProcessingTask(task: BGProcessingTask) {
         // Create an operation that performs the main part of the background task.
-        let operation = BackgroundOperation(manager: self)
+        let operation = BackgroundOperation_ios16(manager: self)
         
         // Provide the background task with an expiration handler that cancels the operation.
         task.expirationHandler = {
@@ -167,7 +167,7 @@ extension ReviveManager_ios16 {
         scheduleAppRefresh()
         
         // Create an operation that performs the main part of the background task.
-        let operation = BackgroundOperation(manager: self)
+        let operation = BackgroundOperation_ios16(manager: self)
         
         // Provide the background task with an expiration handler that cancels the operation.
         task.expirationHandler = {
