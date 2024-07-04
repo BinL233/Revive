@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(iOS 17.0, *)
 extension WidgetManager {
     func secTimeToString(time: Int) -> String {
         let time = time

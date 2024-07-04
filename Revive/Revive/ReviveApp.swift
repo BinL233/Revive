@@ -14,10 +14,15 @@ struct ReviveApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LaunchView()
-                .environment(ReviveManager())
-                .environment(WidgetManager())
-                .environment(DialogManager())
+            if #available(iOS 17.0, *) {
+                LaunchView()
+                    .environment(ReviveManager_ios17())
+                    .environment(DialogManager_ios17())
+            } else if #available(iOS 16.0, *) {
+                LaunchView()
+                    .environmentObject(ReviveManager_ios16())
+                    .environmentObject(DialogManager_ios16())
+            }
         }
     }
 }

@@ -125,9 +125,9 @@
 		B3E1B9482B082B1900AD7AA7 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */; };
 		B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */; };
 		B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */; };
-		B3F6EA5F2C33848800444FA2 /* Tutorial3.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5B2C33848800444FA2 /* Tutorial3.json */; };
-		B3F6EA602C33848800444FA2 /* Tutorial2.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5C2C33848800444FA2 /* Tutorial2.json */; };
-		B3F6EA612C33848800444FA2 /* Tutorial1.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA5D2C33848800444FA2 /* Tutorial1.json */; };
+		B3F6EA6B2C33928C00444FA2 /* Tutorial2.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA682C33928C00444FA2 /* Tutorial2.json */; };
+		B3F6EA6C2C33928C00444FA2 /* Tutorial1.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA692C33928C00444FA2 /* Tutorial1.json */; };
+		B3F6EA6D2C33928C00444FA2 /* Tutorial3.json in Resources */ = {isa = PBXBuildFile; fileRef = B3F6EA6A2C33928C00444FA2 /* Tutorial3.json */; };
 		B3FA3C8D2B22099200FE8D4D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA3C8C2B22099200FE8D4D /* Statistics.swift */; };
 		B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */; };
 		B3FA42D42AFF1B34009C6C41 /* ReviveManager+Backyard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */; };
@@ -309,9 +309,9 @@
 		B3E1B9472B082B1900AD7AA7 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		B3E1B9492B08492C00AD7AA7 /* TrainingComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingComplete.swift; sourceTree = "<group>"; };
 		B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Statistics.swift"; sourceTree = "<group>"; };
-		B3F6EA5B2C33848800444FA2 /* Tutorial3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial3.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial3.json; sourceTree = "<group>"; };
-		B3F6EA5C2C33848800444FA2 /* Tutorial2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial2.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial2.json; sourceTree = "<group>"; };
-		B3F6EA5D2C33848800444FA2 /* Tutorial1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial1.json; path = ../../../../../../../Downloads/tutorial_text/Tutorial1.json; sourceTree = "<group>"; };
+		B3F6EA682C33928C00444FA2 /* Tutorial2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial2.json; path = Revive/Persistences/Tutorial2.json; sourceTree = SOURCE_ROOT; };
+		B3F6EA692C33928C00444FA2 /* Tutorial1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial1.json; path = Revive/Persistences/Tutorial1.json; sourceTree = SOURCE_ROOT; };
+		B3F6EA6A2C33928C00444FA2 /* Tutorial3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Tutorial3.json; path = Revive/Persistences/Tutorial3.json; sourceTree = SOURCE_ROOT; };
 		B3FA3C8C2B22099200FE8D4D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		B3FA42D12AFF19EC009C6C41 /* SpeciesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPanel.swift; sourceTree = "<group>"; };
 		B3FA42D32AFF1B34009C6C41 /* ReviveManager+Backyard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Backyard.swift"; sourceTree = "<group>"; };
@@ -593,9 +593,9 @@
 		B36DE9432C1E6D20007B11FC /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
-				B3F6EA5D2C33848800444FA2 /* Tutorial1.json */,
-				B3F6EA5C2C33848800444FA2 /* Tutorial2.json */,
-				B3F6EA5B2C33848800444FA2 /* Tutorial3.json */,
+				B3F6EA692C33928C00444FA2 /* Tutorial1.json */,
+				B3F6EA682C33928C00444FA2 /* Tutorial2.json */,
+				B3F6EA6A2C33928C00444FA2 /* Tutorial3.json */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -965,18 +965,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F6EA602C33848800444FA2 /* Tutorial2.json in Resources */,
-				B3F6EA5F2C33848800444FA2 /* Tutorial3.json in Resources */,
 				B35D004A2B96CA3100F44AD1 /* Item.json in Resources */,
+				B3F6EA6D2C33928C00444FA2 /* Tutorial3.json in Resources */,
 				B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */,
 				B330E5492B97E60D002B74C9 /* Animations.json in Resources */,
-				B3F6EA612C33848800444FA2 /* Tutorial1.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
+				B3F6EA6B2C33928C00444FA2 /* Tutorial2.json in Resources */,
 				B3096DD52B3764C80067131D /* StoreItems.json in Resources */,
 				B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */,
 				B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */,
 				B3FB819B2B19920B004CB417 /* ExploringMap.json in Resources */,
 				B3CCA4182BD17D07008D4D2B /* Localizable.xcstrings in Resources */,
+				B3F6EA6C2C33928C00444FA2 /* Tutorial1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,7 +1231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1288,7 +1288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

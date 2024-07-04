@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct FocusSetting: View {
-    @Environment(ReviveManager.self) var manager
+@available(iOS 17.0, *)
+struct FocusSetting_ios17: View {
+    @Environment(ReviveManager_ios17.self) var manager
     
     var body: some View {
         @Bindable var manager = manager
@@ -25,21 +26,36 @@ struct FocusSetting: View {
                             manager.setDisplay()
                         }
                 }
-                
-//                HStack {
-//                    Text("Timer to Run in Background")
-//                    Spacer()
-//                    Toggle("", isOn: $manager.backgroundRunning)
-//                        .labelsHidden()
-//                        .onChange(of: manager.backgroundRunning) { oldValue, newValue in
-//                            UserDefaults.standard.set(manager.backgroundRunning, forKey: "backgroundRunning")
-//                        }
-//                }
+
             }
         } header: {
             Text("FOCUS")
-        }// footer: {
-//            Text("Display will not off when you are focusing.")
-//        }
+        }
+    }
+}
+
+@available(iOS 16.0, *)
+struct FocusSetting_ios16: View {
+    @EnvironmentObject var manager: ReviveManager_ios16
+    
+    var body: some View {
+        Section {
+            List {
+                HStack {
+                    Text("Keep Screen On")
+                    Spacer()
+                    Toggle("", isOn: $manager.keepDisplay)
+                        .labelsHidden()
+                        .onChange(of: manager.keepDisplay) { newValue in
+                            manager.keepDisplay = newValue
+                            UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
+                            manager.setDisplay()
+                        }
+                }
+
+            }
+        } header: {
+            Text("FOCUS")
+        }
     }
 }

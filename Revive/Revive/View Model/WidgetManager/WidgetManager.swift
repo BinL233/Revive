@@ -8,6 +8,7 @@
 import Foundation
 import ActivityKit
 
+@available(iOS 17.0, *)
 @Observable
 class WidgetManager {
     var timeRemainingAct : Activity<ReviveWidgetAttributes>?

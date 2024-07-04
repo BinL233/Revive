@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FocusInfo: View {
     @State var isFocusInfoSheetShow : Bool = false
-    @Environment(ReviveManager.self) var manager
     
     var body: some View {
         VStack (alignment: .leading) {

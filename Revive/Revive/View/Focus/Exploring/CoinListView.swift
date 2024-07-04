@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CoinListView: View {
-    @Environment(ReviveManager.self) var manager
     var currItemNum : Int
     
     var body: some View {

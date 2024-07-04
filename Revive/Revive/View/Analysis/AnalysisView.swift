@@ -13,9 +13,17 @@ struct AnalysisView: View {
             ZStack {
                 Background()
                 VStack {
-                    AnalysisTitle()
+                    if #available(iOS 17.0, *) {
+                        AnalysisTitle_ios17()
+                    } else if #available(iOS 16.0, *) {
+                        AnalysisTitle_ios16()
+                    }
                     Spacer()
-                    AnalysisDistribution()
+                    if #available(iOS 17.0, *) {
+                        AnalysisDistribution_ios17()
+                    } else if #available(iOS 16.0, *) {
+                        AnalysisDistribution_ios16()
+                    }
                     Form {
                         VStack {
                             HStack {
@@ -27,7 +35,12 @@ struct AnalysisView: View {
                                     .padding(.bottom, 5)
                                 Spacer()
                             }
-                            AnalysisDetails()
+                            
+                            if #available(iOS 17.0, *) {
+                                AnalysisDetails_ios17()
+                            } else if #available(iOS 16.0, *) {
+                                AnalysisDetails_ios16()
+                            }
                         }
                     }
                     .scrollContentBackground(.hidden)
