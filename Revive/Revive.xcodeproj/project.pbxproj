@@ -13,6 +13,8 @@
 		B3096DD52B3764C80067131D /* StoreItems.json in Resources */ = {isa = PBXBuildFile; fileRef = B3096DD42B3764C80067131D /* StoreItems.json */; };
 		B3096DD72B3764DD0067131D /* StoreItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3096DD62B3764DD0067131D /* StoreItems.swift */; };
 		B3096DD92B3767020067131D /* ReviveManager+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3096DD82B3767020067131D /* ReviveManager+Store.swift */; };
+		B30BB28B2C37C99700254B79 /* WebFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB28A2C37C99700254B79 /* WebFetchManager.swift */; };
+		B30BB28E2C37CB9A00254B79 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB28D2C37CB9A00254B79 /* Announcement.swift */; };
 		B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31319882B1FB83A00FFC760 /* ContactUs.swift */; };
 		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
@@ -195,6 +197,8 @@
 		B3096DD42B3764C80067131D /* StoreItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoreItems.json; sourceTree = "<group>"; };
 		B3096DD62B3764DD0067131D /* StoreItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItems.swift; sourceTree = "<group>"; };
 		B3096DD82B3767020067131D /* ReviveManager+Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Store.swift"; sourceTree = "<group>"; };
+		B30BB28A2C37C99700254B79 /* WebFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFetchManager.swift; sourceTree = "<group>"; };
+		B30BB28D2C37CB9A00254B79 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
@@ -383,6 +387,22 @@
 				B307677F2B2BF8E700AF19D0 /* SingleDetails.swift */,
 			);
 			path = AnalysisDetails;
+			sourceTree = "<group>";
+		};
+		B30BB2892C37C97600254B79 /* WebFetchManager */ = {
+			isa = PBXGroup;
+			children = (
+				B30BB28A2C37C99700254B79 /* WebFetchManager.swift */,
+			);
+			path = WebFetchManager;
+			sourceTree = "<group>";
+		};
+		B30BB28C2C37CB6100254B79 /* Announcement */ = {
+			isa = PBXGroup;
+			children = (
+				B30BB28D2C37CB9A00254B79 /* Announcement.swift */,
+			);
+			path = Announcement;
 			sourceTree = "<group>";
 		};
 		B319E67E2B0A65FC000B9FD4 /* Launch */ = {
@@ -720,6 +740,7 @@
 		B3C774262ACCE6AD00387FDC /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				B30BB2892C37C97600254B79 /* WebFetchManager */,
 				B36DE94A2C1E737C007B11FC /* DialogManager */,
 				B39D61D42B200BB0001BFA00 /* WidgetManager */,
 				B359FE4B2AFBF9DD00A58A87 /* DataManager */,
@@ -754,6 +775,7 @@
 		B3C7742A2ACD044F00387FDC /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B30BB28C2C37CB6100254B79 /* Announcement */,
 				B3D3FE112B2D57EF00D04D8F /* Info */,
 				B3234E892B15047200A730D1 /* Exploring */,
 				B3E1B9462B082B0700AD7AA7 /* Training */,
@@ -1018,6 +1040,7 @@
 				B3D552982B1A9BA20046F4FF /* TrainingAnimation.swift in Sources */,
 				B3C774292ACD044800387FDC /* TimerSlider.swift in Sources */,
 				B3FB81872B19421E004CB417 /* MapListImage.swift in Sources */,
+				B30BB28B2C37C99700254B79 /* WebFetchManager.swift in Sources */,
 				B34F1BCF2AF5E40E00737872 /* LaunchView.swift in Sources */,
 				B3E1B94A2B08492C00AD7AA7 /* TrainingComplete.swift in Sources */,
 				B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */,
@@ -1103,6 +1126,7 @@
 				B3C151DB2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift in Sources */,
 				B3D3FE132B2D57FD00D04D8F /* FocusInfo.swift in Sources */,
 				B330E5472B97E50A002B74C9 /* Animations.swift in Sources */,
+				B30BB28E2C37CB9A00254B79 /* Announcement.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
 				B3AD16062B215F83003D13EE /* SpeciesFeed.swift in Sources */,

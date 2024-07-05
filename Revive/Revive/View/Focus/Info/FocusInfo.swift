@@ -13,6 +13,11 @@ struct FocusInfo: View {
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
+                if #available(iOS 17.0, *) {
+                    Announcement_ios17()
+                } else if #available(iOS 16.0, *) {
+                    Announcement_ios16()
+                }
                 Spacer()
                 Button(action: { isFocusInfoSheetShow.toggle() }, label: {
                     Image(systemName: "info.circle")
