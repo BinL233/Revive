@@ -116,6 +116,9 @@ class ReviveManager_ios17 {
     var hideInitTutorial : Bool
     var tutorialState : Int
     
+    // Logs
+    var updateLogs : [UpdateLogsModel]
+    
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
@@ -137,6 +140,7 @@ class ReviveManager_ios17 {
         itemList = Item.items ?? []
         animations = Animations.animations!
         storeItems = localStoreItems
+        updateLogs = UpdateLogsModel.logs ?? []
         
         isScaledSelectView = false
         totalStoreItemsProbability = {
@@ -372,6 +376,9 @@ class ReviveManager_ios16: ObservableObject {
     @Published var hideInitTutorial: Bool
     @Published var tutorialState: Int
     
+    // Logs
+    @Published var updateLogs : [UpdateLogsModel]
+    
     init() {
         let localTimeRemaining : TimeInterval = 30 * 60
         let localMySpecies = DataManager.shared.loadData()
@@ -393,6 +400,7 @@ class ReviveManager_ios16: ObservableObject {
         itemList = Item.items ?? []
         animations = Animations.animations!
         storeItems = localStoreItems
+        updateLogs = UpdateLogsModel.logs ?? []
         
         isScaledSelectView = false
         totalStoreItemsProbability = {

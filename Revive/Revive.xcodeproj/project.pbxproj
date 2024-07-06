@@ -33,6 +33,10 @@
 		B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */; };
 		B32D8EDF2B1C35F200FD5235 /* ItemPanelImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */; };
 		B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */; };
+		B32E07152C38DF14007A0465 /* UpdateLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07142C38DF14007A0465 /* UpdateLogs.swift */; };
+		B32E07172C38DF57007A0465 /* UpdateLogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */; };
+		B32E07192C38EB12007A0465 /* UpdateLogs.json in Resources */ = {isa = PBXBuildFile; fileRef = B32E07182C38EB12007A0465 /* UpdateLogs.json */; };
+		B32E071B2C38F114007A0465 /* UpdateLogsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E071A2C38F114007A0465 /* UpdateLogsLink.swift */; };
 		B330E5472B97E50A002B74C9 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E5462B97E50A002B74C9 /* Animations.swift */; };
 		B330E5492B97E60D002B74C9 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = B330E5482B97E60D002B74C9 /* Animations.json */; };
 		B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E54A2B97E6DE002B74C9 /* IDs.swift */; };
@@ -217,6 +221,10 @@
 		B32D8EDC2B1C32F600FD5235 /* ItemPanelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelName.swift; sourceTree = "<group>"; };
 		B32D8EDE2B1C35F200FD5235 /* ItemPanelImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPanelImage.swift; sourceTree = "<group>"; };
 		B32DCF4D2B1A541B0078D941 /* ExploringStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploringStartView.swift; sourceTree = "<group>"; };
+		B32E07142C38DF14007A0465 /* UpdateLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLogs.swift; sourceTree = "<group>"; };
+		B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLogsModel.swift; sourceTree = "<group>"; };
+		B32E07182C38EB12007A0465 /* UpdateLogs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = UpdateLogs.json; path = Revive/Persistences/UpdateLogs.json; sourceTree = SOURCE_ROOT; };
+		B32E071A2C38F114007A0465 /* UpdateLogsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLogsLink.swift; sourceTree = "<group>"; };
 		B330E5462B97E50A002B74C9 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		B330E5482B97E60D002B74C9 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
 		B330E54A2B97E6DE002B74C9 /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
@@ -470,6 +478,8 @@
 				B349D5DD2B09593A00270661 /* FocusSetting.swift */,
 				B349D5DF2B09598C00270661 /* ReminderSetting.swift */,
 				B31319882B1FB83A00FFC760 /* ContactUs.swift */,
+				B32E07142C38DF14007A0465 /* UpdateLogs.swift */,
+				B32E071A2C38F114007A0465 /* UpdateLogsLink.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -493,6 +503,7 @@
 				B330E5482B97E60D002B74C9 /* Animations.json */,
 				B35D00492B96CA3100F44AD1 /* Item.json */,
 				B3096DD42B3764C80067131D /* StoreItems.json */,
+				B32E07182C38EB12007A0465 /* UpdateLogs.json */,
 				B3FB81982B19920A004CB417 /* ExploringMap.json */,
 				B3FB819A2B19920B004CB417 /* SpeciesInfo.json */,
 				B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */,
@@ -733,6 +744,7 @@
 				B3FA3C8C2B22099200FE8D4D /* Statistics.swift */,
 				B3096DD62B3764DD0067131D /* StoreItems.swift */,
 				B330E5462B97E50A002B74C9 /* Animations.swift */,
+				B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -998,6 +1010,7 @@
 				B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */,
 				B3FB819B2B19920B004CB417 /* ExploringMap.json in Resources */,
 				B3CCA4182BD17D07008D4D2B /* Localizable.xcstrings in Resources */,
+				B32E07192C38EB12007A0465 /* UpdateLogs.json in Resources */,
 				B3F6EA6C2C33928C00444FA2 /* Tutorial1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,6 +1067,7 @@
 				B3E17BA72B2F7B9700F3A808 /* SeasomeHuStore.swift in Sources */,
 				B3CE6F4A2B225558006727AB /* BuffListView.swift in Sources */,
 				B31922152AFBE175000446B7 /* MySpecies.swift in Sources */,
+				B32E071B2C38F114007A0465 /* UpdateLogsLink.swift in Sources */,
 				B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */,
 				B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */,
 				B3FA3C8D2B22099200FE8D4D /* Statistics.swift in Sources */,
@@ -1081,6 +1095,7 @@
 				B3234E8B2B15048700A730D1 /* ExploringView.swift in Sources */,
 				B327E9622B2EAA6E003BDF76 /* StoreView.swift in Sources */,
 				B349D5E22B0980BD00270661 /* ReviveManager+Setting.swift in Sources */,
+				B32E07172C38DF57007A0465 /* UpdateLogsModel.swift in Sources */,
 				B349D5DE2B09593A00270661 /* FocusSetting.swift in Sources */,
 				B3D67D882B1FF92B004BA91A /* LivePolldWidgetAttributes.swift in Sources */,
 				B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */,
@@ -1144,6 +1159,7 @@
 				B3C774302ACD0BA000387FDC /* Color.swift in Sources */,
 				B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */,
 				B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */,
+				B32E07152C38DF14007A0465 /* UpdateLogs.swift in Sources */,
 				B3234E982B150D4E00A730D1 /* DistributionMode.swift in Sources */,
 				B3D552962B1A8DC60046F4FF /* ExploringComplete.swift in Sources */,
 				B3A481C42B59C0CF00FE7310 /* StoreItemsShuffle.swift in Sources */,

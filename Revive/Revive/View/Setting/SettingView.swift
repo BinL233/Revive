@@ -20,6 +20,8 @@ struct SettingView_ios17: View {
                     FocusSetting_ios17()
                     // ReminderSetting()
                     ContactUs()
+                    
+                    UpdateLogsLink()
                 }
                 .scrollContentBackground(.hidden)
             }
@@ -39,6 +41,8 @@ struct SettingView_ios16: View {
                     FocusSetting_ios16()
                     // ReminderSetting()
                     ContactUs()
+                    
+                    UpdateLogsLink()
                 }
                 .scrollContentBackground(.hidden)
             }

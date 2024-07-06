@@ -43,6 +43,7 @@ struct Reminder_ios17: View {
                         }
                 }
             }
+            .presentationDetents([.fraction(0.5),.medium])
         }
     }
 }
@@ -83,6 +84,7 @@ struct Reminder_ios16: View {
                         }
                 }
             }
+            .presentationDetents([.fraction(0.5),.medium])
         }
     }
 }

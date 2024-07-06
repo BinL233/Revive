@@ -1,0 +1,84 @@
+[
+    {
+        "date": "Jul 5, 2024",
+        "text": [
+            "1. Added a new feature: Users can now feed species on the Item Page.",
+            "2. Fixed dialog layout phase and frontend layout issues.",
+            "3. Completed the logic for tutorials.",
+            "4. Made the View Model compatible with iOS 16.",
+            "5. Implemented the Announcement System."
+        ]
+    },
+    {
+        "date": "Jun 17, 2024",
+        "text": [
+            "1. Created a Shuffle feature, optimized interactions for insufficient coins, added new items and animations for the store, enhanced store item functionality, and introduced new user features, animations, and interactions for the store.",
+            "2. Added new store features.",
+            "3. Fixed the keepDisplay button issue.",
+            "4. Developed the AnimationTextWriter and FrameExtractor tools.",
+            "5. Completed the frame for the tutorial."
+        ]
+    },
+    {
+        "date": "Jan 12, 2024",
+        "text": [
+            "1. Integrated CloudKit with CoreData.",
+            "2. Added new images and exploring features, including the Backyard, Items, Species Info Panel, Feed Features, new views for the map, Contact Us page, Background Task, UserDefaults for species and item sorting, skip function, species selection view scale function, and Store Confirmation View.",
+            "3. Created 50 species with corresponding egg images, JSON data, and Revive_L2d.",
+            "4. Developed the coins gain function and Seasome Hu's Store.",
+            "5. Completed the sorting and release functions.",
+            "6. Improved exploring actions.",
+            "7. Fixed bugs in Exploring, Backyard, Map Core Data, and notifications.",
+            "8. Fixed rewards.",
+            "9. Updated the design document."
+        ]
+    },
+    {
+        "date": "Dec 2, 2023",
+        "text": [
+            "1. Created hatching rate features, optimized charts, species introduction, exploring map panel, exploring views, and features.",
+            "2. Completed the Chart and Nick Name Editor.",
+            "3. Initialized exploration, maps, and items.",
+            "4. Fixed bugs in charts and references.",
+            "5. Updated JSON data, new maps, and new items."
+        ]
+    },
+    {
+        "date": "Nov 28, 2023",
+        "text": [
+            "1. Created Core Model, Data Manager, Chart View, Duration Grouping, Filter for Distribution, and default chart.",
+            "2. Updated testMode functions, added training features, level-up, experience control functions, frame images, and settings.",
+            "3. Finished notifications, experience gaining, and level-up animations."
+        ]
+    },
+    {
+        "date": "Nov 16, 2023",
+        "text": [
+            "1. Added some views and the Species Items Picker.",
+            "2. Updated the design document. ",
+            "3. Created hatch date, progress bar, and favorite feature.",
+            "4. Initialized the Backyard.",
+            "5. Fixed animation issues."
+        ]
+    },
+    {
+        "date": "Nov 9, 2023",
+        "text": [
+            "1. Added a timer module, button animation, and timer.",
+            "2. Integrated Core Data."
+        ]
+    },
+    {
+        "date": "Nov 4, 2023",
+        "text": [
+            "1. Completed data initialization and basic views."
+        ]
+    },
+    {
+        "date": "Oct 25, 2023",
+        "text": [
+            "1. Completed the design document.",
+            "2. Created folders :)"
+        ]
+    }
+]

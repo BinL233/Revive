@@ -351,6 +351,9 @@
     "Cave bear is supposed to stay in the cave." : {
       "extractionState" : "manual"
     },
+    "Check these logs to track the growth of Revive." : {
+
+    },
     "Cheese always be my best bud." : {
       "extractionState" : "manual"
     },
@@ -1216,6 +1219,9 @@
     },
     "Unlock" : {
       "extractionState" : "manual"
+    },
+    "Update Logs" : {
+
     },
     "Use" : {
       "extractionState" : "manual"
