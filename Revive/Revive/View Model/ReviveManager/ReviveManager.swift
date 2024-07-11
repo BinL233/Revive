@@ -31,7 +31,6 @@ class ReviveManager_ios17 {
     var currPanelSpecies : MySpecies?
     var currTrainingSpecies : MySpecies?
     var currExploringSpecies : MySpecies?
-    
     var speciesItemsSelection : SpeciesItems
     
     // Store

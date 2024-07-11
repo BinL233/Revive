@@ -51,6 +51,9 @@
 		B349D5E52B09894F00270661 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E42B09894F00270661 /* AnalysisView.swift */; };
 		B349D5E72B098B6700270661 /* AnalysisDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E62B098B6700270661 /* AnalysisDetailsView.swift */; };
 		B349D5E92B0996F500270661 /* AnalysisTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5E82B0996F500270661 /* AnalysisTitle.swift */; };
+		B349E6AC2C3FF78700A4E9E0 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AB2C3FF78700A4E9E0 /* Collections.swift */; };
+		B349E6AE2C3FF9C200A4E9E0 /* CollectionsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AD2C3FF9C200A4E9E0 /* CollectionsImage.swift */; };
+		B349E6B02C3FFDCF00A4E9E0 /* LinkToCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AF2C3FFDCF00A4E9E0 /* LinkToCollections.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
 		B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC42AF5CE6700737872 /* ReviveManager.swift */; };
@@ -239,6 +242,9 @@
 		B349D5E42B09894F00270661 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		B349D5E62B098B6700270661 /* AnalysisDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisDetailsView.swift; sourceTree = "<group>"; };
 		B349D5E82B0996F500270661 /* AnalysisTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisTitle.swift; sourceTree = "<group>"; };
+		B349E6AB2C3FF78700A4E9E0 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
+		B349E6AD2C3FF9C200A4E9E0 /* CollectionsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsImage.swift; sourceTree = "<group>"; };
+		B349E6AF2C3FFDCF00A4E9E0 /* LinkToCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkToCollections.swift; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		B34F1BC42AF5CE6700737872 /* ReviveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveManager.swift; sourceTree = "<group>"; };
@@ -463,6 +469,13 @@
 			path = Panel;
 			sourceTree = "<group>";
 		};
+		B330F0AB2C3B7C5C00882B98 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		B3335ADE2B506ECA006CCA31 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +500,7 @@
 		B349D5E32B09892700270661 /* Analysis */ = {
 			isa = PBXGroup;
 			children = (
+				B349E6AA2C3FF76C00A4E9E0 /* AnalysisCollections */,
 				B307677E2B2BF8B800AF19D0 /* AnalysisDetails */,
 				B349D5E42B09894F00270661 /* AnalysisView.swift */,
 				B349D5E82B0996F500270661 /* AnalysisTitle.swift */,
@@ -494,6 +508,16 @@
 				B3234E8F2B15096E00A730D1 /* AnalysisDistribution.swift */,
 			);
 			path = Analysis;
+			sourceTree = "<group>";
+		};
+		B349E6AA2C3FF76C00A4E9E0 /* AnalysisCollections */ = {
+			isa = PBXGroup;
+			children = (
+				B349E6AB2C3FF78700A4E9E0 /* Collections.swift */,
+				B349E6AD2C3FF9C200A4E9E0 /* CollectionsImage.swift */,
+				B349E6AF2C3FFDCF00A4E9E0 /* LinkToCollections.swift */,
+			);
+			path = AnalysisCollections;
 			sourceTree = "<group>";
 		};
 		B34F1BB92AF5C27B00737872 /* Persistences */ = {
@@ -766,6 +790,7 @@
 		B3C774272ACCE6D800387FDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B330F0AB2C3B7C5C00882B98 /* Collection */,
 				B35D00462B96C8AC00F44AD1 /* Tutorial */,
 				B3335ADE2B506ECA006CCA31 /* SubViews */,
 				B327E9602B2EAA60003BDF76 /* Store */,
@@ -1103,6 +1128,7 @@
 				B32DCF4E2B1A541B0078D941 /* ExploringStartView.swift in Sources */,
 				B3CE7AFD2B0317E1002472AF /* ProgressBar.swift in Sources */,
 				B3A9B1502AFB3E4A002C25F5 /* HatchingComplete.swift in Sources */,
+				B349E6AE2C3FF9C200A4E9E0 /* CollectionsImage.swift in Sources */,
 				B3AD16022B2143A1003D13EE /* BackyardListSorter.swift in Sources */,
 				B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */,
 				B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */,
@@ -1121,6 +1147,7 @@
 				B35006C92B1CDE6300F030D6 /* PanelButtonsInfoAction.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
+				B349E6B02C3FFDCF00A4E9E0 /* LinkToCollections.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
 				B3BCC2D22B22D7D4008CF924 /* Reminder.swift in Sources */,
 				B3096DD92B3767020067131D /* ReviveManager+Store.swift in Sources */,
@@ -1133,6 +1160,7 @@
 				B34F1BC72AF5CE9700737872 /* Persistences.swift in Sources */,
 				B3096DD72B3764DD0067131D /* StoreItems.swift in Sources */,
 				B34F1BC32AF5C30500737872 /* Species.swift in Sources */,
+				B349E6AC2C3FF78700A4E9E0 /* Collections.swift in Sources */,
 				B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */,
 				B3AD16002B211A3D003D13EE /* SpeciesEvolve.swift in Sources */,
 				B34F1BD12AF5EFBB00737872 /* DisplayView.swift in Sources */,

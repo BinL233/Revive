@@ -19,11 +19,21 @@ struct AnalysisView: View {
                         AnalysisTitle_ios16()
                     }
                     Spacer()
+                    
+                    HStack {
+                        LinkToCollections()
+                            .padding(.leading)
+                            .padding(.vertical)
+                        Spacer()
+                    }
+                    
                     if #available(iOS 17.0, *) {
                         AnalysisDistribution_ios17()
                     } else if #available(iOS 16.0, *) {
                         AnalysisDistribution_ios16()
                     }
+                    
+                    
                     Form {
                         VStack {
                             HStack {
