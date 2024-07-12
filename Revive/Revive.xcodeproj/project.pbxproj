@@ -70,6 +70,8 @@
 		B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */; };
 		B35304052B1D29C400F5E2D3 /* ReviveManager+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */; };
 		B359FE4D2AFBF9EA00A58A87 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */; };
+		B35B42D42C4113E700FE27EA /* MyCollectionsSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B42D32C4113E700FE27EA /* MyCollectionsSpecies.swift */; };
+		B35B42D62C4114D500FE27EA /* DataManager+Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35B42D52C4114D500FE27EA /* DataManager+Collections.swift */; };
 		B35D00482B96C91A00F44AD1 /* InitTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D00472B96C91A00F44AD1 /* InitTutorial.swift */; };
 		B35D004A2B96CA3100F44AD1 /* Item.json in Resources */ = {isa = PBXBuildFile; fileRef = B35D00492B96CA3100F44AD1 /* Item.json */; };
 		B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3629B012AFDDD7A00F3D135 /* BackyardView.swift */; };
@@ -262,6 +264,8 @@
 		B35304022B1D0D7100F5E2D3 /* SpeciesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesInfo.swift; sourceTree = "<group>"; };
 		B35304042B1D29C400F5E2D3 /* ReviveManager+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Items.swift"; sourceTree = "<group>"; };
 		B359FE4C2AFBF9EA00A58A87 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B35B42D32C4113E700FE27EA /* MyCollectionsSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionsSpecies.swift; sourceTree = "<group>"; };
+		B35B42D52C4114D500FE27EA /* DataManager+Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Collections.swift"; sourceTree = "<group>"; };
 		B35D00472B96C91A00F44AD1 /* InitTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitTutorial.swift; sourceTree = "<group>"; };
 		B35D00492B96CA3100F44AD1 /* Item.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Item.json; sourceTree = "<group>"; };
 		B3629B012AFDDD7A00F3D135 /* BackyardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardView.swift; sourceTree = "<group>"; };
@@ -591,6 +595,7 @@
 				B3FB817F2B192F94004CB417 /* DataManager+Item.swift */,
 				B3FB81812B192F9F004CB417 /* DataManager+Map.swift */,
 				B3E3EB2F2B22112B0073920F /* DataManager+Statistics.swift */,
+				B35B42D52C4114D500FE27EA /* DataManager+Collections.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 				B3096DD62B3764DD0067131D /* StoreItems.swift */,
 				B330E5462B97E50A002B74C9 /* Animations.swift */,
 				B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */,
+				B35B42D32C4113E700FE27EA /* MyCollectionsSpecies.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1102,6 +1108,7 @@
 				B32D8EDB2B1C329200FD5235 /* SpeciesPanelName.swift in Sources */,
 				B3629B042AFDDD9C00F3D135 /* BackyardTitle.swift in Sources */,
 				B3C774342ACD11CF00387FDC /* ActionButtons.swift in Sources */,
+				B35B42D62C4114D500FE27EA /* DataManager+Collections.swift in Sources */,
 				B35304032B1D0D7100F5E2D3 /* SpeciesInfo.swift in Sources */,
 				B32D8EDD2B1C32F600FD5235 /* ItemPanelName.swift in Sources */,
 				B3FA42D22AFF19EC009C6C41 /* SpeciesPanel.swift in Sources */,
@@ -1137,6 +1144,7 @@
 				B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */,
 				B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */,
 				B3CE6F4C2B2268CE006727AB /* ConfirmView.swift in Sources */,
+				B35B42D42C4113E700FE27EA /* MyCollectionsSpecies.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B3096DD32B37600A0067131D /* StoreItemImage.swift in Sources */,
 				B34F1BD72AF5FA6800737872 /* HatchingMechanics.swift in Sources */,
@@ -1374,7 +1382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 108;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
 				DEVELOPMENT_TEAM = A48878X7MD;
 				ENABLE_PREVIEWS = YES;
@@ -1414,7 +1422,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 108;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
 				DEVELOPMENT_TEAM = A48878X7MD;
 				ENABLE_PREVIEWS = YES;

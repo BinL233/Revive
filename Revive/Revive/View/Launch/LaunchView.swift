@@ -11,7 +11,7 @@ struct LaunchView: View {
     @State private var isActive = false
     @State private var isVisible = true
     @State private var isTestModeOn : Bool = false
-    @State private var isModeSelected : Bool = false
+    @State private var isModeSelected : Bool = true
 
     var body: some View {
         ZStack {

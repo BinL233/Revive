@@ -82,6 +82,12 @@ extension ReviveManager_ios17 {
         )
         
         currPanelSpecies = mySpecies[index]
+        
+        if !myCollectionsSpecies.contains(where: { $0.id == currPanelSpecies?.speciesID }) {
+            myCollectionsSpecies.append(MyCollectionsSpecies(id: (currPanelSpecies?.speciesID) ?? 0))
+            DataManager.shared.saveCollectionsSpeciesData(customItem: MyCollectionsSpecies(id: (currPanelSpecies?.speciesID) ?? 0))
+        }
+        
         deleteSpecies(id: currPanelSpecies!.speciesID-1, date: currPanelSpecies!.hatchDate, action: "Evolve")
         saveNewSpecies(mySpecies: mySpecies[index])
         changeSpeciesListSorter()
@@ -263,6 +269,12 @@ extension ReviveManager_ios16 {
         )
         
         currPanelSpecies = mySpecies[index]
+
+        if !myCollectionsSpecies.contains(where: { $0.id == currPanelSpecies?.speciesID }) {
+            myCollectionsSpecies.append(MyCollectionsSpecies(id: (currPanelSpecies?.speciesID) ?? 0))
+            DataManager.shared.saveCollectionsSpeciesData(customItem: MyCollectionsSpecies(id: (currPanelSpecies?.speciesID) ?? 0))
+        }
+        
         deleteSpecies(id: currPanelSpecies!.speciesID-1, date: currPanelSpecies!.hatchDate, action: "Evolve")
         saveNewSpecies(mySpecies: mySpecies[index])
         changeSpeciesListSorter()

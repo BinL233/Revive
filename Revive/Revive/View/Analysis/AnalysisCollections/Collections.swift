@@ -19,7 +19,7 @@ struct Collections_ios17: View {
         ScrollView {
             LazyVGrid(columns: adaptiveCloumns, spacing: 20) {
                 ForEach(manager.speciesList.indices, id: \.self) { i in
-                    if manager.mySpecies.contains(where: { $0.speciesID == manager.speciesList[i].id }) {
+                    if manager.myCollectionsSpecies.contains(where: { $0.id == manager.speciesList[i].id }) {
                         CollectionsImage(currSpecies: $manager.speciesList[i], found: true)
                     } else {
                         CollectionsImage(currSpecies: $manager.speciesList[i], found: false)
@@ -42,7 +42,7 @@ struct Collections_ios16: View {
         ScrollView {
             LazyVGrid(columns: adaptiveCloumns, spacing: 20) {
                 ForEach(manager.speciesList.indices, id: \.self) { i in
-                    if manager.mySpecies.contains(where: { $0.speciesID == manager.speciesList[i].id }) {
+                    if manager.myCollectionsSpecies.contains(where: { $0.id == manager.speciesList[i].id }) {
                         CollectionsImage(currSpecies: $manager.speciesList[i], found: true)
                     } else {
                         CollectionsImage(currSpecies: $manager.speciesList[i], found: false)

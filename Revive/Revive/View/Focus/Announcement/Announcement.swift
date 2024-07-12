@@ -23,6 +23,8 @@ struct Announcement_ios17: View {
                     VStack (alignment: .leading) {
                         Text(manager.content)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.subheadline)
+                            .foregroundStyle(Color.cBlack)
                             .padding(8)
                     }
                 }
@@ -56,6 +58,8 @@ struct Announcement_ios16: View {
                     VStack (alignment: .leading) {
                         Text(manager.content)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.subheadline)
+                            .foregroundStyle(Color.cBlack)
                             .padding(8)
                     }
                 }

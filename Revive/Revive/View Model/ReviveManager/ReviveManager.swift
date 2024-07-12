@@ -32,6 +32,7 @@ class ReviveManager_ios17 {
     var currTrainingSpecies : MySpecies?
     var currExploringSpecies : MySpecies?
     var speciesItemsSelection : SpeciesItems
+    var myCollectionsSpecies : [MyCollectionsSpecies]
     
     // Store
     var storeItems : [StoreItems]
@@ -125,6 +126,7 @@ class ReviveManager_ios17 {
         let localMyItems = DataManager.shared.loadItemData()
         let localMyMaps = DataManager.shared.loadMapData()
         var localSta = DataManager.shared.loadStaData()
+        let localMyCollectionsSpecies = DataManager.shared.loadCollectionsSpeciesData()
         let localStoreItems = StoreItems.storeItems ?? []
         
         if localSta.count > 1 {
@@ -151,6 +153,7 @@ class ReviveManager_ios17 {
         }()
         
         mySpecies = localMySpecies.sorted()
+        myCollectionsSpecies = localMyCollectionsSpecies
         currStoreItems = {
             var output : [StoreItems] = []
             
@@ -290,6 +293,7 @@ class ReviveManager_ios16: ObservableObject {
     @Published var currPanelSpecies: MySpecies?
     @Published var currTrainingSpecies: MySpecies?
     @Published var currExploringSpecies: MySpecies?
+    @Published var myCollectionsSpecies : [MyCollectionsSpecies]
     
     @Published var speciesItemsSelection: SpeciesItems
     
@@ -385,6 +389,7 @@ class ReviveManager_ios16: ObservableObject {
         let localMyItems = DataManager.shared.loadItemData()
         let localMyMaps = DataManager.shared.loadMapData()
         var localSta = DataManager.shared.loadStaData()
+        let localMyCollectionsSpecies = DataManager.shared.loadCollectionsSpeciesData()
         let localStoreItems = StoreItems.storeItems ?? []
         
         if localSta.count > 1 {
@@ -431,6 +436,7 @@ class ReviveManager_ios16: ObservableObject {
         }
         
         myItems = localMyItems.sorted()
+        myCollectionsSpecies = localMyCollectionsSpecies
         isExpItemChooseSpecies = false
         lastBackgroundTime = nil
         bgNotification = nil

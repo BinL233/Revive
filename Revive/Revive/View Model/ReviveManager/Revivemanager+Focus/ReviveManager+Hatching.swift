@@ -81,6 +81,12 @@ extension ReviveManager_ios17 {
         
         let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date(), friendship: 0)
         mySpecies.append(currS)
+        
+        if !myCollectionsSpecies.contains(where: { $0.id == currS.speciesID }) {
+            myCollectionsSpecies.append(MyCollectionsSpecies(id: (currHatchingSpecies?.id) ?? 0))
+            DataManager.shared.saveCollectionsSpeciesData(customItem: MyCollectionsSpecies(id: (currHatchingSpecies?.id) ?? 0))
+        }
+        
         DataManager.shared.saveData(customItem: currS)
         
         // Save Details
@@ -191,6 +197,12 @@ extension ReviveManager_ios16 {
         
         let currS = MySpecies(speciesID: (currHatchingSpecies?.id) ?? 0, nickName: currHatchingSpecies?.name ?? "", level: 1, currExp: 0, height: randomHeight, weight: randomWeight, favorite: false, hatchDate: Date(), friendship: 0)
         mySpecies.append(currS)
+        
+        if !myCollectionsSpecies.contains(where: { $0.id == currS.speciesID }) {
+            myCollectionsSpecies.append(MyCollectionsSpecies(id: (currHatchingSpecies?.id) ?? 0))
+            DataManager.shared.saveCollectionsSpeciesData(customItem: MyCollectionsSpecies(id: (currHatchingSpecies?.id) ?? 0))
+        }
+        
         DataManager.shared.saveData(customItem: currS)
         
         // Save Details

@@ -38,7 +38,7 @@ struct ExploringView_ios17: View {
                             ForEach(manager.mapList.indices, id: \.self) { i in
                                 if i < manager.myMaps.count {
                                     HStack {
-                                        MapListImage_ios16(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
+                                        MapListImage_ios17(currMap: $manager.myMaps[i], currModule: $manager.currExploringMap)
                                             .onAppear {
                                                 manager.currExploringMap = manager.myMaps[0]
                                             }
