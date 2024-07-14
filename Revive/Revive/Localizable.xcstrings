@@ -4,6 +4,9 @@
     "" : {
 
     },
+    ": %@" : {
+
+    },
     "?" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -81,7 +84,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "1. 以「探索」来获取资源"
+            "value" : "1. 以「探险」来获取资源"
           }
         }
       }
@@ -125,7 +128,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "2. 最低「探索」时长为10分钟"
+            "value" : "2. 最低「探险」时长为10分钟"
           }
         }
       }
@@ -142,271 +145,920 @@
       }
     },
     "3. Minimum hatching times are different between species. Only selecting a time greater than the certain's Species' minimum hatching time will make it possible to hatch them" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. 不同物种的最短「孵化时间」是不同的。只有当计时器的开始时间大于某个物种的最短「孵化时间」时，才能使其孵化。"
+          }
+        }
+      }
     },
     "3. The next map can only be unlocked if the previous map is 100% explored." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. 只有当前一张「地图」被100%探索时，下一张地图才能解锁。"
+          }
+        }
+      }
     },
     "4 tons of krill a day, keep the doctor away." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每天4吨磷虾，健康无忧。"
+          }
+        }
+      }
     },
     "4. Each map has random Rewards and fixed Treasure." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. 每张「地图」都有「随机奖励」和「固定宝藏」。"
+          }
+        }
+      }
     },
     "4. SR Species probability = 10% + 0.34% * Hatching Time (min)" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. SR物种的概率 = 10% + 0.34% * 孵化时间（分钟）"
+          }
+        }
+      }
     },
     "5. Random Rewards are earned every 10 minutes, and Fixed Treasure must reach the required Exploring time to be earned." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时间才能获得。"
+          }
+        }
+      }
     },
     "5. Random Rewards are earned every 10 minutes, and Fixed Treasure must reach the required Exploring time to be earned. " : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时间才能获得。"
+          }
+        }
+      }
     },
     "6. Each map has its own terrain, and Species will have Exploring Buffs for the terrain they specialize in." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6. 每张「地图」都有其独特的地形，物种在其擅长的地形上会有探险增益。"
+          }
+        }
+      }
     },
     "15th century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "15世纪"
+          }
+        }
+      }
     },
     "17th century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "17世纪"
+          }
+        }
+      }
     },
     "18th century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "18世纪"
+          }
+        }
+      }
     },
     "19th century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "19世纪"
+          }
+        }
+      }
     },
     "20th century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20世纪"
+          }
+        }
+      }
     },
     "21st century" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "21世纪"
+          }
+        }
+      }
     },
     "100" : {
 
     },
     "100 EXP for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为任何「物种」提供100经验值。"
+          }
+        }
+      }
     },
     "200 EXP, carnivore only." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为肉食「物种」提供200经验值"
+          }
+        }
+      }
     },
     "200 EXP, herbivore only." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为草食「物种」提供200经验值"
+          }
+        }
+      }
     },
     "1000" : {
 
     },
     "A healthy diet plan always comes with plants, fruits, and animal protein." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康的饮食计划总是包括植物、水果和动物蛋白。"
+          }
+        }
+      }
     },
     "A king always comes with a magnificent mane." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "国王总是伴随着一头华丽的鬃毛。"
+          }
+        }
+      }
     },
     "A long journey deserved with the best fruit." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "漫长的旅程值得最好的水果。"
+          }
+        }
+      }
     },
     "A semi-Aquatic lifestyle is the perfect choice." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "半水生生活方式是完美的选择。"
+          }
+        }
+      }
     },
     "Acorn" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "橡子"
+          }
+        }
+      }
     },
     "Advantage Areas" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "优势领域"
+          }
+        }
+      }
     },
     "African Wild Dog" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非洲野犬"
+          }
+        }
+      }
     },
     "Ainsworth's Salamander" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安氏蝾螈"
+          }
+        }
+      }
     },
     "Although I have a reliable coat, I still feel chilly in the Ice Age." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尽管我有可靠的外套，但在冰河时代我还是觉得冷。"
+          }
+        }
+      }
     },
     "Amount" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数量"
+          }
+        }
+      }
     },
     "Amur Leopard" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "远东豹"
+          }
+        }
+      }
     },
     "An extraordinarily long neck is here!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一条超长的脖子在这里！"
+          }
+        }
+      }
     },
     "An ice with more density." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一种密度更高的冰。"
+          }
+        }
+      }
     },
     "Analysis" : {
       "extractionState" : "manual"
     },
     "Ankylosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "甲龙属"
+          }
+        }
+      }
     },
     "Announcement" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公告"
+          }
+        }
+      }
     },
     "Another name for me is Soursop, but I'm not sour." : {
       "extractionState" : "manual"
     },
     "Are you sure to RELEASE" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你确定要【放生】"
+          }
+        }
+      }
     },
     "Are you sure?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你确定吗？"
+          }
+        }
+      }
     },
     "Armour up and get your tail ready." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "披上盔甲，准备好你的尾巴。"
+          }
+        }
+      }
     },
     "As you can see, I have feathers, not scales." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如你所见，我是羽毛加身，不是鳞片装甲。"
+          }
+        }
+      }
     },
     "Asian Unicorn is another name for me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "亚洲独角兽是我的另一个名字。"
+          }
+        }
+      }
     },
     "Attention, we have different venom potency." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意，我们的毒性不同。"
+          }
+        }
+      }
     },
     "Aways iridescent." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "永远闪耀。"
+          }
+        }
+      }
     },
     "Back" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回"
+          }
+        }
+      }
     },
     "Backyard" : {
       "extractionState" : "manual"
     },
     "Bactrian Camel" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "双峰骆驼"
+          }
+        }
+      }
     },
     "Ball" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "球"
+          }
+        }
+      }
     },
     "Baozi" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包子"
+          }
+        }
+      }
     },
     "Barbary Lion" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巴巴里獅"
+          }
+        }
+      }
     },
     "Based on my name, you know what I eat." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从我的名字你就知道，我的菜单上写着什么。"
+          }
+        }
+      }
     },
     "Be aware of FUNGUS!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当心真菌！"
+          }
+        }
+      }
     },
     "Be aware of the blind area of my vision." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意我的视线盲区哦。"
+          }
+        }
+      }
     },
     "Beach" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙滩"
+          }
+        }
+      }
     },
     "Berrybush" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浆果丛"
+          }
+        }
+      }
     },
     "Beware of cavity." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小心蛀牙。"
+          }
+        }
+      }
     },
     "Black Rhino" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑犀牛"
+          }
+        }
+      }
     },
     "Blue Whale" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝鲸"
+          }
+        }
+      }
     },
     "Blue-footed Booby" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓝脚鲣鸟"
+          }
+        }
+      }
     },
     "Bornean Orangutan" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "婆罗洲猩猩"
+          }
+        }
+      }
     },
     "Both Ezo and Hokkaido wolf go for me." : {
       "extractionState" : "manual"
     },
     "Brachiosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕龙"
+          }
+        }
+      }
     },
     "Bramble Cay Melomys" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "珊瑚裸尾鼠"
+          }
+        }
+      }
     },
     "Brave people enjoy the world first." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勇敢的人先享受世界。"
+          }
+        }
+      }
     },
     "Buff" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增益"
+          }
+        }
+      }
     },
     "Caribbean Monk Seal" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加勒比僧海豹"
+          }
+        }
+      }
     },
     "carnivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肉食物种"
+          }
+        }
+      }
     },
     "Carnivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肉食物种"
+          }
+        }
+      }
     },
     "Carnivore's favorite." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食肉动物的最爱。"
+          }
+        }
+      }
     },
     "Cave Bear" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洞熊"
+          }
+        }
+      }
     },
     "Cave bear is supposed to stay in the cave." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "洞熊应该待在洞里。"
+          }
+        }
+      }
     },
     "Check these logs to track the growth of Revive." : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查这些日志以查看「Revive」 的成长。"
+          }
+        }
+      }
     },
     "Check Your Collections" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看你的图鉴"
+          }
+        }
+      }
     },
     "Cheese always be my best bud." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "奶酪永远是我的好伙伴。"
+          }
+        }
+      }
     },
     "Climate change has claimed its first mammal extinction-me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "气候变化导致了我的灭绝。"
+          }
+        }
+      }
     },
     "Cloud" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "棉花糖"
+          }
+        }
+      }
     },
     "Cobra" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "眼镜蛇"
+          }
+        }
+      }
     },
     "Collect to unlock SSR species!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "收集以解锁SSR物种！"
+          }
+        }
+      }
     },
     "Compass" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "罗盘"
+          }
+        }
+      }
     },
     "Confirm" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确认"
+          }
+        }
+      }
     },
     "Consider the most agile and swift!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我被认为是最敏捷和迅速的！"
+          }
+        }
+      }
     },
     "Contact Us" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "联系我们"
+          }
+        }
+      }
     },
     "Contact us if you have any problem." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果有任何问题，联系我们。"
+          }
+        }
+      }
     },
     "Container for Exploration Map prizes." : {
       "extractionState" : "manual"
     },
     "Cookie" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曲奇"
+          }
+        }
+      }
     },
     "Copied!" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已复制！"
+          }
+        }
+      }
     },
     "Copy" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制"
+          }
+        }
+      }
     },
     "Cretaceous" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "白垩纪"
+          }
+        }
+      }
     },
     "Croissant" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可颂"
+          }
+        }
+      }
     },
     "Cross River Gorilla" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克罗斯河大猩猩"
+          }
+        }
+      }
     },
     "currDistAction" : {
 
@@ -415,118 +1067,424 @@
 
     },
     "Current Time:" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前时间："
+          }
+        }
+      }
     },
     "Cute color, more power." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可爱的颜色，更多的力量。"
+          }
+        }
+      }
     },
     "Dangerously tasty steamed bao buns." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "危险的美味蒸包子。"
+          }
+        }
+      }
     },
     "Date" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期"
+          }
+        }
+      }
     },
     "Datepalm" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海枣"
+          }
+        }
+      }
     },
     "Day" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
+        }
+      }
     },
     "Desert" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙漠"
+          }
+        }
+      }
     },
     "Desert Rat-kangaroo" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "荒漠袋鼠"
+          }
+        }
+      }
     },
     "Details" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "细节"
+          }
+        }
+      }
     },
     "Developers want some special effect on me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开发者想在我身上添加一些特效。"
+          }
+        }
+      }
     },
     "Direct to the rarest." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直奔最稀有的去。"
+          }
+        }
+      }
     },
     "Dismiss" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        }
+      }
     },
     "Do you want to purchase" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你想要购买吗"
+          }
+        }
+      }
     },
     "Doctor said the recommended calorie count for me is 40,000...daily." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "医生说我的每日推荐卡路里摄入量是40,000……每天。"
+          }
+        }
+      }
     },
     "Dodo Bird" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "渡渡鸟"
+          }
+        }
+      }
     },
     "Don't you think I'm cute with w mouth?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你不觉得我有W形嘴很可爱吗？"
+          }
+        }
+      }
     },
     "Donkey existed, Zebra existed, Quagga extinct...a sad story bro." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "驴曾经存在，斑马也曾经存在，斑驴却灭绝了……兄弟，这真是个悲伤的故事啊。"
+          }
+        }
+      }
     },
     "Double hump, double cool." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "双峰，双重酷。"
+          }
+        }
+      }
     },
     "Dumbbell" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哑铃"
+          }
+        }
+      }
     },
     "Early Eocene" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "始新世早期"
+          }
+        }
+      }
     },
     "Elasmosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "板龙"
+          }
+        }
+      }
     },
     "Elephant bird" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "象鸟"
+          }
+        }
+      }
     },
     "Email Address" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "邮箱地址"
+          }
+        }
+      }
     },
     "Endemic species means I was only in Yunnan Province." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地方性物种意味着我只存在于云南省。"
+          }
+        }
+      }
     },
-    "Everyone looked cute in childhood." : {
-      "extractionState" : "manual"
-    },
-    "Everyone loves cookie!" : {
-      "extractionState" : "manual"
-    },
-    "Evolve" : {
-      "extractionState" : "manual"
-    },
-    "Evolve Successfully" : {
-      "extractionState" : "manual"
-    },
-    "Exploration Speed:" : {
-      "extractionState" : "manual"
-    },
-    "Exploring" : {
-      "extractionState" : "manual"
-    },
-    "Exploring Complete!" : {
-      "extractionState" : "manual"
-    },
-    "Exploring Time: -%@%%" : {
+    "English" : {
 
     },
+    "Everyone looked cute in childhood." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个人在小时候都很可爱。"
+          }
+        }
+      }
+    },
+    "Everyone loves cookie!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个人都喜欢曲奇！"
+          }
+        }
+      }
+    },
+    "Evolve" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "进化"
+          }
+        }
+      }
+    },
+    "Evolve Successfully" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "进化成功"
+          }
+        }
+      }
+    },
+    "Exploration Speed:" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探险速率："
+          }
+        }
+      }
+    },
+    "Exploring" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探险"
+          }
+        }
+      }
+    },
+    "Exploring Complete!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探险成功！"
+          }
+        }
+      }
+    },
+    "Exploring Time: -%@%%" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索时间： -%@%%"
+          }
+        }
+      }
+    },
     "Extremely good at playing leap frog!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蛙跳我可是非常在行！"
+          }
+        }
+      }
     },
     "Ezo Wolf" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "虾夷狼"
+          }
+        }
+      }
     },
     "Favorite" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喜爱"
+          }
+        }
+      }
     },
     "Feed" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "喂食"
+          }
+        }
+      }
     },
     "Feed your Species!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "投喂你的「物种」们！"
+          }
+        }
+      }
     },
     "Firn" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "粒雪"
+          }
+        }
+      }
     },
     "Focus" : {
       "extractionState" : "manual"
@@ -535,175 +1493,630 @@
       "extractionState" : "manual"
     },
     "Focus Information" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专注详细信息"
+          }
+        }
+      }
     },
     "Formed by rapid cooling of lava." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由熔岩快速冷却形成。"
+          }
+        }
+      }
     },
     "Fox is cute, I'm cuter." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "狐狸很可爱，我更可爱。"
+          }
+        }
+      }
     },
     "Gemstone" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宝石"
+          }
+        }
+      }
     },
     "Giant Anteater" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "巨型食蚁兽"
+          }
+        }
+      }
     },
     "Glacier" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰川"
+          }
+        }
+      }
     },
     "Glad I'm not the only flightless bird." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "很高兴我不是唯一不会飞的鸟。"
+          }
+        }
+      }
     },
     "Glad there isn't a cow in the world who knows the law." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "很高兴世界上没有一头懂法律的牛。"
+          }
+        }
+      }
     },
     "Glad to help in medical advancement." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "很高兴能为医学进步贡献一份力量。"
+          }
+        }
+      }
     },
     "Golden Toad" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金扁蟾"
+          }
+        }
+      }
     },
     "Got it" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得"
+          }
+        }
+      }
     },
     "Great Auk" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大海雀"
+          }
+        }
+      }
     },
     "Ground Sloth" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地懒"
+          }
+        }
+      }
     },
     "Guam Flying Fox" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关岛飞狐"
+          }
+        }
+      }
     },
     "Guanabana" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刺果番荔枝"
+          }
+        }
+      }
     },
     "Guess how long my tongue can get...45cm!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "猜猜我的舌头有多长……45厘米！"
+          }
+        }
+      }
     },
     "Guess who hides me here?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "猜猜是谁把我藏在这儿的？"
+          }
+        }
+      }
     },
     "Hatching" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "孵化"
+          }
+        }
+      }
     },
     "Hatching Complete!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "孵化成功！"
+          }
+        }
+      }
     },
     "Hatching Date" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "孵化日期"
+          }
+        }
+      }
     },
     "Hatching Time: -%@%%" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "孵化日期： -%@%%"
+          }
+        }
+      }
     },
     "Have a look at the sail on my back...in the future." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "看看我背上的帆……这就是未来的我。"
+          }
+        }
+      }
     },
     "Have you ever heard of Tasmanian Tiger?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你听说过塔斯马尼亚虎吗？"
+          }
+        }
+      }
     },
     "Hear the voice of the sea." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聆听海洋的声音。"
+          }
+        }
+      }
     },
     "Height" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高度"
+          }
+        }
+      }
     },
     "Hel... lo... how... are... you... to... day...?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你好……今天……过得……怎么样？"
+          }
+        }
+      }
     },
     "herbivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "草食物种"
+          }
+        }
+      }
     },
     "Herbivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "草食物种"
+          }
+        }
+      }
     },
     "Herbivore's favorite." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "草食动物的最爱。"
+          }
+        }
+      }
     },
     "Hide on bush." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "躲在灌木丛里。"
+          }
+        }
+      }
     },
     "Hope I will work in DMV like Mr. Flash one day." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "希望有一天我能像闪电先生一样在车管所工作。"
+          }
+        }
+      }
     },
     "Hours" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小时"
+          }
+        }
+      }
     },
     "I admire my brother...he can walk with only two legs!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我很钦佩我的兄弟……他能用两条腿走路！"
+          }
+        }
+      }
     },
     "I always feel hungry...just like now." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我总是感觉很饿……就像现在。"
+          }
+        }
+      }
     },
     "I am not a Hyenya..." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不是鬣狗……"
+          }
+        }
+      }
     },
     "I am the biggest bird on Earth." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我是地球上最大的鸟。"
+          }
+        }
+      }
     },
     "I am the emperor's mount in Chinese mythology." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我是中国神话中的皇帝坐骑！"
+          }
+        }
+      }
     },
     "I became a sea turtle last night!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昨晚我变成了一只海龟！"
+          }
+        }
+      }
     },
     "I can drink up to 40 gallons at once." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我一次可以喝掉40加仑的水。"
+          }
+        }
+      }
     },
     "I do not know the function of my hands." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不知道我的手有什么用。"
+          }
+        }
+      }
     },
     "I don't have external ears, so I feel vibrations by putting my head on the ground." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我没有外耳，所以通过把头贴在地上感受振动。"
+          }
+        }
+      }
     },
     "I don't think there is a medical use on my scale." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不认为我的鳞片有任何药用价值。"
+          }
+        }
+      }
     },
     "I have a big family with more than 40 members!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我有一个超过40个成员的大家庭！"
+          }
+        }
+      }
     },
     "I have more than 1000 relatives on a single bunch." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在一串上，我有超过1000个亲戚。"
+          }
+        }
+      }
     },
     "I have no idea how to use my nose." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不知道如何使用我的鼻子。"
+          }
+        }
+      }
     },
     "I have no idea why everyone thinks I'm delicious." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不知道为什么大家都觉得我很好吃。"
+          }
+        }
+      }
     },
     "I have only four toes per foot...no digitigrade." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我每只脚只有四个脚趾……没有趾行性。"
+          }
+        }
+      }
     },
     "I know there is a pink pig who also likes to roll in mud ponds." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我知道有只粉红色的小猪也喜欢在泥塘里打滚。"
+          }
+        }
+      }
     },
     "I love bamboo." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我爱竹子。"
+          }
+        }
+      }
     },
     "I love Jackson's chameleon because we all have three horns." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我喜欢杰克逊变色龙，因为我们都有三只角。"
+          }
+        }
+      }
     },
     "I never thought the horn would become dangerous for me one day." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我从没想到有一天角会变得对我有危险。"
+          }
+        }
+      }
     },
     "I want to go to the pier and get some fries as well." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我也想去码头吃点薯条。"
+          }
+        }
+      }
     },
     "I will be the biggest bird on Earth!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我要成为地球上最大的鸟"
+          }
+        }
+      }
     },
     "I will have the strongest power in future!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未来我将拥有最强大的力量！"
+          }
+        }
+      }
     },
     "I'm not a penguin, I can fly." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我不是企鹅，我会飞。"
+          }
+        }
+      }
     },
     "Ice Age" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰川时代"
+          }
+        }
+      }
     },
     "If you do not believe a whale can walk, look at me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你不相信鲸鱼能走路，那就看看我吧，走起！"
+          }
+        }
+      }
     },
     "If you know Lonesome George, you will remember us." : {
       "extractionState" : "manual"
@@ -712,76 +2125,265 @@
       "extractionState" : "manual"
     },
     "Increase the probability of hatching rare species in next focus." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增加下次「孵化」成功时出现稀有物种的概率。"
+          }
+        }
+      }
     },
     "Incubator" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "孵化器"
+          }
+        }
+      }
     },
     "Info" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "信息"
+          }
+        }
+      }
     },
     "Insect are my favorite!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昆虫是我的最爱！"
+          }
+        }
+      }
     },
     "Insufficient Gold" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金币不足"
+          }
+        }
+      }
     },
     "ItemListSorter" : {
 
     },
     "Items" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "物品"
+          }
+        }
+      }
     },
     "Jurassic" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "侏罗纪"
+          }
+        }
+      }
     },
     "Keep Screen On" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏幕常亮"
+          }
+        }
+      }
     },
     "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "钥匙"
+          }
+        }
+      }
+    },
+    "Key 1" : {
       "extractionState" : "manual"
     },
     "kg" : {
       "extractionState" : "manual"
     },
     "Kronosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克罗龙"
+          }
+        }
+      }
+    },
+    "LANGUAGE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言"
+          }
+        }
+      }
     },
     "Lanugo helps me prevent colds!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "胎毛帮助我防止感冒！"
+          }
+        }
+      }
     },
     "Late Cretaceous" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晚白垩世"
+          }
+        }
+      }
     },
     "Late Ice Age" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晚冰河时代"
+          }
+        }
+      }
     },
     "Late Jurassic" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晚侏罗纪"
+          }
+        }
+      }
     },
     "Late Pleistocene" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晚更新世"
+          }
+        }
+      }
     },
     "Left" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剩余"
+          }
+        }
+      }
     },
     "Let me repeat it one more time: Pterosaur is NOT a dinosaur." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再说一次：翼龙不是恐龙！"
+          }
+        }
+      }
     },
     "Let's hatch one Species!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让我们来孵化一个「物种」吧！"
+          }
+        }
+      }
     },
     "Level" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等级"
+          }
+        }
+      }
     },
     "Loading..." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加载中..."
+          }
+        }
+      }
     },
     "Lollipop" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "棒棒糖"
+          }
+        }
+      }
     },
     "Lungless salamander uses skin for respiration." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无肺蝾螈用皮肤呼吸。"
+          }
+        }
+      }
     },
     "Lv" : {
       "extractionState" : "manual"
@@ -790,7 +2392,15 @@
       "extractionState" : "manual"
     },
     "Mammoth" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "猛犸象"
+          }
+        }
+      }
     },
     "mapFrame %d" : {
       "extractionState" : "manual",
@@ -816,298 +2426,1068 @@
       }
     },
     "Meat" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肉"
+          }
+        }
+      }
     },
     "Mesozoic" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中生代"
+          }
+        }
+      }
     },
     "Minimal water is enough for me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我需要的水很少。"
+          }
+        }
+      }
     },
     "MODE SELECTION" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模式选择"
+          }
+        }
+      }
     },
     "Mom said she ran out of ink when I was born." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "妈妈说我出生时她的墨水用完了。"
+          }
+        }
+      }
     },
     "Month" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        }
+      }
     },
     "My brother is popular in movies." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的兄弟在电影里很受欢迎。"
+          }
+        }
+      }
     },
     "My cousin's feet have a separate color, blue and red." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我表兄弟的脚真特别，一只蓝色，一只红色。"
+          }
+        }
+      }
     },
     "My heart will grow bigger than a car in the future." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的心脏未来会比一辆车还大。"
+          }
+        }
+      }
     },
     "My tail is heavy." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的尾巴很重。"
+          }
+        }
+      }
     },
     "Mysterious puzzle with summon power." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "神秘的拼图带有召唤力量。"
+          }
+        }
+      }
     },
     "Name" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称"
+          }
+        }
+      }
     },
     "Neogene" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新近纪"
+          }
+        }
+      }
     },
     "Next" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个"
+          }
+        }
+      }
     },
     "Next Treasure" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距离下个宝藏还有"
+          }
+        }
+      }
     },
     "Next Treasure:" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距离下个宝藏还有："
+          }
+        }
+      }
     },
     "Nick Name" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昵称"
+          }
+        }
+      }
     },
     "NO" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不"
+          }
+        }
+      }
     },
     "No Buff" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无增益"
+          }
+        }
+      }
     },
     "No one can stop my desire for freedom." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没人能阻止我对自由的渴望。"
+          }
+        }
+      }
     },
     "Nori always tastes good...and healthy!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海苔总是好吃又健康！"
+          }
+        }
+      }
     },
     "Not every deer can become the urban animal." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不是每只鹿都能成为城市动物。"
+          }
+        }
+      }
     },
     "Not every horse needs a rider." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不是每匹马都需要骑手。"
+          }
+        }
+      }
     },
     "Nothing in your bag pack yet" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的背包里还什么都没有呢"
+          }
+        }
+      }
     },
     "Number of Coins" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金币数量"
+          }
+        }
+      }
     },
     "Number of Finished Maps" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探险完成的地图数量"
+          }
+        }
+      }
     },
     "Number of Items" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得物品的数量"
+          }
+        }
+      }
     },
     "Number of Maps" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得地图的数量"
+          }
+        }
+      }
     },
     "Number of R Species" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得R稀有度物种的数量"
+          }
+        }
+      }
     },
     "Number of Species" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得物种的数量"
+          }
+        }
+      }
     },
     "Number of SR Species" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得SR稀有度物种的数量"
+          }
+        }
+      }
     },
     "Number of SSR Species" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得SSR稀有度物种的数量"
+          }
+        }
+      }
     },
     "Number of Stage 2 Species" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获得第2阶段的物种数量"
+          }
+        }
+      }
     },
     "Obsidian" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑曜石"
+          }
+        }
+      }
     },
     "Ocean" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海洋"
+          }
+        }
+      }
     },
     "omnivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "杂食物种"
+          }
+        }
+      }
     },
     "Omnivore" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "杂食物种"
+          }
+        }
+      }
     },
     "One of the most recent large mammals to be discovered." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我是最近发现的大型哺乳动物之一。"
+          }
+        }
+      }
+    },
+    "Only avaliable to iOS 17 or later." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只兼容iOS17以及之后的版本。"
+          }
+        }
+      }
     },
     "Oops..." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哦不..."
+          }
+        }
+      }
     },
     "Panda" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熊猫"
+          }
+        }
+      }
     },
     "Pangolin" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "穿山甲"
+          }
+        }
+      }
     },
     "Passenger Pigeon" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旅鸽"
+          }
+        }
+      }
     },
     "Pinta Island tortoise" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平塔岛陆龟"
+          }
+        }
+      }
     },
     "pizza" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "披萨"
+          }
+        }
+      }
     },
     "Plain" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平原"
+          }
+        }
+      }
     },
     "Please leave some fish for me next time." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下次请给我留些鱼。"
+          }
+        }
+      }
     },
     "Pleistocene Epoch" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新世"
+          }
+        }
+      }
     },
     "Pocketwatch" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "怀表"
+          }
+        }
+      }
     },
     "Practice roaring everyday." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日常练习咆哮中。"
+          }
+        }
+      }
     },
     "Prefer to stay on the trees forever if possible." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果可能的话，我更愿意永远待在树上。"
+          }
+        }
+      }
     },
     "Product from a crazy inventor." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "疯狂发明家的作品。"
+          }
+        }
+      }
     },
     "Proud of letting bird species extinction be noticed by scientists." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科学家终于注意到鸟类灭绝的问题了，为此我感到骄傲。"
+          }
+        }
+      }
     },
     "Pterosaur" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翼龙"
+          }
+        }
+      }
     },
     "Puzzle" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拼图"
+          }
+        }
+      }
     },
     "Pyrenean Ibex" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比利牛斯山野山羊"
+          }
+        }
+      }
     },
     "Quagga" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "斑驴"
+          }
+        }
+      }
     },
     "R" : {
       "extractionState" : "manual"
     },
     "Rainforest" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨林"
+          }
+        }
+      }
     },
     "Rarity" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "稀有度"
+          }
+        }
+      }
     },
     "Recover prey population before recovering me please" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请先恢复一下我的猎物数量，再考虑考虑恢复我的数量，谢谢。"
+          }
+        }
+      }
     },
     "Reduce time in exploring in next focus." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降低下次「探险」的专注时间。"
+          }
+        }
+      }
     },
     "Reduce time in hatching in next focus." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "减少下次孵化的时间。"
+          }
+        }
+      }
     },
     "Reduce time in training in next focus." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "降低下次「训练」的专注时间。"
+          }
+        }
+      }
     },
     "Release" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放生"
+          }
+        }
+      }
     },
     "REMINDER" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "闹钟"
+          }
+        }
+      }
     },
     "Reminder Notification" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "闹钟通知"
+          }
+        }
+      }
     },
     "Revive" : {
 
     },
     "Rewards" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "奖励"
+          }
+        }
+      }
     },
     "River" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "河流"
+          }
+        }
+      }
     },
     "Rolling everyday." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每天滚来滚去。"
+          }
+        }
+      }
     },
     "Sabertooth" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剑齿虎"
+          }
+        }
+      }
     },
     "Saola" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "纺车锭子"
+          }
+        }
+      }
     },
     "Schomburgk's Deer" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "熊氏鹿"
+          }
+        }
+      }
     },
     "Scientists believe I had a bird-like respiratory system in order to get enough oxygen." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科学家相信我有类似鸟类的呼吸系统，以获得足够的氧气。"
+          }
+        }
+      }
     },
     "Seashell" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "贝壳"
+          }
+        }
+      }
     },
     "Seasome Hu's" : {
       "extractionState" : "manual"
     },
     "Seaweed" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海藻"
+          }
+        }
+      }
     },
     "Seaweed only." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只吃海草。"
+          }
+        }
+      }
     },
     "Select a Species for training" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一个「物种」来训练"
+          }
+        }
+      }
     },
     "Select adventure buddy" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择一位探险伙伴"
+          }
+        }
+      }
     },
-    "Select Map" : {
-      "extractionState" : "manual"
-    },
-    "Select remind time" : {
-      "extractionState" : "manual"
-    },
-    "Short-necked plesiosaur, not dinosaur." : {
-      "extractionState" : "manual"
-    },
-    "Sky" : {
-      "extractionState" : "manual"
-    },
-    "Slow down in swimming, slow down in life." : {
-      "extractionState" : "manual"
-    },
-    "Sorted by" : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Beach area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Desert area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Glacier area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Mountain area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Ocean area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Plain area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Rainforest area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Sky area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Volcano area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Special reward in Wetland area, 1000 EXP." : {
-      "extractionState" : "manual"
-    },
-    "Species" : {
+    "Select Language" : {
 
     },
+    "Select Map" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择地图"
+          }
+        }
+      }
+    },
+    "Select remind time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择提醒时间"
+          }
+        }
+      }
+    },
+    "Short-necked plesiosaur, not dinosaur." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "短颈蛇颈龙，不是恐龙。"
+          }
+        }
+      }
+    },
+    "Sky" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天空"
+          }
+        }
+      }
+    },
+    "Slow down in swimming, slow down in life." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "游泳慢点，人生也要慢点。"
+          }
+        }
+      }
+    },
+    "Sorted by" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "排序"
+          }
+        }
+      }
+    },
+    "Special reward in Beach area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙滩地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Desert area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙漠地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Glacier area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰川地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Mountain area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "山丘地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Ocean area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海洋地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Plain area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平原地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Rainforest area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨林地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Sky area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天空地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Volcano area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火山地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Special reward in Wetland area, 1000 EXP." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湿地地带的特殊奖励，1000经验值。"
+          }
+        }
+      }
+    },
+    "Species" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "物种"
+          }
+        }
+      }
+    },
     "Species Get" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「物种」获得"
+          }
+        }
+      }
     },
     "SpeciesListSorter" : {
 
@@ -1116,187 +3496,626 @@
 
     },
     "Spinosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "棘龙"
+          }
+        }
+      }
     },
     "SR" : {
       "extractionState" : "manual"
     },
     "SR hatching rate" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SR孵化率"
+          }
+        }
+      }
     },
     "SR hatching rate: +%@%%" : {
 
     },
     "Start" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始"
+          }
+        }
+      }
     },
     "Stegosaurus" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剑龙"
+          }
+        }
+      }
     },
     "Steller's Sea Cow" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大海牛"
+          }
+        }
+      }
     },
     "Stop" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "停止"
+          }
+        }
+      }
     },
     "Store" : {
       "extractionState" : "manual"
     },
     "Surfing yesterday, 84 of us were counted by humans, over." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "昨天冲浪，我们被人类记录了84次，完毕。"
+          }
+        }
+      }
     },
     "Swimming in the sea is sleepy...Zzz" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在海里游泳真让人犯困，Zzz……"
+          }
+        }
+      }
     },
     "T-Rex" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "霸王龙"
+          }
+        }
+      }
     },
     "Tarpan" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧洲野马"
+          }
+        }
+      }
     },
     "TEST MODE" : {
 
     },
     "The most vulnerable part on me is belly." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我最脆弱的部位是腹部。"
+          }
+        }
+      }
     },
     "The owner might from last centry." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主人可能是上个世纪的人。"
+          }
+        }
+      }
     },
     "The reason why I'm extinct...is my food is extinct." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我灭绝的原因是我的食物灭绝了。"
+          }
+        }
+      }
     },
     "There is a total of 20 family members being counted by the scientists." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "科学家统计出我有20个家庭成员。"
+          }
+        }
+      }
     },
     "Thylacine" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "袋狼"
+          }
+        }
+      }
     },
     "Time" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间"
+          }
+        }
+      }
     },
     "Toast" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "吐司"
+          }
+        }
+      }
     },
     "Toolache Wallaby" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图拉客袋鼠"
+          }
+        }
+      }
     },
     "Total" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总共"
+          }
+        }
+      }
     },
     "Total Exploring Time" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总探险时间"
+          }
+        }
+      }
     },
     "Total Hatching Time" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总孵化时间"
+          }
+        }
+      }
     },
     "Total Time" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总时间"
+          }
+        }
+      }
     },
     "Total Time:" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总时间："
+          }
+        }
+      }
     },
     "Total Training Time" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "总训练时间"
+          }
+        }
+      }
     },
     "Training" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "训练"
+          }
+        }
+      }
     },
     "Training Complete!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "训练成功！"
+          }
+        }
+      }
     },
     "Training Time: -%@%%" : {
 
     },
     "Trait" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "习性"
+          }
+        }
+      }
     },
     "Treasure" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宝藏"
+          }
+        }
+      }
     },
     "Triceratops" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三角龙"
+          }
+        }
+      }
     },
     "Two legs leaping are never faster than four legs running." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "两条腿跳跃永远比不上四条腿奔跑。"
+          }
+        }
+      }
     },
     "Unlock" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "解锁"
+          }
+        }
+      }
     },
     "Update Logs" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新日志"
+          }
+        }
+      }
     },
     "Use" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用"
+          }
+        }
+      }
     },
     "Use to be resurrected through cloning, but failed." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曾经试图通过克隆复活，但失败了。"
+          }
+        }
+      }
     },
     "USER MODE" : {
 
     },
     "Vaquita" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小头鼠海豚"
+          }
+        }
+      }
     },
     "Vegetables" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蔬菜"
+          }
+        }
+      }
     },
     "Velociraptor" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伶盗龙属"
+          }
+        }
+      }
     },
     "Volcano" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火山"
+          }
+        }
+      }
     },
     "Walk Whale" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "走鲸"
+          }
+        }
+      }
     },
     "We use Long Calls for communication." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们用长鸣来交流。"
+          }
+        }
+      }
     },
     "We were named after a naturalist found us." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们是以一位博物学家的名字命名的。"
+          }
+        }
+      }
     },
     "Weight" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重量"
+          }
+        }
+      }
     },
     "What topping makes the best toast?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "什么配料组成最好的吐司？"
+          }
+        }
+      }
     },
     "When I grow up, I want to have a silverback!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "长大后，我想拥有银背！"
+          }
+        }
+      }
     },
     "Will become marshmellow if add some sugar." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加点糖就会变成棉花糖。"
+          }
+        }
+      }
     },
     "Will I be able to fly one day?" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会有我能飞的那一天吗？"
+          }
+        }
+      }
     },
     "Xixi" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "戏谑"
+          }
+        }
+      }
     },
     "Year" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年"
+          }
+        }
+      }
     },
     "YES" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "是"
+          }
+        }
+      }
     },
     "You know what, Cross River is a state in Nigeria." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你知道吗，Cross River是尼日利亚的一个州。"
+          }
+        }
+      }
     },
     "You will fail to explore." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你将会探险失败"
+          }
+        }
+      }
     },
     "You will fail to hatch this Species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你将会孵化失败"
+          }
+        }
+      }
     },
     "You will fail to train this Species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你将会训练失败"
+          }
+        }
+      }
     },
     "Yummy mammoth everyday!" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每日美味猛犸象！"
+          }
+        }
+      }
     },
     "Yunnan Lake Newt" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "云南湖蝾螈"
+          }
+        }
+      }
+    },
+    "简体中文" : {
+
     }
   },
   "version" : "1.0"

@@ -19,10 +19,12 @@ struct UpdateLogs_ios17: View {
                         Text("\(log.date)")
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundStyle(Color.cBlue)
                             .padding(.bottom, 5)
                         
                         ForEach(log.text.indices, id: \.self) { i in
                             Text("\(log.text[i])")
+                                .font(.subheadline)
                         }
                         .padding(.bottom)
                     }
@@ -45,11 +47,13 @@ struct UpdateLogs_ios16: View {
                         Text("\(log.date)")
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundStyle(Color.cBlue)
                             .padding(.bottom, 5)
                         
                         ForEach(log.text.indices, id: \.self) { i in
                             Text("\(log.text[i])")
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.subheadline)
                         }
                         .padding(.bottom)
                     }

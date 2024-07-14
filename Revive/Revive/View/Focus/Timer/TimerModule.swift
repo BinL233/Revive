@@ -106,31 +106,32 @@ extension TimerModule_ios17 {
             
             // For Hatching
             if manager.currAction == .hatching {
-                if Int(manager.timeRemaining) == manager.selectedTime / 2 {
-                    // Live Activity
-//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-//                    Task {
-//                        await widgetManager.timeRemainingAct?.update(content)
-//                    }
+                if Int(manager.timeRemaining) <= 0 {
                     
-                    withAnimation{manager.changeToHatchingState2()}
-                    
-                } else if Int(manager.timeRemaining) <= 0 {
-                    // Live Activity
-//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-//                    Task {
-//                        await widgetManager.timeRemainingAct?.update(content)
-//                    }
                     manager.focusTimer?.cancel()
                     withAnimation{manager.changeToHatchingState3()}
                     
-                } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
                     // Live Activity
 //                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
 //                    Task {
 //                        await widgetManager.timeRemainingAct?.update(content)
 //                    }
-                } else {
+                } else if Int(manager.timeRemaining) <= manager.selectedTime / 2 {
+                    
+                    withAnimation{manager.changeToHatchingState2()}
+                    // Live Activity
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
+                    
+//                } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
+                    // Live Activity
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
+//                } else {
                     // Live Activity
 //                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: nil)
 //                    Task {
@@ -266,31 +267,31 @@ extension TimerModule_ios16 {
             
             // For Hatching
             if manager.currAction == .hatching {
-                if Int(manager.timeRemaining) == manager.selectedTime / 2 {
-                    // Live Activity
-//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-//                    Task {
-//                        await widgetManager.timeRemainingAct?.update(content)
-//                    }
-                    
-                    withAnimation{manager.changeToHatchingState2()}
-                    
-                } else if Int(manager.timeRemaining) <= 0 {
-                    // Live Activity
-//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
-//                    Task {
-//                        await widgetManager.timeRemainingAct?.update(content)
-//                    }
+                if Int(manager.timeRemaining) <= 0 {
                     manager.focusTimer?.cancel()
                     withAnimation{manager.changeToHatchingState3()}
                     
-                } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
                     // Live Activity
 //                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
 //                    Task {
 //                        await widgetManager.timeRemainingAct?.update(content)
 //                    }
-                } else {
+                    
+                } else if Int(manager.timeRemaining) <= manager.selectedTime / 2 {
+                    withAnimation{manager.changeToHatchingState2()}
+                    // Live Activity
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
+                    
+//                } else if Int(manager.timeRemaining) < manager.selectedTime / 2 {
+                    // Live Activity
+//                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: String(manager.currHatchingEgg)), staleDate: nil)
+//                    Task {
+//                        await widgetManager.timeRemainingAct?.update(content)
+//                    }
+//                } else {
                     // Live Activity
 //                    let content = ActivityContent(state: ReviveWidgetAttributes.ContentState(timeLeft: manager.secTimeToString(time: Int(manager.timeRemaining)), ImageName: "1001"), staleDate: nil)
 //                    Task {

@@ -19,6 +19,9 @@ struct SettingView_ios17: View {
                 Form {
                     FocusSetting_ios17()
                     // ReminderSetting()
+                    
+                    LanguageSetting_ios17()
+                    
                     ContactUs()
                     
                     UpdateLogsLink()
@@ -40,6 +43,9 @@ struct SettingView_ios16: View {
                 Form {
                     FocusSetting_ios16()
                     // ReminderSetting()
+                    
+                    LanguageSetting_ios16()
+                    
                     ContactUs()
                     
                     UpdateLogsLink()

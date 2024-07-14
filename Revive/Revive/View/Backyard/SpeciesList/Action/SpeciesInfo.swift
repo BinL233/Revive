@@ -31,7 +31,7 @@ struct SpeciesInfo_ios17: View {
                     }
 
                     
-                    Text(species.name)
+                    Text(LocalizedStringKey(species.name))
                         .font(.custom("Georgia-Italic", size: 30))
                         .padding(5)
                         .bold()
@@ -46,7 +46,7 @@ struct SpeciesInfo_ios17: View {
                     Spacer()
                 }
                 
-                Text(species.intro)
+                Text(LocalizedStringKey(species.intro))
                     .font(.subheadline)
                     .italic()
                     .padding()
@@ -81,7 +81,7 @@ struct SpeciesInfo_ios17: View {
                                 .bold()
                                 .foregroundStyle(Color.cBlackBrown)
                             
-                            Text("\(String(format: "%.2f", manager.currPanelSpecies?.height ?? 0)) m")
+                            (Text("\(String(format: "%.2f", manager.currPanelSpecies?.height ?? 0))") + Text("m"))
                                 .font(.custom("Georgia-Italic", size: 20))
                                 .padding([.bottom, .horizontal])
                                 .foregroundStyle(Color.cBlackBrown)
@@ -94,7 +94,7 @@ struct SpeciesInfo_ios17: View {
                                 .bold()
                                 .foregroundStyle(Color.cBlackBrown)
                             
-                            Text("\(String(format: "%.2f", manager.currPanelSpecies?.weight ?? 0)) kg")
+                            (Text("\(String(format: "%.2f", manager.currPanelSpecies?.weight ?? 0))") + Text("kg"))
                                 .font(.custom("Georgia-Italic", size: 20))
                                 .padding([.bottom, .horizontal])
                                 .foregroundStyle(Color.cBlackBrown)
@@ -121,7 +121,7 @@ struct SpeciesInfo_ios17: View {
                     ScrollView(.horizontal) {
                         ForEach(sortedAreas, id: \.key) { area in
                             HStack(spacing: 0) {
-                                Text("\(area.key): \(String(format: "%.2f", area.value))")
+                                (Text(LocalizedStringKey("\(area.key)")) + Text(": \(String(format: "%.2f", area.value))"))
                                     .font(.subheadline)
                                     .bold()
                                     .foregroundStyle(Color.cWhite)
@@ -149,7 +149,7 @@ struct SpeciesInfo_ios17: View {
                     }
                     
                     ScrollView(.horizontal) {
-                        Text(species.trait.rawValue.capitalized)
+                        Text(LocalizedStringKey(species.trait.rawValue.capitalized))
                             .font(.subheadline)
                             .bold()
                             .padding(10)

@@ -18,6 +18,9 @@ struct ReviveApp: App {
                 LaunchView()
                     .environment(ReviveManager_ios17())
                     .environment(DialogManager_ios17())
+                    .environment(LanguageManager())
+                    .environment(\.locale, LanguageManager().locale)
+
             } else if #available(iOS 16.0, *) {
                 LaunchView()
                     .environmentObject(ReviveManager_ios16())

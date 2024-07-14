@@ -13,7 +13,7 @@ struct SingleDetails: View {
     
     var body: some View {
         HStack {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.callout)
                 .italic()
                 .padding(.bottom, 5)
