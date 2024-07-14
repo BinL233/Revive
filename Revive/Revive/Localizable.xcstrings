@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "   " : {
+
+    },
     ": %@" : {
 
     },
@@ -1410,6 +1413,16 @@
         }
       }
     },
+    "Exploring time requires at least 10 minutes." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「探险」时间至少需要10分钟。"
+          }
+        }
+      }
+    },
     "Exploring Time: -%@%%" : {
       "localizations" : {
         "zh-Hans" : {
@@ -1490,7 +1503,15 @@
       "extractionState" : "manual"
     },
     "FOCUS" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专注"
+          }
+        }
+      }
     },
     "Focus Information" : {
       "extractionState" : "manual",
@@ -1708,6 +1729,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "孵化日期"
+          }
+        }
+      }
+    },
+    "Hatching time requires at least 30 minutes." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「孵化」时间至少需要30分钟。"
           }
         }
       }
@@ -2226,6 +2257,9 @@
       }
     },
     "Key 1" : {
+      "extractionState" : "manual"
+    },
+    "Key 2" : {
       "extractionState" : "manual"
     },
     "kg" : {
@@ -2841,19 +2875,15 @@
         }
       }
     },
-    "Only avaliable to iOS 17 or later." : {
-      "extractionState" : "stale",
+    "Only avaliable to iOS 17 or later. Currently follows the system language." : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "只兼容iOS17以及之后的版本。目前跟随系统语言。"
+            "state" : "translated",
+            "value" : "只支持iOS17及以上版本。目前语言为手机系统语言。"
           }
         }
       }
-    },
-    "Only avaliable to iOS 17 or later. Currently follows the system language." : {
-
     },
     "Oops..." : {
       "extractionState" : "manual",

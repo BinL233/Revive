@@ -85,6 +85,7 @@
 		B36DE94C2C1E7397007B11FC /* DialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94B2C1E7397007B11FC /* DialogManager.swift */; };
 		B36DE94E2C1FEAA3007B11FC /* NewUserDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE94D2C1FEAA3007B11FC /* NewUserDialog.swift */; };
 		B36DE9572C2511FF007B11FC /* FriendshipImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DE9562C2511FF007B11FC /* FriendshipImage.swift */; };
+		B38884F42C43F4BF00C75A03 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38884F32C43F4BF00C75A03 /* TipsView.swift */; };
 		B39D61D62B200BCF001BFA00 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D52B200BCF001BFA00 /* WidgetManager.swift */; };
 		B39D61D92B200CC0001BFA00 /* WidgetManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */; };
 		B39D622C2B201917001BFA00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C774022ACCE69A00387FDC /* Preview Assets.xcassets */; };
@@ -283,6 +284,7 @@
 		B36DE94B2C1E7397007B11FC /* DialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManager.swift; sourceTree = "<group>"; };
 		B36DE94D2C1FEAA3007B11FC /* NewUserDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserDialog.swift; sourceTree = "<group>"; };
 		B36DE9562C2511FF007B11FC /* FriendshipImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendshipImage.swift; sourceTree = "<group>"; };
+		B38884F32C43F4BF00C75A03 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		B39D61D52B200BCF001BFA00 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
 		B39D61D82B200CC0001BFA00 /* WidgetManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetManager+util.swift"; sourceTree = "<group>"; };
 		B39D62372B20203C001BFA00 /* Revive.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Revive.entitlements; sourceTree = "<group>"; };
@@ -850,6 +852,7 @@
 				B3C774352ACD151500387FDC /* StartButton.swift */,
 				B3CE6F492B225558006727AB /* BuffListView.swift */,
 				B3BCC2D12B22D7D3008CF924 /* Reminder.swift */,
+				B38884F32C43F4BF00C75A03 /* TipsView.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -1167,6 +1170,7 @@
 				B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */,
 				B3CE6F4C2B2268CE006727AB /* ConfirmView.swift in Sources */,
 				B35B42D42C4113E700FE27EA /* MyCollectionsSpecies.swift in Sources */,
+				B38884F42C43F4BF00C75A03 /* TipsView.swift in Sources */,
 				B34F1BCD2AF5DC7300737872 /* CurrAction.swift in Sources */,
 				B3096DD32B37600A0067131D /* StoreItemImage.swift in Sources */,
 				B35B42DD2C43759200FE27EA /* LanguageManager.swift in Sources */,
@@ -1406,7 +1410,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 111;
+				CURRENT_PROJECT_VERSION = 112;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
 				DEVELOPMENT_TEAM = A48878X7MD;
 				ENABLE_PREVIEWS = YES;
@@ -1446,7 +1450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Revive/Revive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 111;
+				CURRENT_PROJECT_VERSION = 112;
 				DEVELOPMENT_ASSET_PATHS = "\"Revive/Preview Content\"";
 				DEVELOPMENT_TEAM = A48878X7MD;
 				ENABLE_PREVIEWS = YES;

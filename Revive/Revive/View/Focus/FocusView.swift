@@ -10,8 +10,12 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct FocusView_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
+    @State private var tipsModeHatching: String = "Hatching"
+    @State private var tipsModeExploring: String = "Exploring"
     
     var body: some View {
+        @Bindable var manager = manager
+        
         NavigationStack {
             ZStack {
                 Background()
@@ -38,11 +42,19 @@ struct FocusView_ios17: View {
                     ActionButtons_ios17()
                         .padding(.horizontal, 30)
                         .padding(.top, (manager.isHatchingBuff || manager.isRarityBuff || manager.isTrainingBuff || manager.isExploringBuff) ? 0 : 10)
-                        .padding(.bottom, 10)
                     
                     if !manager.isScaledSelectView {
+                        if manager.currAction == .hatching {
+                            TipsView(isShown: isShown, mode: $tipsModeHatching)
+                        } else if manager.currAction == .exploring {
+                            TipsView(isShown: isShown, mode: $tipsModeExploring)
+                        } else {
+                            TipsView(isShown: isShown, mode: $tipsModeExploring)
+                        }
+                        
                         TimerModule_ios17()
                             .padding(.horizontal, 40)
+                            .padding(.top, -5)
 
                         StartButton_ios17()
                             .padding(.vertical, 20)
@@ -79,11 +91,36 @@ struct FocusView_ios17: View {
             }
         }
     }
+
+    private var isConditionMet: Bool {
+        if manager.currAction == .hatching {
+            return !manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies()
+        } else if manager.currAction == .exploring {
+            return !manager.isTimerStart && manager.timeRemaining < 10*60 && !manager.checkNoSpecies()
+        } else {
+            return false
+        }
+    }
+
+    private var isShown: Binding<Bool> {
+        Binding<Bool>(
+            get: {
+                if isConditionMet {
+                    return true
+                } else {
+                    return false
+                }
+            },
+            set: { _ in }
+        )
+    }
 }
 
 @available(iOS 16.0, *)
 struct FocusView_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
+    @State private var tipsModeHatching: String = "Hatching"
+    @State private var tipsModeExploring: String = "Exploring"
     
     var body: some View {
         NavigationStack {
@@ -115,8 +152,17 @@ struct FocusView_ios16: View {
                         .padding(.bottom, 10)
                     
                     if !manager.isScaledSelectView {
+                        if manager.currAction == .hatching {
+                            TipsView(isShown: isShown, mode: $tipsModeHatching)
+                        } else if manager.currAction == .exploring {
+                            TipsView(isShown: isShown, mode: $tipsModeExploring)
+                        } else {
+                            TipsView(isShown: isShown, mode: $tipsModeExploring)
+                        }
+                        
                         TimerModule_ios16()
                             .padding(.horizontal, 40)
+                            .padding(.top, -5)
 
                         StartButton_ios16()
                             .padding(.vertical, 20)
@@ -152,5 +198,28 @@ struct FocusView_ios16: View {
                 }
             }
         }
+    }
+    
+    private var isConditionMet: Bool {
+        if manager.currAction == .hatching {
+            return !manager.isTimerStart && manager.timeRemaining < 30*60 && !manager.checkNoSpecies()
+        } else if manager.currAction == .exploring {
+            return !manager.isTimerStart && manager.timeRemaining < 10*60 && !manager.checkNoSpecies()
+        } else {
+            return false
+        }
+    }
+
+    private var isShown: Binding<Bool> {
+        Binding<Bool>(
+            get: {
+                if isConditionMet {
+                    return true
+                } else {
+                    return false
+                }
+            },
+            set: { _ in }
+        )
     }
 }
