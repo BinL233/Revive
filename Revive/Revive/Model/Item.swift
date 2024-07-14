@@ -45,7 +45,7 @@ extension Item {
 }
 
 enum FunctionType: String, Decodable {
-    case exp, hatchingTime = "hatching_time", trainingTime = "training_time", exploringTime = "exploring_time", rarityUp = "rarity_up"
+    case exp, hatchingTime = "hatching_time", trainingTime = "training_time", exploringTime = "exploring_time", rarityUp = "rarity_up", friendship
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()

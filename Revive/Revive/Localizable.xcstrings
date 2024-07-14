@@ -278,6 +278,9 @@
         }
       }
     },
+    "20 Friendship Points for any species." : {
+      "extractionState" : "manual"
+    },
     "20th century" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -300,8 +303,17 @@
         }
       }
     },
+    "50 EXP and 15 Friendship Points for any species." : {
+      "extractionState" : "manual"
+    },
+    "70 EXP and 10 Friendship Points for any species." : {
+      "extractionState" : "manual"
+    },
     "100" : {
 
+    },
+    "100 EXP and 5 Friendship Points for any species." : {
+      "extractionState" : "manual"
     },
     "100 EXP for any species." : {
       "extractionState" : "manual",
@@ -313,6 +325,15 @@
           }
         }
       }
+    },
+    "150 EXP for any species." : {
+      "extractionState" : "manual"
+    },
+    "200 EXP and 20 Friendship Points, carnivore only." : {
+      "extractionState" : "manual"
+    },
+    "200 EXP and 20 Friendship Points, herbivore only." : {
+      "extractionState" : "manual"
     },
     "200 EXP, carnivore only." : {
       "extractionState" : "manual",
@@ -1207,7 +1228,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你想要购买吗"
+            "value" : "你想要购买这个？"
           }
         }
       }
@@ -2260,6 +2281,9 @@
       "extractionState" : "manual"
     },
     "Key 2" : {
+      "extractionState" : "manual"
+    },
+    "Key 3" : {
       "extractionState" : "manual"
     },
     "kg" : {
@@ -3392,6 +3416,9 @@
         }
       }
     },
+    "Special reward in Beach area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
+    },
     "Special reward in Beach area, 1000 EXP." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3402,6 +3429,9 @@
           }
         }
       }
+    },
+    "Special reward in Desert area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
     },
     "Special reward in Desert area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3414,6 +3444,9 @@
         }
       }
     },
+    "Special reward in Glacier area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
+    },
     "Special reward in Glacier area, 1000 EXP." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3424,6 +3457,9 @@
           }
         }
       }
+    },
+    "Special reward in Mountain area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
     },
     "Special reward in Mountain area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3436,6 +3472,9 @@
         }
       }
     },
+    "Special reward in Ocean area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
+    },
     "Special reward in Ocean area, 1000 EXP." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3446,6 +3485,9 @@
           }
         }
       }
+    },
+    "Special reward in Plain area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
     },
     "Special reward in Plain area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3458,6 +3500,9 @@
         }
       }
     },
+    "Special reward in Rainforest area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
+    },
     "Special reward in Rainforest area, 1000 EXP." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3468,6 +3513,9 @@
           }
         }
       }
+    },
+    "Special reward in Sky area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
     },
     "Special reward in Sky area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3480,6 +3528,9 @@
         }
       }
     },
+    "Special reward in Volcano area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
+    },
     "Special reward in Volcano area, 1000 EXP." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3490,6 +3541,9 @@
           }
         }
       }
+    },
+    "Special reward in Wetland area, 1000 EXP and 100 Friendship Points." : {
+      "extractionState" : "manual"
     },
     "Special reward in Wetland area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3632,7 +3686,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "霸王龙"
+            "value" : "暴龙"
           }
         }
       }
@@ -4073,6 +4127,7 @@
       }
     },
     "YES" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {

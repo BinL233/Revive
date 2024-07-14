@@ -153,7 +153,7 @@ struct SpeciesPanel_ios17: View {
                     }
                     
                     if manager.speciesItemsSelection == .Items && !manager.myItems.isEmpty && manager.currPanelItem != nil {
-                        if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
+                        if !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
                             Button(action: {
                                 manager.itemBuff()
                                 manager.isItemUsed = true
@@ -340,7 +340,7 @@ struct SpeciesPanel_ios16: View {
                     }
                     
                     if manager.speciesItemsSelection == .Items && !manager.myItems.isEmpty && manager.currPanelItem != nil {
-                        if manager.getItem(id: manager.currPanelItem!.id).functionType.count != 1 || !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
+                        if !manager.getItem(id: manager.currPanelItem!.id).functionType.contains(FunctionType(rawValue: "exp")!) {
                             Button(action: {
                                 manager.itemBuff()
                                 manager.isItemUsed = true

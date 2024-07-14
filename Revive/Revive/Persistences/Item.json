@@ -73,140 +73,140 @@
        "id" : 2008,
        "name": "Cookie",
        "trait": ["carnivore", "herbivore", "omnivore"],
-       "function_type": ["exp"],
-       "amount": [100],
+       "function_type": ["exp", "friendship"],
+       "amount": [100, 5],
        "description": "Everyone loves cookie!",
-       "function": "100 EXP for any species."
+       "function": "100 EXP and 5 Friendship Points for any species."
     },
 
     {
         "id" : 2009,
         "name": "Meat",
         "trait": ["carnivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [300],
+        "function_type": ["exp", "friendship"],
+        "amount": [300, 20],
         "description": "Carnivore's favorite.",
-        "function": "200 EXP, carnivore only."
+        "function": "200 EXP and 20 Friendship Points, carnivore only."
     },
 
     {
         "id" : 2010,
         "name": "Vegetables",
         "trait": ["herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [300],
+        "function_type": ["exp", "friendship"],
+        "amount": [300, 20],
         "description": "Herbivore's favorite.",
-        "function": "200 EXP, herbivore only."
+        "function": "200 EXP and 20 Friendship Points, herbivore only."
     },
     
     {
         "id" : 2011,
         "name": "Datepalm",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Hide on bush.",
-        "function": "Special reward in Plain area, 1000 EXP."
+        "function": "Special reward in Plain area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2012,
         "name": "Berrybush",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "I have more than 1000 relatives on a single bunch.",
-        "function": "Special reward in Desert area, 1000 EXP."
+        "function": "Special reward in Desert area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2013,
         "name": "Firn",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "An ice with more density.",
-        "function": "Special reward in Glacier area, 1000 EXP."
+        "function": "Special reward in Glacier area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2014,
         "name": "Obsidian",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Formed by rapid cooling of lava.",
-        "function": "Special reward in Volcano area, 1000 EXP."
+        "function": "Special reward in Volcano area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2015,
         "name": "Cloud",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Will become marshmellow if add some sugar.",
-        "function": "Special reward in Sky area, 1000 EXP."
+        "function": "Special reward in Sky area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2016,
         "name": "Guanabana",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Another name for me is Soursop, but I'm not sour.",
-        "function": "Special reward in Rainforest area, 1000 EXP."
+        "function": "Special reward in Rainforest area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2017,
         "name": "Seaweed",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Nori always tastes good...and healthy!",
-        "function": "Special reward in Ocean area, 1000 EXP."
+        "function": "Special reward in Ocean area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2018,
         "name": "Seashell",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Hear the voice of the sea.",
-        "function": "Special reward in Beach area, 1000 EXP."
+        "function": "Special reward in Beach area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2019,
         "name": "Acorn",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
-        "description": "Special reward in Mountain area, 1000 EXP.",
-        "function": "Guess who hides me here?"
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
+        "description": "Guess who hides me here?",
+        "function": "Special reward in Mountain area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2020,
         "name": "Gemstone",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [1000],
+        "function_type": ["exp", "friendship"],
+        "amount": [1000, 100],
         "description": "Aways iridescent.",
-        "function": "Special reward in Wetland area, 1000 EXP."
+        "function": "Special reward in Wetland area, 1000 EXP and 100 Friendship Points."
     },
 
     {
         "id" : 2021,
         "name": "Lollipop",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [100],
+        "function_type": ["exp", "friendship"],
+        "amount": [50, 15],
         "description": "Beware of cavity.",
-        "function": "100 EXP for any species."
+        "function": "50 EXP and 15 Friendship Points for any species."
     },
 
     {
@@ -214,36 +214,36 @@
         "name": "Toast",
         "trait": ["carnivore", "herbivore", "omnivore"],
         "function_type": ["exp"],
-        "amount": [100],
+        "amount": [150],
         "description": "What topping makes the best toast?",
-        "function": "100 EXP for any species."
+        "function": "150 EXP for any species."
     },
 
     {
         "id" : 2023,
         "name": "Croissant",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [100],
+        "function_type": ["exp", "friendship"],
+        "amount": [100, 5],
         "description": "Glad there isn't a cow in the world who knows the law.",
-        "function": "100 EXP for any species."
+        "function": "100 EXP and 5 Friendship Points for any species."
     },
     {
         "id" : 2024,
         "name": "Baozi",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [100],
+        "function_type": ["exp", "friendship"],
+        "amount": [70, 10],
         "description": "Dangerously tasty steamed bao buns.",
-        "function": "100 EXP for any species."
+        "function": "70 EXP and 10 Friendship Points for any species."
     },
     {
         "id" : 2025,
         "name": "pizza",
         "trait": ["carnivore", "herbivore", "omnivore"],
-        "function_type": ["exp"],
-        "amount": [100],
+        "function_type": ["friendship"],
+        "amount": [20],
         "description": "Cheese always be my best bud.",
-        "function": "100 EXP for any species."
+        "function": "20 Friendship Points for any species."
     }
 ]

@@ -29,10 +29,10 @@ struct StoreItemsShuffle_ios17: View {
                     .background((manager.sta[0].currCoins >= 100 && manager.sta[0].storeLvl > 0) ? Color.cGreen : .gray)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             })
-            .padding(.trailing, 5)
+            .padding(.trailing, 3)
             .disabled(manager.sta[0].currCoins < 100)
             
-            HStack (spacing: 5) {
+            HStack (spacing: 3) {
                 Image("3001")
                     .resizable()
                     .scaledToFit()
@@ -42,11 +42,10 @@ struct StoreItemsShuffle_ios17: View {
                     .font(.headline)
                     .foregroundStyle((manager.sta[0].currCoins >= 100) ? Color.cBlackBrown : .red)
             }
-            .padding(3)
-            .padding(.horizontal, 8)
-            .background(Color.cBlackBrown.opacity(0.2))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
+        .padding(.trailing)
+        .background(Color.cBlackBrown.opacity(0.2))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
@@ -85,10 +84,9 @@ struct StoreItemsShuffle_ios16: View {
                     .font(.headline)
                     .foregroundStyle((manager.sta[0].currCoins >= 100) ? Color.cBlackBrown : .red)
             }
-            .padding(3)
-            .padding(.horizontal, 8)
-            .background(Color.cBlackBrown.opacity(0.2))
-            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
+        .padding(.trailing)
+        .background(Color.cBlackBrown.opacity(0.2))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

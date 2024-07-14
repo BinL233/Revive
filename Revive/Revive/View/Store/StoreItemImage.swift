@@ -35,11 +35,11 @@ struct StoreItemImage_ios17: View {
                         
                         Spacer()
 
-                        Text("\(item.name)")
+                        Text(LocalizedStringKey("\(item.name)"))
                             .font(.title3)
                             .foregroundStyle(Color.cBlackBrown)
 
-                        Text("\(manager.getItem(id: item.id).function)")
+                        Text(LocalizedStringKey("\(manager.getItem(id: item.id).function)"))
                             .font(.caption2)
                             .foregroundStyle(Color.cBlack)
                             .padding(3)
@@ -57,7 +57,7 @@ struct StoreItemImage_ios17: View {
                             .scaledToFit()
                             .frame(width: 25, height: 25)
                         
-                        Text("\(item.price)")
+                        Text(LocalizedStringKey("\(item.price)"))
                             .font(.title3)
                             .foregroundStyle((manager.sta[0].currCoins >= item.price) ? Color.cBlackBrown : .red)
                     }
@@ -97,11 +97,11 @@ struct StoreItemImage_ios16: View {
                         
                         Spacer()
 
-                        Text("\(item.name)")
+                        Text(LocalizedStringKey("\(item.name)"))
                             .font(.title3)
                             .foregroundStyle(Color.cBlackBrown)
 
-                        Text("\(manager.getItem(id: item.id).function)")
+                        Text(LocalizedStringKey("\(manager.getItem(id: item.id).function)"))
                             .font(.caption2)
                             .foregroundStyle(Color.cBlack)
                             .padding(3)
@@ -119,7 +119,7 @@ struct StoreItemImage_ios16: View {
                             .scaledToFit()
                             .frame(width: 25, height: 25)
                         
-                        Text("\(item.price)")
+                        Text(LocalizedStringKey("\(item.price)"))
                             .font(.title3)
                             .foregroundStyle((manager.sta[0].currCoins >= item.price) ? Color.cBlackBrown : .red)
                     }

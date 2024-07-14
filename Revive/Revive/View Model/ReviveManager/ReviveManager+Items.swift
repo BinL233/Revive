@@ -46,8 +46,14 @@ extension ReviveManager_ios17 {
                 useItem(save: false, isFeed: false)
             case "exp":
                 ItemsAddEXP(index: i)
-                useItem(save: true, isFeed: true)
-                
+                if getItem(id: currPanelItem!.id).functionType.count <= i+1 {
+                    useItem(save: true, isFeed: true)
+                }
+            case "friendship":
+                ItemsAddFriendship(index: i)
+                if getItem(id: currPanelItem!.id).functionType.count <= i+1 {
+                    useItem(save: true, isFeed: true)
+                }
             default:
                 continue
             }
@@ -84,6 +90,7 @@ extension ReviveManager_ios17 {
             updateItemAmount(id: currPanelItem!.id, newAmount: myItems[getMyItemIndex(id: currPanelItem!.id)].amount)
             DataManager.shared.updateMySpeciesCurrExp(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.currExp, mySpecies: mySpecies)
             DataManager.shared.updateMySpeciesLevel(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.level, mySpecies: mySpecies)
+            DataManager.shared.updateMySpeciesFriendship(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.friendship, mySpecies: mySpecies)
             
             if myItems[getMyItemIndex(id: currPanelItem!.id)].amount <= 0 {
                 deleteItem(id: currPanelItem!.id)
@@ -108,6 +115,10 @@ extension ReviveManager_ios17 {
         mySpecies[getSpeciesIndex(id: currPanelSpecies?.speciesID ?? 0, date: currPanelSpecies?.hatchDate ?? Date())].currExp = currExp
         currPanelSpecies?.level += levelUpNum
         currPanelSpecies?.currExp = currExp
+    }
+    
+    func ItemsAddFriendship(index: Int) {
+        currPanelSpecies?.friendship += Int(getItem(id: currPanelItem!.id).amount[index])
     }
     
     func ItemsforHatchingTime(index: Int) {
@@ -167,11 +178,17 @@ extension ReviveManager_ios16 {
                 useItem(save: false, isFeed: false)
             case "rarity_up":
                 RarityUp(index: i)
-                useItem(save: false, isFeed: false)
+                if getItem(id: currPanelItem!.id).functionType.count <= i+1 {
+                    useItem(save: true, isFeed: true)
+                }
             case "exp":
                 ItemsAddEXP(index: i)
+                if getItem(id: currPanelItem!.id).functionType.count <= i+1 {
+                    useItem(save: true, isFeed: true)
+                }
+            case "friendship":
+                ItemsAddFriendship(index: i)
                 useItem(save: true, isFeed: true)
-                
             default:
                 continue
             }
@@ -208,6 +225,7 @@ extension ReviveManager_ios16 {
             updateItemAmount(id: currPanelItem!.id, newAmount: myItems[getMyItemIndex(id: currPanelItem!.id)].amount)
             DataManager.shared.updateMySpeciesCurrExp(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.currExp, mySpecies: mySpecies)
             DataManager.shared.updateMySpeciesLevel(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.level, mySpecies: mySpecies)
+            DataManager.shared.updateMySpeciesFriendship(for: currPanelSpecies!.speciesID, for: currPanelSpecies!.hatchDate, with: currPanelSpecies!.friendship, mySpecies: mySpecies)
             
             if myItems[getMyItemIndex(id: currPanelItem!.id)].amount <= 0 {
                 deleteItem(id: currPanelItem!.id)
@@ -232,6 +250,10 @@ extension ReviveManager_ios16 {
         mySpecies[getSpeciesIndex(id: currPanelSpecies?.speciesID ?? 0, date: currPanelSpecies?.hatchDate ?? Date())].currExp = currExp
         currPanelSpecies?.level += levelUpNum
         currPanelSpecies?.currExp = currExp
+    }
+    
+    func ItemsAddFriendship(index: Int) {
+        currPanelSpecies?.friendship += Int(getItem(id: currPanelItem!.id).amount[index])
     }
     
     func ItemsforHatchingTime(index: Int) {

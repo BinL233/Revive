@@ -20,7 +20,7 @@ struct ConfirmView_ios17: View {
     var body: some View {
         VStack {
             VStack {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.custom("Georgia-Italic", size: 15))
                     .padding(.horizontal, 30)
                     .padding([.top, .horizontal], 7)
@@ -28,14 +28,14 @@ struct ConfirmView_ios17: View {
                     .foregroundStyle(Color.cBlackBrown)
                 
                 if method == "release" {
-                    Text(subTitle)
+                    Text(LocalizedStringKey(subTitle))
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 32)
                         .padding(7)
                         .bold()
                         .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
                 } else {
-                    Text(subTitle)
+                    Text(LocalizedStringKey(subTitle))
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 32)
                         .padding(7)
@@ -81,7 +81,7 @@ struct ConfirmView_ios17: View {
                 ZStack {
                     Button {
                     } label: {
-                        Text(method == "Insufficient Gold" ? "Confirm" : "YES")
+                        Text(LocalizedStringKey(method == "Insufficient Gold" ? "Confirm" : "YES"))
                             .font(.custom("Georgia-Italic", size: 15))
                             .padding(.horizontal, 30)
                             .padding(7)
@@ -134,7 +134,7 @@ struct ConfirmView_ios16: View {
     var body: some View {
         VStack {
             VStack {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.custom("Georgia-Italic", size: 15))
                     .padding(.horizontal, 30)
                     .padding([.top, .horizontal], 7)
@@ -142,14 +142,14 @@ struct ConfirmView_ios16: View {
                     .foregroundStyle(Color.cBlackBrown)
                 
                 if method == "release" {
-                    Text(subTitle)
+                    Text(LocalizedStringKey(subTitle))
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 32)
                         .padding(7)
                         .bold()
                         .foregroundStyle(manager.currPanelSpecies == nil ? .black : manager.getSpecies(mySpecies: manager.currPanelSpecies!).rarity == "R" ? .blue : .purple)
                 } else {
-                    Text(subTitle)
+                    Text(LocalizedStringKey(subTitle))
                         .font(.custom("Georgia-Italic", size: 15))
                         .padding(.horizontal, 32)
                         .padding(7)
@@ -195,7 +195,7 @@ struct ConfirmView_ios16: View {
                 ZStack {
                     Button {
                     } label: {
-                        Text(method == "Insufficient Gold" ? "Confirm" : "YES")
+                        Text(LocalizedStringKey(method == "Insufficient Gold" ? "Confirm" : "YES"))
                             .font(.custom("Georgia-Italic", size: 15))
                             .padding(.horizontal, 30)
                             .padding(7)
