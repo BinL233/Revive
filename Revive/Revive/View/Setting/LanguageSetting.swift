@@ -58,7 +58,7 @@ struct LanguageSetting_ios16: View {
         header: {
            Text("LANGUAGE")
         } footer: {
-            Text("Only avaliable to iOS 17 or later.")
+            Text("Only avaliable to iOS 17 or later. Currently follows the system language.")
         }
     }
 }

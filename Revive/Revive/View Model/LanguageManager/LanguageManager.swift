@@ -12,7 +12,7 @@ import Combine
 @available(iOS 17.0, *)
 @Observable
 class LanguageManager {
-    var selectedLanguage: String = "auto" {
+    var selectedLanguage: String = "en" {
         didSet {
             UserDefaults.standard.set(selectedLanguage, forKey: "selectedLanguage")
         }

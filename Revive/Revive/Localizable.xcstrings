@@ -2842,14 +2842,18 @@
       }
     },
     "Only avaliable to iOS 17 or later." : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "只兼容iOS17以及之后的版本。"
+            "state" : "needs_review",
+            "value" : "只兼容iOS17以及之后的版本。目前跟随系统语言。"
           }
         }
       }
+    },
+    "Only avaliable to iOS 17 or later. Currently follows the system language." : {
+
     },
     "Oops..." : {
       "extractionState" : "manual",
