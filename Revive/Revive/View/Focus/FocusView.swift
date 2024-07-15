@@ -35,6 +35,9 @@ struct FocusView_ios17: View {
                                 BuffListView_ios17()
                                     .padding(.leading, 20)
                                 Spacer()
+                                
+                                StrictMode()
+                                .padding(.trailing, 20)
                             }
                         }
                     }
@@ -56,9 +59,11 @@ struct FocusView_ios17: View {
                             .padding(.horizontal, 40)
                             .padding(.top, -5)
 
-                        StartButton_ios17()
-                            .padding(.vertical, 20)
-                            .padding(.bottom, 30)
+                        ZStack {
+                            StartButton_ios17()
+                                .padding(.vertical, 20)
+                                .padding(.bottom, 30)
+                        }
                     }
                 }
                 

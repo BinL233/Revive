@@ -99,6 +99,7 @@
 		B3ADC0992B20B3090039611E /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC0982B20B3090039611E /* BackgroundTask.swift */; };
 		B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */; };
 		B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */; };
+		B3BB37612C44A66100B8A096 /* StrictMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB37602C44A66100B8A096 /* StrictMode.swift */; };
 		B3BCC2D22B22D7D4008CF924 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BCC2D12B22D7D3008CF924 /* Reminder.swift */; };
 		B3C151DB2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C151DA2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift */; };
 		B3C738E82AF9DF42006709C9 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */; };
@@ -296,6 +297,7 @@
 		B3ADC0982B20B3090039611E /* BackgroundTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 		B3ADC09B2B20B53D0039611E /* BackgroundOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOperation.swift; sourceTree = "<group>"; };
 		B3B54FCA2B979EAD00434C4D /* ReviveManager+Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+Tutorial.swift"; sourceTree = "<group>"; };
+		B3BB37602C44A66100B8A096 /* StrictMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrictMode.swift; sourceTree = "<group>"; };
 		B3BCC2D12B22D7D3008CF924 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		B3C151DA2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesFriendshipDetails.swift; sourceTree = "<group>"; };
 		B3C738E72AF9DF42006709C9 /* ActiveAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlert.swift; sourceTree = "<group>"; };
@@ -714,6 +716,14 @@
 			path = BackgroundTask;
 			sourceTree = "<group>";
 		};
+		B3BB375D2C44A53D00B8A096 /* StartButtons */ = {
+			isa = PBXGroup;
+			children = (
+				B3C774352ACD151500387FDC /* StartButton.swift */,
+			);
+			path = StartButtons;
+			sourceTree = "<group>";
+		};
 		B3C773EF2ACCE69800387FDC = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +850,7 @@
 		B3C7742A2ACD044F00387FDC /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B3BB375D2C44A53D00B8A096 /* StartButtons */,
 				B30BB28C2C37CB6100254B79 /* Announcement */,
 				B3D3FE112B2D57EF00D04D8F /* Info */,
 				B3234E892B15047200A730D1 /* Exploring */,
@@ -849,10 +860,10 @@
 				B3C773FD2ACCE69800387FDC /* FocusView.swift */,
 				B3C774312ACD0F6500387FDC /* FocusTitle.swift */,
 				B3C774332ACD11CF00387FDC /* ActionButtons.swift */,
-				B3C774352ACD151500387FDC /* StartButton.swift */,
 				B3CE6F492B225558006727AB /* BuffListView.swift */,
 				B3BCC2D12B22D7D3008CF924 /* Reminder.swift */,
 				B38884F32C43F4BF00C75A03 /* TipsView.swift */,
+				B3BB37602C44A66100B8A096 /* StrictMode.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -1144,6 +1155,7 @@
 				B304B74B2B22B7ED0067371D /* StoreAnimationView.swift in Sources */,
 				B35006CF2B1CE13700F030D6 /* SpeciesAction.swift in Sources */,
 				B3B54FCB2B979EAD00434C4D /* ReviveManager+Tutorial.swift in Sources */,
+				B3BB37612C44A66100B8A096 /* StrictMode.swift in Sources */,
 				B3ADC09C2B20B53D0039611E /* BackgroundOperation.swift in Sources */,
 				B327E9642B2EAB3F003BDF76 /* StoreTitle.swift in Sources */,
 				B3E3EB302B22112B0073920F /* DataManager+Statistics.swift in Sources */,

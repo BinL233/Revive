@@ -43,6 +43,9 @@
         }
       }
     },
+    "/" : {
+
+    },
     "#%@" : {
 
     },
@@ -279,7 +282,15 @@
       }
     },
     "20 Friendship Points for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的物种提供20亲密度。"
+          }
+        }
+      }
     },
     "20th century" : {
       "extractionState" : "manual",
@@ -304,16 +315,40 @@
       }
     },
     "50 EXP and 15 Friendship Points for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的物种提供50经验值以及15亲密度。"
+          }
+        }
+      }
     },
     "70 EXP and 10 Friendship Points for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的物种提供70经验值以及10亲密度。"
+          }
+        }
+      }
     },
     "100" : {
 
     },
     "100 EXP and 5 Friendship Points for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的物种提供100经验值以及5亲密度。"
+          }
+        }
+      }
     },
     "100 EXP for any species." : {
       "extractionState" : "manual",
@@ -327,13 +362,37 @@
       }
     },
     "150 EXP for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的物种提供150经验值。"
+          }
+        }
+      }
     },
     "200 EXP and 20 Friendship Points, carnivore only." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的肉食物种提供200经验值以及20亲密度。"
+          }
+        }
+      }
     },
     "200 EXP and 20 Friendship Points, herbivore only." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为你的草食物种提供200经验值以及20亲密度。"
+          }
+        }
+      }
     },
     "200 EXP, carnivore only." : {
       "extractionState" : "manual",
@@ -3417,7 +3476,15 @@
       }
     },
     "Special reward in Beach area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙滩地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Beach area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3431,7 +3498,15 @@
       }
     },
     "Special reward in Desert area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沙漠地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Desert area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3445,7 +3520,15 @@
       }
     },
     "Special reward in Glacier area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冰川地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Glacier area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3459,7 +3542,15 @@
       }
     },
     "Special reward in Mountain area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "山丘地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Mountain area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3473,7 +3564,15 @@
       }
     },
     "Special reward in Ocean area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海洋地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Ocean area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3487,7 +3586,15 @@
       }
     },
     "Special reward in Plain area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "平原地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Plain area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3501,7 +3608,15 @@
       }
     },
     "Special reward in Rainforest area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "雨林地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Rainforest area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3515,7 +3630,15 @@
       }
     },
     "Special reward in Sky area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天空地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Sky area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3529,7 +3652,15 @@
       }
     },
     "Special reward in Volcano area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火山地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Volcano area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3543,7 +3674,15 @@
       }
     },
     "Special reward in Wetland area, 1000 EXP and 100 Friendship Points." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湿地地带的特别奖励，1000经验值以及100亲密度。"
+          }
+        }
+      }
     },
     "Special reward in Wetland area, 1000 EXP." : {
       "extractionState" : "manual",
@@ -3657,6 +3796,16 @@
     },
     "Store" : {
       "extractionState" : "manual"
+    },
+    "Strict Mode" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "严格模式"
+          }
+        }
+      }
     },
     "Surfing yesterday, 84 of us were counted by humans, over." : {
       "extractionState" : "manual",
