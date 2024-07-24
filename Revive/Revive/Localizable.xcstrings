@@ -139,6 +139,9 @@
         }
       }
     },
+    "2. Gain EXP = 60 * Training Time (min)" : {
+
+    },
     "2. Hatching time should >= 30 minutes." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -149,6 +152,9 @@
           }
         }
       }
+    },
+    "3. Gain Friendship = Training Time (min)" : {
+
     },
     "3. Minimum hatching times are different between species. Only selecting a time greater than the certain's Species' minimum hatching time will make it possible to hatch them" : {
       "extractionState" : "manual",
@@ -193,6 +199,9 @@
           }
         }
       }
+    },
+    "4. SR Species probability = 5 / (100 - 0.4 * Hatching Time (min))" : {
+
     },
     "4. SR Species probability = 10% + 0.34% * Hatching Time (min)" : {
       "extractionState" : "manual",
@@ -4282,6 +4291,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "是"
+          }
+        }
+      }
+    },
+    "You cannot change languages during Focus." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你不可以在「专注」时改变语言。"
           }
         }
       }

@@ -12,8 +12,13 @@ import SwiftUI
 extension ReviveManager_ios17 {
     private func getRandomHatchingSpecies() -> Species {
         let superRarePercent = HatchingMechanics().superRare
+        
+        // Calculate up part rate
         let upRate = HatchingMechanics().superRareUpRate * Double(selectedTime / 60)
+        
+        // Get a random number
         let randomNum = Int.random(in: 0..<(100-Int(upRate)-Int(rarityBuffRate*100)))
+        
         var rarityToFilter = "R"
         
         if randomNum <= 0 {

@@ -40,6 +40,7 @@
 		B330E5472B97E50A002B74C9 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E5462B97E50A002B74C9 /* Animations.swift */; };
 		B330E5492B97E60D002B74C9 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = B330E5482B97E60D002B74C9 /* Animations.json */; };
 		B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E54A2B97E6DE002B74C9 /* IDs.swift */; };
+		B334A05D2C46C0630032BF0B /* BackyardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */; };
 		B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34831992B03C82000545E46 /* SpeciesItems.swift */; };
 		B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D22B0927C200270661 /* ReviveManager+util.swift */; };
 		B349D5D52B09296400270661 /* SpeciesExpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D42B09296400270661 /* SpeciesExpBar.swift */; };
@@ -239,6 +240,7 @@
 		B330E5462B97E50A002B74C9 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		B330E5482B97E60D002B74C9 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
 		B330E54A2B97E6DE002B74C9 /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
+		B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardAnimationView.swift; sourceTree = "<group>"; };
 		B34831992B03C82000545E46 /* SpeciesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesItems.swift; sourceTree = "<group>"; };
 		B349D5D22B0927C200270661 /* ReviveManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+util.swift"; sourceTree = "<group>"; };
 		B349D5D42B09296400270661 /* SpeciesExpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesExpBar.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				B304B74A2B22B7ED0067371D /* StoreAnimationView.swift */,
+				B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */,
 				B35006C92B1CDE6300F030D6 /* PanelButtonsInfoAction.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
+				B334A05D2C46C0630032BF0B /* BackyardAnimationView.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B349E6B02C3FFDCF00A4E9E0 /* LinkToCollections.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,

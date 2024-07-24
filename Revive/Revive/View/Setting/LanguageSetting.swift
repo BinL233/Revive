@@ -11,6 +11,7 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct LanguageSetting_ios17: View {
     @Environment(LanguageManager.self) var manager
+    @Environment(ReviveManager_ios17.self) var reviveManager
     
     var body: some View {
         @Bindable var manager = manager
@@ -29,11 +30,24 @@ struct LanguageSetting_ios17: View {
                         Text("简体中文").tag("zh")
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    .disabled(reviveManager.isTimerStart)
                 }
             }
         }
         header: {
            Text("LANGUAGE")
+        } footer: {
+            if reviveManager.isTimerStart {
+                HStack {
+                    Image(systemName: "exclamationmark.circle")
+                        .foregroundStyle(Color.orange)
+                    
+                    Text("You cannot change languages during Focus.")
+                        .foregroundStyle(Color.orange)
+                    
+                    Spacer()
+                }
+            }
         }
     }
 }

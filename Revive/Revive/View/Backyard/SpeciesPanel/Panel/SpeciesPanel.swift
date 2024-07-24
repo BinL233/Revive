@@ -144,7 +144,7 @@ struct SpeciesPanel_ios17: View {
                         Spacer()
                         
                         if manager.speciesItemsSelection == .Species {
-                            SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
+                            SpeciesPanelImage_ios17(currPanelSpecies: $manager.currPanelSpecies)
                         } else {
                             ItemPanelImage(currPanelItem: $manager.currPanelItem)
                         }
@@ -331,7 +331,7 @@ struct SpeciesPanel_ios16: View {
                         Spacer()
                         
                         if manager.speciesItemsSelection == .Species {
-                            SpeciesPanelImage(currPanelSpecies: $manager.currPanelSpecies)
+                            SpeciesPanelImage_ios16(currPanelSpecies: $manager.currPanelSpecies)
                         } else {
                             ItemPanelImage(currPanelItem: $manager.currPanelItem)
                         }

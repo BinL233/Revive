@@ -17,6 +17,17 @@
                     "4001_touch_030", "4001_touch_036", "4001_touch_042", "4001_touch_048", "4001_touch_054",
                      "4001_touch_060", "4001_touch_066", "4001_touch_072", "4001_touch_078", "4001_touch_084",
                      "4001_touch_090"]
+        },
+        
+        "007": {
+            "idle": ["007_idle_0", "007_idle_1", "007_idle_2", "007_idle_3",
+                "007_idle_4", "007_idle_5", "007_idle_6", "007_idle_7", "007_idle_8",
+                "007_idle_9", "007_idle_10", "007_idle_11"],
+            
+            "purchase": [],
+
+            "touch": ["007_touch_0", "007_touch_1", "007_touch_2", "007_touch_3", "007_touch_4",
+                    "007_touch_5", "007_touch_6"]
         }
     }
 }
