@@ -16,6 +16,8 @@
 		B30BB28B2C37C99700254B79 /* WebFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB28A2C37C99700254B79 /* WebFetchManager.swift */; };
 		B30BB28E2C37CB9A00254B79 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB28D2C37CB9A00254B79 /* Announcement.swift */; };
 		B31319892B1FB83A00FFC760 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31319882B1FB83A00FFC760 /* ContactUs.swift */; };
+		B3154F2F2C50D81A00BB8DFB /* ConfirmViewScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3154F2E2C50D81A00BB8DFB /* ConfirmViewScroll.swift */; };
+		B3154F312C50DC7C00BB8DFB /* StrictModeConfirmInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = B3154F302C50DC7B00BB8DFB /* StrictModeConfirmInfo.json */; };
 		B317C5832AFE6B150076BE33 /* TestMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B317C5822AFE6B150076BE33 /* TestMode.swift */; };
 		B31922152AFBE175000446B7 /* MySpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31922142AFBE175000446B7 /* MySpecies.swift */; };
 		B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31922182AFBED74000446B7 /* MySpeciesModel.xcdatamodeld */; };
@@ -216,6 +218,8 @@
 		B30BB28A2C37C99700254B79 /* WebFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFetchManager.swift; sourceTree = "<group>"; };
 		B30BB28D2C37CB9A00254B79 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		B31319882B1FB83A00FFC760 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		B3154F2E2C50D81A00BB8DFB /* ConfirmViewScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewScroll.swift; sourceTree = "<group>"; };
+		B3154F302C50DC7B00BB8DFB /* StrictModeConfirmInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StrictModeConfirmInfo.json; sourceTree = "<group>"; };
 		B317C5822AFE6B150076BE33 /* TestMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMode.swift; sourceTree = "<group>"; };
 		B31922142AFBE175000446B7 /* MySpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpecies.swift; sourceTree = "<group>"; };
 		B31922192AFBED74000446B7 /* MySpeciesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySpeciesModel.xcdatamodel; sourceTree = "<group>"; };
@@ -438,6 +442,14 @@
 			path = Announcement;
 			sourceTree = "<group>";
 		};
+		B3154F2D2C50D80500BB8DFB /* StrictMode */ = {
+			isa = PBXGroup;
+			children = (
+				B3BB37602C44A66100B8A096 /* StrictMode.swift */,
+			);
+			path = StrictMode;
+			sourceTree = "<group>";
+		};
 		B319E67E2B0A65FC000B9FD4 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				B3CE6F4B2B2268CE006727AB /* ConfirmView.swift */,
+				B3154F2E2C50D81A00BB8DFB /* ConfirmViewScroll.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -538,6 +551,7 @@
 			children = (
 				B36DE9432C1E6D20007B11FC /* Dialog */,
 				B330E5482B97E60D002B74C9 /* Animations.json */,
+				B3154F302C50DC7B00BB8DFB /* StrictModeConfirmInfo.json */,
 				B35D00492B96CA3100F44AD1 /* Item.json */,
 				B3096DD42B3764C80067131D /* StoreItems.json */,
 				B32E07182C38EB12007A0465 /* UpdateLogs.json */,
@@ -853,6 +867,7 @@
 		B3C7742A2ACD044F00387FDC /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				B3154F2D2C50D80500BB8DFB /* StrictMode */,
 				B3BB375D2C44A53D00B8A096 /* StartButtons */,
 				B30BB28C2C37CB6100254B79 /* Announcement */,
 				B3D3FE112B2D57EF00D04D8F /* Info */,
@@ -866,7 +881,6 @@
 				B3CE6F492B225558006727AB /* BuffListView.swift */,
 				B3BCC2D12B22D7D3008CF924 /* Reminder.swift */,
 				B38884F32C43F4BF00C75A03 /* TipsView.swift */,
-				B3BB37602C44A66100B8A096 /* StrictMode.swift */,
 			);
 			path = Focus;
 			sourceTree = "<group>";
@@ -1077,6 +1091,7 @@
 				B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */,
 				B3FB819F2B199212004CB417 /* Assets.xcassets in Resources */,
 				B3FB819B2B19920B004CB417 /* ExploringMap.json in Resources */,
+				B3154F312C50DC7C00BB8DFB /* StrictModeConfirmInfo.json in Resources */,
 				B3CCA4182BD17D07008D4D2B /* Localizable.xcstrings in Resources */,
 				B32E07192C38EB12007A0465 /* UpdateLogs.json in Resources */,
 				B3F6EA6C2C33928C00444FA2 /* Tutorial1.json in Resources */,
@@ -1219,6 +1234,7 @@
 				B35006CD2B1CE0F800F030D6 /* SpeciesList.swift in Sources */,
 				B3C151DB2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift in Sources */,
 				B3D3FE132B2D57FD00D04D8F /* FocusInfo.swift in Sources */,
+				B3154F2F2C50D81A00BB8DFB /* ConfirmViewScroll.swift in Sources */,
 				B330E5472B97E50A002B74C9 /* Animations.swift in Sources */,
 				B30BB28E2C37CB9A00254B79 /* Announcement.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,

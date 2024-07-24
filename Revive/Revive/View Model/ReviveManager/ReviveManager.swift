@@ -71,6 +71,9 @@ class ReviveManager_ios17 {
     var isRarityBuff : Bool
     var rarityBuffRate : Double
     
+    // Strict Mode
+    var isStrictModeOpen : Bool
+    
     // Backyard
     var UDSpeciesListSort : String
     var UDItemListSort : String
@@ -142,6 +145,8 @@ class ReviveManager_ios17 {
         animations = Animations.animations!
         storeItems = localStoreItems
         updateLogs = UpdateLogsModel.logs ?? []
+        
+        isStrictModeOpen = false
         
         isScaledSelectView = false
         totalStoreItemsProbability = {
@@ -297,6 +302,10 @@ class ReviveManager_ios16: ObservableObject {
     
     @Published var speciesItemsSelection: SpeciesItems
     
+    // Strict Mode
+    @Published var isStrictModeOpen : Bool
+    
+    
     // Store
     @Published var storeItems: [StoreItems]
     @Published var currStoreItems: [StoreItems]
@@ -440,6 +449,8 @@ class ReviveManager_ios16: ObservableObject {
         isExpItemChooseSpecies = false
         lastBackgroundTime = nil
         bgNotification = nil
+        
+        isStrictModeOpen = false
         
         focusLog = localFocusLog
         selectedTime2 = 0

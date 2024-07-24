@@ -10,6 +10,8 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct FocusView_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
+    @Environment(DialogManager_ios17.self) var dialogManager
+    @State private var isStrictConfirmOpen: Bool = false
     @State private var tipsModeHatching: String = "Hatching"
     @State private var tipsModeExploring: String = "Exploring"
     
@@ -36,7 +38,7 @@ struct FocusView_ios17: View {
                                     .padding(.leading, 20)
                                 Spacer()
                                 
-                                StrictMode()
+                                StrictMode_ios17(isStrictConfirmOpen: $isStrictConfirmOpen)
                                 .padding(.trailing, 20)
                             }
                         }
@@ -93,6 +95,12 @@ struct FocusView_ios17: View {
                             }
                     }
                 }
+                
+                if isStrictConfirmOpen {
+                    ConfirmViewScroll(info: dialogManager.strictModeConfirmInfo, title: "Strict Mode", isConfirmOpen: $isStrictConfirmOpen, toggle: $manager.isStrictModeOpen)
+                        .padding(.horizontal)
+                        .padding(.vertical, 30)
+                }
             }
         }
     }
@@ -124,6 +132,8 @@ struct FocusView_ios17: View {
 @available(iOS 16.0, *)
 struct FocusView_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
+    @EnvironmentObject var dialogManager: DialogManager_ios16
+    @State private var isStrictConfirmOpen: Bool = false
     @State private var tipsModeHatching: String = "Hatching"
     @State private var tipsModeExploring: String = "Exploring"
     
@@ -147,6 +157,9 @@ struct FocusView_ios16: View {
                                 BuffListView_ios16()
                                     .padding(.leading, 20)
                                 Spacer()
+                                
+                                StrictMode_ios16(isStrictConfirmOpen: $isStrictConfirmOpen)
+                                .padding(.trailing, 20)
                             }
                         }
                     }
@@ -200,6 +213,12 @@ struct FocusView_ios16: View {
                                 manager.isStartButtonDisabled = true
                             }
                     }
+                }
+                
+                if isStrictConfirmOpen {
+                    ConfirmViewScroll(info: dialogManager.strictModeConfirmInfo, title: "Strict Mode", isConfirmOpen: $isStrictConfirmOpen, toggle: $manager.isStrictModeOpen)
+                        .padding(.horizontal)
+                        .padding(.vertical, 30)
                 }
             }
         }
