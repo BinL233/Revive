@@ -19,5 +19,6 @@ struct AnimationType: Codable {
     let idle: [String]
     let purchase: [String]
     let touch: [String]
+    let emoji: [String]
 }
     

@@ -1,33 +1,30 @@
 {
     "id": {
         "4001": {
-            "idle": ["4001_idle_000", "4001_idle_006", "4001_idle_012", "4001_idle_018",
-                "4001_idle_024", "4001_idle_030", "4001_idle_036", "4001_idle_042", "4001_idle_048",
-                "4001_idle_054", "4001_idle_060", "4001_idle_066", "4001_idle_072", "4001_idle_078",
-                "4001_idle_084", "4001_idle_090", "4001_idle_096", "4001_idle_102", "4001_idle_108",
-                "4001_idle_114", "4001_idle_120", "4001_idle_126", "4001_idle_132", "4001_idle_138",
-                "4001_idle_144", "4001_idle_150"],
+            "idle": ["4001_idle_0", "4001_idle_1", "4001_idle_2", "4001_idle_3", "4001_idle_4", "4001_idle_5",
+                    "4001_idle_6", "4001_idle_7", "4001_idle_8", "4001_idle_9", "4001_idle_10", "4001_idle_11",
+                    "4001_idle_12"],
 
-            "purchase": ["4001_purchase_000", "4001_purchase_006", "4001_purchase_012", "4001_purchase_018",
-                        "4001_purchase_024", "4001_purchase_030", "4001_purchase_036", "4001_purchase_042",
-                        "4001_purchase_048", "4001_purchase_054", "4001_purchase_060", "4001_purchase_066",
-                        "4001_purchase_072", "4001_purchase_078", "4001_purchase_084", "4001_purchase_090"],
+            "purchase": ["4001_purchase_0", "4001_purchase_1", "4001_purchase_2", "4001_purchase_3",
+                        "4001_purchase_4", "4001_purchase_5", "4001_purchase_6", "4001_purchase_7"],
 
-            "touch": ["4001_touch_000", "4001_touch_006", "4001_touch_012", "4001_touch_018", "4001_touch_024",
-                    "4001_touch_030", "4001_touch_036", "4001_touch_042", "4001_touch_048", "4001_touch_054",
-                     "4001_touch_060", "4001_touch_066", "4001_touch_072", "4001_touch_078", "4001_touch_084",
-                     "4001_touch_090"]
+            "touch": ["4001_touch_0", "4001_touch_1", "4001_touch_2", "4001_touch_3", "4001_touch_4",
+                    "4001_touch_5", "4001_touch_6", "4001_touch_7"],
+            
+            "emoji": []
         },
         
-        "007": {
-            "idle": ["007_idle_0", "007_idle_1", "007_idle_2", "007_idle_3",
-                "007_idle_4", "007_idle_5", "007_idle_6", "007_idle_7", "007_idle_8",
-                "007_idle_9", "007_idle_10", "007_idle_11"],
+        "species": {
+            "idle": ["_idle_0", "_idle_1", "_idle_2", "_idle_3",
+                "_idle_4", "_idle_5", "_idle_6", "_idle_7", "_idle_8",
+                "_idle_9", "_idle_10", "_idle_11", "_idle_12"],
             
             "purchase": [],
 
-            "touch": ["007_touch_0", "007_touch_1", "007_touch_2", "007_touch_3", "007_touch_4",
-                    "007_touch_5", "007_touch_6"]
-        }
+            "touch": ["_touch_0", "_touch_1", "_touch_2", "_touch_3", "_touch_4",
+                    "_touch_5", "_touch_6", "_touch_7"],
+            
+            "emoji": []
+        },
     }
 }

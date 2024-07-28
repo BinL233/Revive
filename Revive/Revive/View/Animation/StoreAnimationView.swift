@@ -12,11 +12,11 @@ struct StoreAnimationView: View {
     @State var frames : [String]
     @State var isIdle : Bool
     @Binding var animationType: String
-    let sequenceIdle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-    let sequencePAT = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    let sequenceIdle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    let sequencePAT = [0, 1, 2, 3, 4, 5, 6, 7]
     
     var body: some View {
-        TimelineView(.animation(minimumInterval: 0.15, paused: false)) { context in
+        TimelineView(.animation(minimumInterval: 0.2, paused: false)) { context in
             if #available(iOS 17.0, *) {
                 if let image = UIImage(named: frames[isIdle ? sequenceIdle[currentFrame] : sequencePAT[currentFrame]]) {
                     Image(uiImage: image)
