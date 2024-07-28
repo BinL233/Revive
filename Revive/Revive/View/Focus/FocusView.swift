@@ -38,8 +38,8 @@ struct FocusView_ios17: View {
                                     .padding(.leading, 20)
                                 Spacer()
                                 
-                                StrictMode_ios17(isStrictConfirmOpen: $isStrictConfirmOpen)
-                                .padding(.trailing, 20)
+//                                StrictMode_ios17(isStrictConfirmOpen: $isStrictConfirmOpen)
+//                                .padding(.trailing, 20)
                             }
                         }
                     }
@@ -158,8 +158,8 @@ struct FocusView_ios16: View {
                                     .padding(.leading, 20)
                                 Spacer()
                                 
-                                StrictMode_ios16(isStrictConfirmOpen: $isStrictConfirmOpen)
-                                .padding(.trailing, 20)
+//                                StrictMode_ios16(isStrictConfirmOpen: $isStrictConfirmOpen)
+//                                .padding(.trailing, 20)
                             }
                         }
                     }

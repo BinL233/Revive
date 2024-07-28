@@ -11,11 +11,19 @@ import SwiftUI
 struct Collections_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
     private let screenWidth = UIScreen.main.bounds.width
-    @State private var speciesAchieveRate: CGFloat = 0
     
     var body: some View {
         let adaptiveCloumns = [GridItem(.adaptive(minimum: screenWidth > 380 ? 90 : 70))]
         @Bindable var manager = manager
+        
+        var speciesAchieveRate: Binding<CGFloat> {
+            Binding<CGFloat>(
+                get: {
+                    CGFloat(manager.myCollectionsSpecies.count) / CGFloat(manager.speciesList.count)
+                },
+                set: { _ in }
+            )
+        }
         
         VStack {
             Text("Species")
@@ -24,16 +32,13 @@ struct Collections_ios17: View {
                 .foregroundStyle(Color.cBlackBrown)
             
             ZStack {
-                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: $speciesAchieveRate, height: 15)
+                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: speciesAchieveRate, height: 15)
                 (Text("\(manager.myCollectionsSpecies.count)") + Text("/") + Text("\(manager.speciesList.count)"))
                     .bold()
                     .italic()
                     .font(.caption)
                     .foregroundStyle(Color.cBlack)
             }
-        }
-        .onAppear {
-            speciesAchieveRate = CGFloat(manager.myCollectionsSpecies.count / manager.speciesList.count)
         }
         .padding(.horizontal)
         
@@ -56,10 +61,18 @@ struct Collections_ios17: View {
 struct Collections_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
     private let screenWidth = UIScreen.main.bounds.width
-    @State private var speciesAchieveRate: CGFloat = 0
     
     var body: some View {
         let adaptiveCloumns = [GridItem(.adaptive(minimum: screenWidth > 380 ? 90 : 70))]
+        
+        var speciesAchieveRate: Binding<CGFloat> {
+            Binding<CGFloat>(
+                get: {
+                    CGFloat(manager.myCollectionsSpecies.count) / CGFloat(manager.speciesList.count)
+                },
+                set: { _ in }
+            )
+        }
         
         VStack {
             Text("Species")
@@ -68,16 +81,13 @@ struct Collections_ios16: View {
                 .foregroundStyle(Color.cBlackBrown)
             
             ZStack {
-                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: $speciesAchieveRate, height: 15)
+                ProgressBar(color1: Color.cYellow, color2: Color.cYellow, percent: speciesAchieveRate, height: 15)
                 (Text("\(manager.myCollectionsSpecies.count)") + Text("/") + Text("\(manager.speciesList.count)"))
                     .bold()
                     .italic()
                     .font(.caption)
                     .foregroundStyle(Color.cBlack)
             }
-        }
-        .onAppear {
-            speciesAchieveRate = CGFloat(manager.myCollectionsSpecies.count / manager.speciesList.count)
         }
         .padding(.horizontal)
         

@@ -75,6 +75,10 @@ extension ReviveManager_ios17 {
     func changeToHatchingState3() {
         currHatchingState = .state3
         
+        if !myCollectionsSpecies.contains(where: { $0.id == currHatchingSpecies?.id }) {
+            isNewSpecies = true
+        }
+        
         let maxHeight = currHatchingSpecies?.height.L ?? 0
         let minHeight = currHatchingSpecies?.height.S ?? 0
         let maxWeight = currHatchingSpecies?.weight.L ?? 0
@@ -190,6 +194,10 @@ extension ReviveManager_ios16 {
     
     func changeToHatchingState3() {
         currHatchingState = .state3
+        
+        if !myCollectionsSpecies.contains(where: { $0.id == currHatchingSpecies?.id }) {
+            isNewSpecies = true
+        }
         
         let maxHeight = currHatchingSpecies?.height.L ?? 0
         let minHeight = currHatchingSpecies?.height.S ?? 0

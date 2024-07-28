@@ -3816,6 +3816,9 @@
         }
       }
     },
+    "Strict Mode has been activated." : {
+
+    },
     "Surfing yesterday, 84 of us were counted by humans, over." : {
       "extractionState" : "manual",
       "localizations" : {

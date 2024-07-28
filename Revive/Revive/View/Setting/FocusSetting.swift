@@ -25,11 +25,24 @@ struct FocusSetting_ios17: View {
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
                             manager.setDisplay()
                         }
+                        .disabled(manager.isStrictModeOpen)
                 }
 
             }
         } header: {
             Text("FOCUS")
+        } footer: {
+            if manager.isStrictModeOpen {
+                HStack {
+                    Image(systemName: "exclamationmark.circle")
+                        .foregroundStyle(Color.orange)
+                    
+                    Text("Strict Mode has been activated.")
+                        .foregroundStyle(Color.orange)
+                    
+                    Spacer()
+                }
+            }
         }
     }
 }
@@ -51,11 +64,24 @@ struct FocusSetting_ios16: View {
                             UserDefaults.standard.set(manager.keepDisplay, forKey: "isKeepDisplay")
                             manager.setDisplay()
                         }
+                        .disabled(manager.isStrictModeOpen)
                 }
 
             }
         } header: {
             Text("FOCUS")
+        } footer: {
+            if manager.isStrictModeOpen {
+                HStack {
+                    Image(systemName: "exclamationmark.circle")
+                        .foregroundStyle(Color.orange)
+                    
+                    Text("Strict Mode has been activated.")
+                        .foregroundStyle(Color.orange)
+                    
+                    Spacer()
+                }
+            }
         }
     }
 }

@@ -80,6 +80,14 @@ struct HatchingComplete_ios17: View {
                                         .foregroundStyle(Color.white)
                                 }
                                 Spacer()
+                                
+//                                if manager.isNewSpecies {
+//                                    Text("NEW")
+//                                        .font(.custom("Georgia-Italic", size: 28))
+//                                        .padding()
+//                                        .bold()
+//                                        .foregroundStyle(Color.orange)
+//                                }
                             }
                             Spacer()
                         }
@@ -181,6 +189,14 @@ struct HatchingComplete_ios16: View {
                                         .foregroundStyle(Color.white)
                                 }
                                 Spacer()
+                                
+//                                if manager.isNewSpecies {
+//                                    Text("NEW")
+//                                        .font(.custom("Georgia-Italic", size: 28))
+//                                        .padding()
+//                                        .bold()
+//                                        .foregroundStyle(Color.cMidYellow)
+//                                }
                             }
                             Spacer()
                         }

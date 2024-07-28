@@ -99,6 +99,7 @@ class ReviveManager_ios17 {
     var lastBackgroundTime : Date?
     var bgNotification : String?
     var currCoins : Int
+    var isNewSpecies : Bool
     
     // Setting
     var keepDisplay : Bool
@@ -196,6 +197,7 @@ class ReviveManager_ios17 {
         isStartButtonDisabled2 = false
         hideInitTutorial = false
         tutorialState = 0
+        isNewSpecies = false
         currFocusLog = {
             func dateString(from components: DateComponents, calendar: Calendar) -> String {
                 if let date = calendar.date(from: components) {
@@ -368,6 +370,7 @@ class ReviveManager_ios16: ObservableObject {
     @Published var lastBackgroundTime: Date?
     @Published var bgNotification: String?
     @Published var currCoins: Int
+    @Published var isNewSpecies: Bool
     
     // Setting
     @Published var keepDisplay: Bool
@@ -449,7 +452,7 @@ class ReviveManager_ios16: ObservableObject {
         isExpItemChooseSpecies = false
         lastBackgroundTime = nil
         bgNotification = nil
-        
+        isNewSpecies = false
         isStrictModeOpen = false
         
         focusLog = localFocusLog
