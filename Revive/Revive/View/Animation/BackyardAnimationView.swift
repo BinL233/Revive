@@ -17,7 +17,7 @@ struct BackyardAnimationView: View {
     let speciesId : String
         
     var body: some View {
-        TimelineView(.animation(minimumInterval: 0.2, paused: false)) { context in
+        TimelineView(.animation(minimumInterval: 0.15, paused: false)) { context in
             if #available(iOS 17.0, *) {
                 if let image = UIImage(named: speciesId + frames[isIdle ? sequenceIdle[currentFrame] : sequenceTouch[currentFrame]]) {
                     Image(uiImage: image)
