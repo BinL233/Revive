@@ -1030,6 +1030,9 @@
         }
       }
     },
+    "Communities" : {
+
+    },
     "Compass" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1278,6 +1281,9 @@
           }
         }
       }
+    },
+    "Discord" : {
+
     },
     "Dismiss" : {
       "extractionState" : "manual",
@@ -2312,6 +2318,9 @@
         }
       }
     },
+    "Join" : {
+
+    },
     "Jurassic" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3163,6 +3172,9 @@
           }
         }
       }
+    },
+    "QQ" : {
+
     },
     "Quagga" : {
       "extractionState" : "manual",
