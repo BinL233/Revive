@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct BackyardAnimationView: View {
+struct RegularAnimationView: View {
     @State private var currentFrame = 0
     @State var frames : [String]
     @State var isIdle : Bool
     @Binding var animationType: String
-    let sequenceIdle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    let sequenceTouch = [0, 1, 2, 3, 4, 5, 6, 7]
+    @State var sequenceIdle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    @State var sequenceTouch = [0, 1, 2, 3, 4, 5, 6, 7]
     let speciesId : String
+    @State var minimumInterval = 0.15
         
     var body: some View {
-        TimelineView(.animation(minimumInterval: 0.15, paused: false)) { context in
+        TimelineView(.animation(minimumInterval: minimumInterval, paused: false)) { context in
             if #available(iOS 17.0, *) {
                 if let image = UIImage(named: speciesId + frames[isIdle ? sequenceIdle[currentFrame] : sequenceTouch[currentFrame]]) {
                     Image(uiImage: image)

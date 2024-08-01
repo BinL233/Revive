@@ -12,7 +12,7 @@ struct ItemPanelName_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
     
     var body: some View {
-        Text(manager.getItem(id: manager.currPanelItem?.id ?? manager.myItems[0].id).name)
+        Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem?.id ?? manager.myItems[0].id).name))
             .font(.system(size: 25))
             .italic()
             .bold()
@@ -25,7 +25,7 @@ struct ItemPanelName_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
     
     var body: some View {
-        Text(manager.getItem(id: manager.currPanelItem?.id ?? manager.myItems[0].id).name)
+        Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem?.id ?? manager.myItems[0].id).name))
             .font(.system(size: 25))
             .italic()
             .bold()

@@ -3041,7 +3041,7 @@
         }
       }
     },
-    "pizza" : {
+    "Pizza" : {
       "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {

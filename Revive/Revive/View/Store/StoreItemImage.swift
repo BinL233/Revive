@@ -35,11 +35,11 @@ struct StoreItemImage_ios17: View {
                         
                         Spacer()
 
-                        Text(LocalizedStringKey("\(item.name)"))
+                        Text(LocalizedStringKey(item.name))
                             .font(.title3)
                             .foregroundStyle(Color.cBlackBrown)
 
-                        Text(LocalizedStringKey("\(manager.getItem(id: item.id).function)"))
+                        Text(LocalizedStringKey(manager.getItem(id: item.id).function))
                             .font(.caption2)
                             .foregroundStyle(Color.cBlack)
                             .padding(3)
@@ -97,11 +97,11 @@ struct StoreItemImage_ios16: View {
                         
                         Spacer()
 
-                        Text(LocalizedStringKey("\(item.name)"))
+                        Text(LocalizedStringKey(item.name))
                             .font(.title3)
                             .foregroundStyle(Color.cBlackBrown)
 
-                        Text(LocalizedStringKey("\(manager.getItem(id: item.id).function)"))
+                        Text(LocalizedStringKey(manager.getItem(id: item.id).function))
                             .font(.caption2)
                             .foregroundStyle(Color.cBlack)
                             .padding(3)

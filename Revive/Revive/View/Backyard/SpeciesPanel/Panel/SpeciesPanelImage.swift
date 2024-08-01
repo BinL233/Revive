@@ -22,7 +22,7 @@ struct SpeciesPanelImage_ios17: View {
 //            if currPanelSpecies!.speciesID == 7 {
                 if animationType == "idle" {
                     if let frames = framesIdle {
-                        BackyardAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                        RegularAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                             .shadow(radius: 6, x: 0, y: 4)
                             .onTapGesture {
                                 animationType = "touch"
@@ -30,7 +30,7 @@ struct SpeciesPanelImage_ios17: View {
                     }
                 } else if animationType == "touch" {
                     if let frames = framesTouch {
-                        BackyardAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                        RegularAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                             .shadow(radius: 6, x: 0, y: 4)
                     }
                 }
@@ -69,7 +69,7 @@ struct SpeciesPanelImage_ios16: View {
         if currPanelSpecies != nil {
             if animationType == "idle" {
                 if let frames = framesIdle {
-                    BackyardAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                    RegularAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                         .shadow(radius: 6, x: 0, y: 4)
                         .onTapGesture {
                             animationType = "touch"
@@ -77,7 +77,7 @@ struct SpeciesPanelImage_ios16: View {
                 }
             } else if animationType == "touch" {
                 if let frames = framesTouch {
-                    BackyardAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                    RegularAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                         .shadow(radius: 6, x: 0, y: 4)
                 }
             }

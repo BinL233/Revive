@@ -58,7 +58,7 @@ struct SpeciesPanel_ios17: View {
                         if !manager.myItems.isEmpty && manager.currPanelItem != nil {
                             HStack {
                                 Spacer()
-                                Text(manager.getItem(id: manager.currPanelItem!.id).description)
+                                Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem!.id).description))
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(nil)
                                     .font(.caption)
@@ -69,7 +69,7 @@ struct SpeciesPanel_ios17: View {
                             
                             HStack {
                                 Spacer()
-                                Text(manager.getItem(id: manager.currPanelItem!.id).function)
+                                Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem!.id).function))
                                     .multilineTextAlignment(.center)
                                     .lineLimit(nil)
                                     .font(.caption)
@@ -245,7 +245,7 @@ struct SpeciesPanel_ios16: View {
                         if !manager.myItems.isEmpty && manager.currPanelItem != nil {
                             HStack {
                                 Spacer()
-                                Text(manager.getItem(id: manager.currPanelItem!.id).description)
+                                Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem!.id).description))
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(nil)
                                     .font(.caption)
@@ -256,7 +256,7 @@ struct SpeciesPanel_ios16: View {
                             
                             HStack {
                                 Spacer()
-                                Text(manager.getItem(id: manager.currPanelItem!.id).function)
+                                Text(LocalizedStringKey(manager.getItem(id: manager.currPanelItem!.id).function))
                                     .multilineTextAlignment(.center)
                                     .lineLimit(nil)
                                     .font(.caption)
