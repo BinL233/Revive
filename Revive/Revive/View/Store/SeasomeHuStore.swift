@@ -13,23 +13,14 @@ struct SeasomeHuStore_ios17: View {
     @State var animationType: String = "idle"
     
     var body: some View {
-        let framesIdle = manager.animations.id["4001"]?.idle
-        let framesPurchase = manager.animations.id["4001"]?.purchase
-        let framesTouch = manager.animations.id["4001"]?.touch
         
         ZStack {
             if animationType == "idle" {
-                if let frames = framesIdle {
-                    StoreAnimationView(frames: frames, isIdle: true, animationType: $animationType)
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             } else if animationType == "purchase" {
-                if let frames = framesPurchase {
-                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             } else {
-                if let frames = framesTouch {
-                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
-                }
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             }
             
             Circle()
@@ -48,23 +39,14 @@ struct SeasomeHuStore_ios16: View {
     @State var animationType: String = "idle"
     
     var body: some View {
-        let framesIdle = manager.animations.id["4001"]?.idle
-        let framesPurchase = manager.animations.id["4001"]?.purchase
-        let framesTouch = manager.animations.id["4001"]?.touch
         
         ZStack {
             if animationType == "idle" {
-                if let frames = framesIdle {
-                    StoreAnimationView(frames: frames, isIdle: true, animationType: $animationType)
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             } else if animationType == "purchase" {
-                if let frames = framesPurchase {
-                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             } else {
-                if let frames = framesTouch {
-                    StoreAnimationView(frames: frames, isIdle: false, animationType: $animationType)
-                }
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 25, sequenceTouch: 15, speciesId: "4001", minimumInterval: 0.1)
             }
             
             Circle()

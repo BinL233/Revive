@@ -14,8 +14,6 @@ struct HatchingView_ios17: View {
     @State var animationType: String = "idle"
     
     var body: some View {
-        let framesIdle = manager.animations.id["species"]?.idle
-        let framesTouch = manager.animations.id["species"]?.touch
         
         ZStack {
             Ellipse()
@@ -31,18 +29,14 @@ struct HatchingView_ios17: View {
 //                .frame(width: 120)
             
             if animationType == "idle" {
-                if let frames = framesIdle {
-                    RegularAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
-                        .shadow(radius: 6, x: 0, y: 4)
-                        .onTapGesture {
-                            animationType = "touch"
-                        }
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 50, sequenceTouch: 30, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                    .shadow(radius: 6, x: 0, y: 4)
+                    .onTapGesture {
+                        animationType = "touch"
+                    }
             } else if animationType == "touch" {
-                if let frames = framesTouch {
-                    RegularAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
-                        .shadow(radius: 6, x: 0, y: 4)
-                }
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 50, sequenceTouch: 30, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                    .shadow(radius: 6, x: 0, y: 4)
             }
             
         }
@@ -56,8 +50,6 @@ struct HatchingView_ios16: View {
     @State var animationType: String = "idle"
     
     var body: some View {
-        let framesIdle = manager.animations.id["species"]?.idle
-        let framesTouch = manager.animations.id["species"]?.touch
         ZStack {
             Ellipse()
                 .fill(.gray)
@@ -72,18 +64,14 @@ struct HatchingView_ios16: View {
 //                .frame(width: 120)
             
             if animationType == "idle" {
-                if let frames = framesIdle {
-                    RegularAnimationView(frames: frames, isIdle: true, animationType: $animationType, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
-                        .shadow(radius: 6, x: 0, y: 4)
-                        .onTapGesture {
-                            animationType = "touch"
-                        }
-                }
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 51, sequenceTouch: 31, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                    .shadow(radius: 6, x: 0, y: 4)
+                    .onTapGesture {
+                        animationType = "touch"
+                    }
             } else if animationType == "touch" {
-                if let frames = framesTouch {
-                    RegularAnimationView(frames: frames, isIdle: false, animationType: $animationType, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
-                        .shadow(radius: 6, x: 0, y: 4)
-                }
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 51, sequenceTouch: 31, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                    .shadow(radius: 6, x: 0, y: 4)
             }
         }
     }

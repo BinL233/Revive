@@ -21,7 +21,6 @@ class ReviveManager_ios17 {
     var speciesList : [Species]
     var mapList : [ExploringMap]
     var itemList : [Item]
-    var animations : Animations
     
     // My species
     var mySpecies : [MySpecies]
@@ -143,7 +142,6 @@ class ReviveManager_ios17 {
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
-        animations = Animations.animations!
         storeItems = localStoreItems
         updateLogs = UpdateLogsModel.logs ?? []
         
@@ -290,7 +288,6 @@ class ReviveManager_ios16: ObservableObject {
     @Published var speciesList: [Species]
     @Published var mapList: [ExploringMap]
     @Published var itemList: [Item]
-    @Published var animations: Animations
     
     // My species
     @Published var mySpecies: [MySpecies]
@@ -414,7 +411,6 @@ class ReviveManager_ios16: ObservableObject {
         speciesList = Species.species ?? []
         mapList = ExploringMap.maps ?? []
         itemList = Item.items ?? []
-        animations = Animations.animations!
         storeItems = localStoreItems
         updateLogs = UpdateLogsModel.logs ?? []
         

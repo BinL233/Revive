@@ -39,10 +39,8 @@
 		B32E07172C38DF57007A0465 /* UpdateLogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */; };
 		B32E07192C38EB12007A0465 /* UpdateLogs.json in Resources */ = {isa = PBXBuildFile; fileRef = B32E07182C38EB12007A0465 /* UpdateLogs.json */; };
 		B32E071B2C38F114007A0465 /* UpdateLogsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E071A2C38F114007A0465 /* UpdateLogsLink.swift */; };
-		B330E5472B97E50A002B74C9 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E5462B97E50A002B74C9 /* Animations.swift */; };
-		B330E5492B97E60D002B74C9 /* Animations.json in Resources */ = {isa = PBXBuildFile; fileRef = B330E5482B97E60D002B74C9 /* Animations.json */; };
 		B330E54B2B97E6DE002B74C9 /* IDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330E54A2B97E6DE002B74C9 /* IDs.swift */; };
-		B334A05D2C46C0630032BF0B /* BackyardAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */; };
+		B334A05D2C46C0630032BF0B /* RegularAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A05C2C46C0630032BF0B /* RegularAnimationView.swift */; };
 		B339F0072C59094B00A72E36 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B339F0062C59094B00A72E36 /* CommunityView.swift */; };
 		B348319A2B03C82000545E46 /* SpeciesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34831992B03C82000545E46 /* SpeciesItems.swift */; };
 		B349D5D32B0927C200270661 /* ReviveManager+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349D5D22B0927C200270661 /* ReviveManager+util.swift */; };
@@ -58,6 +56,7 @@
 		B349E6AC2C3FF78700A4E9E0 /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AB2C3FF78700A4E9E0 /* Collections.swift */; };
 		B349E6AE2C3FF9C200A4E9E0 /* CollectionsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AD2C3FF9C200A4E9E0 /* CollectionsImage.swift */; };
 		B349E6B02C3FFDCF00A4E9E0 /* LinkToCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B349E6AF2C3FFDCF00A4E9E0 /* LinkToCollections.swift */; };
+		B34EE7992C5D384C00BD4295 /* AnimationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EE7982C5D384C00BD4295 /* AnimationAction.swift */; };
 		B34F1BC12AF5C2DD00737872 /* SpeciesComop.json in Resources */ = {isa = PBXBuildFile; fileRef = B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */; };
 		B34F1BC32AF5C30500737872 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC22AF5C30500737872 /* Species.swift */; };
 		B34F1BC52AF5CE6700737872 /* ReviveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F1BC42AF5CE6700737872 /* ReviveManager.swift */; };
@@ -242,10 +241,8 @@
 		B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLogsModel.swift; sourceTree = "<group>"; };
 		B32E07182C38EB12007A0465 /* UpdateLogs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = UpdateLogs.json; path = Revive/Persistences/UpdateLogs.json; sourceTree = SOURCE_ROOT; };
 		B32E071A2C38F114007A0465 /* UpdateLogsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLogsLink.swift; sourceTree = "<group>"; };
-		B330E5462B97E50A002B74C9 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
-		B330E5482B97E60D002B74C9 /* Animations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animations.json; sourceTree = "<group>"; };
 		B330E54A2B97E6DE002B74C9 /* IDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDs.swift; sourceTree = "<group>"; };
-		B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardAnimationView.swift; sourceTree = "<group>"; };
+		B334A05C2C46C0630032BF0B /* RegularAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularAnimationView.swift; sourceTree = "<group>"; };
 		B339F0062C59094B00A72E36 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		B34831992B03C82000545E46 /* SpeciesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesItems.swift; sourceTree = "<group>"; };
 		B349D5D22B0927C200270661 /* ReviveManager+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviveManager+util.swift"; sourceTree = "<group>"; };
@@ -261,6 +258,7 @@
 		B349E6AB2C3FF78700A4E9E0 /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
 		B349E6AD2C3FF9C200A4E9E0 /* CollectionsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsImage.swift; sourceTree = "<group>"; };
 		B349E6AF2C3FFDCF00A4E9E0 /* LinkToCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkToCollections.swift; sourceTree = "<group>"; };
+		B34EE7982C5D384C00BD4295 /* AnimationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationAction.swift; sourceTree = "<group>"; };
 		B34F1BBF2AF5C2DD00737872 /* SpeciesComop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpeciesComop.json; sourceTree = "<group>"; };
 		B34F1BC22AF5C30500737872 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		B34F1BC42AF5CE6700737872 /* ReviveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveManager.swift; sourceTree = "<group>"; };
@@ -414,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				B304B74A2B22B7ED0067371D /* StoreAnimationView.swift */,
-				B334A05C2C46C0630032BF0B /* BackyardAnimationView.swift */,
+				B334A05C2C46C0630032BF0B /* RegularAnimationView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -560,7 +558,6 @@
 			isa = PBXGroup;
 			children = (
 				B36DE9432C1E6D20007B11FC /* Dialog */,
-				B330E5482B97E60D002B74C9 /* Animations.json */,
 				B3154F302C50DC7B00BB8DFB /* StrictModeConfirmInfo.json */,
 				B35D00492B96CA3100F44AD1 /* Item.json */,
 				B3096DD42B3764C80067131D /* StoreItems.json */,
@@ -585,6 +582,7 @@
 				B35006C82B1CDE6300F030D6 /* PanelButtonsInfoAction.swift */,
 				B3AD16012B2143A1003D13EE /* BackyardListSorter.swift */,
 				B330E54A2B97E6DE002B74C9 /* IDs.swift */,
+				B34EE7982C5D384C00BD4295 /* AnimationAction.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -830,7 +828,6 @@
 				B3FB817D2B192EDA004CB417 /* MyItems.swift */,
 				B3FA3C8C2B22099200FE8D4D /* Statistics.swift */,
 				B3096DD62B3764DD0067131D /* StoreItems.swift */,
-				B330E5462B97E50A002B74C9 /* Animations.swift */,
 				B32E07162C38DF57007A0465 /* UpdateLogsModel.swift */,
 				B35B42D32C4113E700FE27EA /* MyCollectionsSpecies.swift */,
 			);
@@ -1095,7 +1092,6 @@
 				B35D004A2B96CA3100F44AD1 /* Item.json in Resources */,
 				B3F6EA6D2C33928C00444FA2 /* Tutorial3.json in Resources */,
 				B3FB819D2B19920B004CB417 /* SpeciesInfo.json in Resources */,
-				B330E5492B97E60D002B74C9 /* Animations.json in Resources */,
 				B3C774032ACCE69A00387FDC /* Preview Assets.xcassets in Resources */,
 				B3F6EA6B2C33928C00444FA2 /* Tutorial2.json in Resources */,
 				B3096DD52B3764C80067131D /* StoreItems.json in Resources */,
@@ -1208,6 +1204,7 @@
 				B319221A2AFBED74000446B7 /* MySpeciesModel.xcdatamodeld in Sources */,
 				B3FB817A2B192232004CB417 /* Item.swift in Sources */,
 				B3629B022AFDDD7A00F3D135 /* BackyardView.swift in Sources */,
+				B34EE7992C5D384C00BD4295 /* AnimationAction.swift in Sources */,
 				B3FF6B9D2B1BB74200327E93 /* ReviveManager+Hatching.swift in Sources */,
 				B3CE6F4C2B2268CE006727AB /* ConfirmView.swift in Sources */,
 				B35B42D42C4113E700FE27EA /* MyCollectionsSpecies.swift in Sources */,
@@ -1222,7 +1219,7 @@
 				B3FF6BA22B1BB7A800327E93 /* ReviveManager+Exploring.swift in Sources */,
 				B35006C92B1CDE6300F030D6 /* PanelButtonsInfoAction.swift in Sources */,
 				B3C7742C2ACD07B000387FDC /* Background.swift in Sources */,
-				B334A05D2C46C0630032BF0B /* BackyardAnimationView.swift in Sources */,
+				B334A05D2C46C0630032BF0B /* RegularAnimationView.swift in Sources */,
 				B34F1BD32AF5F29200737872 /* MainTabView.swift in Sources */,
 				B349E6B02C3FFDCF00A4E9E0 /* LinkToCollections.swift in Sources */,
 				B3234E8E2B15052300A730D1 /* AnalysisChart.swift in Sources */,
@@ -1246,7 +1243,6 @@
 				B3C151DB2BB464BF00F8ADA0 /* SpeciesFriendshipDetails.swift in Sources */,
 				B3D3FE132B2D57FD00D04D8F /* FocusInfo.swift in Sources */,
 				B3154F2F2C50D81A00BB8DFB /* ConfirmViewScroll.swift in Sources */,
-				B330E5472B97E50A002B74C9 /* Animations.swift in Sources */,
 				B30BB28E2C37CB9A00254B79 /* Announcement.swift in Sources */,
 				B349D5DA2B09541900270661 /* ReviveManager+Notification.swift in Sources */,
 				B34F1BCB2AF5D67200737872 /* ReviveManager+Timer.swift in Sources */,
