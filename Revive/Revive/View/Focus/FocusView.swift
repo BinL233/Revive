@@ -26,7 +26,7 @@ struct FocusView_ios17: View {
                     Spacer()
                     
                     ZStack {
-                        FocusInfo()
+                        FocusInfo_ios17()
                         DisplayView_ios17()
                             .padding(.bottom, 10)
                             .padding(.top, 10)
@@ -146,7 +146,7 @@ struct FocusView_ios16: View {
                     Spacer()
                     
                     ZStack {
-                        FocusInfo()
+                        FocusInfo_ios16()
                         DisplayView_ios16()
                             .padding(.bottom, 10)
                             .padding(.top, 10)

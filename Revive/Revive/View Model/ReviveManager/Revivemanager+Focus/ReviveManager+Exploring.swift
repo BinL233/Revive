@@ -107,13 +107,15 @@ extension ReviveManager_ios17 {
         let treasureRewards : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
         var rewards : [Int:Int] = [:]
         
+        print(currExploringMap!.currTime, selectedTime)
+        
         for point in treasureRewards.keys {
-            if Int(point)! > currExploringMap!.currTime - selectedTime && Int(point)! <= currExploringMap!.currTime {
+            if Int(point)! > currExploringMap!.currTime && Int(point)! <= currExploringMap!.currTime + selectedTime {
                 for item in treasureRewards[point]!.keys {
                     if rewards.keys.contains(Int(item)!) {
-                        rewards[Int(item)!]! += 1
+                        rewards[Int(item)!]! += treasureRewards[point]![item]!
                     } else {
-                        rewards[Int(item)!] = 1
+                        rewards[Int(item)!] = treasureRewards[point]![item]!
                     }
                 }
             }
@@ -222,7 +224,7 @@ extension ReviveManager_ios17 {
         focusLog.append(logg)
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
-        DataManager.shared.updateMySpeciesFriendship(for: currExploringSpecies!.speciesID, for: currExploringSpecies!.hatchDate, with: currExploringSpecies!.friendship/60 + selectedTime/60, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesFriendship(for: currExploringSpecies!.speciesID, for: currExploringSpecies!.hatchDate, with: currExploringSpecies!.friendship + selectedTime/60, mySpecies: mySpecies)
         
         if !myItems.isEmpty {
             currPanelItem = myItems[0]
@@ -359,13 +361,15 @@ extension ReviveManager_ios16 {
         let treasureRewards : [String:[String:Int]] = getMap(map: currExploringMap!).rewardPoint
         var rewards : [Int:Int] = [:]
         
+        print(currExploringMap!.currTime, selectedTime)
+        
         for point in treasureRewards.keys {
-            if Int(point)! > currExploringMap!.currTime - selectedTime && Int(point)! <= currExploringMap!.currTime {
+            if Int(point)! > currExploringMap!.currTime && Int(point)! <= currExploringMap!.currTime + selectedTime {
                 for item in treasureRewards[point]!.keys {
                     if rewards.keys.contains(Int(item)!) {
-                        rewards[Int(item)!]! += 1
+                        rewards[Int(item)!]! += treasureRewards[point]![item]!
                     } else {
-                        rewards[Int(item)!] = 1
+                        rewards[Int(item)!] = treasureRewards[point]![item]!
                     }
                 }
             }
@@ -474,7 +478,7 @@ extension ReviveManager_ios16 {
         focusLog.append(logg)
         currFocusLog = groupAndCalculateDurations()
         DataManager.shared.saveLogData(customItem: logg)
-        DataManager.shared.updateMySpeciesFriendship(for: currExploringSpecies!.speciesID, for: currExploringSpecies!.hatchDate, with: currExploringSpecies!.friendship/60 + selectedTime/60, mySpecies: mySpecies)
+        DataManager.shared.updateMySpeciesFriendship(for: currExploringSpecies!.speciesID, for: currExploringSpecies!.hatchDate, with: currExploringSpecies!.friendship + selectedTime/60, mySpecies: mySpecies)
         
         if !myItems.isEmpty {
             currPanelItem = myItems[0]

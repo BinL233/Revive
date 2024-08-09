@@ -9,17 +9,18 @@ import SwiftUI
 
 struct RegularAnimationView: View {
     @State private var currentFrame = 0
-//    @State var frames : [String]
-    @State var action : AnimationAction = .idle
+    @State var action: AnimationAction = .idle
     @Binding var animationType: String
-    @State var sequenceIdle = 12
-    @State var sequenceTouch = 7
-     @State var sequencePurchase = 16
-    let speciesId : String
-    @State var minimumInterval = 0.15
+    @State var sequenceIdle = 13
+    @State var sequenceTouch = 8
+    @State var sequencePurchase = 17
+    let speciesId: String
+    @State var minimumInterval = 0.2
     var currIdle = 0
     var currTouch = 0
     var currPurchase = 0
+    @State private var timer: Timer?
+    
     var frame: String {
         switch action {
         case .idle:
@@ -30,46 +31,53 @@ struct RegularAnimationView: View {
             return "purchase_" + String(currentFrame)
         }
     }
-        
+    
     var body: some View {
-        
-        TimelineView(.animation(minimumInterval: minimumInterval, paused: false)) { context in
-            if #available(iOS 17.0, *) {
-                if let image = UIImage(named: speciesId + "_" + frame) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .clipped()
-                        .onChange(of: context.date) {
-                            DispatchQueue.main.async {
-                                updateFrameSequence()
-                                
-                                if (action != .idle && currentFrame == sequenceTouch-1) {
-                                    animationType = "idle"
-                                    action = .idle
-                                }
-                            }
-                        }
-                }
-            } else if #available(iOS 16.0, *) {
-                if let image = UIImage(named: speciesId + "_" + frame) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .clipped()
-                        .onChange(of: context.date) { _ in
-                            DispatchQueue.main.async {
-                                updateFrameSequence()
-                                
-                                if (action != .idle && currentFrame == sequenceTouch-1) {
-                                    animationType = "idle"
-                                    action = .idle
-                                }
-                            }
-                        }
-                }
+        if #available(iOS 17.0, *) {
+            if let image = UIImage(named: speciesId + "_" + frame) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+                    .onAppear {
+                        startTimer()
+                    }
+                    .onDisappear {
+                        stopTimer()
+                    }
+            }
+        } else if #available(iOS 16.0, *) {
+            if let image = UIImage(named: speciesId + "_" + frame) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+                    .onAppear {
+                        startTimer()
+                    }
+                    .onDisappear {
+                        stopTimer()
+                    }
             }
         }
+    }
+    
+    func startTimer() {
+        stopTimer()
+        timer = Timer.scheduledTimer(withTimeInterval: minimumInterval, repeats: true) { timer in
+            updateFrameSequence()
+            
+            if (action != .idle && currentFrame == sequenceTouch - 1) {
+                animationType = "idle"
+                action = .idle
+                currentFrame = 0
+            }
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
     
     func updateFrameSequence() {

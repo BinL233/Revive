@@ -14,14 +14,11 @@ struct HatchingView_ios17: View {
     @State var animationType: String = "idle"
     
     var body: some View {
-        
         ZStack {
-            Ellipse()
-                .fill(.gray)
-                .opacity(0.5)
-                .frame(width: 90, height: 35)
-                .scaledToFit()
-                .offset(CGSize(width: 0, height: 46))
+//            Ellipse()
+//                .fill(.gray.opacity(0.3))
+//                .scaledToFit()
+//                .frame(width: 130, height: 130)
             
 //            Image(String(manager.currHatchingEgg))
 //                .resizable()
@@ -29,13 +26,13 @@ struct HatchingView_ios17: View {
 //                .frame(width: 120)
             
             if animationType == "idle" {
-                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 50, sequenceTouch: 30, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
                     .onTapGesture {
                         animationType = "touch"
                     }
             } else if animationType == "touch" {
-                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 50, sequenceTouch: 30, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
             }
             
@@ -51,12 +48,12 @@ struct HatchingView_ios16: View {
     
     var body: some View {
         ZStack {
-            Ellipse()
-                .fill(.gray)
-                .opacity(0.5)
-                .frame(width: 90, height: 35)
-                .scaledToFit()
-                .offset(CGSize(width: 0, height: 46))
+//            Ellipse()
+//                .fill(.gray)
+//                .opacity(0.5)
+//                .frame(width: 90, height: 35)
+//                .scaledToFit()
+//                .offset(CGSize(width: 0, height: 46))
             
 //            Image(String(manager.currHatchingEgg))
 //                .resizable()
@@ -64,13 +61,13 @@ struct HatchingView_ios16: View {
 //                .frame(width: 120)
             
             if animationType == "idle" {
-                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 51, sequenceTouch: 31, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
                     .onTapGesture {
                         animationType = "touch"
                     }
             } else if animationType == "touch" {
-                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 51, sequenceTouch: 31, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.1)
+                RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
             }
         }
