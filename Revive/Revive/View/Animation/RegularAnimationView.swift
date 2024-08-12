@@ -11,11 +11,12 @@ struct RegularAnimationView: View {
     @State private var currentFrame = 0
     @State var action: AnimationAction = .idle
     @Binding var animationType: String
-    @State var sequenceIdle = 13
-    @State var sequenceTouch = 8
+    @State var sequenceIdle = 76
+    @State var sequenceTouch = 46
     @State var sequencePurchase = 17
     let speciesId: String
-    @State var minimumInterval = 0.2
+    @State var minimumInterval = 0.05
+    @State var scaleToFit = true
     var currIdle = 0
     var currTouch = 0
     var currPurchase = 0
@@ -35,29 +36,55 @@ struct RegularAnimationView: View {
     var body: some View {
         if #available(iOS 17.0, *) {
             if let image = UIImage(named: speciesId + "_" + frame) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .clipped()
-                    .onAppear {
-                        startTimer()
-                    }
-                    .onDisappear {
-                        stopTimer()
-                    }
+                if scaleToFit {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipped()
+                        .onAppear {
+                            startTimer()
+                        }
+                        .onDisappear {
+                            stopTimer()
+                        }
+                } else {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .onAppear {
+                            startTimer()
+                        }
+                        .onDisappear {
+                            stopTimer()
+                        }
+                }
             }
         } else if #available(iOS 16.0, *) {
             if let image = UIImage(named: speciesId + "_" + frame) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .clipped()
-                    .onAppear {
-                        startTimer()
-                    }
-                    .onDisappear {
-                        stopTimer()
-                    }
+                if scaleToFit {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipped()
+                        .onAppear {
+                            startTimer()
+                        }
+                        .onDisappear {
+                            stopTimer()
+                        }
+                } else {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .clipped()
+                        .onAppear {
+                            startTimer()
+                        }
+                        .onDisappear {
+                            stopTimer()
+                        }
+                }
             }
         }
     }

@@ -140,7 +140,14 @@
       }
     },
     "2. Gain EXP = 60 * Training Time (min)" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 获得「经验值」 = 60 * 「训练」时间（分钟）"
+          }
+        }
+      }
     },
     "2. Hatching time should >= 30 minutes." : {
       "extractionState" : "manual",
@@ -154,7 +161,14 @@
       }
     },
     "3. Gain Friendship = Training Time (min)" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. 获得「亲密度」 = 「训练」时间（分钟）"
+          }
+        }
+      }
     },
     "3. Minimum hatching times are different between species. Only selecting a time greater than the certain's Species' minimum hatching time will make it possible to hatch them" : {
       "extractionState" : "manual",
@@ -184,7 +198,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每天4吨磷虾，健康无忧。"
+            "value" : "一天4吨虾米，医生离我千米。"
           }
         }
       }
@@ -201,7 +215,14 @@
       }
     },
     "4. SR Species probability = 5 / (100 - 0.4 * Hatching Time (min))" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. SR物种孵化概率 = 5 / （100 - 0.4 * 「孵化」时间（分钟））"
+          }
+        }
+      }
     },
     "4. SR Species probability = 10% + 0.34% * Hatching Time (min)" : {
       "extractionState" : "manual",
@@ -220,7 +241,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时间才能获得。"
+            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时长才能获得。"
           }
         }
       }
@@ -230,7 +251,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时间才能获得。"
+            "value" : "5. 「随机奖励」每10分钟获得一次，「固定宝藏」必须达到要求的探险时长才能获得。"
           }
         }
       }
@@ -241,7 +262,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "6. 每张「地图」都有其独特的地形，物种在其擅长的地形上会有探险增益。"
+            "value" : "6. 每张「地图」都有独特的地形，物种在其擅长的地形上会有探险增益。"
           }
         }
       }
@@ -387,7 +408,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为你的肉食物种提供200经验值以及20亲密度。"
+            "value" : "为你的食肉动物提供200经验值以及20亲密度。"
           }
         }
       }
@@ -398,7 +419,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为你的草食物种提供200经验值以及20亲密度。"
+            "value" : "为你的食草动物提供200经验值以及20亲密度。"
           }
         }
       }
@@ -409,7 +430,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为肉食「物种」提供200经验值"
+            "value" : "为食肉动物提供200经验值"
           }
         }
       }
@@ -420,7 +441,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "为草食「物种」提供200经验值"
+            "value" : "为食草动物提供200经验值"
           }
         }
       }
@@ -434,7 +455,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "健康的饮食计划总是包括植物、水果和动物蛋白。"
+            "value" : "一个健康的饮食计划应该包含植物、水果和蛋白质。"
           }
         }
       }
@@ -445,7 +466,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "国王总是伴随着一头华丽的鬃毛。"
+            "value" : "你知道的，只有王才配得上华丽的鬃毛。"
           }
         }
       }
@@ -456,7 +477,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "漫长的旅程值得最好的水果。"
+            "value" : "漫长的旅程值得最好的收获。"
           }
         }
       }
@@ -467,7 +488,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "半水生生活方式是完美的选择。"
+            "value" : "半水生才是最完美的生活方式！"
           }
         }
       }
@@ -511,7 +532,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "安氏蝾螈"
+            "value" : "阿因斯沃斯蝾螈"
           }
         }
       }
@@ -522,7 +543,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "尽管我有可靠的外套，但在冰河时代我还是觉得冷。"
+            "value" : "尽管我的毛外套看起来很可靠，但在冰河时代仍然不堪一击。"
           }
         }
       }
@@ -554,7 +575,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一条超长的脖子在这里！"
+            "value" : "你见过这么长的脖子吗？"
           }
         }
       }
@@ -579,7 +600,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "甲龙属"
+            "value" : "甲龙"
           }
         }
       }
@@ -595,7 +616,15 @@
       }
     },
     "Another name for me is Soursop, but I'm not sour." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "虽然我叫刺果番荔枝，但我其实又软又甜。"
+          }
+        }
+      }
     },
     "Are you sure to RELEASE" : {
       "extractionState" : "manual",
@@ -625,7 +654,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "披上盔甲，准备好你的尾巴。"
+            "value" : "甲龙们，甩起尾巴，准备迎敌。"
           }
         }
       }
@@ -636,7 +665,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "如你所见，我是羽毛加身，不是鳞片装甲。"
+            "value" : "如你所见，我的背上是羽毛，不是鳞片。"
           }
         }
       }
@@ -647,7 +676,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "亚洲独角兽是我的另一个名字。"
+            "value" : "亚洲独角兽，正是在下。"
           }
         }
       }
@@ -658,7 +687,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "注意，我们的毒性不同。"
+            "value" : "请注意，我们的毒性各不相同。"
           }
         }
       }
@@ -669,7 +698,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "永远闪耀。"
+            "value" : "如彩虹般。"
           }
         }
       }
@@ -694,7 +723,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "双峰骆驼"
+            "value" : "双峰驼"
           }
         }
       }
@@ -727,7 +756,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "巴巴里獅"
+            "value" : "巴巴里獅子"
           }
         }
       }
@@ -738,7 +767,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "从我的名字你就知道，我的菜单上写着什么。"
+            "value" : "问我吃什么？答案在我的名字里面。"
           }
         }
       }
@@ -760,7 +789,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "注意我的视线盲区哦。"
+            "value" : "注意我的视线盲区。"
           }
         }
       }
@@ -843,7 +872,15 @@
       }
     },
     "Both Ezo and Hokkaido wolf go for me." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我有许多称呼，最喜欢的还是北海道狼。"
+          }
+        }
+      }
     },
     "Brachiosaurus" : {
       "extractionState" : "manual",
@@ -906,7 +943,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "肉食物种"
+            "value" : "食肉动物"
           }
         }
       }
@@ -917,7 +954,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "肉食物种"
+            "value" : "食肉动物"
           }
         }
       }
@@ -960,7 +997,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "检查这些日志以查看「Revive」 的成长。"
+            "value" : "用日志来查看「Revive」的成长数据。"
           }
         }
       }
@@ -981,7 +1018,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "奶酪永远是我的好伙伴。"
+            "value" : "鱼离不开水，就像我离不开奶酪。"
           }
         }
       }
@@ -1003,7 +1040,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "棉花糖"
+            "value" : "云"
           }
         }
       }
@@ -1039,7 +1076,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "罗盘"
+            "value" : "黄金罗盘"
           }
         }
       }
@@ -1061,7 +1098,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我被认为是最敏捷和迅速的！"
+            "value" : "敏捷的速度之王！"
           }
         }
       }
@@ -1083,13 +1120,21 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "如果有任何问题，联系我们。"
+            "value" : "如果有任何问题，请联系我们。"
           }
         }
       }
     },
     "Container for Exploration Map prizes." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "装着探险宝物的箱子。"
+          }
+        }
+      }
     },
     "Cookie" : {
       "extractionState" : "manual",
@@ -1178,7 +1223,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "可爱的颜色，更多的力量。"
+            "value" : "可爱的颜色会带来更多力量。"
           }
         }
       }
@@ -1189,7 +1234,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "危险的美味蒸包子。"
+            "value" : "蒸包子，美味的终极。"
           }
         }
       }
@@ -1211,7 +1256,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "海枣"
+            "value" : "椰枣"
           }
         }
       }
@@ -1244,7 +1289,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "荒漠袋鼠"
+            "value" : "沙漠大袋鼠"
           }
         }
       }
@@ -1277,7 +1322,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "直奔最稀有的去。"
+            "value" : "向最稀有的物种前行。"
           }
         }
       }
@@ -1302,7 +1347,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你想要购买这个？"
+            "value" : "你想要购买"
           }
         }
       }
@@ -1313,7 +1358,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "医生说我的每日推荐卡路里摄入量是40,000……每天。"
+            "value" : "医生说我的推荐卡路里摄入量是40,000……每天。"
           }
         }
       }
@@ -1335,7 +1380,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你不觉得我有W形嘴很可爱吗？"
+            "value" : "你不觉得我的‘W’嘴很可爱吗？"
           }
         }
       }
@@ -1346,7 +1391,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "驴曾经存在，斑马也曾经存在，斑驴却灭绝了……兄弟，这真是个悲伤的故事啊。"
+            "value" : "这个世界有驴，有斑马，却再也没有班驴了……兄弟，这真是个悲伤的故事。"
           }
         }
       }
@@ -1390,7 +1435,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "板龙"
+            "value" : "薄片龙"
           }
         }
       }
@@ -1423,7 +1468,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地方性物种意味着我只存在于云南省。"
+            "value" : "地方性物种的意思就是，我只生活在云南省。"
           }
         }
       }
@@ -1437,7 +1482,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每个人在小时候都很可爱。"
+            "value" : "小时候的自己是最可爱的。"
           }
         }
       }
@@ -1448,7 +1493,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每个人都喜欢曲奇！"
+            "value" : "没人能够拒绝曲奇！"
           }
         }
       }
@@ -1481,7 +1526,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "探险速率："
+            "value" : "探险速度："
           }
         }
       }
@@ -1534,7 +1579,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "蛙跳我可是非常在行！"
+            "value" : "要来和我比一比蛙跳吗？"
           }
         }
       }
@@ -1545,7 +1590,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "虾夷狼"
+            "value" : "北海道狼"
           }
         }
       }
@@ -1625,7 +1670,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "由熔岩快速冷却形成。"
+            "value" : "由熔岩快速冷却而形成。"
           }
         }
       }
@@ -1658,7 +1703,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "巨型食蚁兽"
+            "value" : "大食蚁兽"
           }
         }
       }
@@ -1713,7 +1758,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "金扁蟾"
+            "value" : "金蟾蜍"
           }
         }
       }
@@ -1757,7 +1802,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "关岛飞狐"
+            "value" : "关岛狐蝠"
           }
         }
       }
@@ -1854,7 +1899,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "看看我背上的帆……这就是未来的我。"
+            "value" : "未来的我，背上会有很帅的帆。"
           }
         }
       }
@@ -1909,7 +1954,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "草食物种"
+            "value" : "食草动物"
           }
         }
       }
@@ -1920,7 +1965,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "草食物种"
+            "value" : "食草动物"
           }
         }
       }
@@ -1931,7 +1976,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "草食动物的最爱。"
+            "value" : "食草动物的最爱。"
           }
         }
       }
@@ -1942,7 +1987,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "躲在灌木丛里。"
+            "value" : "该进草埋伏了。"
           }
         }
       }
@@ -2019,7 +2064,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我是中国神话中的皇帝坐骑！"
+            "value" : "上一个坐在我背上的人，叫蚩尤。"
           }
         }
       }
@@ -2030,7 +2075,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "昨晚我变成了一只海龟！"
+            "value" : "昨晚我梦见自己变成了一只海龟！"
           }
         }
       }
@@ -2063,7 +2108,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我没有外耳，所以通过把头贴在地上感受振动。"
+            "value" : "我没有外耳，一般需要把脑袋放地上来感受震动。"
           }
         }
       }
@@ -2074,7 +2119,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我不认为我的鳞片有任何药用价值。"
+            "value" : "我不认为自己的鳞片有任何药用价值……"
           }
         }
       }
@@ -2085,7 +2130,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我有一个超过40个成员的大家庭！"
+            "value" : "我家超多人，40多口呢！"
           }
         }
       }
@@ -2096,7 +2141,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在一串上，我有超过1000个亲戚。"
+            "value" : "我跟我的1000个亲戚住一块。"
           }
         }
       }
@@ -2107,7 +2152,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我不知道如何使用我的鼻子。"
+            "value" : "我还在学习《鼻子的100种用法》。"
           }
         }
       }
@@ -2118,7 +2163,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我不知道为什么大家都觉得我很好吃。"
+            "value" : "不知道为什么大家都觉得我很好吃……"
           }
         }
       }
@@ -2129,7 +2174,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我每只脚只有四个脚趾……没有趾行性。"
+            "value" : "我每只脚只有四个脚趾……不算趾行动物。"
           }
         }
       }
@@ -2162,7 +2207,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我喜欢杰克逊变色龙，因为我们都有三只角。"
+            "value" : "我喜欢杰克森变色龙，因为我们都有三只角。"
           }
         }
       }
@@ -2173,7 +2218,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我从没想到有一天角会变得对我有危险。"
+            "value" : "我的角原本是用来保护我的。"
           }
         }
       }
@@ -2184,7 +2229,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我也想去码头吃点薯条。"
+            "value" : "我也想去码头整点薯条。"
           }
         }
       }
@@ -2195,7 +2240,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我要成为地球上最大的鸟"
+            "value" : "我要成为地球上最大的鸟！"
           }
         }
       }
@@ -2206,7 +2251,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "未来我将拥有最强大的力量！"
+            "value" : "未来，我将拥有最强大的力量！"
           }
         }
       }
@@ -2245,10 +2290,26 @@
       }
     },
     "If you know Lonesome George, you will remember us." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你认识孤独的乔治，那么你也会记住我们。"
+          }
+        }
+      }
     },
     "Increase 100 Affection for any species." : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "给任意物种增加100亲密度。"
+          }
+        }
+      }
     },
     "Increase the probability of hatching rare species in next focus." : {
       "extractionState" : "manual",
@@ -2289,7 +2350,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "昆虫是我的最爱！"
+            "value" : "昆虫？我的最爱！"
           }
         }
       }
@@ -2372,7 +2433,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "克罗龙"
+            "value" : "克柔龙"
           }
         }
       }
@@ -2394,7 +2455,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "胎毛帮助我防止感冒！"
+            "value" : "胎毛能帮助我防止感冒！"
           }
         }
       }
@@ -2588,7 +2649,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我需要的水很少。"
+            "value" : "一点点水就能活很久。"
           }
         }
       }
@@ -2609,7 +2670,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "妈妈说我出生时她的墨水用完了。"
+            "value" : "妈妈说我出生时，墨水刚好用完了。"
           }
         }
       }
@@ -2653,7 +2714,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我的心脏未来会比一辆车还大。"
+            "value" : "以后我的心脏会比一辆车还大。"
           }
         }
       }
@@ -2664,7 +2725,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我的尾巴很重。"
+            "value" : "我的尾巴好重……"
           }
         }
       }
@@ -2675,7 +2736,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "神秘的拼图带有召唤力量。"
+            "value" : "具有召唤之力的神秘拼图。"
           }
         }
       }
@@ -2784,7 +2845,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "海苔总是好吃又健康！"
+            "value" : "海苔既好吃又健康！"
           }
         }
       }
@@ -2806,7 +2867,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "不是每匹马都需要骑手。"
+            "value" : "不是每匹千里马都需要伯乐。"
           }
         }
       }
@@ -2949,7 +3010,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "杂食物种"
+            "value" : "杂食动物"
           }
         }
       }
@@ -2960,7 +3021,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "杂食物种"
+            "value" : "杂食动物"
           }
         }
       }
@@ -2971,7 +3032,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我是最近发现的大型哺乳动物之一。"
+            "value" : "被发现的大型哺乳动物之一。"
           }
         }
       }
@@ -2992,7 +3053,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "哦不..."
+            "value" : "啊哦..."
           }
         }
       }
@@ -3036,12 +3097,12 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "平塔岛陆龟"
+            "value" : "平塔岛象龟"
           }
         }
       }
     },
-    "Pizza" : {
+    "pizza" : {
       "extractionState" : "manual",
       "localizations" : {
         "zh-Hans" : {
@@ -3124,7 +3185,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "疯狂发明家的作品。"
+            "value" : "疯狂科学家的作品。"
           }
         }
       }
@@ -3135,7 +3196,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "科学家终于注意到鸟类灭绝的问题了，为此我感到骄傲。"
+            "value" : "我的离开，终于让科学家们注意到鸟类灭绝的问题了。"
           }
         }
       }
@@ -3168,7 +3229,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "比利牛斯山野山羊"
+            "value" : "比利牛斯山羊"
           }
         }
       }
@@ -3342,7 +3403,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "纺车锭子"
+            "value" : "中南大羚"
           }
         }
       }
@@ -3364,7 +3425,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "科学家相信我有类似鸟类的呼吸系统，以获得足够的氧气。"
+            "value" : "人们认为我有类似于鸟类的呼吸系统，来获得足够的氧气。"
           }
         }
       }
@@ -3400,7 +3461,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "只吃海草。"
+            "value" : "很挑食，只吃海草。"
           }
         }
       }
@@ -3428,7 +3489,14 @@
       }
     },
     "Select Language" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择语言"
+          }
+        }
+      }
     },
     "Select Map" : {
       "extractionState" : "manual",
@@ -3480,7 +3548,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "游泳慢点，人生也要慢点。"
+            "value" : "人生和游泳一样，都可以慢慢来。"
           }
         }
       }
@@ -3884,7 +3952,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我最脆弱的部位是腹部。"
+            "value" : "我最脆弱的部位是肚子。"
           }
         }
       }
@@ -3895,7 +3963,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "主人可能是上个世纪的人。"
+            "value" : "拥有者可能来自于上个世纪。"
           }
         }
       }
@@ -3906,7 +3974,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我灭绝的原因是我的食物灭绝了。"
+            "value" : "我的食物灭绝了，所以……我也灭绝了。"
           }
         }
       }
@@ -3917,7 +3985,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "科学家统计出我有20个家庭成员。"
+            "value" : "科学家们统计出我有20个家庭成员。"
           }
         }
       }
@@ -3960,7 +4028,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "图拉客袋鼠"
+            "value" : "图拉克袋鼠"
           }
         }
       }
@@ -4095,7 +4163,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "两条腿跳跃永远比不上四条腿奔跑。"
+            "value" : "用两条腿跳不如用四条腿跑。"
           }
         }
       }
@@ -4138,7 +4206,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "曾经试图通过克隆复活，但失败了。"
+            "value" : "试图通过克隆复活……下次一定。"
           }
         }
       }
@@ -4152,7 +4220,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "小头鼠海豚"
+            "value" : "加湾鼠海豚"
           }
         }
       }
@@ -4174,7 +4242,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "伶盗龙属"
+            "value" : "伶盗龙"
           }
         }
       }
@@ -4207,7 +4275,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我们用长鸣来交流。"
+            "value" : "长鸣是我们独特的交流方式。"
           }
         }
       }
@@ -4218,7 +4286,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "我们是以一位博物学家的名字命名的。"
+            "value" : "我们的名字是为了纪念发现我们的自然学家。"
           }
         }
       }
@@ -4240,7 +4308,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "什么配料组成最好的吐司？"
+            "value" : "什么是吐司最好的搭档？"
           }
         }
       }
@@ -4251,7 +4319,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "长大后，我想拥有银背！"
+            "value" : "长大后，我想拥有帅气的银背！"
           }
         }
       }
@@ -4273,7 +4341,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "会有我能飞的那一天吗？"
+            "value" : "会有飞向天空的那一天吗？"
           }
         }
       }
@@ -4326,7 +4394,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你知道吗，Cross River是尼日利亚的一个州。"
+            "value" : "你知道吗，克罗斯河是尼日利亚的一个州。"
           }
         }
       }
@@ -4337,7 +4405,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你将会探险失败"
+            "value" : "你的探险将会失败"
           }
         }
       }
@@ -4348,7 +4416,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你将会孵化失败"
+            "value" : "你的孵化将会失败"
           }
         }
       }
@@ -4359,7 +4427,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你将会训练失败"
+            "value" : "你的训练将会失败"
           }
         }
       }
@@ -4370,7 +4438,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "每日美味猛犸象！"
+            "value" : "每日一猛犸象，是我的梦想！"
           }
         }
       }
@@ -4381,7 +4449,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "云南湖蝾螈"
+            "value" : "滇螈"
           }
         }
       }

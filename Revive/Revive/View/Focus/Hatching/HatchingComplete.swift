@@ -10,6 +10,7 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct HatchingComplete_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
+    @State var animationType: String = "idle"
     // @Environment(WidgetManager.self) var widgetManager
     
     var body: some View {
@@ -34,7 +35,6 @@ struct HatchingComplete_ios17: View {
                     .padding(.top)
                 
                 if let species = manager.currHatchingSpecies {
-                    let speciesImage = String(format: "%03d", species.id)
                     if species.rarity == "R" {
                         Text(species.name)
                             .font(.custom("Georgia-Italic", size: 22))
@@ -56,14 +56,16 @@ struct HatchingComplete_ios17: View {
                     }
                     
                     ZStack {
-                        Image(speciesImage)
-                            .resizable()
-                            .scaledToFill()
-                            .padding()
-                            .shadow(radius: 6, x: 0, y: 4)
+//                        Image(speciesImage)
+//                            .resizable()
+//                            .scaledToFill()
+//                            .padding()
+//                            .shadow(radius: 6, x: 0, y: 4)
 //                            .background(.gray.opacity(0.3))
 //                            .clipShape(RoundedRectangle(cornerRadius: 15))
 //                            .padding()
+                        RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", manager.currHatchingSpecies!.id), scaleToFit: false)
+                            .shadow(radius: 6, x: 0, y: 4)
                         
                         VStack {
                             HStack {
@@ -119,6 +121,7 @@ struct HatchingComplete_ios17: View {
 @available(iOS 16.0, *)
 struct HatchingComplete_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
+    @State var animationType: String = "idle"
     // @Environment(WidgetManager.self) var widgetManager
     
     var body: some View {
@@ -143,7 +146,6 @@ struct HatchingComplete_ios16: View {
                     .padding(.top)
                 
                 if let species = manager.currHatchingSpecies {
-                    let speciesImage = String(format: "%03d", species.id)
                     if species.rarity == "R" {
                         Text(species.name)
                             .font(.custom("Georgia-Italic", size: 22))
@@ -165,14 +167,16 @@ struct HatchingComplete_ios16: View {
                     }
                     
                     ZStack {
-                        Image(speciesImage)
-                            .resizable()
-                            .scaledToFill()
-                            .padding()
-                            .shadow(radius: 6, x: 0, y: 4)
+//                        Image(speciesImage)
+//                            .resizable()
+//                            .scaledToFill()
+//                            .padding()
+//                            .shadow(radius: 6, x: 0, y: 4)
 //                            .background(.gray.opacity(0.3))
 //                            .clipShape(RoundedRectangle(cornerRadius: 15))
 //                            .padding()
+                        RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", manager.currHatchingSpecies!.id), scaleToFit: false)
+                            .shadow(radius: 6, x: 0, y: 4)
                         
                         VStack {
                             HStack {

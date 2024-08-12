@@ -28,12 +28,14 @@ struct HatchingView_ios17: View {
             if animationType == "idle" {
                 RegularAnimationView(action: .idle, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
+                    .shadow(radius: 20, x: 0, y: 18)
                     .onTapGesture {
                         animationType = "touch"
                     }
             } else if animationType == "touch" {
                 RegularAnimationView(action: .touch, animationType: $animationType, sequenceIdle: 76, sequenceTouch: 46, speciesId: String(manager.currHatchingEgg), minimumInterval: 0.05)
                     .shadow(radius: 6, x: 0, y: 4)
+                    .shadow(radius: 20, x: 0, y: 18)
             }
             
         }
