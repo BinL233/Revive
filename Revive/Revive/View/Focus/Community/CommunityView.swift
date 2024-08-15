@@ -30,7 +30,7 @@ struct CommunityView: View {
                                 Text("Join")
                                     .padding(.horizontal, 20)
                                     .padding(.vertical, 8)
-                                    .background(Color.blue)
+                                    .background(Color.cDarkBrown)
                                     .foregroundColor(.white)
                                     .cornerRadius(8)
                             }
@@ -51,7 +51,7 @@ struct CommunityView: View {
                                 Text("Join")
                                     .padding(.horizontal, 20)
                                     .padding(.vertical, 8)
-                                    .background(Color.blue)
+                                    .background(Color.cDarkBrown)
                                     .foregroundColor(.white)
                                     .cornerRadius(8)
                             }

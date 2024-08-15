@@ -1686,6 +1686,16 @@
         }
       }
     },
+    "Friendship" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "亲密度"
+          }
+        }
+      }
+    },
     "Gemstone" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2380,7 +2390,14 @@
       }
     },
     "Join" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入"
+          }
+        }
+      }
     },
     "Jurassic" : {
       "extractionState" : "manual",

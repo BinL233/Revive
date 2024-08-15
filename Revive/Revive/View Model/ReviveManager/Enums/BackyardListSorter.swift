@@ -9,7 +9,7 @@ import Foundation
 
 enum SpeciesListSorter : String, Identifiable {
     var id: Self { self }
-    case name, favorite, level, rarity, hatchingDate
+    case name, favorite, level, rarity, hatchingDate, friendship
     
     init?(stringValue: String) {
         switch stringValue {
@@ -23,6 +23,8 @@ enum SpeciesListSorter : String, Identifiable {
             self = .rarity
         case "hatchingDate":
             self = .hatchingDate
+        case "friendship":
+            self = .friendship
         default:
             return nil
         }

@@ -35,6 +35,7 @@ struct SpeciesList_ios17: View {
                         Text("Favorite").tag(SpeciesListSorter.favorite.rawValue)
                         Text("Level").tag(SpeciesListSorter.level.rawValue)
                         Text("Rarity").tag(SpeciesListSorter.rarity.rawValue)
+                        Text("Friendship").tag(SpeciesListSorter.friendship.rawValue)
                         Text("Hatching Date").tag(SpeciesListSorter.hatchingDate.rawValue)
                     }
                     .background(Color.white)
@@ -136,6 +137,7 @@ struct SpeciesList_ios16: View {
                         Text("Favorite").tag(SpeciesListSorter.favorite.rawValue)
                         Text("Level").tag(SpeciesListSorter.level.rawValue)
                         Text("Rarity").tag(SpeciesListSorter.rarity.rawValue)
+                        Text("Friendship").tag(SpeciesListSorter.friendship.rawValue)
                         Text("Hatching Date").tag(SpeciesListSorter.hatchingDate.rawValue)
                     }
                     .background(Color.white)

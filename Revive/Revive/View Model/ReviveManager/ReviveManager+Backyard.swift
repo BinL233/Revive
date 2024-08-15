@@ -133,6 +133,9 @@ extension ReviveManager_ios17 {
         case "hatchingDate":
             mySpecies = mySpecies.sorted{ $0.hatchDate > $1.hatchDate }
             
+        case "friendship":
+            mySpecies = mySpecies.sorted{ $0.friendship > $1.friendship }
+            
         default:
             return
             
@@ -319,6 +322,9 @@ extension ReviveManager_ios16 {
             
         case "hatchingDate":
             mySpecies = mySpecies.sorted{ $0.hatchDate > $1.hatchDate }
+            
+        case "friendship":
+            mySpecies = mySpecies.sorted{ $0.friendship > $1.friendship }
             
         default:
             return

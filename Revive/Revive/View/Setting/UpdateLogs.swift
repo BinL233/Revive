@@ -24,7 +24,7 @@ struct UpdateLogs_ios17: View {
                         
                         ForEach(log.text.indices, id: \.self) { i in
                             Text("\(log.text[i])")
-                                .font(.subheadline)
+                                .font(.system(size: 14))
                         }
                         .padding(.bottom)
                     }
@@ -53,7 +53,7 @@ struct UpdateLogs_ios16: View {
                         ForEach(log.text.indices, id: \.self) { i in
                             Text("\(log.text[i])")
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .font(.subheadline)
+                                .font(.system(size: 14))
                         }
                         .padding(.bottom)
                     }
