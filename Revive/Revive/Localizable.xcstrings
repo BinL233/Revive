@@ -926,6 +926,9 @@
         }
       }
     },
+    "but also the rare puzzle for mysterious species." : {
+      "extractionState" : "manual"
+    },
     "Caribbean Monk Seal" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2310,6 +2313,9 @@
         }
       }
     },
+    "In Exploring, you can not only discover different items in different map," : {
+      "extractionState" : "manual"
+    },
     "Increase 100 Affection for any species." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2542,6 +2548,9 @@
           }
         }
       }
+    },
+    "Let's focus on Revive." : {
+      "extractionState" : "manual"
     },
     "Let's hatch one Species!" : {
       "extractionState" : "manual",
@@ -2900,6 +2909,12 @@
         }
       }
     },
+    "Now go to Backyard to check your T-Rex's information." : {
+      "extractionState" : "manual"
+    },
+    "Now let's click the start button and meet your first friend." : {
+      "extractionState" : "manual"
+    },
     "Number of Coins" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3074,6 +3089,9 @@
           }
         }
       }
+    },
+    "Other than Hatching, Training provides EXP for your species to level up and evolve." : {
+      "extractionState" : "manual"
     },
     "Panda" : {
       "extractionState" : "manual",
@@ -4319,6 +4337,9 @@
         }
       }
     },
+    "Welcome to the world of Revive!" : {
+      "extractionState" : "manual"
+    },
     "What topping makes the best toast?" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4405,6 +4426,9 @@
         }
       }
     },
+    "You got a [T-Rex]!" : {
+      "extractionState" : "manual"
+    },
     "You know what, Cross River is a state in Nigeria." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -4415,6 +4439,9 @@
           }
         }
       }
+    },
+    "You will connect with different kinds of extinct, endangered, or mysterious species by hatching eggs." : {
+      "extractionState" : "manual"
     },
     "You will fail to explore." : {
       "extractionState" : "manual",

@@ -11,6 +11,9 @@ import SwiftUI
 struct TrainingView_ios17: View {
     @Environment(ReviveManager_ios17.self) var manager
     private let screenWidth = UIScreen.main.bounds.width
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var currentFrame = 0
+    @State var animationType: String = "idle"
     
     var body: some View {
         let adaptiveCloumns = [GridItem(.adaptive(minimum: screenWidth > 380 ? 73 : 65))]
@@ -30,11 +33,27 @@ struct TrainingView_ios17: View {
                 let speciesImage = String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0)
                 
                 ZStack {
-                    Image(speciesImage)
-                        .resizable()
-                        .scaledToFit()
-                        .shadow(radius: 6, x: 0, y: 4)
-                        .padding(15)
+                    if scenePhase == .background {
+                        Image(speciesImage)
+                            .resizable()
+                            .scaledToFit()
+                            .shadow(radius: 6, x: 0, y: 4)
+                            .shadow(radius: 20, x: 0, y: 18)
+                            .padding(15)
+                    } else if scenePhase == .active {
+                        if animationType == "idle" {
+                            RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0))
+                                .shadow(radius: 6, x: 0, y: 4)
+                                .shadow(radius: 20, x: 0, y: 18)
+                                .onTapGesture {
+                                    animationType = "touch"
+                                }
+                        } else if animationType == "touch" {
+                            RegularAnimationView(action: .touch, animationType: $animationType, speciesId: String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0))
+                                .shadow(radius: 6, x: 0, y: 4)
+                                .shadow(radius: 20, x: 0, y: 18)
+                        }
+                    }
                     
                     ForEach(0..<5, id: \.self) { _ in
                         TrainingAnimation_ios17()
@@ -91,6 +110,9 @@ struct TrainingView_ios17: View {
 struct TrainingView_ios16: View {
     @EnvironmentObject var manager: ReviveManager_ios16
     private let screenWidth = UIScreen.main.bounds.width
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var currentFrame = 0
+    @State var animationType: String = "idle"
     
     var body: some View {
         let adaptiveCloumns = [GridItem(.adaptive(minimum: screenWidth > 380 ? 73 : 65))]
@@ -109,11 +131,27 @@ struct TrainingView_ios16: View {
                 let speciesImage = String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0)
                 
                 ZStack {
-                    Image(speciesImage)
-                        .resizable()
-                        .scaledToFit()
-                        .shadow(radius: 6, x: 0, y: 4)
-                        .padding(15)
+                    if scenePhase == .background {
+                        Image(speciesImage)
+                            .resizable()
+                            .scaledToFit()
+                            .shadow(radius: 6, x: 0, y: 4)
+                            .shadow(radius: 20, x: 0, y: 18)
+                            .padding(15)
+                    } else if scenePhase == .active {
+                        if animationType == "idle" {
+                            RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0))
+                                .shadow(radius: 6, x: 0, y: 4)
+                                .shadow(radius: 20, x: 0, y: 18)
+                                .onTapGesture {
+                                    animationType = "touch"
+                                }
+                        } else if animationType == "touch" {
+                            RegularAnimationView(action: .touch, animationType: $animationType, speciesId: String(format: "%03d", manager.currTrainingSpecies?.speciesID ?? 0))
+                                .shadow(radius: 6, x: 0, y: 4)
+                                .shadow(radius: 20, x: 0, y: 18)
+                        }
+                    }
                     
                     ForEach(0..<5, id: \.self) { _ in
                         TrainingAnimation_ios16()

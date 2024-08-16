@@ -13,11 +13,12 @@ struct SpeciesPanelImage_ios17: View {
     @State private var currentFrame = 0
     @State var animationType: String = "idle"
     @Environment(ReviveManager_ios17.self) var manager
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         
         if currPanelSpecies != nil {
-//            if currPanelSpecies!.speciesID == 7 {
+            if scenePhase == .active {
                 if animationType == "idle" {
                     RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                         .shadow(radius: 6, x: 0, y: 4)
@@ -28,13 +29,13 @@ struct SpeciesPanelImage_ios17: View {
                     RegularAnimationView(action: .touch, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
                         .shadow(radius: 6, x: 0, y: 4)
                 }
-//            } else {
-//                let speciesImage = String(format: "%03d", currPanelSpecies!.speciesID)
-//                Image(speciesImage)
-//                    .resizable()
-//                    .scaledToFit()
-//                    .shadow(radius: 6, x: 0, y: 4)
-//            }
+            } else if scenePhase == .background {
+                let speciesImage = String(format: "%03d", currPanelSpecies!.speciesID)
+                Image(speciesImage)
+                    .resizable()
+                    .scaledToFit()
+                    .shadow(radius: 6, x: 0, y: 4)
+            }
         } else {
             ZStack {
                 Text("?")
@@ -55,18 +56,27 @@ struct SpeciesPanelImage_ios16: View {
     @State private var currentFrame = 0
     @State var animationType: String = "idle"
     @EnvironmentObject var manager: ReviveManager_ios16
+    @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
         
         if currPanelSpecies != nil {
-            if animationType == "idle" {
-                RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
-                    .shadow(radius: 6, x: 0, y: 4)
-                    .onTapGesture {
-                        animationType = "touch"
-                    }
-            } else if animationType == "touch" {
-                RegularAnimationView(action: .touch, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+            if scenePhase == .active {
+                if animationType == "idle" {
+                    RegularAnimationView(action: .idle, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                        .shadow(radius: 6, x: 0, y: 4)
+                        .onTapGesture {
+                            animationType = "touch"
+                        }
+                } else if animationType == "touch" {
+                    RegularAnimationView(action: .touch, animationType: $animationType, speciesId: String(format: "%03d", currPanelSpecies!.speciesID))
+                        .shadow(radius: 6, x: 0, y: 4)
+                }
+            } else if scenePhase == .background {
+                let speciesImage = String(format: "%03d", currPanelSpecies!.speciesID)
+                Image(speciesImage)
+                    .resizable()
+                    .scaledToFit()
                     .shadow(radius: 6, x: 0, y: 4)
             }
         } else {

@@ -3,7 +3,7 @@
         "date": "Aug 15, 2024",
         "text": [
             "1. Added animations for Species and Eggs, json for animations and silhouette species images.",
-            "2. Finished all localizable.",
+            "2. Finished all localizable files.",
             "3. Implemented Community modulw and Collections module",
             "4. Modified SR Species hatching rate.",
             "5. Fixed bugs for language changing, Friendship and Exploring treasure, and animation for Store.",
